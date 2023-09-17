@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/_16dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShowDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_show_dialog" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShowUtilDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_show_util_dialog" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShowBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_show_bottom_sheet" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnThirdFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/third_fragment" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

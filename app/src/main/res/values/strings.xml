@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Demo Project</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="second_fragment">Second Fragment</string>
+    <string name="third_fragment">Third Fragment</string>
+    <string name="text_show_dialog">Show dialog</string>
+    <string name="text_show_util_dialog">Show util dialog</string>
+    <string name="text_showed">Showed</string>
+    <string name="text_this_is_bottom_sheet">This is bottom sheet</string>
+    <string name="text_show_bottom_sheet">Show bottom sheet</string>
+</resources>
