@@ -11,4 +11,8 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
 </resources>
