@@ -7,7 +7,8 @@ package com.longkd.buildsrc.app
 object AppDependencies {
     val android = listOf(
         AppLibraries.hilt,
-        AppLibraries.glide
+        AppLibraries.glide,
+        AppLibraries.lottie
     )
 
     val kapt = listOf(

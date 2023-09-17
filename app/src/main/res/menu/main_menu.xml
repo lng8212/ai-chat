@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/firstFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="@string/first_fragment" />
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/state_chat"
+        android:title="@string/chat_fragment" />
     <item
-        android:id="@+id/secondFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="@string/second_fragment" />
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/state_setting"
+        android:title="@string/setting_fragment" />
 </menu>

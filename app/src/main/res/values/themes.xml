@@ -2,4 +2,13 @@
 <resources>
 
     <style name="Theme.BaseProject" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.Splash" parent="@style/Theme.BaseProject">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 </resources>

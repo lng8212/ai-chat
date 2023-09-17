@@ -1,10 +1,206 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by CuongNV on 2/3/23, 1:53 PM
+  ~ Copyright (c) by Begamob.com 2023 . All rights reserved.
+  ~ Last modified 9/13/21, 10:29 AM
+  -->
+
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="safr">#5f777777</color>
+    <color name="holo_dark_background">#303030</color>
+    <color name="holo_dark_action_mode">#212121</color>
+    <color name="divider">#e0e0e0</color>
+    <color name="divider_dark_card">#575757</color>
+    <color name="divider_dark">#484848</color>
+    <color name="divider_translucent">#50575757</color>
+    <color name="search_text_highlight">#FF9632</color>
+    <color name="grid_background_light">#f2f2f2</color>
+    <!--GRAY 700 used for icons instead of black-->
+    <color name="item_light_theme">#FF616161</color>
+
+    <color name="roundedimagepaint">#BAB399</color>
+
+    <!--Colors for preference dialog pie chart-->
+    <color name="piechart_red">#FFEF5350</color>
+    <color name="piechart_green">#FF4CAF50</color>
+    <color name="piechart_blue">#FF2196F3</color>
+
+    <!-- primary color palatte -->
+    <color name="primary_red">#F44336</color>
+    <color name="primary_pink">#e91e63</color>
+    <color name="primary_purple">#9c27b0</color>
+    <color name="primary_deep_purple">#673ab7</color>
+    <color name="primary_indigo">#3f51b5</color>
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_light_blue">#03A9F4</color>
+    <color name="primary_cyan">#00BCD4</color>
+    <color name="primary_teal">#009688</color>
+    <color name="primary_green">#4CAF50</color>
+    <color name="primary_light_green">#8bc34a</color>
+    <color name="primary_amber">#FFC107</color>
+    <color name="primary_orange">#FF9800</color>
+    <color name="primary_deep_orange">#FF5722</color>
+    <color name="primary_brown">#795548</color>
+    <color name="primary_grey_900">#000000</color>
+    <color name="primary_blue_grey">#607d8b</color>
+    <color name="primary_teal_900">#004d40</color>
+    <color name="black_color">#000000</color>
+
+    <!-- accent color palatte -->
+    <color name="accent_red">#F44336</color>
+    <color name="accent_pink">#e91e63</color>
+    <color name="accent_purple">#9c27b0</color>
+    <color name="accent_deep_purple">#673ab7</color>
+    <color name="accent_indigo">#3f51b5</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="accent_light_blue">#03A9F4</color>
+    <color name="accent_cyan">#00BCD4</color>
+    <color name="accent_teal">#009688</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_light_green">#8bc34a</color>
+    <color name="accent_amber">#FFC107</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_deep_orange">#FF5722</color>
+    <color name="accent_brown">#795548</color>
+    <color name="accent_black">#212121</color>
+    <color name="accent_blue_grey">#607d8b</color>
+    <color name="accent_super_su">#004d40</color>
+
+    <!-- colors used for files items -->
+    <color name="goback_item">#757575</color>
+    <color name="video_item">#f06292</color>
+    <color name="audio_item">#9575cd</color>
+    <color name="pdf_item">#da4336</color>
+    <color name="code_item">#00bfa5</color>
+    <color name="text_item">#e06055</color>
+    <color name="archive_item">#f9a825</color>
+    <color name="apk_item">#a4c439</color>
+    <color name="generic_item">#9e9e9e</color>
+
+    <color name="grey">#ff666666</color>
+
+    <color name="appsadapter_background">#5f33b5e5</color>
+
+    <color name="text_disabled">#f6f6f6</color>
+
+    <color name="item_background">#9f757575</color>
+    <color name="icon_background_dark">#303030</color>
+
+    <color name="text_light">#8A000000</color>
+    <color name="text_dark">#B3ffffff</color>
+
+    <!-- indicator -->
+
+    <!-- cardview foreground and background -->
+    <color name="cardView_foreground">#202020</color>
+    <color name="cardView_background">#363F45</color>
+
+    <color name="white_translucent">#0DFFFFFF</color>
+
+    <color name="disabled_button">#BDBDBD</color>
+
+    <!--Used for white vectors -->
+    <color name="vectors_white">#FFFFFFFF</color>
+
+    <!-- Warning error for InputTextLayout -->
+    <color name="warningColor">#ffe082</color>
+    <!-- Error error for InputTextLayout -->
+    <color name="error_color_material">#F4511E</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_grey">#cccccc</color>
+    <color name="color_grey_eee">#eeeeee</color>
+    <color name="color_circle">#FFBA35</color>
+    <color name="color_base_blue">#6094FF</color>
+    <color name="color_base_blue_light">#82AAFD</color>
+    <color name="color_base_blue_dark">#0755F8</color>
+    <color name="color_grey_bbb">#BBBBBB</color>
+    <color name="color_grey_bbb_30">#4DBBBBBB</color>
+    <color name="color_grey_888">#888888</color>
+    <color name="color_blue_circle">#3E80FB</color>
+    <color name="color_des_circle">#C6DAFF</color>
+    <color name="transparent_color">#00FFFFFF</color>
+    <color name="color_selected">#D6E4FF</color>
+    <color name="color_view_group">#2AA1FA</color>
+    <color name="color_black_444">#444444</color>
+    <color name="color_bg_home">#F5F6F8</color>
+    <color name="colorTransparent">#00FF0000</color>
+    <color name="colorShadow">#80000000</color>
+    <color name="common_shadow_color">#14000000</color>
+    <color name="common_black_loading">#26000000</color>
+    <color name="black_5">#0D000000</color>
+    <color name="color_star_disable">#DDDDDD</color>
+    <color name="color_star">#FFC245</color>
+    <color name="color_analyze_image">#FFBF1C</color>
+    <color name="color_analyze_video">#FF971D</color>
+    <color name="color_analyze_app">#4ADC8D</color>
+    <color name="color_analyze_document">#43A5FF</color>
+    <color name="color_analyze_audio">#A967FD</color>
+    <color name="color_analyze_other">#3E80FB</color>
+
+    <color name="color_blue_splash_start">#141F82</color>
+    <color name="color_blue_splash_end">#5263FA</color>
+    <color name="color_wave_home_full">#00C981</color>
+    <color name="color_wave_home_full_20">#3300C981</color>
+    <color name="color_wave_home_full_behind">#B300C981</color>
+    <color name="color_green_base">#00B085</color>
+    <color name="color_green_base_10">#5000B085</color>
+    <color name="color_seekbar_home">#193F49</color>
+    <color name="chat_detail_color">#759344</color>
+    <color name="color_white_10">#1AFFFFFF</color>
+    <color name="color_white_5">#10FFFFFF</color>
+    <color name="color_white_50">#80FFFFFF</color>
+    <color name="color_blue_gradient1">#236152</color>
+    <color name="color_white_40">#66FFFFFF</color>
+    <color name="color_black_30">#4D000000</color>
+    <color name="color_black_40">#66000000</color>
+    <color name="color_chat_style_1">#069B7A</color>
+    <color name="color_chat_style_2">#679817</color>
+    <color name="color_chat_style_3">#C7972F</color>
+    <color name="color_chat_style_4">#E44D30</color>
+    <color name="color_chat_style_5">#923AB6</color>
+    <color name="color_chat_style_6">#3369E4</color>
+
+    <color name="color_chat_style_bg_1">#FFC347</color>
+    <color name="color_chat_style_bg_2">#9276C3</color>
+    <color name="color_chat_style_bg_3">#65BDBD</color>
+    <color name="color_chat_style_bg_4">#DD908F</color>
+    <color name="color_chat_style_bg_5">#A4BF5C</color>
+    <color name="color_chat_style_bg_6">#AAA775</color>
+    <color name="color_line_setting">#1AE4E4E4</color>
+    <color name="color_dialog_rate">#2C3537</color>
+    <color name="color_grey_89">#898989</color>
+    <color name="color_grey_d6">#D6D6D6</color>
+    <color name="color_white_20">#33FFFFFF</color>
+    <color name="color_grey_666">#D3D3D3</color>
+    <color name="color_white_70">#B3FFFFFF</color>
+    <color name="color_white_80">#CCFFFFFF</color>
+    <color name="color_chat_base_bg">#041216</color>
+    <color name="color_black_20">#33000000</color>
+    <color name="color_white_30">#4DFFFFFF</color>
+    <color name="color_bg_bottom_navigation">#09252D</color>
+    <color name="color_txt_premium">#C7972F</color>
+    <color name="color_white_15">#26FFFFFF</color>
+    <color name="color_suggest_premium_new">#8BB714</color>
+    <color name="color_top">#011D23</color>
+    <color name="color_062">#06232C</color>
+    <color name="black_50">#80000000</color>
+    <color name="color_1A3239">#1A3239</color>
+    <color name="color_EA9F48">#EA9F48</color>
+    <color name="color_28BFEB">#28BFEB</color>
+    <color name="color_467BB8">#467BB8</color>
+    <color name="transparent_50">#80000000</color>
+    <color name="color_0C3844">#0C3844</color>
+    <color name="color_294952">#294952</color>
+    <color name="color_4AC789">#4AC789</color>
+    <color name="color_3278C3">#3278C3</color>
+    <color name="color_19383E">#19383E</color>
+    <color name="color_FE780A">#FE780A</color>
+    <color name="color_031F26">#031F26</color>
+    <color name="color_031F26_50">#80031F26</color>
+    <color name="color_6238E2">#6238E2</color>
+    <color name="color_2FCB83">#2FCB83</color>
+    <color name="color_FF8908">#FF8908</color>
+    <color name="color_011C23">#011C23</color>
+    <color name="color_001115">#001115</color>
+    <color name="color_white_14">#24FFFFFF</color>
+
 </resources>

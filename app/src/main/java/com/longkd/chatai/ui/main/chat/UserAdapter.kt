@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.frist
+package com.longkd.chatai.ui.main.chat
 
 import android.annotation.SuppressLint
 import android.content.Context

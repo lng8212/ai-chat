@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.second
+package com.longkd.chatai.ui.main.setting
 
 import androidx.fragment.app.viewModels
 import com.longkd.base_android.base.BaseFragment
@@ -6,7 +6,7 @@ import com.longkd.base_android.ktx.onClickAnim
 import com.longkd.base_android.ktx.showToast
 import com.longkd.base_android.utils.DialogUtils
 import com.longkd.chatai.R
-import com.longkd.chatai.databinding.FragmentSecondBinding
+import com.longkd.chatai.databinding.FragmentSettingBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -15,8 +15,8 @@ import dagger.hilt.android.AndroidEntryPoint
  */
 
 @AndroidEntryPoint
-class SecondFragment : BaseFragment<FragmentSecondBinding, SecondViewModel>() {
-    override val viewModel: SecondViewModel by viewModels()
+class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>() {
+    override val viewModel: SettingViewModel by viewModels()
 
     override val enableAnimationFragment: Boolean
         get() = true

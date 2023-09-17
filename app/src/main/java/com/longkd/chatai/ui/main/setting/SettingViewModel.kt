@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.second
+package com.longkd.chatai.ui.main.setting
 
 import androidx.navigation.NavDirections
 import com.longkd.base_android.base.BaseViewModel
@@ -10,9 +10,9 @@ import javax.inject.Inject
  * @Since: 21:08 - 12/08/2023
  */
 @HiltViewModel
-class SecondViewModel @Inject constructor() : BaseViewModel<NavDirections>() {
+class SettingViewModel @Inject constructor() : BaseViewModel<NavDirections>() {
 
     fun navigateToThirdFragment() {
-        navigator.navigateTo(SecondFragmentDirections.actionSecondFragmentToThirdFragment())
+        navigator.navigateTo(SettingFragmentDirections.actionSettingFragmentToThirdFragment())
     }
 }

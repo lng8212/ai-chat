@@ -66,6 +66,7 @@ dependencies {
     AppDependencies.android.forEach {
         implementation(it)
     }
+
     AppDependencies.kapt.forEach {
         kapt(it)
     }

@@ -10,4 +10,6 @@ object AppVersions {
 
     //kapt
     const val hiltCompiler = "2.44"
+
+    const val lottie = "5.2.0"
 }

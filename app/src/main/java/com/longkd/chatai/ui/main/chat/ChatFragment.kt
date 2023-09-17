@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.frist
+package com.longkd.chatai.ui.main.chat
 
 import android.util.Log
 import androidx.fragment.app.viewModels
@@ -9,7 +9,7 @@ import com.longkd.base_android.base.toolbar.ToolbarConfiguration
 import com.longkd.base_android.data.CommonSharedPreference
 import com.longkd.base_android.ktx.TAG
 import com.longkd.chatai.R
-import com.longkd.chatai.databinding.FragmentFirstBinding
+import com.longkd.chatai.databinding.FragmentChatBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -20,10 +20,10 @@ import javax.inject.Inject
  * @Since: 20:48 - 12/08/2023
  */
 @AndroidEntryPoint
-class FirstFragment :
-    BaseFragment<FragmentFirstBinding, FirstViewModel>() {
-    private val toolbarConfiguration = ToolbarConfiguration(titleResId = R.string.first_fragment)
-    override val viewModel: FirstViewModel by viewModels()
+class ChatFragment :
+    BaseFragment<FragmentChatBinding, ChatViewModel>() {
+    private val toolbarConfiguration = ToolbarConfiguration(titleResId = R.string.chat_fragment)
+    override val viewModel: ChatViewModel by viewModels()
 
     @Inject
     lateinit var preference: CommonSharedPreference
@@ -53,11 +53,4 @@ class FirstFragment :
         }
     }
 
-    override fun onStateError() {
-        super.onStateError()
-    }
-
-    override fun onStateLoading() {
-        super.onStateLoading()
-    }
 }

@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.frist
+package com.longkd.chatai.ui.main.chat
 
 import androidx.navigation.NavDirections
 import com.longkd.base_android.base.BaseGetDataViewModel
@@ -15,10 +15,11 @@ import javax.inject.Inject
  */
 
 @HiltViewModel
-class FirstViewModel @Inject constructor(private val userRepository: com.longkd.chatai.domain.UserRepository) :
+class ChatViewModel @Inject constructor(private val userRepository: com.longkd.chatai.domain.UserRepository) :
     BaseGetDataViewModel<NavDirections>() {
 
-    private val _listData = MutableStateFlow(listOf<com.longkd.chatai.data.api.response.UserResponse.Data>())
+    private val _listData =
+        MutableStateFlow(listOf<com.longkd.chatai.data.api.response.UserResponse.Data>())
     val listData = _listData.asStateFlow()
 
     fun getListData(page: Int) = bindUiState {

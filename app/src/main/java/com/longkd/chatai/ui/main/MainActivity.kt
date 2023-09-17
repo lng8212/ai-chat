@@ -47,6 +47,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, EmptyViewModel<IntentDire
         //        navigateTo(MainActivity::class.createActionIntentDirections())
         val navHost = supportFragmentManager.findFragmentById(R.id.fcvMain) as NavHostFragment
         navController = navHost.navController
+        binding.bnMain.itemIconTintList = null
         NavigationUI.setupWithNavController(
             binding.bnMain,
             navController

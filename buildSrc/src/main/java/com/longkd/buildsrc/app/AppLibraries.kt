@@ -12,5 +12,5 @@ object AppLibraries {
     //kapt
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${AppVersions.hiltCompiler}"
 
-
+    const val lottie = "com.airbnb.android:lottie:${AppVersions.lottie}"
 }
