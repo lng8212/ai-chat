@@ -8,4 +8,11 @@
     <string name="text_showed">Showed</string>
     <string name="text_this_is_bottom_sheet">This is bottom sheet</string>
     <string name="text_show_bottom_sheet">Show bottom sheet</string>
+    <string name="str_ask_a_question">Ask a question…</string>
+    <string name="str_summary">Summary</string>
+    <string name="str_summary_sub_title">Summarize texts from files and Answer any questions within</string>
+    <string name="str_summary_now">Summary Now!</string>
+    <string name="add_a_new_widget">add a new widget</string>
+    <string name="str_image_to_text">Image To Text</string>
+    <string name="txt_topic">Topics</string>
 </resources>

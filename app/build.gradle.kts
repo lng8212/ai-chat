@@ -67,6 +67,8 @@ dependencies {
         implementation(it)
     }
 
+    implementation("com.github.donkingliang:ConsecutiveScroller:4.6.4")
+
     AppDependencies.kapt.forEach {
         kapt(it)
     }
