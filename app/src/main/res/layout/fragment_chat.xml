@@ -46,11 +46,10 @@
             app:layout_constraintTop_toTopOf="@+id/homeFmSelectTitle" />
 
         <com.longkd.chatai.ui.custom.CommonTextViewWriting
-            android:id="@+id/homeFm_titleChatAI"
+            android:id="@+id/titleChatAI"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_18dp"
-            android:layout_marginTop="@dimen/_16dp"
             android:drawableStart="@drawable/ic_icon_start_chat"
             android:drawablePadding="@dimen/_12dp"
             android:fontFamily="@font/font_bold"
@@ -77,7 +76,7 @@
             android:textSize="@dimen/_16dp"
             app:layout_constraintEnd_toStartOf="@id/homeFm_iconStartChat"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeFm_titleChatAI" />
+            app:layout_constraintTop_toBottomOf="@id/titleChatAI" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/homeFm_iconOcr"
@@ -167,51 +166,6 @@
 
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/llnPremium"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_70dp"
-            android:layout_marginStart="@dimen/_18dp"
-            android:layout_marginTop="@dimen/_12dp"
-            android:layout_marginEnd="@dimen/_18dp"
-            android:background="@drawable/bg_layout_background_premium"
-            android:orientation="horizontal"
-            android:weightSum="10"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeFm_bgSummary">
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animGift"
-                android:layout_width="@dimen/_50dp"
-                android:layout_height="@dimen/_45dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_6dp"
-                android:layout_marginEnd="@dimen/_8dp"
-                android:translationY="-4dp"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/anim_gift2" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvBuyPremium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toStartOf="@id/ivNavigation"
-                android:layout_toEndOf="@id/animGift"
-                android:textColor="@color/color_white"
-                android:textSize="@dimen/_14dp" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivNavigation"
-                android:layout_width="@dimen/_28dp"
-                android:layout_height="@dimen/_28dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_12dp"
-                app:srcCompat="@drawable/ic_navigation_right" />
-
-        </RelativeLayout>
 
         <View
             android:id="@+id/homeFm_viewDirector"
@@ -325,9 +279,12 @@
             android:layout_marginStart="@dimen/_18dp"
             android:layout_marginTop="@dimen/_24dp"
             android:layout_marginEnd="@dimen/_18dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTopic" />
+            app:layout_constraintTop_toBottomOf="@id/tvTopic"
+            tools:listitem="@layout/item_topic" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rclDetailAllTopic"
@@ -336,11 +293,13 @@
             android:layout_marginStart="@dimen/_18dp"
             android:layout_marginTop="@dimen/_12dp"
             android:layout_marginBottom="@dimen/_16dp"
-            android:visibility="visible"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rclTitleTopic" />
+            app:layout_constraintTop_toBottomOf="@id/rclTitleTopic"
+            tools:listitem="@layout/item_detail_sub_topic" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rclDetailTopic"
@@ -349,11 +308,15 @@
             android:layout_marginStart="@dimen/_18dp"
             android:layout_marginTop="@dimen/_12dp"
             android:layout_marginBottom="@dimen/_16dp"
+            android:orientation="vertical"
             android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rclTitleTopic" />
+            app:layout_constraintTop_toBottomOf="@id/rclTitleTopic"
+            app:spanCount="2"
+            tools:listitem="@layout/item_detail_topic" />
 
         <View
             android:id="@+id/homeFm_viewDirector1"

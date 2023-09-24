@@ -19,7 +19,7 @@ import javax.inject.Inject
 class SplashViewModel @Inject constructor() : BaseViewModel<IntentDirections>() {
     fun initToMain() {
         viewModelScope.launch {
-            delay(2000)
+            delay(3000)
             navigator.navigateOff(MainActivity::class.createActionIntentDirections())
         }
     }

@@ -8,7 +8,7 @@ import org.gradle.api.JavaVersion
  */
 object AppConfigs {
     const val appName = "com.longkd.chatai"
-    const val minSDK = 21
+    const val minSDK = 24
     const val complieSDK = 33
     const val targetSDK = 33
     const val versionCode = 1
