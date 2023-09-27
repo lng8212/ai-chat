@@ -2,7 +2,7 @@ package com.longkd.chatai.ui.main.setting
 
 import androidx.fragment.app.viewModels
 import com.longkd.base_android.base.BaseFragment
-import com.longkd.base_android.ktx.onClickAnim
+import com.longkd.base_android.ktx.onSingleClickAnim
 import com.longkd.base_android.ktx.showToast
 import com.longkd.base_android.utils.DialogUtils
 import com.longkd.chatai.R
@@ -26,19 +26,19 @@ class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>()
             btnThirdFragment.setOnClickListener {
                 viewModel.navigateToThirdFragment()
             }
-            btnShowDialog.onClickAnim {
+            btnShowDialog.onSingleClickAnim {
                 com.longkd.chatai.ui.DialogTest.newInstance {
                     context?.showToast(getString(R.string.text_showed))
                 }.show(childFragmentManager, null)
             }
-            btnShowUtilDialog.onClickAnim {
+            btnShowUtilDialog.onSingleClickAnim {
                 activity?.let {
                     DialogUtils.showCustomDialog(it) {
                         context?.showToast(getString(R.string.text_showed))
                     }
                 }
             }
-            btnShowBottomSheet.onClickAnim {
+            btnShowBottomSheet.onSingleClickAnim {
                 activity?.let {
                     com.longkd.chatai.ui.BottomSheetTest.newInstance {
                         context?.showToast(getString(R.string.text_showed))

@@ -6,6 +6,7 @@ import android.animation.ValueAnimator
 import android.view.View
 import android.view.ViewGroup
 import com.longkd.base_android.utils.AnimationHelper
+import com.longkd.base_android.utils.OnSingleClickListener
 
 /**
  * @Author: longkd
@@ -127,10 +128,23 @@ fun View.animateWidthAndHeight(
     return animator
 }
 
-fun View.onClickAnim(action: () -> Unit) = this.setOnClickListener {
-    AnimationHelper.scaleAnimation(it, animationListener = {
-        kotlin.runCatching {
-            action.invoke()
+fun View.onSingleClickAnim(action: ((v: View?) -> Unit)) {
+    setOnClickListener(object : OnSingleClickListener() {
+        override fun onSingleClick(v: View?) {
+            AnimationHelper.scaleAnimation(v, animationListener = {
+                kotlin.runCatching {
+                    action.invoke(v)
+                }
+            })
+        }
+
+    })
+}
+
+fun View.setOnSingleClick(action: ((v: View?) -> Unit)) {
+    setOnClickListener(object : OnSingleClickListener() {
+        override fun onSingleClick(v: View?) {
+            action.invoke(v)
         }
     })
 }
