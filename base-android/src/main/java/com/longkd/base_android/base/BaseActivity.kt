@@ -2,11 +2,14 @@ package com.longkd.base_android.base
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Rect
+import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.EditText
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.LayoutRes
@@ -113,8 +116,25 @@ abstract class BaseActivity<out VB : ViewBinding, out VM : BaseViewModel<IntentD
         }
     }
 
+    @Suppress("DEPRECATION")
+    private fun fullScreen() {
+        window.apply {
+            clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                /** full screen làm android:windowSoftInputMode="adjustResize" not working*/
+                decorView.systemUiVisibility =
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            } else {
+                decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            }
+            statusBarColor = Color.TRANSPARENT
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        fullScreen()
         _binding = createBinding()
         setContentView(_binding!!.root)
         setupBindingLifeCycle()
@@ -264,5 +284,5 @@ abstract class BaseActivity<out VB : ViewBinding, out VM : BaseViewModel<IntentD
         return Locale.getDefault().language
     }
 
-    companion object {}
+    companion object
 }
