@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.chat.adapter
+package com.longkd.chatai.ui.main.chat.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

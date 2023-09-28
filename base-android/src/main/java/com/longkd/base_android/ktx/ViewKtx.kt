@@ -128,7 +128,7 @@ fun View.animateWidthAndHeight(
     return animator
 }
 
-fun View.onSingleClickAnim(action: ((v: View?) -> Unit)) {
+fun View.setOnSingleClickAnim(action: ((v: View?) -> Unit)) {
     setOnClickListener(object : OnSingleClickListener() {
         override fun onSingleClick(v: View?) {
             AnimationHelper.scaleAnimation(v, animationListener = {

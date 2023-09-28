@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    tools:layout_height="@dimen/toolbar_height"
+    tools:layout_height="@dimen/_80dp"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <androidx.appcompat.widget.AppCompatImageButton
@@ -12,7 +12,6 @@
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="@dimen/_32dp"
         android:layout_height="@dimen/_32dp"
-        android:layout_gravity="center"
         android:layout_marginStart="@dimen/_24dp"
         app:iconTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +28,9 @@
         android:gravity="center"
         android:maxWidth="@dimen/_200dp"
         android:maxLines="1"
+        android:fontFamily="@font/font_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18dp"
         android:textAppearance="@style/text_h4"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +38,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnStart"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage"
         tools:text="@tools:sample/lorem[1]" />
 
     <androidx.appcompat.widget.AppCompatImageButton
@@ -46,6 +49,8 @@
         android:layout_marginEnd="@dimen/_24dp"
         app:iconSize="@dimen/_32dp"
         app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:srcCompat="@drawable/ic_launcher_background" />
 

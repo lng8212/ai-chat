@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.longkd.chatai.ui.main.chat.ChatFragment"
+        android:name="com.longkd.chatai.ui.main.chat.home.ChatFragment"
         android:label="ChatFragment"
         tools:layout="@layout/fragment_chat">
         <action
-            android:id="@+id/action_chatFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
+            android:id="@+id/action_chatFragment_to_detailChatFragment"
+            app:destination="@id/detailChatFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -28,4 +28,9 @@
         android:name="com.longkd.chatai.ui.main.third.ThirdFragment"
         android:label="ThirdFragment"
         tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/detailChatFragment"
+        android:name="com.longkd.chatai.ui.main.chat.detail.DetailChatFragment"
+        android:label="DetailChatFragment"
+        tools:layout="@layout/fragment_detail_chat" />
 </navigation>

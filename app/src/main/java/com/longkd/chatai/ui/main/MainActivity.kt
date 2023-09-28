@@ -30,15 +30,15 @@ class MainActivity : BaseActivity<ActivityMainBinding, EmptyViewModel<IntentDire
         get() = EmptyViewModel()
 
 
-    private val listFragmentHideBottomNav = listOf(
-        R.id.thirdFragment
+    private val listFragmentShowBottomNav = listOf(
+        R.id.chatFragment, R.id.settingFragment
     )
 
     private val listener = NavController.OnDestinationChangedListener { _, destination, _ ->
-        if (destination.id in listFragmentHideBottomNav) {
-            goneBottomNav()
-        } else {
+        if (destination.id in listFragmentShowBottomNav) {
             showBottomNav()
+        } else {
+            goneBottomNav()
         }
     }
 

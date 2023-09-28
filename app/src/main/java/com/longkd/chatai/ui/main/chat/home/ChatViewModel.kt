@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.chat
+package com.longkd.chatai.ui.main.chat.home
 
 import android.content.Context
 import androidx.navigation.NavDirections
@@ -47,5 +47,9 @@ class ChatViewModel @Inject constructor(private val userRepository: com.longkd.c
         _currentType.update {
             type
         }
+    }
+
+    fun navigateToDetail() {
+        navigator.navigateTo(ChatFragmentDirections.actionChatFragmentToDetailChatFragment())
     }
 }

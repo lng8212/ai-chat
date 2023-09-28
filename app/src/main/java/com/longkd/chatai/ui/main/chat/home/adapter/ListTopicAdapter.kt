@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.chat.adapter
+package com.longkd.chatai.ui.main.chat.home.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -21,6 +21,18 @@ class ListTopicAdapter(
 ) :
     BaseListAdapter<DataUtils.ListTopic, ListTopicAdapter.ListTopicViewHolder>() {
 
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setSelected(type: DataUtils.ListTopic) {
+        var position = -1
+        for ((index, item) in currentList.withIndex()) {
+            if (item == type) position = index
+        }
+        if (position != -1) {
+            currentSelected = position
+            notifyDataSetChanged()
+        }
+    }
 
     private var currentSelected = 0
     override fun getViewHolder(

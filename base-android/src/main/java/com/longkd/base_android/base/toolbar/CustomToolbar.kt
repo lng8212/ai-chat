@@ -6,9 +6,9 @@ import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
-import com.longkd.base_android.R
 import com.longkd.base_android.databinding.CustomToolbarBinding
 import com.longkd.base_android.ktx.setImageDrawableWithAnimation
+import com.longkd.base_android.ktx.setOnSingleClickAnim
 import com.longkd.base_android.utils.viewBinding
 
 /**
@@ -33,7 +33,6 @@ class CustomToolbar @JvmOverloads constructor(
             configureStartButton(startIconResId, startIconClick)
             configureEndButton(endIconResId, endIconClick)
         }
-        initBackgroundColor(R.color.white)
         isVisible = true
     }
 
@@ -58,7 +57,7 @@ class CustomToolbar @JvmOverloads constructor(
                 return
             }
             setImageResource(resId)
-            setOnClickListener { clickAction?.invoke() }
+            setOnSingleClickAnim { clickAction?.invoke() }
             isVisible = true
         }
     }
@@ -70,7 +69,7 @@ class CustomToolbar @JvmOverloads constructor(
                 return
             }
             setImageResource(resId)
-            setOnClickListener { clickAction?.invoke() }
+            setOnSingleClickAnim { clickAction?.invoke() }
             isVisible = true
         }
     }

@@ -65,4 +65,12 @@
     <string name="text_travel_experiences">Travel Experiences</string>
     <string name="text_travel_experiences_detail">Tips &amp; tricks when traveling suggested by ChatGPT!</string>
     <string name="text_all">All</string>
+    <string name="text_regenerate">Regenerate</string>
+    <string name="text_copy">Copy</string>
+    <string name="text_type_here">Ask a question…</string>
+    <string name="text_continue_to_chat">Continue to Chat</string>
+    <string name="text_skip_generating">Skip generating</string>
+    <string name="text_preview_your_files">Click here if you want to\npreview your files</string>
+    <string name="text_close">Close</string>
+    <string name="text_gpt">Chat GPT</string>
 </resources>

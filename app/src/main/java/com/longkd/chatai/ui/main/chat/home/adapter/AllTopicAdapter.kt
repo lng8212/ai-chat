@@ -1,4 +1,4 @@
-package com.longkd.chatai.ui.main.chat.adapter
+package com.longkd.chatai.ui.main.chat.home.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -14,7 +14,10 @@ import com.longkd.chatai.util.DataUtils
  * @Author: longkd
  * @Since: 11:49 - 24/09/2023
  */
-class AllTopicAdapter(private val context: Context, private val onClickNext: (Topic) -> Unit) :
+class AllTopicAdapter(
+    private val context: Context,
+    private val onClickNext: (topic: Topic) -> Unit
+) :
     BaseListAdapter<Topic, AllTopicAdapter.AllTopicViewHolder>() {
     @Suppress("UNCHECKED_CAST")
     inner class AllTopicViewHolder(binding: ItemDetailSubTopicBinding) :
