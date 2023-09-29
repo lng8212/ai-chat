@@ -73,4 +73,7 @@
     <string name="text_preview_your_files">Click here if you want to\npreview your files</string>
     <string name="text_close">Close</string>
     <string name="text_gpt">Chat GPT</string>
+    <string name="text_title_start_chat">Hello, How can I assist you?</string>
+    <string name="text_see_more_1">…See More</string>
+    <string name="text_see_more">See More</string>
 </resources>

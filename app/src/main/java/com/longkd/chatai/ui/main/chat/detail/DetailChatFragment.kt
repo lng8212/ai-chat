@@ -6,6 +6,7 @@ import com.longkd.base_android.base.toolbar.FragmentConfiguration
 import com.longkd.base_android.base.toolbar.ToolbarConfiguration
 import com.longkd.chatai.R
 import com.longkd.chatai.databinding.FragmentDetailChatBinding
+import com.longkd.chatai.ui.main.chat.detail.adapter.ChatDetailAdapter
 
 /**
  * @Author: longkd
@@ -19,6 +20,7 @@ class DetailChatFragment : BaseFragment<FragmentDetailChatBinding, DetailChatVie
         startIconClick = { back() }
 
     )
+    private var mAdapter: ChatDetailAdapter? = null
     override val viewModel: DetailChatViewModel by viewModels()
 
     override val fragmentConfiguration: FragmentConfiguration
