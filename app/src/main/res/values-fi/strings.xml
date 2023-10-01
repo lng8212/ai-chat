@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_ui_crash">Sovellus/käyttöliittymä kaatui</string>
+    <string name="sorry_string">Anteeksi, niin ei olisi pitänyt tapahtua.</string>
+    <string name="error_report_button_text">Ilmoita tästä virheestä sähköpostitse</string>
+    <string name="error_report_button_telegram">Ilmoita tästä virheestä sähkeellä</string>
+    <string name="copy_format">Kopioi muotoiltu raportti</string>
+    <string name="error_report_open_issue_button_text">Raportoi</string>
+    <string name="error_report_open_github_notice">Tarkista, onko kaatumistasi koskeva ongelma jo olemassa.</string>
+    <string name="what_device_headline">Tiedot:</string>
+    <string name="what_happened_headline">Mitä tapahtui:</string>
+    <string name="info_labels">Mikä:\\nPyyntö:\\nGMT–aika:\\nPaketti:\\nVersio:\\nKäyttöjärjestelmäversio:\\nLaite:\\nMalli:\\nTuote:</string>
+    <string name="your_comment">Kommenttisi (englanniksi):</string>
+    <string name="error_details_headline">Yksityiskohdat:</string>
+    <string name="error_report_title">Virhe raportti</string>
+    <string name="crash_report_copied">Virheraportti kopioitiin leikepöydälle</string>
+    <string name="error_snackbar_message">Pahoittelut, jotain meni pieleen.</string>
+    <string name="error_snackbar_action">Raportoi</string>
+    <string name="text_setting">asetukset</string>
+    <string name="text_start_chat">Aloita chatti</string>
+    <string name="text_your_chat_ai">Chatbot AI</string>
+    <string name="text_ads_splash">Tämä prosessi voi sisältää mainoksia</string>
+    <string name="text_chat_detail_title">GPT AI Chatbot</string>
+    <string name="text_intro_first">Miten päiväsi menee?\nPuhutaanpa kanssani!</string>
+    <string name="text_wonderful">Ihana</string>
+    <string name="text_great">Loistava</string>
+    <string name="text_intro_second">Kysy minulta mitä haluat tietää, \nAutan sinua.</string>
+    <string name="text_select_character">Valitse Hahmo</string>
+    <string name="hi_there">Hei siellä!</string>
+    <string name="device_not_support">Valitettavasti laitetta ei tueta!</string>
+    <string name="input_empty_error">Ole hyvä ja syötä jotain!</string>
+    <string name="something_error">Voi ei, jotain meni pieleen, yritä uudelleen!</string>
+    <string name="type_here">Kirjoita tähän…</string>
+    <string name="text_thanks">Kiitos, että käytit sovellustamme. Voit arvioida sovelluksen CHPlayssa. Tämä auttaa ja rohkaisee meitä paljon. Kiitos ja nähdään taas!</string>
+    <string name="text_cancel">Peruuttaa</string>
+    <string name="text_update_to_premium">Päivitä täysversioon</string>
+    <string name="text_update_to_premium_des">Nauti rajattomasta pääsystä kaikilla ominaisuuksilla.</string>
+    <string name="text_support">Tuki</string>
+    <string name="text_restore_purchase">Palauta ostos</string>
+    <string name="text_about_us">Meistä</string>
+    <string name="text_privacy_policy">Tietosuojakäytäntö</string>
+    <string name="text_term_of_use">Käyttöehto</string>
+    <string name="text_stay_in_touch">Pysyä yhteydessä</string>
+    <string name="text_rate_app">Arvostele sovellus</string>
+    <string name="text_send_feedback">Lähetä palautetta</string>
+    <string name="txt_comming_soon">Tulossa pian!</string>
+    <string name="text_rate_des">Työskentelemme kovasti paremman käyttökokemuksen eteen. Olisimme erittäin kiitollisia, jos voisit arvioida meidät.</string>
+    <string name="text_rate">Rate</string>
+    <string name="text_version">Versio:</string>
+    <string name="text_rate_suggest">Parasta mitä voimme saada ♥</string>
+    <string name="text_premium_update">Premium–päivitys</string>
+    <string name="text_unlimited">Rajattomasti kysymyksiä ja vastauksia</string>
+    <string name="text_no_ads">Ei mainontaa</string>
+    <string name="text_unlock">Täysi hahmon lukitus</string>
+    <string name="text_start_trial">Aloita ilmainen kokeilu ja suunnitelma</string>
+    <string name="text_trial_free_day">3 päivän ilmainen kokeilu</string>
+    <string name="text_trial_free_price">sitten %s/viikko, automaattisesti – uusiutuva</string>
+    <string name="text_best_offer">Paras tarjous</string>
+    <string name="text_lifetime_price">– Elinikäinen – Kertamaksu</string>
+    <string name="text_sub_temp">Tilausehdot</string>
+    <string name="text_sub_temp_1">käyttöehdot</string>
+    <string name="privacy_sub">Tilaajilla on rajoittamaton käyttö ja pääsy kaikkiin sen Premium–ominaisuuksiin ilman mainoksia.\n– Ei–tilaaneet käyttäjät voivat käyttää sovellusta jatkuvasti mainosten kanssa, ja heillä on rajoitettu Premium–ominaisuuksien käyttö. \n– Maksu veloitetaan Google–tililtäsi ostovahvistuksen yhteydessä.\n– Tilaukset uusiutuvat automaattisesti, ellei automaattista uusimista ole poistettu käytöstä vähintään 24 tuntia ennen nykyisen jakson päättymistä.\n– Tiliä veloitetaan uusimisesta 24 tuntia ennen nykyisen jakson päättymistä ja tunnista uusimisen kustannukset.</string>
+    <string name="privacy_sub2">\n– Kaikki käyttämättömät ilmaisen kokeilujakson osat, jos niitä tarjotaan, menetetään, kun käyttäjä ostaa kyseisen julkaisun tilauksen, jos mahdollista.– Käyttäjä voi hallita tilauksia ja automaattinen uusiminen voidaan poistaa käytöstä siirtymällä Käyttäjätilin asetukset oston jälkeen. Huomaa, että sovelluksen poistaminen ei peruuta tilaustasi.\n1. Avaa Google Play Kauppa Android–puhelimella tai –tabletilla.\n2. Tarkista, oletko kirjautunut oikealle Google–tilille.\n3. Napauta Valikko Tilaukset ja valitse tilaus, jonka haluat peruuttaa.\n4. Napauta Peruuta tilaus.</string>
+    <string name="txt_billing_unavailable">Sovelluksen sisäinen laskutuspalvelu ei ole saatavilla, päivitä Android Market/Play versioon 3.9.16 tai uudempaan!</string>
+    <string name="txt_first_error_billing">Oston aikana tapahtui virhe, yritä myöhemmin uudelleen!</string>
+    <string name="txt_check_internet">Varmista, että Wi–Fi tai mobiilidata on päällä. Yritä sitten uudelleen</string>
+    <string name="txt_check_wifi">Tarkista wifi–yhteytesi ja yritä uudelleen!</string>
+    <string name="txt_no_internet">Ei Internet–yhteyttä!</string>
+    <string name="txt_no_wifi">Yhdistä wifi–verkkoon</string>
+    <string name="txt_title_exit">Oletko varma, että haluat poistua?</string>
+    <string name="txt_billing_premium_success">Kiitos ostoksestasi!</string>
+    <string name="txt_billing_premium_fail">Valitettavasti et ole ostanut tai ostamasi paketti on vanhentunut!</string>
+    <string name="txt_billing_restart_app">Jotta sovellus toimisi parhaalla mahdollisella tavalla oston tekemisen jälkeen, käynnistä sovellus uudelleen ja viimeistele muuntaminen VIP–käyttäjäksi!</string>
+    <string name="txt_get_premium">Hanki Premium</string>
+    <string name="txt_mess_number_premium1">Sinulla on</string>
+    <string name="txt_mess_number_premium2">ilmaisia ​​viestejä jäljellä</string>
+    <string name="txt_gift_title">Erityinen lahja juuri sinulle.</string>
+    <string name="txt_gift_title_des">Hae se nyt.</string>
+    <string name="txt_free_message">Ilmaiset viestit:</string>
+    <string name="txt_start_trial">Aloita ilmainen kokeilu</string>
+    <string name="txt_month">Kuukausittain</string>
+    <string name="txt_lifetime">Elinikä</string>
+    <string name="txt_start_month_auto">Automaattinen – uusiutuva tilaus veloitetaan kuukausittain</string>
+    <string name="txt_start_one_time_auto">Kertamaksu. Täysin uusi ominaisuus – Forever</string>
+    <string name="txt_not_support_title">Voi ei!</string>
+    <string name="txt_not_support_title_des">Olemme pahoillamme, että tämä ominaisuus ei ole käytettävissä laitteessasi. Yritämme parantaa, nähdään seuraavassa versiossa.</string>
+    <string name="txt_topic">Aiheet</string>
+    <string name="txt_chat_ai">AI chat</string>
+    <string name="txt_topic_interview">Toimin haastattelijana ja esitän sinulle kysymyksiä haemastasi tehtävästä. Vastaat kysymyksiin kuin olisit ehdokas. Aloitetaanpa!</string>
+    <string name="txt_topic_develop">Olen kehittäjä, jolla on kokemusta turvallisten verkko– ja sovellusratkaisujen kehittämisestä. Pystyn luomaan arkkitehtuurin ja kirjoittamaan koodin tarpeidesi mukaan. Tehdään yhdessä toteuttaaksemme visiosi ja luodaksemme vankan ja turvallisen alustan!</string>
+    <string name="txt_topic_business">Autan sinua vinkeillä ja malleilla, joilla voit parantaa osaamistasi liiketoiminnassa ja autan sinua päivittäisissä työhön liittyvissä asioissa. Aloitetaan liiketoimintakykysi parantaminen!</string>
+    <string name="txt_topic_ad">Voin auttaa sinua markkinointikampanjan luomisessa valitsemasi tuotteen tai palvelun mainostamiseksi. Tehdään yhdessä kampanjasta vaikuttava ja onnistunut!</string>
+    <string name="txt_topic_language">Olen englannin kielen asiantuntija, jolla on taidot kääntää, korjata oikeinkirjoitus ja parantaa kielioppia. Autan sinua varmistamaan, että kirjoitettu kielesi on tarkkaa ja hiottua.</string>
+    <string name="txt_topic_chef">Voin ehdottaa herkullisia ja ravitsevia reseptejä, jotka ovat helppoja valmistaa ja jotka eivät vie paljon aikaa. Minulla on laaja valikoima reseptejä ja ideoita, jotka sopivat erilaisille ruoanlaittotaitotasoille. Tehdään yhdessä terveellisiä ja maukkaita aterioita!</string>
+    <string name="txt_topic_composer">Olen täällä auttaakseni sinua laulutarpeissasi. Autan sinua sitten, etsitpä sanoituksia tietylle kappaleelle tai haluatko sanat kirjoitettua mielessäsi olevan konseptin perusteella. Pystyn löytämään minkä tahansa kappaleen sanat tai kirjoittamaan uusia sanoituksia konseptisi perusteella. Luodaan mieleenpainuvia ja vaikuttavia sanoituksia!</string>
+    <string name="txt_topic_mental">Olen täällä tarjotakseni ohjausta ja neuvoja tunteiden, stressin, ahdistuksen ja muiden mielenterveysongelmien hallinnassa. Tavoitteeni on auttaa sinua selviytymään näistä haasteista ja löytämään terveellisiä tapoja selviytyä niistä. Tehdään yhteistyötä parantaaksemme yleistä hyvinvointiasi ja emotionaalista vakauttasi.</string>
+    <string name="txt_topic_interview_title">Haastattelija</string>
+    <string name="txt_topic_develop_title">Kehittäjä</string>
+    <string name="txt_topic_business_title">Business Assistant</string>
+    <string name="txt_topic_ad_title">Mainostaja</string>
+    <string name="txt_topic_language_title">Kielen asiantuntija</string>
+    <string name="txt_topic_chef_title">Kokki</string>
+    <string name="txt_topic_composer_title">Säveltäjä</string>
+    <string name="txt_topic_mental_title">Mielenterveysmainos</string>
+    <string name="txt_topic_interview_q1">Mitkä ovat yleisimmät haastattelukysymykset?</string>
+    <string name="txt_topic_interview_q2">Kuinka valmistaudun haastatteluun?</string>
+    <string name="txt_topic_interview_q3">Mitkä ovat parhaat haastattelukysymykset hakijoille?</string>
+    <string name="txt_topic_interview_q4">Kuinka suoritan onnistuneen työhaastattelun?</string>
+    <string name="txt_topic_interview_q5">Miten arvioin hakijan taidot ja pätevyyden?</string>
+    <string name="txt_topic_interview_q6">Miten määritän ehdokkaan kulttuurisen sopivuuden?</string>
+    <string name="txt_topic_interview_q7">Mitkä ovat tehokkaita haastattelutekniikoita ehdokkaiden arvioinnissa?</string>
+    <string name="txt_topic_interview_q8">Miten toimin vaikeissa haastattelutilanteissa?</string>
+    <string name="txt_topic_interview_q9">Miten arvioin ehdokkaan kasvu– ja kehityspotentiaalia?</string>
+    <string name="txt_topic_interview_q10">Mitkä ovat parhaat käytännöt oikeudenmukaiseen ja puolueettomaan haastatteluprosessiin?</string>
+    <string name="txt_topic_develop_q1">Mitä ohjelmointikieliä minun pitäisi opetella?</string>
+    <string name="txt_topic_develop_q2">Mitä ketterä kehitys on ja miten se toimii?</string>
+    <string name="txt_topic_develop_q3">Mitkä ovat parhaat resurssit ohjelmistokehityksen oppimiseen?</string>
+    <string name="txt_topic_develop_q4">Mitkä ovat kysytyimmät ohjelmointitaidot?</string>
+    <string name="txt_topic_develop_q5">Miten pääsen alkuun kehittäjänä?</string>
+    <string name="txt_topic_develop_q6">Mikä DevOps on ja miten se liittyy kehitykseen?</string>
+    <string name="txt_topic_develop_q7">Kuinka pysyn ajan tasalla viimeisimmistä teknologiatrendeistä?</string>
+    <string name="txt_topic_develop_q8">Mitkä ovat onnistuneen kehitysprojektin avaintekijät?</string>
+    <string name="txt_topic_develop_q9">Kuinka voin parantaa koodaustaitojani?</string>
+    <string name="txt_topic_develop_q10">Mitkä ovat parhaat kehitystyökalut ja ohjelmistot käytettäväksi?</string>
+    <string name="txt_topic_business_q1">Mitkä ovat yritysassistentin vastuut?</string>
+    <string name="txt_topic_business_q2">Kuinka minusta tulee menestyvä yritysassistentti?</string>
+    <string name="txt_topic_business_q3">Mitä taitoja yritysassistentilta vaaditaan?</string>
+    <string name="txt_topic_business_q4">Mitkä ovat parhaat työkalut ja ohjelmistot yritysassistenteille?</string>
+    <string name="txt_topic_business_q5">Mikä on virtuaalisen yritysassistentin rooli?</string>
+    <string name="txt_topic_business_q6">Kuinka voin parantaa organisointitaitojani yritysassistenttina?</string>
+    <string name="txt_topic_business_q7">Kuinka hallitsen useita tehtäviä ja prioriteetteja yritysassistenttina?</string>
+    <string name="txt_topic_business_q8">Mitkä ovat parhaat käytännöt tehokkaaseen viestintään yritysassistenttina?</string>
+    <string name="txt_topic_business_q9">Kuinka käsittelen arkaluonteisia ja luottamuksellisia tietoja yritysassistenttina?</string>
+    <string name="txt_topic_business_q10">Mikä on yritysassistentin keskipalkka?</string>
+    <string name="txt_topic_ad_q1">Mitä mainonta on ja miten se toimii?</string>
+    <string name="txt_topic_ad_q2">Mitä eri mainontatyyppejä on?</string>
+    <string name="txt_topic_ad_q3">Kuinka luon onnistuneen mainoskampanjan?</string>
+    <string name="txt_topic_ad_q4">Mitkä ovat tehokkaimmat mainoskanavat?</string>
+    <string name="txt_topic_ad_q5">Miten mittaan mainoskampanjan menestystä?</string>
+    <string name="txt_topic_ad_q6">Mitkä ovat parhaat työkalut ja ohjelmistot mainontaan?</string>
+    <string name="txt_topic_ad_q7">Kuinka kohdistan mainoskampanjani oikeaan yleisöön?</string>
+    <string name="txt_topic_ad_q8">Mitkä ovat mainonnan uusimmat trendit ja innovaatiot?</string>
+    <string name="txt_topic_ad_q9">Miten luon houkuttelevia ja mieleenpainuvia mainosviestejä?</string>
+    <string name="txt_topic_ad_q10">Kuinka paljon mainonta maksaa ja mikä on mainonnan sijoitetun pääoman tuotto?</string>
+    <string name="txt_topic_language_q1">Mikä on paras tapa tulla kielen asiantuntijaksi?</string>
+    <string name="txt_topic_language_q2">Miten voin parantaa kielitaitoni?</string>
+    <string name="txt_topic_language_q3">Mitkä ovat tärkeimmät kieltenoppimisvinkit?</string>
+    <string name="txt_topic_language_q4">Mitkä ovat parhaat resurssit kieltenoppimiseen?</string>
+    <string name="txt_topic_language_q5">Mikä on paras kieli opiskella liiketoiminnan ja uran menestymiseksi?</string>
+    <string name="txt_topic_language_q6">Kuinka voin voittaa kieltenoppimisen esteet ja haasteet?</string>
+    <string name="txt_topic_language_q7">Kuinka voin parantaa ääntämistäni ja puhetaitojani?</string>
+    <string name="txt_topic_language_q8">Mitkä ovat parhaat tekniikat sanaston ja kieliopin ulkoa oppimiseen?</string>
+    <string name="txt_topic_language_q9">Kuinka rakentaa sujuvaa ja itseluottamusta uuden kielen puhumisessa?</string>
+    <string name="txt_topic_language_q10">Kuinka opin kielen nopeasti ja tehokkaasti?</string>
+    <string name="txt_topic_chef_q1">Mitä kokki tekee ja mitkä ovat kokin velvollisuudet?</string>
+    <string name="txt_topic_chef_q2">Miten minusta tulee kokki ja mitä koulutusta vaaditaan?</string>
+    <string name="txt_topic_chef_q3">Mitkä ovat parhaat ruoanlaittokoulut ja kulinaariset ohjelmat?</string>
+    <string name="txt_topic_chef_q4">Mitkä ovat kokin tärkeimmät ruoanlaitto– ja keittiötaidot?</string>
+    <string name="txt_topic_chef_q5">Miten voin parantaa ruoanlaittotaitojani ja –tekniikoita?</string>
+    <string name="txt_topic_chef_q6">Mitkä ovat parhaat keittiövälineet ja –laitteet kokin käyttöön?</string>
+    <string name="txt_topic_chef_q7">Kuinka luon menun ja suunnittelen onnistuneen keittiö– ja ruokailukokemuksen?</string>
+    <string name="txt_topic_chef_q8">Kuinka hallitsen keittiötä sekä kokki– ja henkilökuntatiimiä?</string>
+    <string name="txt_topic_chef_q9">Mitkä ovat parhaat ruoka– ja ruoanlaittotrendit kokina pysyä mukana?</string>
+    <string name="txt_topic_chef_q10">Kuinka tasapainotan ruokaturvallisuutta ja ruokaluovuutta keittiössä?</string>
+    <string name="txt_topic_composer_q1">Mitä säveltäjä tekee ja mitkä ovat säveltäjän vastuut?</string>
+    <string name="txt_topic_composer_q2">Kuinka minusta tulee säveltäjä ja mitä koulutusta vaaditaan?</string>
+    <string name="txt_topic_composer_q3">Mitkä ovat parhaat musiikkikoulut ja ohjelmat säveltäjille?</string>
+    <string name="txt_topic_composer_q4">Mitkä ovat säveltäjän tärkeimmät taidot?</string>
+    <string name="txt_topic_composer_q5">Miten kehitän sävellystaitojani ja tekniikoitani?</string>
+    <string name="txt_topic_composer_q6">Mitkä ovat parhaat työkalut ja ohjelmistot musiikin säveltämiseen?</string>
+    <string name="txt_topic_composer_q7">Kuinka luon onnistuneen sävellyksen?</string>
+    <string name="txt_topic_composer_q8">Miten teen yhteistyötä muiden musiikkialan muusikoiden, taiteilijoiden ja tuottajien kanssa?</string>
+    <string name="txt_topic_composer_q9">Mitkä ovat parhaat tavat mainostaa ja markkinoida musiikkiani säveltäjänä?</string>
+    <string name="txt_topic_composer_q10">Kuinka pysyn ajan tasalla musiikin sävellyksen viimeisimmistä trendeistä ja innovaatioista?</string>
+    <string name="txt_topic_mental_q1">Mitä mielenterveysmainonta on ja miksi se on tärkeää?</string>
+    <string name="txt_topic_mental_q2">Miten mainonta vaikuttaa mielenterveyteen ja hyvinvointiin?</string>
+    <string name="txt_topic_mental_q3">Mitkä ovat parhaat tavat edistää mielenterveystietoisuutta mainonnan avulla?</string>
+    <string name="txt_topic_mental_q4">Miten luon tehokkaan mielenterveysmainoskampanjan?</string>
+    <string name="txt_topic_mental_q5">Mitkä ovat mielenterveystuotteiden ja –palveluiden mainonnan eettiset näkökohdat?</string>
+    <string name="txt_topic_mental_q6">Mitkä ovat tehokkaimmat mielenterveysmainonnan kanavat?</string>
+    <string name="txt_topic_mental_q7">Kuinka kohdistan mielenterveysmainoskampanjani oikeaan yleisöön?</string>
+    <string name="txt_topic_mental_q8">Mitkä ovat uusimmat trendit ja innovaatiot mielenterveysmainonnassa?</string>
+    <string name="txt_topic_mental_q9">Miten luon houkuttelevia ja arkaluonteisia viestejä mielenterveysmainontaan?</string>
+    <string name="txt_topic_mental_q10">Mitkä ovat tehottoman tai haitallisen mielenterveysmainonnan mahdolliset seuraukset?</string>
+    <string name="txt_confirm">Vahvistaa</string>
+    <string name="text_confirm_restart_change">Haluatko käynnistää sovelluksen uudelleen, jotta muutos otetaan käyttöön?</string>
+    <string name="text_content_sale_not_purchase2">Älä missaa rajoitetun ajan tarjoustamme! Avaa sovellus nyt ja säästä premium–sisällöstä.</string>
+    <string name="text_content_sale_not_purchase3">Kiire! Rajoitettu erä saatavilla alennuksella. Avaa sovellus nyt saadaksesi alennuksen.</string>
+    <string name="text_content_sale_not_purchase4">Tervetuloa takaisin! Kiitoksena tarjoamme sinulle alennuksen seuraavasta ostoksestasi. Avaa sovellus nyt lunastaaksesi.</string>
+    <string name="text_content_sale_not_purchase5">Avaa sovellus nyt ja saat eksklusiivisen alennuksen seuraavasta ostoksestasi! Älä missaa!</string>
+    <string name="text_content_sale_not_purchase6">Saat alennuksen premium–sisällöstä, kun avaat sovelluksen nyt. Se on vain rajoitetun ajan, joten ole nopea!</string>
+    <string name="text_content_sale_not_purchase7">Oletko valmis säästämään paljon? Avaa sovellus nyt ja käytä koodia DISCOUNT saadaksesi alennuksen ostoksestasi.</string>
+    <string name="text_content_sale_not_purchase8">Uusia tuotteita juuri lisätty ja alennettu! Avaa sovellus nyt saadaksesi alennuksen ostoksestasi. Et halua missata
+        Tämä!</string>
+    <string name="text_title_sale_not_purchase2">Rajoitetun ajan tarjous &#127881;&#127881;&#127881;</string>
+    <string name="text_title_sale_not_purchase3">Ainutlaatuinen alennus sinulle &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase4">Älä missaa &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase5">Uusia alennuksia lisätty &#127881;&#127881;&#127881;</string>
+    <string name="txt_auto_generating">Animoi automaattisesti luovaa tekstiä</string>
+    <string name="txt_skip_generating">Ohita luominen</string>
+    <string name="txt_weekly">Viikoittain</string>
+    <string name="txt_start_weekly_auto">Automaattinen – uusittava tilaus veloitetaan viikoittain</string>
+    <string name="txt_premium_des_image">AI Luo realistisia kuvia kuvauksesta</string>
+    <string formatted="false" name="text_sale_off">Ainutlaatuinen %s alennus juuri sinulle</string>
+    <string name="txt_special_gift">Erityinen lahja sinulle</string>
+    <string name="txt_discount">Alennus</string>
+    <string name="txt_get_now">Hanki nyt</string>
+    <string name="txt_you_are_vip">Olet VIP</string>
+    <string name="txt_unlock_chat_ai">Mainosten katsominen keskustelua varten</string>
+    <string name="text_no_ads_toShow">Ei näytettäviä mainoksia, yritä myöhään!</string>
+    <string name="txt_next">Seuraava</string>
+    <string name="onetime_payment">Kertamaksu</string>
+    <string name="get_premium_now">Hanki Premium nyt</string>
+    <string name="sorry_you_ve_used_up_today">Anteeksi, olet käyttänyt tämän päivän ilmaiset keskustelut loppuun. Nähdään huomenna tai käytä premium–versiotamme</string>
+    <string name="weird_description"><b>Weird:</b>Yksinkertainen vastaus, oikea ongelma</string>
+    <string name="smart_description"><b>Smart:</b>Älykäs vastaus, oikea ongelma</string>
+    <string name="brainiac_description"><b>Brainiac:</b>Älykäs vastaus, laajennettu ongelmanratkaisu</string>
+    <string name="content_free_chat_1">Olemme valmiita auttamaan sinua joka päivä &#129299; Muista tulla takaisin ja lunastaa 3 ilmaista kysymystäsi!</string>
+    <string name="content_free_chat_2">Kerää 3 ilmaista kysymystä päivittäin saadaksesi tarvitsemasi vastaukset!&#128526;</string>
+    <string name="content_free_chat_3">Älä unohda käyttää 3 ilmaista kysymystä joka päivä kysyäksesi minulta!&#129299;</string>
+    <string name="content_free_chat_4">Tarjoamme 3 ilmaista päivittäistä kysymystä auttamaan sinua! Muista tulla takaisin! &#128526;</string>
+    <string name="title_notify_daily_1">Kuinka voin auttaa sinua tänään?</string>
+    <string name="title_notify_daily_3">Oletko jumissa työssäsi?</string>
+    <string name="title_notify_daily_4">Tunnetko olosi yksinäiseksi?</string>
+    <string name="title_notify_daily_5">Onko vaikeuksia tehdä läksyjä, kirjoittaa sisältöä?</string>
+    <string name="title_content_daily_1">Kysy vain mitä haluat &#129299;</string>
+    <string name="title_content_daily_2">Muista, että ChatAI on aina täällä vastaamassa kysymyksiisi! &#129299;</string>
+    <string name="title_content_daily_3">Anna ChatAI:n auttaa sinua!&#128522;</string>
+    <string name="title_content_daily_4">ChatAI on täällä sinua varten &#128526;</string>
+    <string name="title_content_daily_5">Kysy minulta mitä tahansa! &#128526;</string>
+    <string name="title_content_daily_6">Anna minun analysoida osakemarkkinoita tänään sinulle!&#128200;</string>
+    <string name="txt_continue">Jatkaa</string>
+
+    <string name="choose_the_topics">Valitse aiheet, joista olet kiinnostunut:</string>
+    <string name="txt_history">Historia</string>
+    <string name="see_all">Näytä kaikki</string>
+    <string name="hello_blank_fragment">Hei tyhjä fragmentti</string>
+    <string name="delete_x">Poista (%s)</string>
+    <string name="you_re_a_premium">Olet Premium</string>
+    <string name="enjoy_the_premium">Nauti premium \nversiosta kaikilla ominaisuuksilla</string>
+    <string name="toast_copy_text">Teksti kopioitu leikepöydälle</string>
+    <string name="you_don_t_have">Sinulla ei ole vielä keskustelua,<font color='#00B085'>Keskustele nyt!</font></string>
+    <string name="earn_2_free_messages">ansaitaksesi 2 ilmaista viestiä</string>
+    <string name="you_can_choose">Voit valita:</string>
+    <string name="watch_ads">Katso mainoksia</string>
+    <string name="txt_exception_date">Tapahtui virhe. Tarkista, onko automaattinen päivämäärä ja aika käytössä puhelimessasi.</string>
+    <string name="personalize_your_home_screen">Mukauta aloitusnäyttöäsi yhdellä napautuksella.</string>
+    <string name="add_to_home_screen">+ Lisää aloitusnäyttöön</string>
+    <string name="ask_ai_chat_anything">Kysy<b>AI Chatilta</b>mitä tahansa</string>
+    <string name="add_widget">lisää widget</string>
+    <string name="add_a_new_widget">lisää uusi widget</string>
+    <string name="widget">Widget</string>
+    <string name="convenient_with_bubble_chat">Kätevä kuplachatin kanssa</string>
+    <string name="text_policy">Tietosuojakäytäntö</string>
+    <string name="text_policy_terms">Ehdot</string>
+    <string name="text_des_policy">olen samaa mieltä</string>
+    <string name="text_des_guide_widget">Aseta manuaalisesti aloitusnäyttöön koskettamalla pitkään.</string>
+    <string name="_4x1_widget">4x1 widget</string>
+    <string name="_4x2_widget">4x2 widget</string>
+    <string name="gpt_4_access"><b><font color='#4AE89F'>GPT–4</font></b>pääsy</string>
+    <string name="txt_premium_unlimited"><b><font color='#4AE89F'>Rajaton</font></b>kysymyksiä ja vastauksia</string>
+    <string name="txt_premium_ads"><b><font color='#4AE89F'>Mainokset ilman</font></b>–kokemusta</string>
+    <string name="txt_premium_convenient"><b><font color='#4AE89F'>Kätevä</font></b>kuplachatin avulla</string>
+    <string name="enter_your_prompt">Anna kehote</string>
+    <string name="get_inspired"><u>Inspiroidu</u></string>
+    <string name="choose_an_art_style">Valitse taidetyyli</string>
+    <string name="free_tries_left_s">Ilmaisia ​​yrityksiä jäljellä: %s</string>
+    <string name="left_s">Vasen: %s</string>
+    <string name="txt_painting">Maalaus</string>
+    <string name="txt_magical">Maaginen</string>
+    <string name="txt_steampunk">Steampunk</string>
+    <string name="txt_oil_painting">Öljymaalaus</string>
+    <string name="txt_anime">Anime</string>
+    <string name="txt_digital_art">Digitaalinen taide</string>
+    <string name="txt_cyberpunk">Kyberpunk</string>
+    <string name="txt_3d">3D</string>
+    <string name="txt_ghibli">Ghibli</string>
+    <string name="txt_game_art">Pelin art</string>
+    <string name="txt_vaporwave">Höyryn aallot</string>
+    <string name="txt_comic">Koominen</string>
+    <string name="txt_pixel_art">Pixel Art</string>
+    <string name="txt_synthwave">Synthwave</string>
+    <string name="txt_watercolor">Akvarelli</string>
+    <string name="txt_picasso">Picasso</string>
+    <string name="watermark">Vesileima</string>
+    <string name="regenerate">Luo uudelleen</string>
+    <string name="prompt">Kehote</string>
+    <string name="style">Tyyli</string>
+    <string name="not_acceptable">Ei hyväksyttävä</string>
+    <string name="des_fail_art">Valitettavasti tapahtui virhe tai tämä kehote vioitti turvasuodattimen. Yritä luoda vain työturvallista sisältöä.</string>
+    <string name="i_got_it">SAIN SEN</string>
+    <string name="content_doesn_t_contain">Sisältö ei sisällä arkaluonteisia sanoja.</string>
+    <string name="more">Lisää</string>
+    <string name="midj_art">Midj Art</string>
+    <string name="done">Tehty</string>
+    <string name="choose_style_art">Valitse Tyylitaide</string>
+    <string name="applying_style">Tyyliä sovelletaan…</string>
+    <string name="adjusting_colors">Säädellään värejä…</string>
+    <string name="enhancing_quality">Parantaa laatua…</string>
+    <string name="creating_artwork">Luodaan taideteoksia…</string>
+    <string name="no_style">Ei tyyliä</string>
+    <string name="s_by_s" formatted="false">%s tyylillä %s</string>
+    <string name="grantfailed">Lupaa ei myönnetty</string>
+    <string name="downloaded">Ladattu!</string>
+    <string name="error">Virhe!</string>
+    <string name="txt_premium_create"><b><font color='#4AE89F'>Luo</font></b> upeaa taidetta tekoälyllä</string>
+    <string name="txt_premium_faster"><b><font color='#4AE89F'>Nopeampi</font></b> kuvankäsittely</string>
+    <string name="txt_premium_no"><b><font color='#4AE89F'>Ei</font></b> vesileimoja!</string>
+    <string name="txt_premium_quality"><b><font color='#4AE89F'>Paras</font></b> kuvanlaatu</string>
+    <string name="generate_art_with_midjourney_pro"><b>10 Luo taidetta</b>\n Midjourney Pron avulla</string>
+    <string name="purchase">Ostaa</string>
+    <string name="sharing_image">Kuvan jakaminen</string>
+    <string name="inspired_1">Maa ihmisen sukupuuton jälkeen, uusi alku, luonto ottaa planeetan takaisin, harmonia, rauha, maa tasapainossa</string>
+    <string name="inspired_2">Noirin etsivä mr. Kumi ankka. Savua, sadetta, viikset ja rohkeutta. Hän osaa ratkaista minkä tahansa pulman. Mutta ei voi voittaa hänen sisäisiä demonejaan. Ilmeikäs tumma matta gouche–maalaus</string>
+    <string name="inspired_3">Muotokuva aasialaisesta vanhasta soturipäälliköstä, heimopantteri meikki, sininen punaisella, sivuprofiili, katse pois, vakavat silmät, 50 mm muotokuva, kova reunavalokuvaus</string>
+    <string name="inspired_4">Söpö maaginen lentävä koira, Disneyn konseptitaiteilijoiden piirtämä fantasiataide, kultainen väri, korkea laatu, erittäin yksityiskohtainen, tyylikäs, terävä tarkennus, konseptitaide, hahmokonseptit, digitaalinen maalaus, mysteeri, seikkailu</string>
+    <string name="inspired_5">Realistinen arkkitehtoninen renderöinti kapselitalon jättimäisissä betonilohkoissa sammalilla ja korkeilla pyöristetyillä ikkunoilla ja valoilla sisätiloissa, ihmisvaa\&apos;at</string>
+    <string name="image_type_object_any_details_ne_g_a_beautiful_magical_kingdom">Kuvan tyyppi, kohde, kaikki yksityiskohdat \nEsim. Kaunis maaginen valtakunta</string>
+    <string name="str_title_start_chat">Hei, Kuinka voin auttaa sinua?</string>
+    <string name="str_trending">Trendaavat</string>
+    <string name="str_ask_a_question">Kysy kysymys…</string>
+    <string name="str_bus">Bussi</string>
+    <string name="str_music">Musiikki</string>
+    <string name="str_mathematics">Matematiikka</string>
+    <string name="str_history">Historia</string>
+    <string name="str_content">Sisältö</string>
+    <string name="str_email_topic">Sähköposti</string>
+    <string name="str_cooking_techniques">Ruoanlaittotekniikat</string>
+    <string name="str_cooking_tool">Ruoanlaittovälineet</string>
+    <string name="str_cooking_ingredients">Keittoainekset</string>
+    <string name="str_cooking_styles">Ruoanlaittotyylit</string>
+    <string name="str_cooking_recipes">Ruoanlaitto Reseptit</string>
+    <string name="str_cooking_environment">Ruoanlaitto ympäristön hyväksi</string>
+    <string name="str_science">Tiede</string>
+    <string name="str_essays">Esseitä</string>
+    <string name="str_physics">Fysiikka</string>
+    <string name="str_travel_experiences">Matkakokemuksia</string>
+    <string name="str_travel_skill">Matkustustaidot</string>
+    <string name="str_travel_trend">Matkailutrendit</string>
+    <string name="str_travel_impact">Matkustusvaikutus</string>
+    <string name="str_travel_tip">Matkasuositukset</string>
+    <string name="str_travel_des">Matkakohde</string>
+    <string name="str_company_bio">Yrityksen Bio</string>
+    <string name="str_company_slogan">Iskulause</string>
+    <string name="str_company_name">Nimigeneraattori</string>
+    <string name="str_business_trend">Liiketoiminnan trendit</string>
+    <string name="str_business_innov">Liiketoiminnan innovaatiot</string>
+    <string name="str_business_strategy">Yritysstrategia</string>
+    <string name="str_bus_detail">Hallitse tehtäväsi ensiluokkaisten esseenkirjoituspalveluidemme avulla.</string>
+    <string name="str_music_detail">Kirjoita melodia, laulu. Opi äänestä, rytmi, harmonia ja sävellys.</string>
+    <string name="str_science_detail">Luo jännittävää tietoa biologiasta, kemiasta, tähtitiedestä,…</string>
+    <string name="str_mathematics_detail">Saat helposti vastaukset kaikkiin matematiikan kysymyksiin</string>
+    <string name="str_history_detail">Tutustu menneisyyden tapahtumiin ja merkittäviin virstanpylväisiin</string>
+    <string name="str_content_detail">Paranna ja yksinkertaista sisältöä parantaaksesi luettavuutta.</string>
+    <string name="str_email_topic_detail">Kirjoita hyvin suunniteltu sähköposti, joka on harkiten jäsennelty ja järjestetty.</string>
+    <string name="str_cooking_techniques_detail">Opi hallitsemaan ruoanlaiton perustaidot</string>
+    <string name="str_cooking_tool_detail">Erilaisten työkalujen käyttö keittiössä</string>
+    <string name="str_cooking_ingredients_detail">Eri ainesosien tutkiminen ruoanlaitossa</string>
+    <string name="str_travel_des_detail">Tutustu maailman ihmeisiin</string>
+    <string name="str_popular_des_detail">Päivittäiset reseptisuositukset</string>
+    <string name="str_company_bio_detail">Yrityksesi tarina: Kasvu, innovaatio, menestys.</string>
+    <string name="str_company_slogan_detail">Suunnittele yrityksellesi ikimuistoinen iskulause</string>
+    <string name="str_essays_detail">Kirjoita yli 200 sanan essee ilman vaivaa</string>
+    <string name="str_physics_detail">Tutustu universumin mysteeriin ChatGPT:n avulla</string>
+    <string name="str_cooking_styles_detail">Kokeillaan erilaisia ​​ruoanlaittotyylejä</string>
+    <string name="str_cooking_recipes_detail">Suunnittele ateriat helposti</string>
+    <string name="str_cooking_environment_detail">Opi tekemään ruokaa ympäristöystävällisemmällä tavalla</string>
+    <string name="str_travel_experiences_detail">Kokemusten kuunteleminen voi rikastuttaa näkökulmaasi matkustamiseen</string>
+    <string name="str_travel_skill_detail">Taitojen kehittäminen, jotka voivat parantaa matkakokemustasi</string>
+    <string name="str_travel_trend_detail">Selvitä uusia suuntauksia matkustamisessa ja ota kiinni</string>
+    <string name="str_travel_impact_detail">Vaikutuksen tunteminen matkoilla</string>
+    <string name="str_travel_tip_detail">Saat käytännön neuvoja älykkäämpään, turvallisempaan ja halvempaan matkustamiseen.</string>
+    <string name="str_company_name_detail">Luo vangitseva nimi brändillesi tai tuotteellesi.</string>
+    <string name="str_business_trend_detail">Tutustu uusiin trendeihin ja sopeudu nopeasti</string>
+    <string name="str_business_innov_detail">Luo uusia ideoita tuotteiden, palvelujen ja suorituskyvyn parantamiseksi</string>
+    <string name="str_business_strategy_detail">Arvioi liiketoimintaasi ja anna neuvoja tavoitteista, suunnitelmista ja toimista</string>
+    <string name="str_music_ques">Kuinka voimme auttaa sinua musiikin kanssa?</string>
+    <string name="str_mathematics_ques">Mitä matemaattisia tehtäviä haluat ratkaista?</string>
+    <string name="str_history_ques">Mitä tapahtumia tai aikajanaa haluat tietää?</string>
+    <string name="str_science_ques">Mitä tapahtumia tai aikajanaa haluat tietää?</string>
+    <string name="str_essays_ques">Mikä on esseen aihe?</string>
+    <string name="str_physics_ques">Mitä haluat tietää fysiikasta?</string>
+    <string name="str_cooking_techniques_ques">Mihin tekniikoihin keskityt?</string>
+    <string name="str_cooking_tool_ques">Mitä ruoanlaittovälineitä käytät?</string>
+    <string name="str_cooking_ingredients_ques">Minkä ainesten kanssa kamppailet?</string>
+    <string name="str_cooking_styles_ques">Mitä ruoanlaittotyylejä etsit?</string>
+    <string name="str_cooking_recipes_ques">Mitä reseptiä haluat tutkia?</string>
+    <string name="str_cooking_environment_ques">Mitä haluat tietää kestävästä ruoanlaitosta?</string>
+    <string name="str_travel_des_ques">Maa, jossa haluat vierailla?</string>
+    <string name="str_travel_experiences_ques">Mitä virheitä, onnistumisia, haasteita matkustamisessa haluat tietää?</string>
+    <string name="str_travel_skill_ques">Mikä on sinun huolenaiheesi matkustustaitojen parantamisessa?</string>
+    <string name="str_travel_trend_ques">Oletko kiinnostunut tietystä trendistä?</string>
+    <string name="str_travel_impact_ques">Mitä haluat tietää ympäristöystävällisestä matkustamisesta?</string>
+    <string name="str_travel_tip_ques">Mitä käteviä vinkkejä haluat tietää?</string>
+    <string name="str_company_name_ques">Mitä brändisi/tuotteesi tekee?</string>
+    <string name="str_business_trend_ques">Mihin tiettyyn kategoriaan haluat keskittyä?</string>
+    <string name="str_business_innov_ques">Mitä innovaatiokohdetta haluat saavuttaa?</string>
+    <string name="str_business_strategy_ques">Miten voimme auttaa yritystäsi?</string>
+    <string name="str_company_bio_ques">Mikä on yrityksesi nimi ja erikoisala?</string>
+    <string name="str_company_slogan_ques">Kerro lyhyt, kiehtova anekdootti yrityksen alkuperästä.</string>
+    <string name="str_premium_txt"><![CDATA[Kokeile<b> %s </b>Premiumia upeilla tarjouksilla.\n<b>Hanki nyt.</b>]]></string>
+    <string name="txt_continue_to_chat">Jatka Chatiin</string>
+    <string name="str_copy">Kopio</string>
+    <string name="str_regenerate">Luo uudelleen</string>
+    <string name="str_fashion_ques">Haluatko, että annamme sinulle ideoita tästä trendistä?</string>
+    <string name="str_relax_ques">Suositeltava sarja katsottavaksi Netflixissä tänä kesänä.</string>
+    <string name="str_tech_ques">Tekoälyllä on nyt merkittäviä vaikutuksia maailmaan. Haluatko löytää lisää?</string>
+
+    <string-array name="topic_title">
+        <item>Kaikki</item>
+        <item>Liiketoiminnan asiantuntija</item>
+        <item>Sisällöntekijä</item>
+        <item>Lifestyle Buddy</item>
+        <item>Opi ChatAI:lla</item>
+        <item>Ruoanlaittomestari</item>
+        <item>Matka</item>
+    </string-array>
+
+    <string-array name="select_input_fashion">
+        <item>Hopeanvärinen käsilaukku</item>
+        <item>Sadesaappaat</item>
+        <item>Newjeans-muoti</item>
+        <item>Univormu</item>
+        <item>Sydänkaulakoru</item>
+        <item>Himecut hiukset</item>
+    </string-array>
+
+    <string-array name="select_input_relax">
+        <item>Ginny &amp; Georgia</item>
+        <item>Ulkopankit</item>
+        <item>Heartstopper</item>
+        <item>Stranger Things</item>
+        <item>Vitun maailman loppu</item>
+        <item>Kuningattaren Gambit</item>
+        <item>K- draama</item>
+    </string-array>
+
+    <string-array name="select_input_tech">
+        <item>AI Art</item>
+        <item>AI Chat</item>
+        <item>AI-kuvageneraattori</item>
+        <item>AI-laulu</item>
+        <item>AI-botit</item>
+        <item>AI-video</item>
+    </string-array>
+
+    <string-array name="arr_science">
+        <item>Biologia</item>
+        <item>Kemia</item>
+        <item>Astronomia</item>
+    </string-array>
+
+    <string-array name="arr_cooking_techniques">
+        <item>Paahtaminen</item>
+        <item>Hauduttaminen</item>
+        <item>Keetä</item>
+        <item>Lasituksenpoisto</item>
+        <item>Paistaminen</item>
+    </string-array>
+
+    <string-array name="arr_cooking_tool">
+        <item>veitset</item>
+        <item>Ruukut</item>
+        <item>Pannut</item>
+        <item>sekoittimet</item>
+        <item>Blenderit</item>
+        <item>Lämpömittarit</item>
+        <item>vaa\'at</item>
+    </string-array>
+
+    <string-array name="arr_cooking_ingredients">
+        <item>mausteet</item>
+        <item>yrtit</item>
+        <item>öljyt</item>
+        <item>etikka</item>
+        <item>jyvät</item>
+        <item>pavut</item>
+        <item>pähkinät</item>
+        <item>siemenet</item>
+        <item>hedelmät</item>
+        <item>vihanneksia</item>
+    </string-array>
+
+    <string-array name="arr_cooking_style">
+        <item>leivonta</item>
+        <item>grillaus</item>
+        <item>paistaminen</item>
+        <item>höyrytys</item>
+        <item>salmetsästys</item>
+        <item>pavut</item>
+        <item>paistele</item>
+        <item>ja mikroaaltouunissa</item>
+    </string-array>
+
+    <string-array name="arr_travle_des">
+        <item>Vietnam</item>
+        <item>Japani</item>
+        <item>Yhdysvallat</item>
+        <item>Iso-Britannia</item>
+        <item>Ranska</item>
+        <item>Saksa</item>
+        <item>norja</item>
+        <item>Etelä-Korea</item>
+    </string-array>
+
+    <string-array name="arr_business_innovation">
+        <item>Markkinointi</item>
+        <item>Logistiikka</item>
+        <item>Henkilöjohtaminen</item>
+        <item>Rahoitus</item>
+        <item>muut</item>
+    </string-array>
+
+    <string-array name="arr_business_trends">
+        <item>Teknologia</item>
+        <item>Logistiikka</item>
+        <item>Markkinointi</item>
+        <item>Virta</item>
+        <item>Maatalous</item>
+        <item>Kaupallinen</item>
+        <item>Sähköinen kaupankäynti</item>
+        <item>muut</item>
+    </string-array>
+
+    <string-array name="arr_art_page">
+        <item>Luo taide</item>
+        <item>Taustakuvat</item>
+    </string-array>
+    <string name="txt_random">satunnainen</string>
+
+    <string name="str_create_photo">Luo valokuva</string>
+    <string name="str_square">Neliö</string>
+    <string name="str_original">Alkuperäinen</string>
+    <string name="str_wallpaper">Taustakuva</string>
+    <string name="str_set_wallpaper">Aseta taustakuva</string>
+    <string name="str_popular">Suosittu</string>
+    <string name="str_see_more">Katso lisää</string>
+    <string name="str_see_more_1">…Katso lisää</string>
+    <string name="str_fashion_title">Muoti</string>
+    <string name="str_relax_title">Rentoutua</string>
+    <string name="str_techlogy_title">Tekniikka</string>
+    <string name="str_title_exit_app">Oletko varma, että haluat poistua?</string>
+
+    <string name="str_choose_action">Valitse toiminto:</string>
+    <string name="str_open_camera">Avaa kamera</string>
+    <string name="str_select_photo">Siirry Kuviin</string>
+    <string name="str_recognize">Tunnista</string>
+    <string name="str_recognizing">Tunnistaa...</string>
+    <string name="str_txt_recognize">Tekstin tunnistus</string>
+    <string name="str_txt_choose_image">Valitse kuvat</string>
+    <string name="str_txt_apply_text">Käytä tekstiä</string>
+    <string name="str_summary">Yhteenveto</string>
+    <string name="str_summary_sub_title">Tee yhteenveto tiedostojen teksteistä ja vastaa kysymyksiin</string>
+    <string name="str_summary_upload_files">Lähetä tiedostot</string>
+    <string name="str_summary_upload_image">Lähetä valokuvia</string>
+    <string name="str_summary_upload_des1">Ilmoittaa tärkeimmät tosiasiat tai ajatukset jostakin tai jostakin henkilöstä ytimekkäässä ja selkeässä muodossa</string>
+    <string name="str_summary_upload_des2">Tarjoaa selkeän selvityksen tärkeistä seikoista.</string>
+    <string name="str_summary_upload_des3">Esittää muutamalla sanalla tärkeimmät ideat tai tosiasiat raportissa, keskustelussa jne...</string>
+    <string name="str_error_summary">Jokin meni pieleen!</string>
+    <string name="str_error_summary_des">Voit lähettää enintään 1MB. Päivitä premium-versioon ja käsittele suuria tiedostoja.</string>
+    <string name="str_txt_unlock_premium">Avaa Premiumin lukitus</string>
+    <string name="str_sub_unlock_premium">GPT4, ei rajoituksia, ei mainoksia</string>
+    <string name="str_no_image">Ei kuvaa</string>
+    <string name="str_premium_des1">Poista Chat GPT-4</string>
+    <string name="str_premium_des2">Rajaton kysymys &amp; Vastaukset</string>
+    <string name="str_premium_des3">Eri valittavissa oleva aihe</string>
+    <string name="str_premium_des4">Lähetä tiedosto &amp; kysy mitä tahansa</string>
+    <string name="str_premium_des5">Rajaton sukupolven tekoälytaide</string>
+    <string name="str_best_choose">Paras valinta</string>
+    <string name="str_file_summary">Tiedoston yhteenveto:</string>
+    <string name="str_summary_text">Yhteenvetoteksti</string>
+    <string name="str_your_chats">Omat keskustelut</string>
+    <string name="str_out_of_times_summary">Voi ei, tämän päivän yhteenvedot ovat loppuneet. Jatka sen käyttöä %d yhteenvedolla huomenna! Jatka rajoittamattomien muiden sovelluksen ominaisuuksien käyttöä.</string>
+    <string name="str_intro_summary">Voit lähettää vain pdf-tiedostoja, jotka ovat kooltaan alle %dMB.</string>
+    <string name="str_uploading">Ladataan...</string>
+    <string name="str_upload_s_photo">Lähetä %d valokuvaa</string>
+    <string name="str_upload_photo_msg">Voit valita vain 3 kuvaa yhdelle lataukselle.</string>
+    <string name="txt_continue_to_summary">Jatka yhteenvetoon</string>
+    <string name="txt_premium_topic"><b><font color='#4AE89F'>Eri</font></b> valittavissa oleva aihe</string>
+    <string name="txt_premium_upload_file"><b><font color='#4AE89F'>Lähetä tiedosto</font></b> &amp; kysy mitä tahansa</string>
+    <string name="txt_premium_generate_art"><b><font color='#4AE89F'>Avaa</font></b> sukupolven AI Art</string>
+    <string name="str_summary_now">Yhteenveto nyt!</string>
+
+    <string name="str_i_got_it">sain sen</string>
+    <string name="str_mes_loading_summary_file">Tekoäly oppii tiedostostasi, ja se voi kestää jonkin aikaa asiakirjan koosta riippuen.</string>
+    <string name="str_go_to_chat">Mene chattiin</string>
+    <string name="str_exists_file_mes">Tiedosto on jo olemassa, palaa keskusteluun.</string>
+
+    <string-array name="arr_strategy_type">
+        <item>Sisältömarkkinointi</item>
+        <item>IMC (Integrated Marketing Communications)</item>
+        <item>Sähköisen kaupan markkinointi</item>
+        <item>Sosiaalisen median markkinointi</item>
+    </string-array>
+
+    <string-array name="arr_interviewer_detail">
+        <item>Tausta &amp; Kokemus</item>
+        <item>Johtajuus</item>
+        <item>Uratavoitteet</item>
+        <item>Tekniset taidot</item>
+        <item>Kriittinen ajattelu</item>
+        <item>ajattelutapa</item>
+    </string-array>
+
+    <string-array name="arr_key_segment">
+        <item>Vahvuudet</item>
+        <item>Heikkoudet</item>
+        <item>Myyntitaktiikka</item>
+        <item>Markkinointistrategiat</item>
+        <item>Äänen osuus</item>
+        <item>Tulot</item>
+    </string-array>
+
+    <string-array name="arr_tone_voice">
+        <item>Muodollinen</item>
+        <item>Optimistinen</item>
+        <item>Ystävällinen</item>
+        <item>Kannustavaa</item>
+        <item>Vakuuttava</item>
+        <item>Osuuskunta</item>
+    </string-array>
+
+    <string-array name="arr_genre_song">
+        <item>Indie</item>
+        <item>RnB</item>
+        <item>Pop</item>
+        <item>Maa</item>
+        <item>Rock</item>
+        <item>Klassinen</item>
+        <item>Metalli</item>
+        <item>Jazz</item>
+        <item>Balladit</item>
+        <item>Sininen</item>
+    </string-array>
+
+    <string-array name="arr_mood_song">
+        <item>Hyvää</item>
+        <item>Energinen</item>
+        <item>Masennus</item>
+        <item>Huolestunut/Surullinen</item>
+        <item>Pehmeä</item>
+        <item>Kova</item>
+        <item>Romanttinen</item>
+        <item>Rauhallinen</item>
+    </string-array>
+
+    <string-array name="arr_media_plalform">
+        <item>LinkedIn</item>
+        <item>Instagram</item>
+        <item>Facebook</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="arr_media_goal">
+        <item>Sitoutuminen</item>
+        <item>Näyttökerrat</item>
+    </string-array>
+    <string-array name="arr_gender">
+        <item>Mies</item>
+        <item>Nainen</item>
+        <item>Muut</item>
+    </string-array>
+    <string-array name="arr_outfit_designer_style">
+        <item>Retro</item>
+        <item>gootti</item>
+        <item>Emo</item>
+        <item>Tekniset vaatteet</item>
+        <item>Hypebeast</item>
+        <item>Vintage</item>
+        <item>Klassinen</item>
+        <item>Vanhat rahat</item>
+        <item>Katuasut</item>
+        <item>Kawaii</item>
+        <item>Minimalistinen</item>
+        <item>Rock</item>
+    </string-array>
+
+    <string-array name="arr_information_horoscope">
+        <item>Rakkaus</item>
+        <item>Ura</item>
+        <item>Ominaisuudet</item>
+        <item>Vastaava horoskooppi</item>
+    </string-array>
+
+    <string-array name="arr_information_travel">
+        <item>Ruoka</item>
+        <item>Kansalliset juhlapäivät</item>
+        <item>Kulttuuri</item>
+        <item>Skenaari</item>
+    </string-array>
+
+    <string-array name="language_programing">
+        <item>SQL</item>
+        <item>Java</item>
+        <item>Java-skripti</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>Python</item>
+        <item>PHP</item>
+        <item>Ruby</item>
+        <item>Muut</item>
+    </string-array>
+
+    <string-array name="arr_techniques_cooking">
+        <item>Paahtaminen</item>
+        <item>Hauduttaminen</item>
+        <item>Keetä</item>
+        <item>Lasinpoisto</item>
+        <item>Paistaminen</item>
+        <item>muut</item>
+    </string-array>
+
+    <string name="str_marketing_plan">Markkinointisuunnitelma</string>
+    <string name="str_marketing_plan_detail">Kamppailetko tuotteesi markkinoinnin kanssa? Anna ChatGPT:n auttaa sinua</string>
+    <string name="str_marketing_plan_ques">Olet liiketoiminnan asiantuntija. Ehdota minulle markkinointisuunnitelmaa kohteelle %s. Tuote on %s. Kampanjan tavoitteena on %s. Strategiatyyppi, jonka haluan toteuttaa, on %s–kampanja.</string>
+    <string name="str_interviewer_support">Haastattelijatuki</string>
+    <string name="str_interviewer_support_detail">Hanki haastattelukysymyksiä sekunnissa ChatGPT:n avulla</string>
+    <string name="str_interviewer_support_ques">Olet henkilöstöhallinnon rekrytoija. Ehdota minulle 10 kysymystä %s:lle. Vaatimukset sisältävät %s.</string>
+    <string name="str_competitors_research">Kilpailijoiden tutkimus</string>
+    <string name="str_competitors_research_detail">Anna ChatGPT:n tehdä tutkimus kilpailijoistasi</string>
+    <string name="str_competitors_research_ques">Olet markkinatutkija. Tee kilpailijan tutkimus aiheesta %s teollisuudessa %s avaintuotteella/palvelulla %s. Tutkimuksen tulee sisältää %s.</string>
+    <string name="str_customers_insights_research">Customers Insights Research</string>
+    <string name="str_customers_insights_research_detail">Haluatko ymmärtää asiakastasi enemmän?</string>
+    <string name="str_customers_insights_research_ques">Olet ammattimainen markkinoinnin asiantuntija. Tee asiakastietotutkimus %s:n yleisöstä. Tutkimukseen tulisi osallistua ihmisiä, joilla on seuraavat ominaisuudet: %s, %s, %s.</string>
+    <string name="str_write_paragraph">Kirjoittaa kappale</string>
+    <string name="str_write_paragraph_detail">ChatGPT voi kirjoittaa erinomaisen kappaleen hetkessä</string>
+    <string name="str_write_paragraph_ques">Olet ammattikirjailija. Kirjoita minulle %s kappale %s äänellä. Kappaleen tulee olla %s.</string>
+    <string name="str_write_song_lyrics">Kirjoita laulun sanat</string>
+    <string name="str_write_song_lyrics_detail">Ole ammattimainen laulusäveltäjä ChatGPT:n avulla</string>
+    <string name="str_write_song_lyrics_ques">Olet ammattimainen musiikin säveltäjä. Kirjoita minulle kappale, jonka aihe on %s. Kappaleen tulee olla %s musiikkia %s tunnelmalla.</string>
+    <string name="str_write_social_media_post">Kirjoita sosiaalisessa mediassa postaus</string>
+    <string name="str_str_write_social_media_post_detail">Älä käytä vaivaa sosiaalisten viestien kirjoittamiseen ChatGPT:n avulla</string>
+    <string name="str_str_write_social_media_post_ques">Olet ammattimainen sosiaalisen median markkinoija. Kirjoita minulle mukaansatempaava viesti osoitteeseen %s, jonka sisältö on %s. Viestin tavoitteena on %s %s äänellä.</string>
+    <string name="str_write_email">Kirjoittaa sähköposti</string>
+    <string name="str_write_email_detail">Anna ChatGPT:n kirjoittaa sähköpostia puolestasi</string>
+    <string name="str_write_email_ques">Kirjoita minulle sähköposti, jonka sisältö on %s. Äänen sävyn tulee olla %s.</string>
+    <string name="str_outfit_designer">Asusuunnittelija</string>
+    <string name="str_outfit_designer_detail">Etkö tiedä mitä laittaa päälle tänään? Anna ChatGPT:n ehdottaa #ootd</string>
+    <string name="str_outfit_designer_ques">Olet stylisti ja asusuunnittelija. Ehdota minulle asua %s:lle, jonka tyyli on %s.</string>
+    <string name="str_write_pickup_line">Kirjoita noutolinja</string>
+    <string name="str_write_pickup_line_detail">Hanki hauskoja poimintalinjoja tehdäksesi vaikutuksen kaveriisi</string>
+    <string name="str_write_pickup_line_ques">Kirjoita minulle poimintalinja %s %s äänellä.</string>
+    <string name="str_write_joke">Kirjoita vitsi</string>
+    <string name="str_write_joke_detail">Kaikilla ei ole hauskoja tarinoita kerrottavana. Anna ChatGPT:n tehdä se</string>
+    <string name="str_write_joke_ques">Kirjoita minulle vitsi kielellä %s kontekstissa %s.</string>
+    <string name="str_horoscope_reader">Horoskoopin lukija</string>
+    <string name="str_horoscope_reader_detail">Tekniikka on mysteerin ystävä. Etkö usko?</string>
+    <string name="str_horoscope_reader_ques">Olet astrologi ja horoskoopin lukija. Analysoi %s syntyneen henkilön horoskooppi. Tietojen tulee sisältää %s.</string>
+    <string name="str_solve_math_problem">Ratkaise matemaattinen tehtävä</string>
+    <string name="str_solve_math_problem_detail">Saat helposti vastaukset kaikkiin matematiikan kysymyksiin</string>
+    <string name="str_solve_math_problem_ques">Olet matematiikan tiedemies. Ratkaise minulle seuraava ongelma: %s.</string>
+    <string name="str_history_events">Historian tapahtumia</string>
+    <string name="str_history_events_detail">Tutustu menneisyyden tapahtumiin ja merkittäviin virstanpylväisiin</string>
+    <string name="str_history_events_ques">Kerro minulle historialliset tapahtumat %s, %s.</string>
+    <string name="str_code_supporter">Koodituki</string>
+    <string name="str_code_supporter_detail">Kamppailetko koodin kanssa ja haluatko oppia lisää? ChatGPT voi tukea sinua</string>
+    <string name="str_code_supporter_ques">Olet erinomainen koodaaja. Tue minua %s:n koodilla %s.</string>
+    <string name="str_latino_dishes">Latino–ruoat</string>
+    <string name="str_latino_dishes_detail">Opi valmistamaan latinoruokia ChatGPT:n avulla</string>
+    <string name="str_latino_dishes_ques">Olet 3–tähden Michelin–kokki. Suosittele latinoruokaa. Ruokalaji on %s %s–tekniikalla. Ainesosien tulee sisältää %s. Ehdota minulle materiaalin määrää %s henkilölle.</string>
+    <string name="str_african_dishes">Afrikkalaisia ​​ruokia</string>
+    <string name="str_african_dishes_detail">Opi valmistamaan afrikkalaisia ​​ruokia ChatGPT:n avulla</string>
+    <string name="str_african_dishes_ques">Olet 3–tähden Michelin–kokki. Ehdota minulle afrikkalaisia ​​ruokia. Ruokalaji on %s %s–tekniikalla. Ainesosien tulee sisältää %s. Ehdota minulle materiaalin määrää %s henkilölle.</string>
+    <string name="str_asian_dishes">Aasialaisia ​​ruokia</string>
+    <string name="str_asian_dishes_detail">Opi valmistamaan aasialaisia ​​ruokia ChatGPT:n avulla</string>
+    <string name="str_asian_dishes_ques">Olet 3–tähden Michelin–kokki. Ehdota minulle aasialaisia ​​ruokia. Ruokalaji on %s %s–tekniikalla. Ainesosien tulee sisältää %s. Ehdota minulle materiaalin määrää %s henkilölle.</string>
+    <string name="str_western_dishes">Länsimaisia ​​ruokia</string>
+    <string name="str_western_dishes_detail">Opi valmistamaan länsimaisia ​​ruokia ChatGPT:n avulla</string>
+    <string name="str_western_dishes_ques">Olet 3–tähden Michelin–kokki. Suosittele länsimaisia ​​ruokia. Ruokalaji on %s %s–tekniikalla. Ainesosien tulee sisältää %s. Ehdota minulle materiaalin määrää %s henkilölle.</string>
+    <string name="str_travel_destination">Matkakohde</string>
+    <string name="str_travel_destination_detail">ChatGPT voi ehdottaa kaikkia matkakohteen allekirjoituksia!</string>
+    <string name="str_travel_destination_ques">Olet turistiopas. Ehdota, että %s pitäisi tutkia kohteessa %s.</string>
+    <string name="str_travel_experience">Matkakokemuksia</string>
+    <string name="str_travel_experience_detail">ChatGPT:n ehdottama vinkkejä ja temppuja matkustamiseen!</string>
+    <string name="str_travel_experience_ques">Olet turistiopas. Ehdota minulle vinkkejä liittyen kohteeseen %s, kun matkustat kohteeseen %s.</string>
+    <string name="str_brand_name">Tuotenimi</string>
+    <string name="str_product_services">Tuotteet/palvelut</string>
+    <string name="str_goals">Tavoitteet</string>
+    <string name="str_position">asema</string>
+    <string name="str_details">Yksityiskohdat</string>
+    <string name="str_name">Nimi</string>
+    <string name="str_industry">Ala</string>
+    <string name="str_key_segment">Avainsegmentti</string>
+    <string name="str_age">Ikä</string>
+    <string name="str_gender">Sukupuoli</string>
+    <string name="str_region">Alue</string>
+    <string name="str_subject">Aihe</string>
+    <string name="str_length">Pituus</string>
+    <string name="str_context">Konteksti</string>
+    <string name="str_genre">Genre</string>
+    <string name="str_mood">Mieliala</string>
+    <string name="str_platform">Alusta</string>
+    <string name="str_style">Tyyli</string>
+    <string name="str_language">Kieli</string>
+    <string name="str_information">Tiedot</string>
+    <string name="str_tone_of_voice">Äänensävy</string>
+    <string name="str_year">vuosi</string>
+    <string name="str_birth_date">Syntymäpäivä/aika</string>
+    <string name="str_country_region">Maa/alue</string>
+    <string name="str_issue">Ongelma</string>
+    <string name="str_dishes">Astiat</string>
+    <string name="str_techniques">Tekniikat</string>
+    <string name="str_ingredients">Ainesosat</string>
+    <string name="str_potion">Juoma</string>
+    <string name="str_context_strategy_type">Mitä strategiatyyppejä haluat toteuttaa?</string>
+    <string name="str_context_position">Ehdota minulle 10 kysymystä haastateltavaksi tähän tehtävään</string>
+    <string name="str_context_name">Mikä on kilpailija, jota haluat nähdä?</string>
+    <string name="str_context_product_services">Mitä tuotteita/palveluita haluat kohdistaa yleisöille?</string>
+    <string name="str_context_subject">Mistä kappaleesi koskee?</string>
+    <string name="str_context_song">Mistä kappaleesi kertoo?</string>
+    <string name="str_context_post_media">Mitä viestisi koskee?</string>
+    <string name="str_context_gmail">Mistä sähköpostistasi on kyse?</string>
+    <string name="str_context_style">Mistä tyylistä pidät tällä hetkellä?</string>
+    <string name="str_context_joke">Mistä vitsisi liittyy?</string>
+    <string name="str_context_birth_date_time">Mikä on syntymäaikasi ja –päiväsi?</string>
+    <string name="str_context_information">Mitä haluat tietää sinusta?</string>
+    <string name="str_context_solve_math_problem">Mikä on ongelmasi matematiikassa?</string>
+    <string name="str_context_issue">Mikä sinua huolestuttaa tästä?</string>
+    <string name="str_context_dishes">Mitä ruokaa aiot valmistaa?</string>
+    <string name="str_context_techniques">Mitä tekniikkaa aiot käyttää tähän astiaan?</string>
+    <string name="str_context_ingredients">Millaisia ainesosia haluat käyttää tässä ruoassa?</string>
+    <string name="str_context_potion">Kuinka monelle juomalle (ihmiselle) haluat valmistaa tämän ruuan?</string>
+    <string name="str_context_information_travel">Mitä haluat tutkia?</string>
+    <string name="str_context_information_travel2">Mitä haluat tietää matkustaessasi tähän paikkaan?</string>
+    <string name="str_context_country">Minne aiot mennä?</string>
+    <string name="str_select_model">Valitse malli:</string>
+    <string name="str_message_model_3_5">GPT – 3.5 –malli optimoi suorituskyvyn ja tehokkuuden erilaisiin tekstiin liittyviin toimintoihin.</string>
+    <string name="str_reasoning">Päättely</string>
+    <string name="str_speed">Nopeus</string>
+    <string name="str_concisenes">Tiivistelmät</string>
+    <string name="str_message_model_4">GPT – 4 –malli toimii hyvin toimissa, jotka vaativat parempaa päättelyä, tarkkojen ohjeiden ymmärtämistä ja lisääntynyttä mielikuvitusta.</string>
+    <string name="str_you_may_be_interested_in_these_questions">Saatat olla kiinnostunut näistä kysymyksistä:</string>
+    <string name="str_close">kiinni</string>
+    <string name="str_preview_your_files">Napsauta tätä, jos haluat\nesikatsella tiedostojasi</string>
+    <string name="str_has_your_payment_expired">Onko maksusi\n vanhentunut?</string>
+    <string name="str_has_your_payment_sale">Erikoistarjoukset \n kutsuvat sinua!!</string>
+    <string name="str_has_your_payment_cancel">Älä missaa \n upeita tarjouksia!</string>
+    <string name="str_oh_no">Voi ei!</string>
+    <string name="str_great">Hienoa!!!</string>
+    <string name="str_welcome_back">Tervetuloa takaisin!</string>
+    <string name="str_super_sale">Superalennus</string>
+    <string name="str_limited_time_only">Vain rajoitetun ajan</string>
+    <string name="str_the_file_no_content">Tiedosto ei sisällä\nsisältöä!</string>
+    <string name="str_we_found_no_content">Emme löytäneet sisältöä tai sisältöä ei ole tarpeeksi yhteenvedon tekemiseen. Yritä toista tiedostoa.</string>
+    <string name="str_msg_free_message">ansaitaksesi %d ilmaista viestiä</string>
+    <string name="str_msg_free_summary">ansaita %d ilmainen yhteenveto</string>
+    <string name="str_msg_free_generate_art">ansaita %d ilmaista taidetta</string>
+    <string name="str_msg_sale_weekly_t3">Automaattinen – tilauksen uusiminen veloitetaan viikoittain</string>
+    <string name="str_intro_gpt_4"><![CDATA[ Tekijä: <br><b> <font color=#FFFFFF>GPT-4</font></b>]]></string>
+    <string name="str_intro_topic"><![CDATA[ Eri <br><b> <font color=#FFFFFF>Aiheet</font></b>]]></string>
+    <string name="str_intro_image_to_text"><![CDATA[ kuva <br><b> <font color=#FFFFFF> Teksti (OCR) </font></b>]]></string>
+    <string name="str_intro_free_ads"><![CDATA[ Ilmaiset <br><b> <font color=#FFFFFF> 100 % mainoksia </font></b>]]></string>
+    <string name="str_intro_unlimit_art"><![CDATA[ UnIimited <br><b> <font color=#FFFFFF> AI Art </font></b>]]></string>
+    <string name="str_intro_upload_file"><![CDATA[ Lähetä tiedosto <br><b> <font color=#FFFFFF> Kysy mitä tahansa </font></b>]]></string>
+    <string name="str_detail_price_yearly_new"> sitten %s / vuosi, automaattisesti - uusittavissa. </string>
+    <string name="txt_yearly">Vuosittain</string>
+    <string name="txt_start_yeal_auto">Automaattinen – uusittava tilaus veloitetaan vuosittain</string>
+</resources>

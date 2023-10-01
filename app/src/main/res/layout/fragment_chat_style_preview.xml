@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatStylePreviewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/splash_bg_gradient">
+
+        <ImageView
+            android:id="@+id/chatStylePreviewImg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/chatStylePreviewStartChat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.61"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.76"
+            tools:src="@drawable/bg_character_preview_1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatStylePreviewStartChat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:background="@drawable/ripper_btn_full_green_round"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/chatStylePreviewCancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_48sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:text="@string/text_start_chat"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_16sdp"
+                app:drawableStartCompat="@drawable/ic_chat_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatStylePreviewCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:background="@drawable/ripper_btn_full_grey_round"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_48sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:text="@string/text_cancel"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

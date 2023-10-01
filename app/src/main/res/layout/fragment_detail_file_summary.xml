@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/detailFm_viewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_36sdp"
+        android:background="@color/color_top">
+
+        <TextView
+            android:id="@+id/detailFm_nameFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_white"
+            android:drawablePadding="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/detailFm_closeFile"
+            tools:text="FileName.pdf"
+            app:drawableStartCompat="@drawable/ic_summary_upload_file" />
+
+        <TextView
+            android:id="@+id/detailFm_closeFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/color_green_base"
+            android:drawablePadding="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:textSize="@dimen/_16sdp"
+            android:text="Close"
+            app:drawableEndCompat="@drawable/ic_close_circle_green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detailFm_rcl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_below="@id/detailFm_nameFile"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_16sdp"/>
+
+    </RelativeLayout>
+</layout>

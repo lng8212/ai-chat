@@ -1,0 +1,187 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="Material_dialog" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="CircularProgressIndicator" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="colorPrimary">@color/color_base_blue</item>
+    </style>
+
+    <style name="LinearProgressIndicator" parent="Widget.MaterialComponents.LinearProgressIndicator">
+        <item name="colorPrimary">@color/color_base_blue</item>
+    </style>
+
+    <style name="CircularProgressIndicator_splash" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="colorPrimary">@color/color_base_blue</item>
+        <item name="indicatorSize">@dimen/_80sdp</item>
+    </style>
+
+    <style name="exv_style_dialog_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/exv_popup_toast_anim</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="exv_popup_toast_anim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="pop_animation">
+        <item name="android:windowEnterAnimation">@anim/pop_from_bottom_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_from_bottom_anim_out</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/color_base_blue</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/color_grey_bbb</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/color_grey_bbb</item>
+    </style>
+
+    <style name="Theme.BaseProject" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="color_chat_style_base">@color/color_chat_style_5</item>
+    </style>
+
+    <style name="Theme.BaseProjectMaterial" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="color_chat_style_base">@color/color_chat_style_5</item>
+    </style>
+
+    <style name="Theme.MaterialTranslucent" parent="@style/Theme.BaseProjectMaterial">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme.AppCompatTranslucent" parent="@style/Theme.BaseProject">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Theme_Splash_Translucent" parent="@style/Theme.BaseProject">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:statusBarColor">@color/transparent_color</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/color_green_base</item>
+        <item name="android:progressTint">@color/color_green_base</item>
+        <item name="android:minHeight">@dimen/_4sdp</item>
+        <item name="android:maxHeight">@dimen/_4sdp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/transparent_color</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+    <style name="default_bubble_style">
+        <item name="android:windowEnterAnimation">@anim/enter_fade_out</item>
+        <item name="android:windowExitAnimation">@anim/exit_fade_in</item>
+    </style>
+
+
+    <style name="default_close_bubble_style">
+        <item name="android:windowEnterAnimation">@anim/enter_fade_out_fly_up</item>
+        <item name="android:windowExitAnimation">@anim/exit_fade_in_fly_down</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="customTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+
+    <style name="customTabLayout1" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabTextAppearancePremium</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TabTextAppearancePremium" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="roundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_16sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_16sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_16sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_16sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_16sdp</item>
+    </style>
+
+    <style name="roundedCornersImageGallery" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_6sdp</item>
+        <item name="cornerSizeTopRight">@dimen/_6sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_6sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_6sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_6sdp</item>
+    </style>
+
+    <declare-styleable name="CustomToastView">
+        <attr name="show_time" format="integer" />
+    </declare-styleable>
+
+    <style name="textDescriptionPremium" parent="TextAppearance.AppCompat">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="fontFamily">@font/font_regular</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="drawableStartCompat">@drawable/ic_check_premium</item>
+        <item name="android:drawablePadding">@dimen/_12sdp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_ui_crash">App/Benutzeroberfläche abgestürzt</string>
+    <string name="sorry_string">Entschuldigung, das hätte nicht passieren dürfen.</string>
+    <string name="error_report_button_text">Melden Sie diesen Fehler per E–Mail</string>
+    <string name="error_report_button_telegram">Melden Sie diesen Fehler per Telegramm</string>
+    <string name="copy_format">Formatierten Bericht kopieren</string>
+    <string name="error_report_open_issue_button_text">Bericht</string>
+    <string name="error_report_open_github_notice">Bitte prüfen Sie, ob bereits ein Issue zu Ihrem Absturz existiert.</string>
+    <string name="what_device_headline">Die Info:</string>
+    <string name="what_happened_headline">Was ist passiert:</string>
+    <string name="info_labels">Was:\\nAnfrage:\\nGMT–Zeit:\\nPaket:\\nVersion:\\nOS–Version:\\nGerät:\\nModell:\\nProdukt:</string>
+    <string name="your_comment">Ihr Kommentar (auf Englisch):</string>
+    <string name="error_details_headline">Einzelheiten:</string>
+    <string name="error_report_title">Fehlermeldung</string>
+    <string name="crash_report_copied">Absturzbericht in die Zwischenablage kopiert</string>
+    <string name="error_snackbar_message">Entschuldigung, etwas ist schief gelaufen.</string>
+    <string name="error_snackbar_action">Bericht</string>
+    <string name="text_setting">Einstellungen</string>
+    <string name="text_start_chat">Chat beginnen</string>
+    <string name="text_your_chat_ai">Ihre Chatbot–KI</string>
+    <string name="text_ads_splash">Dieser Prozess kann Werbung enthalten</string>
+    <string name="text_chat_detail_title">GPT AI Chatbot</string>
+    <string name="text_intro_first">Wie läuft dein Tag?\nReden wir mit mir!</string>
+    <string name="text_wonderful">Wunderbar</string>
+    <string name="text_great">Großartig</string>
+    <string name="text_intro_second">Frag mich alles, was du wissen möchtest, \nich werde dir helfen.</string>
+    <string name="text_select_character">Charakter auswählen</string>
+    <string name="hi_there">Hi!</string>
+    <string name="device_not_support">Gerät wird leider nicht unterstützt!</string>
+    <string name="input_empty_error">Bitte geben Sie etwas ein!</string>
+    <string name="something_error">Oh nein, etwas ist schief gelaufen, bitte versuchen Sie es erneut!</string>
+    <string name="type_here">Geben Sie hier ein…</string>
+    <string name="text_thanks">Vielen Dank, dass Sie unsere Anwendung verwenden. Sie können die App auf CHPlay bewerten. Das wird uns sehr helfen und Mut machen. Vielen Dank und bis bald!</string>
+    <string name="text_cancel">Stornieren</string>
+    <string name="text_update_to_premium">Auf die Vollversion upgraden</string>
+    <string name="text_update_to_premium_des">Genießen Sie uneingeschränkten Zugriff mit allen Funktionen.</string>
+    <string name="text_support">Unterstützung</string>
+    <string name="text_restore_purchase">Kauf wiederherstellen</string>
+    <string name="text_about_us">Über uns</string>
+    <string name="text_privacy_policy">Datenschutz–Bestimmungen</string>
+    <string name="text_term_of_use">Nutzungsbedinungen</string>
+    <string name="text_stay_in_touch">In Kontakt bleiben</string>
+    <string name="text_rate_app">Bewertungs App</string>
+    <string name="text_send_feedback">Feedback abschicken</string>
+    <string name="txt_comming_soon">Demnächst!</string>
+    <string name="text_rate_des">Wir arbeiten hart an einer besseren Benutzererfahrung. Wir würden uns sehr freuen, wenn Sie uns bewerten könnten.</string>
+    <string name="text_rate">Rate</string>
+    <string name="text_version">Ausführung:</string>
+    <string name="text_rate_suggest">Das Beste, was wir bekommen können ♥</string>
+    <string name="text_premium_update">Premium–Upgrade</string>
+    <string name="text_unlimited">Unbegrenzte Frage &amp; Antworten</string>
+    <string name="text_no_ads">Keine Werbung</string>
+    <string name="text_unlock">Vollständige Freischaltung des Charakters</string>
+    <string name="text_start_trial">Kostenlose Testversion starten und planen</string>
+    <string name="text_trial_free_day">3 Tage kostenlos testen</string>
+    <string name="text_trial_free_price">dann %s/Woche, automatisch – erneuerbar</string>
+    <string name="text_best_offer">Bestes Angebot</string>
+    <string name="text_lifetime_price">– Lebenslang – Einmalige Zahlung</string>
+    <string name="text_sub_temp">Abonnementbedingungen</string>
+    <string name="text_sub_temp_1">Terms &amp;amp; Bedingungen</string>
+    <string name="privacy_sub">Abonnierte Benutzer haben unbegrenzte Nutzung und Zugriff auf alle Premium–Funktionen ohne Werbung.\n– Nicht abonnierte Benutzer können die App kontinuierlich mit Werbung verwenden und haben eine begrenzte Nutzung der Premium–Funktionen. \n– Die Zahlung wird Ihrem Google–Konto bei der Kaufbestätigung belastet.\n– Abonnements verlängern sich automatisch, es sei denn, die automatische Verlängerung wird mindestens 24 Stunden vor dem Ende des aktuellen Zeitraums deaktiviert.\n– Das Konto wird innerhalb von 24 Stunden mit der Verlängerung belastet 24 Stunden vor dem Ende des aktuellen Zeitraums und geben Sie die Kosten für die Verlängerung an.</string>
+    <string name="privacy_sub2">\n– Jeder ungenutzte Teil eines kostenlosen Testzeitraums, falls angeboten, verfällt, wenn der Benutzer gegebenenfalls ein Abonnement für diese Veröffentlichung erwirbt.– Abonnements können vom Benutzer verwaltet und die automatische Verlängerung kann deaktiviert werden, indem er zu geht die Benutzerkontoeinstellungen nach dem Kauf. Beachten Sie, dass durch die Deinstallation der App Ihr ​​Abonnement nicht gekündigt wird.\n1. Lassen Sie auf Ihrem Android–Smartphone oder –Tablet den Google Play Store öffnen.\n2. Überprüfen Sie, ob Sie im richtigen Google–Konto angemeldet sind.\n3. Tippen Sie auf Menü Abonnements und wählen Sie das Abonnement aus, das Sie kündigen möchten.\n4. Tippen Sie auf Abonnement kündigen.</string>
+    <string name="txt_billing_unavailable">Der In–App–Abrechnungsdienst ist nicht verfügbar, bitte aktualisieren Sie Android Market/Play auf Version 3.9.16 oder höher!</string>
+    <string name="txt_first_error_billing">Beim Kauf ist ein Fehler aufgetreten, bitte versuchen Sie es später erneut!</string>
+    <string name="txt_check_internet">Stellen Sie sicher, dass WLAN oder mobile Daten aktiviert sind. Dann versuchen Sie es bitte erneut</string>
+    <string name="txt_check_wifi">Überprüfen Sie Ihre WLAN–Verbindung und versuchen Sie es erneut!</string>
+    <string name="txt_no_internet">Keine Internetverbindung!</string>
+    <string name="txt_no_wifi">Bitte mit WLAN verbinden</string>
+    <string name="txt_title_exit">Sie sind sicher, dass Sie beenden wollen?</string>
+    <string name="txt_billing_premium_success">Danke für Ihren Einkauf!</string>
+    <string name="txt_billing_premium_fail">Tut mir leid, dass Sie nicht gekauft haben oder das gekaufte Paket abgelaufen ist!</string>
+    <string name="txt_billing_restart_app">Damit die App nach dem Kauf optimal funktioniert, starten Sie die App bitte neu, um die Umwandlung in einen VIP–Benutzer abzuschließen!</string>
+    <string name="txt_get_premium">Premium bekommen</string>
+    <string name="txt_mess_number_premium1">Du hast</string>
+    <string name="txt_mess_number_premium2">kostenlose Nachrichten hinterlassen</string>
+    <string name="txt_gift_title">Ein besonderes Geschenk nur für Sie.</string>
+    <string name="txt_gift_title_des">Hol es dir jetzt.</string>
+    <string name="txt_free_message">Kostenlose Nachrichten:</string>
+    <string name="txt_start_trial">Kostenlos testen</string>
+    <string name="txt_month">Monatlich</string>
+    <string name="txt_lifetime">Lebensdauer</string>
+    <string name="txt_start_month_auto">Abonnement mit automatischer Verlängerung, das monatlich berechnet wird</string>
+    <string name="txt_start_one_time_auto">Einmalige Zahlung. Alle neuen Funktionen – Für immer</string>
+    <string name="txt_not_support_title">Ach nein!</string>
+    <string name="txt_not_support_title_des">Es tut uns leid, dass diese Funktion auf Ihrem Gerät nicht verfügbar ist. Wir werden versuchen, uns zu verbessern, wir sehen uns in der nächsten Version.</string>
+    <string name="txt_topic">Themen</string>
+    <string name="txt_chat_ai">KI–Chat</string>
+    <string name="txt_topic_interview">Ich fungiere als Interviewer und stelle Ihnen Fragen zu der Stelle, auf die Sie sich bewerben. Sie werden die Fragen so beantworten, als ob Sie der Kandidat wären. Lass uns anfangen!</string>
+    <string name="txt_topic_develop">Ich bin ein Entwickler mit Erfahrung in der Entwicklung sicherer Web– und App–Lösungen. Ich bin in der Lage, eine Architektur zu erstellen und Code zu schreiben, um Ihre Anforderungen zu erfüllen. Lassen Sie uns zusammenarbeiten, um Ihre Vision zum Leben zu erwecken und eine robuste und sichere Plattform zu schaffen!</string>
+    <string name="txt_topic_business">Ich unterstütze Sie mit Tipps und Vorlagen, um Ihre Fähigkeiten im Geschäftsleben zu verbessern, und helfe Ihnen bei Ihren täglichen Arbeitsangelegenheiten. Lassen Sie uns damit beginnen, Ihren Geschäftssinn zu verbessern!</string>
+    <string name="txt_topic_ad">Ich kann Ihnen bei der Erstellung einer Marketingkampagne helfen, um ein Produkt oder eine Dienstleistung Ihrer Wahl zu bewerben. Lassen Sie uns zusammenarbeiten, um die Kampagne wirkungsvoll und erfolgreich zu machen!</string>
+    <string name="txt_topic_language">Ich bin ein Experte für die englische Sprache, mit den Fähigkeiten zu übersetzen, die Rechtschreibung zu korrigieren und die Grammatik zu verbessern. Lassen Sie mich Ihnen dabei helfen, sicherzustellen, dass Ihre geschriebene Sprache korrekt und ausgefeilt ist.</string>
+    <string name="txt_topic_chef">Ich kann Vorschläge für köstliche und nahrhafte Rezepte machen, die einfach zuzubereiten sind und nicht viel Zeit in Anspruch nehmen. Ich habe eine große Auswahl an Rezepten und Ideen, die für unterschiedliche Kochfertigkeiten geeignet sind. Lassen Sie uns zusammenarbeiten, um gesunde und schmackhafte Mahlzeiten zu kreieren!</string>
+    <string name="txt_topic_composer">Ich bin hier, um Ihnen bei Ihren Song–Bedürfnissen zu helfen. Egal, ob Sie nach den Texten zu einem bestimmten Lied suchen oder Texte auf der Grundlage eines Konzepts geschrieben haben möchten, das Sie im Sinn haben, ich kann Ihnen helfen. Ich habe die Möglichkeit, die Texte zu jedem Lied zu finden oder neue Texte basierend auf Ihrem Konzept zu schreiben. Lassen Sie uns einige unvergessliche und wirkungsvolle Texte erstellen!</string>
+    <string name="txt_topic_mental">Ich bin hier, um Anleitungen und Ratschläge zum Umgang mit Emotionen, Stress, Angst und anderen psychischen Problemen zu geben. Mein Ziel ist es, Sie dabei zu unterstützen, mit diesen Herausforderungen umzugehen und gesunde Wege zu finden, damit umzugehen. Lassen Sie uns gemeinsam daran arbeiten, Ihr allgemeines Wohlbefinden und Ihre emotionale Stabilität zu verbessern.</string>
+    <string name="txt_topic_interview_title">Interviewer</string>
+    <string name="txt_topic_develop_title">Entwickler</string>
+    <string name="txt_topic_business_title">Geschäftsassistent</string>
+    <string name="txt_topic_ad_title">Inserent</string>
+    <string name="txt_topic_language_title">Sprachexperte</string>
+    <string name="txt_topic_chef_title">Koch</string>
+    <string name="txt_topic_composer_title">Komponist</string>
+    <string name="txt_topic_mental_title">Anzeige für psychische Gesundheit</string>
+    <string name="txt_topic_interview_q1">Was sind die häufigsten Fragen im Vorstellungsgespräch?</string>
+    <string name="txt_topic_interview_q2">Wie bereite ich mich auf ein Vorstellungsgespräch vor?</string>
+    <string name="txt_topic_interview_q3">Was sind die besten Interviewfragen für Kandidaten?</string>
+    <string name="txt_topic_interview_q4">Wie führe ich ein erfolgreiches Vorstellungsgespräch?</string>
+    <string name="txt_topic_interview_q5">Wie bewerte ich die Fähigkeiten und Qualifikationen eines Kandidaten?</string>
+    <string name="txt_topic_interview_q6">Wie bestimme ich den Cultural Fit eines Kandidaten?</string>
+    <string name="txt_topic_interview_q7">Was sind einige effektive Interviewtechniken zur Bewertung von Kandidaten?</string>
+    <string name="txt_topic_interview_q8">Wie gehe ich mit schwierigen Gesprächssituationen um?</string>
+    <string name="txt_topic_interview_q9">Wie beurteile ich das Wachstums– und Entwicklungspotenzial eines Kandidaten?</string>
+    <string name="txt_topic_interview_q10">Was sind einige Best Practices für einen fairen und unvoreingenommenen Bewerbungsprozess?</string>
+    <string name="txt_topic_develop_q1">Welche Programmiersprachen soll ich lernen?</string>
+    <string name="txt_topic_develop_q2">Was ist agile Entwicklung und wie funktioniert sie?</string>
+    <string name="txt_topic_develop_q3">Was sind die besten Ressourcen für das Lernen von Softwareentwicklung?</string>
+    <string name="txt_topic_develop_q4">Was sind die gefragtesten Programmierkenntnisse?</string>
+    <string name="txt_topic_develop_q5">Wie fange ich als Entwickler an?</string>
+    <string name="txt_topic_develop_q6">Was ist DevOps und in welcher Beziehung steht es zur Entwicklung?</string>
+    <string name="txt_topic_develop_q7">Wie bleibe ich über die neuesten Technologietrends auf dem Laufenden?</string>
+    <string name="txt_topic_develop_q8">Was sind die Schlüsselkomponenten eines erfolgreichen Entwicklungsprojekts?</string>
+    <string name="txt_topic_develop_q9">Wie verbessere ich meine Programmierkenntnisse?</string>
+    <string name="txt_topic_develop_q10">Welche sind die besten Entwicklungstools und Software?</string>
+    <string name="txt_topic_business_q1">Welche Aufgaben hat ein kaufmännischer Assistent?</string>
+    <string name="txt_topic_business_q2">Wie werde ich ein erfolgreicher Business Assistant?</string>
+    <string name="txt_topic_business_q3">Welche Fähigkeiten sind für einen Wirtschaftsassistenten erforderlich?</string>
+    <string name="txt_topic_business_q4">Was sind die besten Tools und Software für Business Assistants?</string>
+    <string name="txt_topic_business_q5">Was ist die Rolle eines virtuellen Business–Assistenten?</string>
+    <string name="txt_topic_business_q6">Wie verbessere ich meine organisatorischen Fähigkeiten als Business Assistant?</string>
+    <string name="txt_topic_business_q7">Wie verwalte ich als Business Assistant mehrere Aufgaben und Prioritäten?</string>
+    <string name="txt_topic_business_q8">Was sind die Best Practices für eine effektive Kommunikation als Business Assistant?</string>
+    <string name="txt_topic_business_q9">Wie gehe ich als Business Assistant mit sensiblen und vertraulichen Informationen um?</string>
+    <string name="txt_topic_business_q10">Was ist das Durchschnittsgehalt für kaufmännische/r Assistent/in?</string>
+    <string name="txt_topic_ad_q1">Was ist Werbung und wie funktioniert sie?</string>
+    <string name="txt_topic_ad_q2">Welche Arten von Werbung gibt es?</string>
+    <string name="txt_topic_ad_q3">Wie erstelle ich eine erfolgreiche Werbekampagne?</string>
+    <string name="txt_topic_ad_q4">Was sind die effektivsten Werbekanäle?</string>
+    <string name="txt_topic_ad_q5">Wie messe ich den Erfolg einer Werbekampagne?</string>
+    <string name="txt_topic_ad_q6">Was sind die besten Tools und Software für Werbung?</string>
+    <string name="txt_topic_ad_q7">Wie erreiche ich die richtige Zielgruppe für meine Werbekampagne?</string>
+    <string name="txt_topic_ad_q8">Was sind die neuesten Trends und Innovationen in der Werbung?</string>
+    <string name="txt_topic_ad_q9">Wie erstelle ich überzeugende und einprägsame Werbebotschaften?</string>
+    <string name="txt_topic_ad_q10">Wie viel kostet Werbung und wie hoch ist der Return on Investment für Werbung?</string>
+    <string name="txt_topic_language_q1">Wie wird man am besten Sprachexperte?</string>
+    <string name="txt_topic_language_q2">Wie verbessere ich meine Sprachkenntnisse?</string>
+    <string name="txt_topic_language_q3">Was sind die wichtigsten Tipps zum Sprachenlernen?</string>
+    <string name="txt_topic_language_q4">Was sind die besten Ressourcen zum Sprachenlernen?</string>
+    <string name="txt_topic_language_q5">Welche Sprache lernt man am besten für geschäftlichen und beruflichen Erfolg?</string>
+    <string name="txt_topic_language_q6">Wie überwinde ich Hindernisse und Herausforderungen beim Sprachenlernen?</string>
+    <string name="txt_topic_language_q7">Wie verbessere ich meine Aussprache und Sprechfähigkeiten?</string>
+    <string name="txt_topic_language_q8">Was sind die besten Techniken zum Auswendiglernen von Vokabeln und Grammatik?</string>
+    <string name="txt_topic_language_q9">Wie baue ich Gewandtheit und Selbstvertrauen beim Sprechen einer neuen Sprache auf?</string>
+    <string name="txt_topic_language_q10">Wie lerne ich eine Sprache schnell und effektiv?</string>
+    <string name="txt_topic_chef_q1">Was macht ein Koch und welche Aufgaben hat ein Koch?</string>
+    <string name="txt_topic_chef_q2">Wie werde ich Koch und welche Ausbildung ist dafür erforderlich?</string>
+    <string name="txt_topic_chef_q3">Was sind die besten Kochschulen und kulinarischen Programme?</string>
+    <string name="txt_topic_chef_q4">Was sind die wichtigsten Koch– und Küchenfähigkeiten, die ein Koch haben sollte?</string>
+    <string name="txt_topic_chef_q5">Wie verbessere ich meine Kochkünste und –techniken?</string>
+    <string name="txt_topic_chef_q6">Was sind die besten Küchengeräte und –geräte für einen Koch?</string>
+    <string name="txt_topic_chef_q7">Wie erstelle ich ein Menü und plane ein erfolgreiches Küchen– und Esserlebnis?</string>
+    <string name="txt_topic_chef_q8">Wie leite ich eine Küche und ein Team aus Köchen und Personal?</string>
+    <string name="txt_topic_chef_q9">Was sind die besten Essens– und Kochtrends, mit denen man als Koch Schritt halten kann?</string>
+    <string name="txt_topic_chef_q10">Wie bringe ich Lebensmittelsicherheit und Lebensmittelkreativität in der Küche in Einklang?</string>
+    <string name="txt_topic_composer_q1">Was macht ein Komponist und was sind die Aufgaben eines Komponisten?</string>
+    <string name="txt_topic_composer_q2">Wie werde ich Komponist und welche Ausbildung ist dafür erforderlich?</string>
+    <string name="txt_topic_composer_q3">Was sind die besten Musikschulen und Programme für Komponisten?</string>
+    <string name="txt_topic_composer_q4">Was sind die wichtigsten Fähigkeiten, die ein Komponist haben sollte?</string>
+    <string name="txt_topic_composer_q5">Wie verbessere ich meine Kompositionsfähigkeiten und –techniken?</string>
+    <string name="txt_topic_composer_q6">Was sind die besten Tools und Software zum Komponieren von Musik?</string>
+    <string name="txt_topic_composer_q7">Wie erstelle ich eine gelungene Musikkomposition?</string>
+    <string name="txt_topic_composer_q8">Wie arbeite ich mit anderen Musikern, Künstlern und Produzenten in der Musikbranche zusammen?</string>
+    <string name="txt_topic_composer_q9">Was sind die besten Möglichkeiten, meine Musik als Komponist zu bewerben und zu vermarkten?</string>
+    <string name="txt_topic_composer_q10">Wie bleibe ich über die neuesten Trends und Innovationen in der Musikkomposition auf dem Laufenden?</string>
+    <string name="txt_topic_mental_q1">Was ist Werbung für psychische Gesundheit und warum ist sie wichtig?</string>
+    <string name="txt_topic_mental_q2">Wie wirkt sich Werbung auf die psychische Gesundheit und das Wohlbefinden aus?</string>
+    <string name="txt_topic_mental_q3">Was sind die besten Möglichkeiten, das Bewusstsein für psychische Gesundheit durch Werbung zu fördern?</string>
+    <string name="txt_topic_mental_q4">Wie erstelle ich eine effektive Werbekampagne für psychische Gesundheit?</string>
+    <string name="txt_topic_mental_q5">Was sind die ethischen Erwägungen für die Werbung für Produkte und Dienstleistungen im Bereich der psychischen Gesundheit?</string>
+    <string name="txt_topic_mental_q6">Was sind die effektivsten Kanäle für Werbung für psychische Gesundheit?</string>
+    <string name="txt_topic_mental_q7">Wie erreiche ich die richtige Zielgruppe für meine Werbekampagne für psychische Gesundheit?</string>
+    <string name="txt_topic_mental_q8">Was sind die neuesten Trends und Innovationen in der Werbung für psychische Gesundheit?</string>
+    <string name="txt_topic_mental_q9">Wie erstelle ich überzeugende und sensible Botschaften für Werbung für psychische Gesundheit?</string>
+    <string name="txt_topic_mental_q10">Was sind die möglichen Folgen von unwirksamer oder schädlicher Werbung für psychische Gesundheit?</string>
+    <string name="txt_confirm">Bestätigen</string>
+    <string name="text_confirm_restart_change">Möchten Sie die Anwendung neu starten, um die Änderung zu übernehmen?</string>
+    <string name="text_content_sale_not_purchase2">Verpassen Sie nicht unseren zeitlich begrenzten Sale! Öffnen Sie jetzt die App und sparen Sie bei Premium–Inhalten.</string>
+    <string name="text_content_sale_not_purchase3">Sich beeilen! Begrenzter Vorrat mit Rabatt erhältlich. Öffnen Sie jetzt die App, um Ihren Rabatt zu erhalten.</string>
+    <string name="text_content_sale_not_purchase4">Willkommen zurück! Als Dankeschön gewähren wir Ihnen einen Rabatt auf Ihren nächsten Einkauf. Öffnen Sie die App jetzt, um sie einzulösen.</string>
+    <string name="text_content_sale_not_purchase5">Öffnen Sie jetzt die App und erhalten Sie einen exklusiven Rabatt auf Ihren nächsten Einkauf! Nicht verpassen!</string>
+    <string name="text_content_sale_not_purchase6">Erhalten Sie einen Rabatt auf Premium–Inhalte, wenn Sie die App jetzt öffnen. Es ist nur für eine begrenzte Zeit, also beeil dich!</string>
+    <string name="text_content_sale_not_purchase7">Bereit, viel zu sparen? Öffnen Sie jetzt die App und verwenden Sie den Code DISCOUNT, um einen Rabatt auf Ihren Einkauf zu erhalten.</string>
+    <string name="text_content_sale_not_purchase8">Neue Produkte gerade hinzugefügt und reduziert! Öffnen Sie jetzt die App, um Ihren Rabatt auf Ihren Einkauf zu erhalten. Sie werden es nicht verpassen wollen
+        Das!</string>
+    <string name="text_title_sale_not_purchase2">Zeitlich begrenztes Angebot &#127881;&#127881;&#127881;</string>
+    <string name="text_title_sale_not_purchase3">Exklusiver Rabatt für Sie &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase4">Nicht verpassen &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase5">Neue Rabatte hinzugefügt &#127881;&#127881;&#127881;</string>
+    <string name="txt_auto_generating">Animieren Sie automatisch generierten Text</string>
+    <string name="txt_skip_generating">Generierung überspringen</string>
+    <string name="txt_weekly">Wöchentlich</string>
+    <string name="txt_start_weekly_auto">Automatische Verlängerung des Abonnements, das wöchentlich berechnet wird</string>
+    <string name="txt_premium_des_image">KI Erstellen Sie realistische Bilder aus einer Beschreibung</string>
+    <string formatted="false" name="text_sale_off">Exklusiver Rabatt von %s nur für Sie</string>
+
+    <string name="txt_special_gift">Besonderes Geschenk für Sie</string>
+    <string name="txt_discount">Rabatt</string>
+    <string name="txt_get_now">Holen Sie sich jetzt</string>
+    <string name="txt_you_are_vip">Sie sind ein VIP</string>
+    <string name="txt_unlock_chat_ai">Anzeigen ansehen, um zu chatten</string>
+    <string name="text_no_ads_toShow">Keine Anzeigen zu zeigen, versuchen Sie es später!</string>
+    <string name="txt_next">Nächste</string>
+    <string name="onetime_payment">Einmalige Zahlung</string>
+    <string name="get_premium_now">Holen Sie sich jetzt Premium</string>
+    <string name="sorry_you_ve_used_up_today">Entschuldigung, Sie haben die kostenlosen Chats von heute aufgebraucht. Bis morgen oder nutzen Sie unsere Premium–Version</string>
+    <string name="weird_description"><b>Weird:</b>Einfache Antwort, richtiges Problem</string>
+    <string name="smart_description"><b>Smart:</b>Schlaue Antwort, richtiges Problem</string>
+    <string name="brainiac_description"><b>Brainiac:</b>Super intelligente Antwort, erweiterte Problemlösung</string>
+    <string name="content_free_chat_1">Wir sind bereit, Ihnen jeden Tag zu helfen &#129299; Denken Sie daran, zurückzukommen und Ihre 3 kostenlosen Fragen anzufordern!</string>
+    <string name="content_free_chat_2">Sammeln Sie jeden Tag 3 kostenlose Fragen, um die Antworten zu erhalten, die Sie brauchen!&#128526;</string>
+    <string name="content_free_chat_3">Vergiss nicht, mir jeden Tag 3 kostenlose Fragen zu stellen!&#129299;</string>
+    <string name="content_free_chat_4">Wir bieten 3 kostenlose tägliche Fragen an, um Ihnen zu helfen! Denken Sie an ein Comeback!&#128526;</string>
+    <string name="title_notify_daily_1">Wie kann ich Ihnen heute helfen?</string>
+    <string name="title_notify_daily_3">Stecken Sie mit Ihrer Arbeit fest?</string>
+    <string name="title_notify_daily_4">Du fühlst dich einsam?</string>
+    <string name="title_notify_daily_5">Haben Sie Probleme, Hausaufgaben zu machen, Inhalte zu schreiben?</string>
+    <string name="title_content_daily_1">Frag mich einfach was du willst &#129299;</string>
+    <string name="title_content_daily_2">Denken Sie daran, dass ChatAI immer hier ist, um Ihre Fragen zu beantworten! &#129299;</string>
+    <string name="title_content_daily_3">Lassen Sie sich von ChatAI helfen!&#128522;</string>
+    <string name="title_content_daily_4">ChatAI ist für Sie da &#128526;</string>
+    <string name="title_content_daily_5">Frag mich was! &#128526;</string>
+    <string name="title_content_daily_6">Lassen Sie mich heute den Aktienmarkt für Sie analysieren!&#128200;</string>
+    <string name="txt_continue">Weitermachen</string>
+
+    <string name="choose_the_topics">Wählen Sie die Themen aus, die Sie interessieren:</string>
+    <string name="txt_history">Geschichte</string>
+    <string name="see_all">Alles sehen</string>
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
+    <string name="delete_x">Löschen (%s)</string>
+    <string name="you_re_a_premium">Du bist ein Premium</string>
+    <string name="enjoy_the_premium">Genießen Sie die Premium–\nVersion mit allen Funktionen</string>
+    <string name="toast_copy_text">Text in die Zwischenablage kopiert</string>
+    <string name="you_don_t_have">Sie haben noch keine Konversation,<font color='#00B085'>Chatten Sie jetzt!</font></string>
+    <string name="earn_2_free_messages">um 2 kostenlose Nachrichten zu erhalten</string>
+    <string name="you_can_choose">Du kannst wählen:</string>
+    <string name="watch_ads">Anzeigen ansehen</string>
+    <string name="txt_exception_date">Es ist ein Fehler aufgetreten, bitte überprüfen Sie, ob automatisches Datum und Uhrzeit auf Ihrem Telefon aktiviert sind.</string>
+    <string name="personalize_your_home_screen">Personalisieren Sie Ihren Startbildschirm mit einem Fingertipp.</string>
+    <string name="add_to_home_screen">+ Zum Startbildschirm hinzufügen</string>
+    <string name="ask_ai_chat_anything">Fragen Sie<b>AI Chat</b>alles</string>
+    <string name="add_widget">Widget hinzufügen</string>
+    <string name="add_a_new_widget">füge ein neues Widget hinzu</string>
+    <string name="widget">Widget</string>
+    <string name="convenient_with_bubble_chat">Bequem mit Bubble–Chat</string>
+    <string name="text_policy">Datenschutz–Bestimmungen</string>
+    <string name="text_policy_terms">Bedingungen</string>
+    <string name="text_des_policy">Ich stimme dem zu</string>
+    <string name="text_des_guide_widget">Zum manuellen Platzieren auf dem Startbildschirm berühren und halten.</string>
+    <string name="_4x1_widget">4x1–Widget</string>
+    <string name="_4x2_widget">4x2–Widget</string>
+    <string name="gpt_4_access"><b><font color='#4AE89F'>GPT–4</font></b>Zugriff</string>
+    <string name="txt_premium_unlimited"><b><font color='#4AE89F'>Unbegrenzt</font></b>Fragen und Antworten</string>
+    <string name="txt_premium_ads"><b><font color='#4AE89F'>Anzeigenfrei</font></b>erleben</string>
+    <string name="txt_premium_convenient"><b><font color='#4AE89F'>Bequem</font></b>mit Bubble–Chat</string>
+    <string name="enter_your_prompt">Geben Sie Ihre Eingabeaufforderung ein</string>
+    <string name="get_inspired"><u>Lassen Sie sich inspirieren</u></string>
+    <string name="choose_an_art_style">Wählen Sie einen Kunststil</string>
+    <string name="generate" formatted="false">Generieren</string>
+    <string name="free_tries_left_s">Kostenlose Versuche übrig: %s</string>
+    <string name="left_s">Links: %s</string>
+    <string name="txt_painting">Malen</string>
+    <string name="txt_magical">Magisch</string>
+    <string name="txt_steampunk">Steampunk</string>
+    <string name="txt_oil_painting">Ölgemälde</string>
+    <string name="txt_anime">Anime</string>
+    <string name="txt_digital_art">Digitale Kunst</string>
+    <string name="txt_cyberpunk">Cyberpunk</string>
+    <string name="txt_3d">3D</string>
+    <string name="txt_ghibli">Ghibli</string>
+    <string name="txt_game_art">Spielkunst</string>
+    <string name="txt_vaporwave">Dampfwellen</string>
+    <string name="txt_comic">Comic</string>
+    <string name="txt_pixel_art">Pixel Kunst</string>
+    <string name="txt_synthwave">Synthwave</string>
+    <string name="txt_watercolor">Aquarell</string>
+    <string name="txt_picasso">Picasso</string>
+    <string name="watermark">Wasserzeichen</string>
+    <string name="regenerate">Regenerieren</string>
+    <string name="prompt">Prompt</string>
+    <string name="style">Stil</string>
+    <string name="not_acceptable">Inakzeptabel</string>
+    <string name="des_fail_art">Leider ist ein Fehler aufgetreten oder diese Eingabeaufforderung hat den Sicherheitsfilter beschädigt. Bitte versuchen Sie, nur arbeitssichere Inhalte zu erstellen.</string>
+    <string name="i_got_it">ICH HABE ES</string>
+    <string name="content_doesn_t_contain">Der Inhalt enthält keine sensiblen Wörter.</string>
+    <string name="more">Mehr</string>
+    <string name="midj_art">Midj–Kunst</string>
+    <string name="done">Erledigt</string>
+    <string name="choose_style_art">Wählen Sie „Stil Kunst“.</string>
+    <string name="applying_style">Stil anwenden…</string>
+    <string name="adjusting_colors">Farben anpassen…</string>
+    <string name="enhancing_quality">Qualität steigern…</string>
+    <string name="creating_artwork">Kunstwerke erstellen…</string>
+    <string name="no_style">Kein Style</string>
+    <string name="s_by_s" formatted="false">%s nach Stil %s</string>
+    <string name="grantfailed">Erlaubnis nicht erteilt</string>
+    <string name="downloaded">Heruntergeladen!</string>
+    <string name="error">Fehler!</string>
+    <string name="txt_premium_create"><b><font color='#4AE89F'>Erstellen</font></b> Erstaunliche Kunst mit KI</string>
+    <string name="txt_premium_faster"><b><font color='#4AE89F'>Schneller</font></b> Bildverarbeitung</string>
+    <string name="txt_premium_no"><b><font color='#4AE89F'>Keine</font></b> Wasserzeichen!</string>
+    <string name="txt_premium_quality"><b><font color='#4AE89F'>Die beste</font></b> Bildqualität</string>
+    <string name="generate_art_with_midjourney_pro"><b>10 Generieren Sie Kunst</b>mit\n Midjourney Pro</string>
+    <string name="purchase">Kaufen</string>
+    <string name="sharing_image">Bild teilen</string>
+    <string name="inspired_1">Die Erde nach dem Aussterben der Menschheit, ein Neuanfang, die Natur erobert sich den Planeten zurück, Harmonie, Frieden, die Erde im Gleichgewicht</string>
+    <string name="inspired_2">Noir–Detektiv Mr. Badeente. Rauch, Regen, Schnurrbart und Tapferkeit. Er kann jedes Rätsel lösen. Aber er kann seine inneren Dämonen nicht besiegen. Ausdrucksstarke dunkelmatte Gouche–Malerei</string>
+    <string name="inspired_3">Porträtfoto eines alten asiatischen Kriegerhäuptlings, Stammes–Panther–Make–up, Blau auf Rot, Seitenprofil, wegschauend, ernste Augen, 50–mm–Porträtfotografie, Fotografie mit harter Randbeleuchtung</string>
+    <string name="inspired_4">Ein süßer magischer fliegender Hund, Fantasy–Kunst, gezeichnet von Disney–Konzeptkünstlern, goldene Farbe, hohe Qualität, sehr detailliert, elegant, scharfer Fokus, Konzeptkunst, Charakterkonzepte, digitale Malerei, Geheimnis, Abenteuer</string>
+    <string name="inspired_5">Realistische architektonische Darstellung eines Kapselhauses in riesigen Betonblöcken mit Moos und hohen, abgerundeten Fenstern mit Lichtern im Inneren, menschliche Maßstäbe</string>
+    <string name="image_type_object_any_details_ne_g_a_beautiful_magical_kingdom">Bildtyp, Objekt, alle Details \nZ.B. Ein wunderschönes magisches Königreich</string>
+    <string name="str_title_start_chat">Hallo, wie kann ich Ihnen helfen?</string>
+    <string name="str_trending">Im Trend</string>
+    <string name="str_ask_a_question">Stelle eine Frage…</string>
+    <string name="str_bus">Bus</string>
+    <string name="str_music">Musik</string>
+    <string name="str_mathematics">Mathematik</string>
+    <string name="str_history">Geschichte</string>
+    <string name="str_content">Inhalt</string>
+    <string name="str_email_topic">Email</string>
+    <string name="str_cooking_techniques">Kochtechniken</string>
+    <string name="str_cooking_tool">Kochutensilien</string>
+    <string name="str_cooking_ingredients">Kochzutaten</string>
+    <string name="str_cooking_styles">Kochstile</string>
+    <string name="str_cooking_recipes">Kochen Rezepte</string>
+    <string name="str_cooking_environment">Kochen für die Umwelt</string>
+    <string name="str_science">Wissenschaft</string>
+    <string name="str_essays">Aufsätze</string>
+    <string name="str_physics">Physik</string>
+    <string name="str_travel_experiences">Reiseerlebnisse</string>
+    <string name="str_travel_skill">Reisekenntnisse</string>
+    <string name="str_travel_trend">Reisetrends</string>
+    <string name="str_travel_impact">Auswirkungen auf Reisen</string>
+    <string name="str_travel_tip">Reisetipps</string>
+    <string name="str_travel_des">Reiseziel</string>
+    <string name="str_company_bio">Firmenbiografie</string>
+    <string name="str_company_slogan">Slogan</string>
+    <string name="str_company_name">Namensgenerator</string>
+    <string name="str_business_trend">Geschäftstrends</string>
+    <string name="str_business_innov">Unternehmensinnovation</string>
+    <string name="str_business_strategy">Geschäftsstrategie</string>
+    <string name="str_bus_detail">Meistern Sie Ihre Aufgaben mit unseren erstklassigen Essay–Schreibservices.</string>
+    <string name="str_music_detail">Schreiben Sie eine Melodie, ein Lied. Erfahren Sie mehr über Klang, Rhythmus, Harmonie und Komposition.</string>
+    <string name="str_science_detail">Generieren Sie spannendes Wissen in Biologie, Chemie, Astronomie, …</string>
+    <string name="str_mathematics_detail">Erhalten Sie ganz einfach Antworten auf alle Mathematikfragen</string>
+    <string name="str_history_detail">Entdecken Sie die Ereignisse der Vergangenheit und wichtige Meilensteine</string>
+    <string name="str_content_detail">Verbessern und vereinfachen Sie Inhalte für eine bessere Lesbarkeit.</string>
+    <string name="str_email_topic_detail">Verfassen Sie eine gut formulierte E–Mail, die sorgfältig strukturiert und organisiert ist.</string>
+    <string name="str_cooking_techniques_detail">Erlernen der Grundkenntnisse des Kochens</string>
+    <string name="str_cooking_tool_detail">Wissen, wie man verschiedene Werkzeuge in der Küche verwendet</string>
+    <string name="str_cooking_ingredients_detail">Entdecken Sie verschiedene Zutaten beim Kochen</string>
+    <string name="str_travel_des_detail">Entdecken Sie die Wunder der Welt</string>
+    <string name="str_popular_des_detail">Tägliche Rezeptempfehlungen</string>
+    <string name="str_company_bio_detail">Die Geschichte Ihres Unternehmens: Wachstum, Innovation, Erfolg.</string>
+    <string name="str_company_slogan_detail">Entwerfen Sie einen einprägsamen Slogan für Ihr Unternehmen</string>
+    <string name="str_essays_detail">Schreiben Sie mühelos einen Aufsatz mit mehr als 200 Wörtern</string>
+    <string name="str_physics_detail">Entdecken Sie die Geheimnisse des Universums mit der Kraft von ChatGPT</string>
+    <string name="str_cooking_styles_detail">Experimentieren mit verschiedenen Kochstilen</string>
+    <string name="str_cooking_recipes_detail">Planen Sie Ihre Mahlzeiten ganz einfach</string>
+    <string name="str_cooking_environment_detail">Lernen Sie, umweltfreundlicher zu kochen</string>
+    <string name="str_travel_experiences_detail">Das Anhören von Erlebnissen kann Ihre Sicht auf das Reisen bereichern</string>
+    <string name="str_travel_skill_detail">Entwickeln Sie Fähigkeiten, die Ihr Reiseerlebnis verbessern können</string>
+    <string name="str_travel_trend_detail">Entdecken Sie neue Reisetrends und informieren Sie sich</string>
+    <string name="str_travel_impact_detail">Kennen Sie Ihre Auswirkungen auf Reisen</string>
+    <string name="str_travel_tip_detail">Erhalten Sie praktische Ratschläge, wie Sie intelligenter, sicherer und günstiger reisen können.</string>
+    <string name="str_company_name_detail">Erstellen Sie einen faszinierenden Namen für Ihre Marke oder Ihr Produkt.</string>
+    <string name="str_business_trend_detail">Entdecken Sie neue Trends und passen Sie sich schnell an</string>
+    <string name="str_business_innov_detail">Generieren Sie neue Ideen zur Verbesserung von Produkten, Dienstleistungen und Leistung</string>
+    <string name="str_business_strategy_detail">Bewerten Sie Ihr Unternehmen und geben Sie Ratschläge zu Zielen, Plänen und Maßnahmen</string>
+    <string name="str_music_ques">Wie können wir Ihnen mit Musik helfen?</string>
+    <string name="str_mathematics_ques">Welche Matheaufgaben möchtest du lösen?</string>
+    <string name="str_history_ques">Welche Ereignisse oder Zeitpläne möchten Sie wissen?</string>
+    <string name="str_science_ques">Welche Ereignisse oder Zeitpläne möchten Sie wissen?</string>
+    <string name="str_essays_ques">Was ist das Thema des Aufsatzes?</string>
+    <string name="str_physics_ques">Was möchtest du in der Physik wissen?</string>
+    <string name="str_cooking_techniques_ques">Auf welche Techniken konzentrieren Sie sich?</string>
+    <string name="str_cooking_tool_ques">Welche Kochutensilien verwenden Sie?</string>
+    <string name="str_cooking_ingredients_ques">Mit welchen Zutaten haben Sie Probleme?</string>
+    <string name="str_cooking_styles_ques">Welche Kochstile suchen Sie?</string>
+    <string name="str_cooking_recipes_ques">Welches Rezept möchten Sie ausprobieren?</string>
+    <string name="str_cooking_environment_ques">Was möchten Sie über nachhaltiges Kochen wissen?</string>
+    <string name="str_travel_des_ques">Das Land, das Sie besuchen möchten?</string>
+    <string name="str_travel_experiences_ques">Welche Fehler, Erfolge, Herausforderungen beim Reisen möchten Sie wissen?</string>
+    <string name="str_travel_skill_ques">Was ist Ihr Anliegen bei der Verbesserung Ihrer Reisekenntnisse?</string>
+    <string name="str_travel_trend_ques">Interessieren Sie sich für einen bestimmten Trend?</string>
+    <string name="str_travel_impact_ques">Was möchten Sie über umweltfreundliches Reisen wissen?</string>
+    <string name="str_travel_tip_ques">Welche praktischen Tipps möchten Sie wissen?</string>
+    <string name="str_company_name_ques">Was macht Ihre Marke/Ihr Produkt?</string>
+    <string name="str_business_trend_ques">Auf welche bestimmte Kategorie möchten Sie sich konzentrieren?</string>
+    <string name="str_business_innov_ques">Welches Innovationsthema möchten Sie erreichen?</string>
+    <string name="str_business_strategy_ques">Wie können wir Ihnen bei Ihrem Unternehmen helfen?</string>
+    <string name="str_company_bio_ques">Wie lautet Ihr Firmenname und Ihre Spezialität?</string>
+    <string name="str_company_slogan_ques">Erzählen Sie eine kurze, fesselnde Anekdote über die Entstehung des Unternehmens.</string>
+    <string name="str_premium_txt"><![CDATA[Testen Sie<b> %s</b>Premium mit tollen Angeboten.\n<b>Jetzt herunterladen.</b>]]></string>
+    <string name="txt_continue_to_chat">Weiter zum Chatten</string>
+    <string name="str_copy">Kopieren</string>
+    <string name="str_regenerate">Regenerieren</string>
+    <string name="str_fashion_ques">Möchten Sie, dass wir Ihnen einige Anregungen zu diesem Trend geben?</string>
+    <string name="str_relax_ques">Empfohlene Serie, die Sie diesen Sommer auf Netflix sehen sollten.</string>
+    <string name="str_tech_ques">Die künstliche Intelligenz hat mittlerweile erhebliche Auswirkungen auf die Welt. Möchten Sie mehr erfahren?</string>
+
+    <string-array name="topic_title">
+        <item>Alle</item>
+        <item>Geschäftsexperte</item>
+        <item>Inhaltsersteller</item>
+        <item>Lifestyle Buddy</item>
+        <item>Lernen Sie mit ChatAI</item>
+        <item>Kochmeister</item>
+        <item>Reise</item>
+    </string-array>
+
+    <string-array name="select_input_fashion">
+        <item>Silberne Handtasche</item>
+        <item>Regenstiefel</item>
+        <item>Newjeans-Mode</item>
+        <item>Uniform</item>
+        <item>Herz-Halskette</item>
+        <item>Himecut-Haare</item>
+    </string-array>
+
+    <string-array name="select_input_relax">
+        <item>Ginny &amp; Georgien</item>
+        <item>Outer Banks</item>
+        <item>Herzstopper</item>
+        <item>Fremde Dinge</item>
+        <item>Das Ende der verdammten Welt</item>
+        <item>Das Damengambit</item>
+        <item>K-Drama</item>
+    </string-array>
+
+    <string-array name="select_input_tech">
+        <item>KI-Kunst</item>
+        <item>KI-Chat</item>
+        <item>AI-Bildergenerator</item>
+        <item>KI-Lied</item>
+        <item>KI-Bots</item>
+        <item>KI-Video</item>
+    </string-array>
+
+    <string-array name="arr_science">
+        <item>Biologie</item>
+        <item>Chemie</item>
+        <item>Astronomie</item>
+    </string-array>
+
+    <string-array name="arr_cooking_techniques">
+        <item>Rösten</item>
+        <item>Köcheln</item>
+        <item>Sieden</item>
+        <item>Entglasung</item>
+        <item>Sautieren</item>
+    </string-array>
+
+    <string-array name="arr_cooking_tool">
+        <item>Messer</item>
+        <item>Töpfe</item>
+        <item>Pfannen</item>
+        <item>Mischer</item>
+        <item>Mixer</item>
+        <item>Thermometer</item>
+        <item>Waagen</item>
+    </string-array>
+
+    <string-array name="arr_cooking_ingredients">
+        <item>Gewürze</item>
+        <item>Kräuter</item>
+        <item>Öle</item>
+        <item>Essig</item>
+        <item>Körner</item>
+        <item>Bohnen</item>
+        <item>Nüsse</item>
+        <item>Samen</item>
+        <item>Früchte</item>
+        <item>Gemüse</item>
+    </string-array>
+
+    <string-array name="arr_cooking_style">
+        <item>Backen</item>
+        <item>Grillen</item>
+        <item>Braten</item>
+        <item>Dämpfen</item>
+        <item>Wilderei</item>
+        <item>Bohnen</item>
+        <item>Grillen</item>
+        <item>und Mikrowelle</item>
+    </string-array>
+
+    <string-array name="arr_travle_des">
+        <item>Vietnam</item>
+        <item>Japan</item>
+        <item>USA</item>
+        <item>Großbritannien</item>
+        <item>Frankreich</item>
+        <item>Deutschland</item>
+        <item>Norwegisch</item>
+        <item>Südkorea</item>
+    </string-array>
+
+    <string-array name="arr_business_innovation">
+        <item>Marketing</item>
+        <item>Logistik</item>
+        <item>Personalmanagement</item>
+        <item>Finanzen</item>
+        <item>andere</item>
+    </string-array>
+
+    <string-array name="arr_business_trends">
+        <item>Technologie</item>
+        <item>Logistik</item>
+        <item>Marketing</item>
+        <item>Macht</item>
+        <item>Landwirtschaft</item>
+        <item>Werbespot</item>
+        <item>E-Commerce</item>
+        <item>andere</item>
+    </string-array>
+
+    <string-array name="arr_art_page">
+        <item>Kunst generieren</item>
+        <item>Hintergrundbilder</item>
+    </string-array>
+
+    <string name="str_create_photo">Foto erstellen</string>
+    <string name="str_square">Quadrat</string>
+    <string name="str_original">Original</string>
+    <string name="str_wallpaper">Hintergrund</string>
+    <string name="str_set_wallpaper">Hintergrundbild festlegen</string>
+    <string name="str_popular">Beliebt</string>
+    <string name="str_see_more">Mehr sehen</string>
+    <string name="str_see_more_1">…Mehr sehen</string>
+    <string name="str_fashion_title">Mode</string>
+    <string name="str_relax_title">Entspannen</string>
+    <string name="str_techlogy_title">Technologie</string>
+    <string name="txt_random">willkürlich</string>
+    <string name="str_title_exit_app">Sie sind sicher, dass Sie beenden wollen?</string>
+
+    <string name="str_choose_action">Aktion auswählen:</string>
+    <string name="str_open_camera">Kamera öffnen</string>
+    <string name="str_select_photo">Gehe zu Fotos</string>
+    <string name="str_recognize">Erkennen</string>
+    <string name="str_recognizing">Erkennt...</string>
+    <string name="str_txt_recognize">Texterkennung</string>
+    <string name="str_txt_choose_image">Fotos auswählen</string>
+    <string name="str_txt_apply_text">Text anwenden</string>
+    <string name="str_summary">Zusammenfassung</string>
+    <string name="str_summary_sub_title">Texte aus Dateien zusammenfassen und alle darin enthaltenen Fragen beantworten</string>
+    <string name="str_summary_upload_files">Dateien hochladen</string>
+    <string name="str_summary_upload_image">Fotos hochladen</string>
+    <string name="str_summary_upload_des1">Um die wichtigsten Fakten oder Ideen über etwas oder jemanden in prägnanter und klarer Form auszudrücken</string>
+    <string name="str_summary_upload_des2">Um wichtige Punkte klar darzulegen.</string>
+    <string name="str_summary_upload_des3">Um die wichtigsten Ideen oder Fakten in einem Bericht, einer Diskussion usw. in wenigen Worten darzustellen.</string>
+    <string name="str_error_summary">Etwas ist schiefgegangen!</string>
+    <string name="str_error_summary_des">Sie können maximal 1MB hochladen. Bitte aktualisieren Sie auf Premium und verarbeiten Sie große Dateien.</string>
+    <string name="str_txt_unlock_premium">Premium freischalten</string>
+    <string name="str_sub_unlock_premium">Unterstützt von GPT4, keine Begrenzung, keine Werbung</string>
+    <string name="str_no_image">Kein Bild</string>
+    <string name="str_premium_des1">Unterstützt von Chat GPT-4</string>
+    <string name="str_premium_des2">Unbegrenzte Fragen &amp; Antworten</string>
+    <string name="str_premium_des3">Verschiedene Themen zur Auswahl</string>
+    <string name="str_premium_des4">Datei hochladen &amp; frage alles</string>
+    <string name="str_premium_des5">Unbegrenzte Generation von KI-Kunstwerken</string>
+    <string name="str_best_choose">Beste Auswahl</string>
+    <string name="str_file_summary">Dateizusammenfassung:</string>
+    <string name="str_summary_text">Zusammenfassungstext</string>
+    <string name="str_your_chats">Ihre Chats</string>
+    <string name="str_out_of_times_summary">Oh nein, Ihnen sind die Zusammenfassungen für heute ausgegangen, verwenden Sie sie morgen mit %d Zusammenfassungen weiter! Nutzen Sie weiterhin unbegrenzt andere Funktionen der Anwendung.</string>
+    <string name="str_intro_summary">Sie können nur PDF-Dateien hochladen, die weniger als %dMB groß sind.</string>
+    <string name="str_uploading">Hochladen...</string>
+    <string name="str_upload_s_photo">%d Fotos hochladen</string>
+    <string name="str_upload_photo_msg">Sie können nur 3 Fotos für einen Upload auswählen.</string>
+    <string name="txt_continue_to_summary">Weiter zur Zusammenfassung</string>
+    <string name="txt_premium_topic"><b><font color='#4AE89F'>Verschiedene</font></b>Themen zur Auswahl</string>
+    <string name="txt_premium_upload_file"><b><font color='#4AE89F'>Datei hochladen</font></b> &amp; frage alles</string>
+    <string name="txt_premium_generate_art"><b><font color='#4AE89F'>Schalte</font></b> KI-Kunst der Generation frei</string>
+    <string name="str_summary_now">Zusammenfassung jetzt!</string>
+
+    <string name="str_i_got_it">Ich habe es</string>
+    <string name="str_mes_loading_summary_file">AI lernt aus Ihrer Datei und es kann je nach Größe des Dokuments eine Weile dauern.</string>
+    <string name="str_go_to_chat">Gehen Sie zum Chat</string>
+    <string name="str_exists_file_mes">Die Datei existiert bereits. Bitte kehren Sie zum Chat zurück.</string>
+
+    <string-array name="arr_strategy_type">
+        <item>Content-Marketing</item>
+        <item>IMC (Integrierte Marketingkommunikation)</item>
+        <item>E-Commerce-Marketing</item>
+        <item>Social-Media-Marketing</item>
+    </string-array>
+
+    <string-array name="arr_interviewer_detail">
+        <item>Hintergrund &amp; Erfahrung</item>
+        <item>Führung</item>
+        <item>Karriereziele</item>
+        <item>Technische Fähigkeiten</item>
+        <item>Kritisches Denken</item>
+        <item>Denkweise</item>
+    </string-array>
+
+    <string-array name="arr_key_segment">
+        <item>Stärken</item>
+        <item>Schwächen</item>
+        <item>Verkaufstaktiken</item>
+        <item>Marketingstrategien</item>
+        <item>Share of Voice</item>
+        <item>Umsatz</item>
+    </string-array>
+
+    <string-array name="arr_tone_voice">
+        <item>Formal</item>
+        <item>Optimistisch</item>
+        <item>Freundlich</item>
+        <item>Ermutigend</item>
+        <item>Durchsetzungsfähig</item>
+        <item>Genossenschaft</item>
+    </string-array>
+
+    <string-array name="arr_genre_song">
+        <item>Indie</item>
+        <item>RnB</item>
+        <item>Pop</item>
+        <item>Land</item>
+        <item>Rock</item>
+        <item>Klassisch</item>
+        <item>Metall</item>
+        <item>Jazz</item>
+        <item>Balladen</item>
+        <item>Blau</item>
+    </string-array>
+
+    <string-array name="arr_mood_song">
+        <item>Glücklich</item>
+        <item>Energetisch</item>
+        <item>Depression</item>
+        <item>Ängstlich/traurig</item>
+        <item>Weich</item>
+        <item>Schwer</item>
+        <item>Romantisch</item>
+        <item>Ruhe</item>
+    </string-array>
+
+    <string-array name="arr_media_plalform">
+        <item>LinkedIn</item>
+        <item>Instagram</item>
+        <item>Facebook</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="arr_media_goal">
+        <item>Engagement</item>
+        <item>Impressionen</item>
+    </string-array>
+    <string-array name="arr_gender">
+        <item>Männlich</item>
+        <item>Weiblich</item>
+        <item>Andere</item>
+    </string-array>
+    <string-array name="arr_outfit_designer_style">
+        <item>Retro</item>
+        <item>Gothic</item>
+        <item>Emo</item>
+        <item>Techwear</item>
+        <item>Hypebeast</item>
+        <item>Vintage</item>
+        <item>Klassisch</item>
+        <item>Altes Geld</item>
+        <item>Streetwear</item>
+        <item>Kawaii</item>
+        <item>Minimalistisch</item>
+        <item>Rock</item>
+    </string-array>
+
+    <string-array name="arr_information_horoscope">
+        <item>Liebe</item>
+        <item>Karriere</item>
+        <item>Eigenschaften</item>
+        <item>Passendes Sternzeichen</item>
+    </string-array>
+
+    <string-array name="arr_information_travel">
+        <item>Essen</item>
+        <item>Nationale Feiertage</item>
+        <item>Kultur</item>
+        <item>Szenario</item>
+    </string-array>
+
+    <string-array name="language_programing">
+        <item>SQL</item>
+        <item>Java</item>
+        <item>Java Script</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>Python</item>
+        <item>PHP</item>
+        <item>Rubin</item>
+        <item>Andere</item>
+    </string-array>
+
+    <string-array name="arr_techniques_cooking">
+        <item>Rösten</item>
+        <item>Köcheln</item>
+        <item>Sieden</item>
+        <item>Entglasung</item>
+        <item>Sautieren</item>
+        <item>andere</item>
+    </string-array>
+
+    <string name="str_marketing_plan">Marketingplan</string>
+    <string name="str_marketing_plan_detail">Haben Sie Probleme mit der Vermarktung Ihres Produkts? Lassen Sie sich von ChatGPT helfen</string>
+    <string name="str_marketing_plan_ques">Sie sind ein Business–Experte. Schlagen Sie mir einen Marketingplan für %s vor. Das Produkt ist %s. Das Ziel der Kampagne ist %s. Der Strategietyp, den ich implementieren möchte, ist %s Kampagne.</string>
+    <string name="str_interviewer_support">Interviewerunterstützung</string>
+    <string name="str_interviewer_support_detail">Erhalten Sie mit ChatGPT in einer Sekunde Interviewfragen</string>
+    <string name="str_interviewer_support_ques">Sie sind Personalvermittler. Schlagen Sie mir 10 Fragen für %s vor. Die Anforderungen umfassen %s.</string>
+    <string name="str_competitors_research">Wettbewerbsforschung</string>
+    <string name="str_competitors_research_detail">Lassen Sie ChatGPT die Recherche über Ihre Konkurrenten durchführen</string>
+    <string name="str_competitors_research_ques">Sie sind Marktforscher. Führen Sie eine Konkurrenzforschung zu %s in der %s–Branche durch, wobei das wichtigste Produkt/die wichtigste Dienstleistung %s ist. Die Recherche sollte %s umfassen.</string>
+    <string name="str_customers_insights_research">Kunden–Insights–Forschung</string>
+    <string name="str_customers_insights_research_detail">Möchten Sie Ihren Kunden besser verstehen?</string>
+    <string name="str_customers_insights_research_ques">Sie sind ein professioneller Marketingspezialist. Führen Sie eine Customer Insights–Recherche über die Zielgruppe von %s durch. Die Forschung sollte Personen mit diesen Merkmalen umfassen: %s, %s, %s.</string>
+    <string name="str_write_paragraph">Schreiben Sie einen Absatz</string>
+    <string name="str_write_paragraph_detail">ChatGPT kann in kürzester Zeit einen hervorragenden Absatz schreiben</string>
+    <string name="str_write_paragraph_ques">Sie sind ein professioneller Autor. Schreiben Sie mir einen Absatz von %s mit %s Tonfall. Der Absatz sollte in %s sein.</string>
+    <string name="str_write_song_lyrics">Schreibe einen Liedtext</string>
+    <string name="str_write_song_lyrics_detail">Werden Sie mit ChatGPT ein professioneller Songkomponist</string>
+    <string name="str_write_song_lyrics_ques">Sie sind ein professioneller Musikkomponist. Schreib mir ein Lied mit dem Betreff %s. Das Lied sollte in %s Musik mit %s Stimmung sein.</string>
+    <string name="str_write_social_media_post">Schreiben Sie einen Social–Media–Beitrag</string>
+    <string name="str_str_write_social_media_post_detail">Verbringen Sie mit ChatGPT keine Mühe mit dem Schreiben von Social–Media–Beiträgen</string>
+    <string name="str_str_write_social_media_post_ques">Sie sind ein professioneller Social–Media–Vermarkter. Schreiben Sie mir einen fesselnden Beitrag auf %s mit dem Inhalt von %s. Das Ziel des Beitrags besteht darin, %s mit dem %s Tonfall zu erreichen.</string>
+    <string name="str_write_email">Eine E–Mail schreiben</string>
+    <string name="str_write_email_detail">Lassen Sie ChatGPT E–Mails für Sie schreiben</string>
+    <string name="str_write_email_ques">Schreiben Sie mir eine E–Mail mit dem Inhalt %s. Der Tonfall sollte %s sein.</string>
+    <string name="str_outfit_designer">Outfit–Designer</string>
+    <string name="str_outfit_designer_detail">Sie wissen nicht, was Sie heute anziehen sollen? Lassen Sie ChatGPT Ihr #ootd vorschlagen</string>
+    <string name="str_outfit_designer_ques">Du bist Stylistin und Outfit–Designerin. Schlagen Sie mir ein Outfit für %s im %s–Stil vor.</string>
+    <string name="str_write_pickup_line">Schreiben Sie eine Anmachzeile</string>
+    <string name="str_write_pickup_line_detail">Holen Sie sich lustige Anmachsprüche, um Ihren Kumpel zu beeindrucken</string>
+    <string name="str_write_pickup_line_ques">Schreiben Sie mir eine Anmachzeile in %s mit %s Tonfall.</string>
+    <string name="str_write_joke">Schreibe einen Witz</string>
+    <string name="str_write_joke_detail">Nicht jeder hat lustige Geschichten zu erzählen. Lassen Sie ChatGPT das tun</string>
+    <string name="str_write_joke_ques">Schreib mir einen Witz in %s mit dem Kontext von %s.</string>
+    <string name="str_horoscope_reader">Horoskopleser</string>
+    <string name="str_horoscope_reader_detail">Technologie ist ein Freund mit Geheimnissen. Meinst du nicht auch?</string>
+    <string name="str_horoscope_reader_ques">Sie sind Astrologe und Horoskopleser. Analysieren Sie das Horoskop einer in %s geborenen Person. Die Informationen sollten %s enthalten.</string>
+    <string name="str_solve_math_problem">Lösen Sie eine Matheaufgabe</string>
+    <string name="str_solve_math_problem_detail">Erhalten Sie ganz einfach Antworten auf alle Mathematikfragen</string>
+    <string name="str_solve_math_problem_ques">Sie sind Mathematikwissenschaftler. Lösen Sie mir das folgende Problem: %s.</string>
+    <string name="str_history_events">Geschichtliche Ereignisse</string>
+    <string name="str_history_events_detail">Entdecken Sie die Ereignisse der Vergangenheit und wichtige Meilensteine</string>
+    <string name="str_history_events_ques">Sagen Sie mir, dass die Verlaufsereignisse in %s, in %s, stattgefunden haben.</string>
+    <string name="str_code_supporter">Code–Unterstützer</string>
+    <string name="str_code_supporter_detail">Haben Sie Probleme mit dem Code und möchten mehr erfahren? ChatGPT kann Sie unterstützen</string>
+    <string name="str_code_supporter_ques">Du bist ein hervorragender Programmierer. Unterstützen Sie mich mit dem Code von %s in %s.</string>
+    <string name="str_latino_dishes">Latino–Gerichte</string>
+    <string name="str_latino_dishes_detail">Erfahren Sie, wie Sie mit ChatGPT lateinamerikanische Gerichte zubereiten</string>
+    <string name="str_latino_dishes_ques">Sie sind ein 3–Sterne–Michelin–Koch. Schlagen Sie mir ein Latino–Gericht vor. Das Gericht ist %s mit %s Technik. Die Zutaten sollten %s enthalten. Schlagen Sie mir die Menge an Materialien für %s Personen vor.</string>
+    <string name="str_african_dishes">Afrikanische Gerichte</string>
+    <string name="str_african_dishes_detail">Erfahren Sie, wie Sie mit ChatGPT afrikanische Gerichte zubereiten</string>
+    <string name="str_african_dishes_ques">Sie sind ein 3–Sterne–Michelin–Koch. Schlagen Sie mir ein afrikanisches Gericht vor. Das Gericht ist %s mit %s Technik. Die Zutaten sollten %s enthalten. Schlagen Sie mir die Menge an Materialien für %s Personen vor.</string>
+    <string name="str_asian_dishes">Asiatische Gerichte</string>
+    <string name="str_asian_dishes_detail">Erfahren Sie, wie Sie mit ChatGPT asiatische Gerichte zubereiten</string>
+    <string name="str_asian_dishes_ques">Sie sind ein 3–Sterne–Michelin–Koch. Schlagen Sie mir ein asiatisches Gericht vor. Das Gericht ist %s mit %s Technik. Die Zutaten sollten %s enthalten. Schlagen Sie mir die Menge an Materialien für %s Personen vor.</string>
+    <string name="str_western_dishes">Westliche Gerichte</string>
+    <string name="str_western_dishes_detail">Erfahren Sie, wie Sie mit ChatGPT westliche Gerichte zubereiten</string>
+    <string name="str_western_dishes_ques">Sie sind ein 3–Sterne–Michelin–Koch. Schlagen Sie mir ein westliches Gericht vor. Das Gericht ist %s mit %s Technik. Die Zutaten sollten %s enthalten. Schlagen Sie mir die Menge an Materialien für %s Personen vor.</string>
+    <string name="str_travel_destination">Reiseziel</string>
+    <string name="str_travel_destination_detail">ChatGPT kann Ihnen alle Signaturen Ihres Reiseziels vorschlagen!</string>
+    <string name="str_travel_destination_ques">Sie sind ein Reiseführer. Schlagen Sie mir vor, dass %s %s erkunden soll.</string>
+    <string name="str_travel_experience">Reiseerlebnisse</string>
+    <string name="str_travel_experience_detail">Tipps &amp; Tricks beim Reisen, empfohlen von ChatGPT!</string>
+    <string name="str_travel_experience_ques">Sie sind ein Reiseführer. Schlagen Sie mir einige Tipps zu %s vor, wenn Sie nach %s reisen.</string>
+    <string name="str_brand_name">Markenname</string>
+    <string name="str_product_services">Produkt/Dienstleistungen</string>
+    <string name="str_goals">Ziele</string>
+    <string name="str_position">Position</string>
+    <string name="str_details">Einzelheiten</string>
+    <string name="str_name">Name</string>
+    <string name="str_industry">Industrie</string>
+    <string name="str_key_segment">Schlüsselsegment</string>
+    <string name="str_age">Alter</string>
+    <string name="str_gender">Geschlecht</string>
+    <string name="str_region">Region</string>
+    <string name="str_subject">Thema</string>
+    <string name="str_length">Länge</string>
+    <string name="str_context">Kontext</string>
+    <string name="str_genre">Genre</string>
+    <string name="str_mood">Stimmung</string>
+    <string name="str_platform">Plattform</string>
+    <string name="str_style">Stil</string>
+    <string name="str_language">Sprache</string>
+    <string name="str_information">Information</string>
+    <string name="str_tone_of_voice">Tonfall</string>
+    <string name="str_year">Jahr</string>
+    <string name="str_birth_date">Geburtsdatum/–uhrzeit</string>
+    <string name="str_country_region">Land/Region</string>
+    <string name="str_issue">Ausgabe</string>
+    <string name="str_dishes">Teller</string>
+    <string name="str_techniques">Techniken</string>
+    <string name="str_ingredients">Zutaten</string>
+    <string name="str_potion">Trank</string>
+    <string name="str_context_strategy_type">Welche Strategietypen möchten Sie umsetzen?</string>
+    <string name="str_context_position">Schlagen Sie mir 10 Fragen für ein Vorstellungsgespräch für diese Position vor</string>
+    <string name="str_context_name">Welchen Konkurrenten möchten Sie sich ansehen?</string>
+    <string name="str_context_product_services">Welche Produkte/Dienstleistungen möchten Sie gezielt an Ihre Zielgruppen richten?</string>
+    <string name="str_context_subject">Worum geht es in Ihrem Absatz?</string>
+    <string name="str_context_song">Worum geht es in deinem Lied?</string>
+    <string name="str_context_post_media">Worum geht es in deinem Beitrag?</string>
+    <string name="str_context_gmail">Worum geht es in Ihrer E–Mail?</string>
+    <string name="str_context_style">Auf welchen Stil stehst du derzeit?</string>
+    <string name="str_context_joke">Worum geht es in deinem Witz?</string>
+    <string name="str_context_birth_date_time">Was ist Ihre Geburtszeit und Ihr Geburtstag?</string>
+    <string name="str_context_information">Was möchtest du über dich wissen?</string>
+    <string name="str_context_solve_math_problem">Was ist Ihr Problem in Mathematik?</string>
+    <string name="str_context_issue">Welche Bedenken haben Sie diesbezüglich?</string>
+    <string name="str_context_dishes">Welches Gericht möchten Sie kochen?</string>
+    <string name="str_context_techniques">Welche Technik planen Sie für dieses Gericht?</string>
+    <string name="str_context_ingredients">Welche Zutaten möchten Sie in diesem Gericht verwenden?</string>
+    <string name="str_context_potion">Für wie viele Tränke (Personen) möchten Sie dieses Gericht zubereiten?</string>
+    <string name="str_context_information_travel">Was möchten Sie erkunden?</string>
+    <string name="str_context_information_travel2">Was möchten Sie wissen, wenn Sie an diesen Ort reisen?</string>
+    <string name="str_context_country">Wohin willst du gehen?</string>
+    <string name="str_select_model">Modell auswählen:</string>
+    <string name="str_message_model_3_5">Das GPT–3.5–Modell optimiert Leistung und Effizienz für eine Vielzahl textbezogener Aktivitäten.</string>
+    <string name="str_reasoning">Argumentation</string>
+    <string name="str_speed">Geschwindigkeit</string>
+    <string name="str_concisenes">Prägnant</string>
+    <string name="str_message_model_4">Das GPT–4–Modell eignet sich gut für Aktivitäten, die ein verbessertes Denken, das Verstehen präziser Anweisungen und eine gesteigerte Vorstellungskraft erfordern.</string>
+    <string name="str_you_may_be_interested_in_these_questions">Diese Fragen könnten Sie interessieren:</string>
+    <string name="str_close">Schließen</string>
+    <string name="str_preview_your_files">Klicken Sie hier, wenn Sie eine Vorschau Ihrer Dateien anzeigen möchten</string>
+    <string name="str_has_your_payment_expired">Ist Ihre Zahlung\n abgelaufen?</string>
+    <string name="str_has_your_payment_sale">Exklusive Angebote rufen Sie!!</string>
+    <string name="str_has_your_payment_cancel">Verpassen Sie nicht die tollen Angebote!</string>
+    <string name="str_oh_no">Oh nein!</string>
+    <string name="str_great">Großartig!!!</string>
+    <string name="str_welcome_back">Willkommen zurück!</string>
+    <string name="str_super_sale">Super Sale</string>
+    <string name="str_limited_time_only">Nur für begrenzte Zeit</string>
+    <string name="str_the_file_no_content">Die Datei enthält\nkeinen Inhalt!</string>
+    <string name="str_we_found_no_content">Wir haben keinen oder nicht genügend Inhalt zum Zusammenfassen gefunden. Bitte versuchen Sie es mit einer anderen Datei.</string>
+    <string name="str_msg_free_message">um %d kostenlose Nachrichten zu verdienen</string>
+    <string name="str_msg_free_summary">um %d kostenlose Zusammenfassung zu erhalten</string>
+    <string name="str_msg_free_generate_art">um %d kostenlose Generierungskunst zu verdienen</string>
+
+    <string name="str_msg_sale_weekly_t3">Automatisch – Abonnementverlängerung wird wöchentlich berechnet</string>
+    <string name="str_intro_gpt_4"><![CDATA[ Unterstützt von <br><b> <font color=#FFFFFF>GPT-4</font></b>]]></string>
+    <string name="str_intro_topic"><![CDATA[ Verschiedene <br><b> <font color=#FFFFFF>Themen</font></b>]]></string>
+    <string name="str_intro_image_to_text"><![CDATA[ Bild zu <br><b> <font color=#FFFFFF> Text (OCR) </font></b>]]></string>
+    <string name="str_intro_free_ads"><![CDATA[ Kostenlose <br><b> <font color=#FFFFFF> 100 % Werbung </font></b>]]></string>
+    <string name="str_intro_unlimit_art"><![CDATA[ UnIimited <br><b> <font color=#FFFFFF> AI Art </font></b>]]></string>
+    <string name="str_intro_upload_file"><![CDATA[ Datei hochladen <br><b> <font color=#FFFFFF> Alles fragen </font></b>]]></string>
+    <string name="str_detail_price_yearly_new"> dann %s / Jahr, automatisch – verlängerbar. </string>
+    <string name="txt_yearly">Jährlich</string>
+    <string name="txt_start_yeal_auto">Automatisch – Abonnementverlängerung wird jährlich berechnet</string>
+</resources>

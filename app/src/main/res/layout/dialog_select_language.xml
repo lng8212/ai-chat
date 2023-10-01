@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialogSelectLanguage_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_rate_app"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:theme="@style/Material_dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.86">
+
+            <TextView
+                android:id="@+id/dialogSelectLanguage_tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_56sdp"
+                android:gravity="center_vertical"
+                android:text="@string/txt_language"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dialogSelectLanguage_radioRcv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fadeScrollbars="false"
+                android:paddingBottom="@dimen/_40sdp"
+                android:scrollbarSize="@dimen/_4sdp"
+                android:scrollbars="vertical"
+                android:verticalScrollbarPosition="right"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintHeight_percent="0.87"
+                app:layout_constraintTop_toBottomOf="@+id/dialogSelectLanguage_tvTitle"
+                tools:listitem="@layout/item_select_language" />
+
+
+            <TextView
+                android:id="@+id/dialogSelectLanguage_tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@android:string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/color_grey_89"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/dialogSelectLanguage_tvSubmit" />
+
+            <TextView
+                android:id="@+id/dialogSelectLanguage_tvSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@android:string/ok"
+                android:textAllCaps="true"
+                android:textColor="@color/color_green_base"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

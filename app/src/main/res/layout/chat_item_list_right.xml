@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/chatItemListRightTextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:textColor="@color/color_white_40"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="06:06" />
+
+        <TextView
+            android:id="@+id/chatItemListRightText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:layout_marginTop="4dp"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/color_white"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/_13sdp"
+            android:background="@drawable/bg_border_background_chat_user"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/_12sdp"
+            android:drawableStart="@drawable/ic_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatItemListRightTextTime"
+            tools:text="Can you explain this to me as if I were a child?" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_top"
+        tools:context=".feature.history.FragmentHistory">
+
+        <com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
+            android:id="@+id/fmHistory_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_24sdp"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+        <com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
+            android:id="@+id/fmHistory_headerRemove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_24sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+
+             />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fmHistory_rcv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_80sdp"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmHistory_header"/>
+
+        <TextView
+            android:id="@+id/fmHistory_delete"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/bg_border_btn"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="@string/txt_delete"
+            android:enabled="false"
+            android:visibility="gone"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="27dp"
+            app:layout_constraintWidth_percent="0.83" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

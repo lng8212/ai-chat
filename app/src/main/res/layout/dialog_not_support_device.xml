@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:background="@drawable/bg_exit_app"
+            android:gravity="center"
+            android:padding="@dimen/_24sdp">
+
+            <ImageView
+                android:id="@+id/dialogNotSupport_topImg"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_88sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/img_device_not_support" />
+
+            <TextView
+                android:id="@+id/dialogNotSupport_tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:text="@string/txt_not_support_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialogNotSupport_topImg"
+                app:layout_constraintWidth_percent="0.85" />
+
+            <TextView
+                android:id="@+id/dialogNotSupport_tvDes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:text="@string/txt_not_support_title_des"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialogNotSupport_tvTitle"
+                app:layout_constraintWidth_percent="0.85" />
+
+            <TextView
+                android:id="@+id/dialogNotSupport_tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@android:string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/color_grey_89"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toStartOf="@+id/dialogNotSupport_tvSubmit"
+                app:layout_constraintTop_toBottomOf="@+id/dialogNotSupport_tvDes" />
+
+            <TextView
+                android:id="@+id/dialogNotSupport_tvSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@android:string/ok"
+                android:textAllCaps="true"
+                android:textColor="@color/color_green_base"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialogNotSupport_tvDes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

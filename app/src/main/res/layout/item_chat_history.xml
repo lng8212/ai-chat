@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_marginVertical="@dimen/_10sdp">
+        <CheckBox
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:button="@drawable/check_remove"
+            android:checked="false"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:visibility="gone"
+            android:id="@+id/itChatHistory_cb"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itChatHistory_ct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_history_14"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_24sdp"
+            app:layout_constraintStart_toEndOf="@+id/itChatHistory_cb"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:paddingHorizontal="@dimen/_14sdp">
+            <TextView
+                android:id="@+id/itChatHistoryUserChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_chat_user"
+                android:paddingStart="16dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="8dp"
+                android:alpha="0.8"
+                android:textColor="@color/color_white"
+                android:paddingHorizontal="@dimen/_17sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintWidth_percent="0.63"
+                android:text="Lorem faucibus ac cursus scelerisque nam ac "/>
+            <TextView
+                android:id="@+id/itChatHistoryBotChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/itChatHistoryUserChat"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/bg_chat_bot"
+                android:textColor="@color/color_white"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintWidth_percent="0.73"
+                android:paddingBottom="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:text="Lorem faucibus ac cursus scelerisque nam ac "/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

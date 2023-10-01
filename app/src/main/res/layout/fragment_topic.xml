@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/intro_bg_gradient"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="false"
+        tools:context=".feature.topic.FragmentFirstTopic"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmTopic_title"
+            tools:listitem="@layout/topic_list_item" />
+
+        <TextView
+            android:id="@+id/fmTopic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/font_bold"
+            android:gravity="center"
+            android:text="@string/txt_topic"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

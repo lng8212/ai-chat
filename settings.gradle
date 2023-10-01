@@ -1,0 +1,2 @@
+rootProject.name = "ChatGPT-OpenAI"
+include ':app'

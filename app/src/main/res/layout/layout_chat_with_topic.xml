@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_50"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_100sdp">
+
+            <RelativeLayout
+                android:id="@+id/lln_chat_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/bg_border_background_dialog_chat_topic"
+                android:padding="@dimen/_12sdp"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="@dimen/_6sdp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="2.5dp"
+                    android:background="@drawable/bg_border_top_sheet"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:gravity="center"
+                    android:textColor="@color/color_white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textSize="@dimen/_18sdp"
+                    tools:text="Would you like us to give you some ideas about this trend?"/>
+
+                <LinearLayout
+                    android:id="@+id/llnChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:orientation="vertical"
+                    android:layout_below="@id/tvTitle"
+                    android:minHeight="@dimen/_140sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_boder_white10"
+                        android:gravity="top"
+                        android:importantForAutofill="no"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:lines="10"
+                        android:textColor="@color/color_white"
+                        android:padding="@dimen/_12sdp"
+                        android:maxLines="10"
+                        android:textSize="@dimen/_14sdp"
+                        tools:ignore="LabelFor" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:alignContent="stretch"
+                        app:alignItems="stretch"
+                        app:flexWrap="wrap" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:background="@drawable/bg_border14_green"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textColor="@color/color_white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_18sdp"
+                    android:text="@string/txt_continue"
+                    android:gravity="center"
+                    android:layout_below="@id/llnChat"/>
+
+            </RelativeLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

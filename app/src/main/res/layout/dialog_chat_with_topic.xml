@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_color">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="@dimen/_200sdp"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:background="@drawable/bg_border_background_dialog_chat_topic"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="@dimen/_6sdp"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+            
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/font_bold"
+                android:textColor="@color/color_green_base"
+                tools:text="Select country/ Region"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/select_rcl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_12sdp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

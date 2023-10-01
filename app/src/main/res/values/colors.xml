@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by CuongNV on 2/3/23, 1:53 PM
-  ~ Copyright (c) by Begamob.com 2023 . All rights reserved.
-  ~ Last modified 9/13/21, 10:29 AM
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="safr">#5f777777</color>
     <color name="holo_dark_background">#303030</color>
@@ -161,7 +156,7 @@
 
     <color name="color_chat_style_bg_1">#FFC347</color>
     <color name="color_chat_style_bg_2">#9276C3</color>
-    <color name="color_chat_style_bg_3">#65BDBD</color>
+    <color name="color_chat_style_bg_3">#65BDBD </color>
     <color name="color_chat_style_bg_4">#DD908F</color>
     <color name="color_chat_style_bg_5">#A4BF5C</color>
     <color name="color_chat_style_bg_6">#AAA775</color>

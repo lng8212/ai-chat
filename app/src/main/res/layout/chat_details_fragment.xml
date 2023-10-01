@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mViewModel"
+            type="com.longkd.chatgpt_openai.feature.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llnViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatFmContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="-18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatFm_llnFile">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatFm_rcv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/chatFm_rclSuggest"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp"
+                tools:listitem="@layout/chat_item_list_left"
+                tools:itemCount="1"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatFm_rclSuggest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:clipToPadding="false"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/chatFm_tvStopAnimateText"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp"
+                tools:listitem="@layout/item_suggest_question"
+                tools:itemCount="3"
+                android:visibility="gone"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fmChatBottomContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/chatFm_edt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:background="@drawable/bg_border_input_chat"
+                    android:fontFamily="@font/font_regular"
+                    android:hint="@string/type_here"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:minHeight="@dimen/_52sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_50sdp"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white_50"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="@={mViewModel.inputEdtChat}"
+                    android:paddingBottom="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/chatFm_btnSend"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/chatFm_btnOcr"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    app:lottie_autoPlay="true"
+                    android:layout_centerVertical="true"
+                    app:lottie_fileName="anim_ocr.json"
+                    app:lottie_loop="true"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:padding="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/chatFm_edt"
+                    app:layout_constraintEnd_toStartOf="@+id/chatFm_btnSend"
+                    app:layout_constraintTop_toTopOf="@+id/chatFm_edt" />
+
+                <ImageView
+                    android:id="@+id/chatFm_btnSend"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:background="@drawable/bg_background_chat_selector"
+                    android:padding="@dimen/_14sdp"
+                    android:src="@drawable/ic_send_chat"
+                    app:layout_constraintBottom_toBottomOf="@+id/chatFm_edt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/chatFm_edt" />
+
+                <TextView
+                    android:id="@+id/chatFmLimitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="10/100"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/chatFm_edt"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:background="@drawable/bg_border14_green"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textColor="@color/color_white"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_18sdp"
+                android:textSize="@dimen/_18sdp"
+                android:text="@string/txt_continue_to_chat"
+                android:gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/fmChatBottomContainer"/>
+
+            <TextView
+                android:id="@+id/chatFm_tvStopAnimateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:background="@drawable/bg_topic_item"
+                android:fontFamily="@font/font_medium"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:text="@string/txt_skip_generating"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/fmChat_llnSelectModel"
+            layout="@layout/layout_select_model_chat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatFmHeaderView"
+            android:visibility="gone"/>
+
+
+        <com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
+            android:id="@+id/chatFmHeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:paddingTop="@dimen/_24sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/fmChat_llnViewToolTip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_black_40"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_100sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                app:srcCompat="@drawable/ic_tooltip_2"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_50sdp"/>
+
+            <TextView
+                android:id="@+id/fmChat_showDetailSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:textSize="@dimen/_16sdp"
+                android:padding="@dimen/_16sdp"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_rounded_main_16"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/str_preview_your_files"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/chatFm_llnFile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52sdp"
+            app:layout_constraintTop_toBottomOf="@id/chatFmHeaderView"
+            app:layout_constraintBottom_toTopOf="@id/chatFmContainer"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/bg_border_name_file"
+            android:layout_marginTop="@dimen/_48sdp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/chatFm_nameFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_white"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:textSize="@dimen/_16sdp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@id/chatFm_closeFile"
+                tools:text="FileName.pdf"
+                app:drawableStartCompat="@drawable/ic_summary_upload_file" />
+
+            <TextView
+                android:id="@+id/chatFm_closeFile"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/color_white"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/str_close"
+                app:drawableEndCompat="@drawable/ic_close_circle" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

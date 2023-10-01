@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
+        android:id="@+id/homeFm_scrollerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/home_bg_gradient"
+        app:autoAdjustHeightAtBottomView="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFm_topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_isSink="true"
+            app:layout_isSticky="true"
+            app:layout_isTriggerScroll="true">
+
+            <TextView
+                android:id="@+id/homeFmSelectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_54sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:text="@string/app_name_new"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/homeFm_imvWidget"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_widget"
+                app:layout_constraintBottom_toBottomOf="@+id/homeFmSelectTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/homeFmSelectTitle" />
+
+
+            <com.longkd.chatgpt_openai.base.widget.CommonTextViewWriting
+                android:id="@+id/homeFm_titleChatAI"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:drawableStart="@drawable/ic_icon_start_chat"
+                android:drawablePadding="@dimen/_12sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_green_base"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeFmSelectTitle" />
+
+            <TextView
+                android:id="@+id/homeFm_startChat"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@drawable/bg_border_start_chat"
+                android:drawablePadding="@dimen/_12sdp"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:text="@string/str_ask_a_question"
+                android:textColor="@color/color_white_50"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toStartOf="@id/homeFm_iconStartChat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeFm_titleChatAI" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/homeFm_iconOcr"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@id/homeFm_startChat"
+                app:layout_constraintEnd_toEndOf="@id/homeFm_startChat"
+                app:layout_constraintTop_toTopOf="@id/homeFm_startChat"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="anim_ocr.json"
+                app:lottie_loop="true" />
+
+            <ImageView
+                android:id="@+id/homeFm_iconStartChat"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:background="@drawable/bg_border_btn_send"
+                android:padding="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="@id/homeFm_startChat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/homeFm_startChat"
+                app:srcCompat="@drawable/ic_send_chat" />
+
+            <ImageView
+                android:id="@+id/homeFm_bgSummary"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/homeFm_summaryFile"
+                app:layout_constraintEnd_toEndOf="@id/homeFm_summaryFile"
+                app:layout_constraintStart_toStartOf="@id/homeFm_summaryFile"
+                app:layout_constraintTop_toTopOf="@id/homeFm_summaryFile"
+                app:srcCompat="@drawable/img_background_summary" />
+
+            <LinearLayout
+                android:id="@+id/homeFm_summaryFile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:background="@drawable/bg_border_summary_file"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/homeFm_startChat">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/font_bold"
+                    android:text="@string/str_summary"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_22sdp"
+                    app:drawableStartCompat="@drawable/ic_summary_file" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/str_summary_sub_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_17sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/bg_boder20_e6"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/font_medium"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:text="@string/str_summary_now"
+                    android:textColor="@color/color_6238E2"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/homeFm_viewDirector"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/color_black_40"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/homeFmImvDirector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_director_widget"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/homeFm_imvWidget"
+                app:layout_constraintTop_toBottomOf="@+id/homeFm_imvWidget" />
+
+            <LinearLayout
+                android:id="@+id/homeFmAddWidget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_boder_e3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/homeFmImvDirector"
+                app:layout_constraintStart_toStartOf="@+id/homeFmImvDirector"
+                app:layout_constraintTop_toBottomOf="@+id/homeFmImvDirector">
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:src="@drawable/ic_add_widget"
+                    app:tint="@color/color_green_base" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/font_medium"
+                    android:gravity="center"
+                    android:text="@string/add_a_new_widget"
+                    android:textColor="@color/color_green_base"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/homeFmImvDirector1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_director_widget"
+                android:translationX="10dp"
+                android:translationY="-10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/homeFm_iconOcr"
+                app:layout_constraintTop_toBottomOf="@+id/homeFm_iconOcr" />
+
+            <TextView
+                android:id="@+id/toolTipOcr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_boder_e3"
+                android:fontFamily="@font/font_medium"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:text="Image To Text"
+                android:textColor="@color/color_green_base"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/homeFmImvDirector1"
+                app:layout_constraintStart_toStartOf="@id/homeFmImvDirector1"
+                app:layout_constraintTop_toBottomOf="@id/homeFmImvDirector1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFm_llnBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_bg_gradient"
+            android:orientation="vertical"
+            app:layout_scrollChild="@+id/rclDetailAllTopic">
+
+            <TextView
+                android:id="@+id/tvTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/font_bold"
+                android:text="@string/txt_topic"
+                android:textColor="@color/color_white_50"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclTitleTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTopic"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclDetailAllTopic"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rclTitleTopic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclDetailTopic"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rclTitleTopic" />
+
+            <View
+                android:id="@+id/homeFm_viewDirector1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/color_black_40"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout>
+</layout>

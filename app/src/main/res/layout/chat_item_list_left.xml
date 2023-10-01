@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <com.longkd.chatgpt_openai.base.widget.CommonTextViewWriting
+            android:id="@+id/chatItemListLeftText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_boder_white10"
+            android:drawableStart="@drawable/ic_icon_start_chat"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:textColor="@color/color_white"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Of course! I'm here to help you understand things in a simple and easy-to-understand way. What would you like me to explain?"
+            tools:visibility="visible" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/chatItemListLeftAnimTypePing"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_chat_left_round"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/chatItemListLeftText"
+            app:layout_constraintStart_toStartOf="@+id/chatItemListLeftText"
+            app:layout_constraintTop_toTopOf="@+id/chatItemListLeftText"
+            app:lottie_fileName="anim_typing_indicator.json"
+            app:lottie_loop="true"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btnRegeberate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/bg_boder_white10"
+            android:drawableStart="@drawable/ic_rotate_left"
+            android:drawablePadding="@dimen/_8sdp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/str_regenerate"
+            android:textColor="@color/color_white_50"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/chatItemListCopy"
+            app:layout_constraintTop_toBottomOf="@id/chatItemListLeftText"/>
+
+        <TextView
+            android:id="@+id/chatItemListCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/bg_boder_white10"
+            android:drawableStart="@drawable/ic_copy"
+            android:drawablePadding="@dimen/_8sdp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/str_copy"
+            android:textColor="@color/color_white_50"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chatItemListLeftText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

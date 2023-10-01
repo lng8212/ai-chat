@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_boder18_white"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_16sdp">
+
+    <LinearLayout
+        android:id="@+id/layoutWidgetChat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/bg_boder20_e6"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/ic_mascot" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/font_regular"
+            android:text="@string/ask_ai_chat_anything"
+            android:textColor="#404040"
+            android:textSize="@dimen/_10sdp" />
+
+
+        <ImageView
+            android:id="@+id/layoutWidgetSend"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_send_widget"/>
+    </LinearLayout>
+</LinearLayout>

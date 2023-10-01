@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/home_bg_gradient"
+        tools:ignore="SpUsage">
+
+        <TextView
+            android:id="@+id/fmSettingHeaderView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_80sdp"
+            android:fontFamily="@font/font_bold"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_24sdp"
+            android:text="@string/text_setting"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.872" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmSettingHeaderView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_24sdp">
+
+
+
+                <TextView
+                    android:id="@+id/fmSettingUpdateTvSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/text_support"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateSupportContainer"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/fmSettingUpdateSupportContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_item_settinground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateTvSupport"
+                    app:layout_constraintWidth_percent="0.872">
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingBubble"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        app:Its_icon="@drawable/ic_restore_purchase"
+                        app:Its_style="Its_switch"
+                        app:Its_title="Bubble Chat"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_line_setting"
+                        app:layout_constraintEnd_toEndOf="@+id/fmSettingBubble"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="@+id/fmSettingBubble"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingBubble"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:Its_icon="@drawable/ic_about_us"
+                        app:Its_title="@string/text_about_us"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingBubble" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_line_setting"
+                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemAbout"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemAbout"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemAbout"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemPrivacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:Its_icon="@drawable/ic_privacy_policy"
+                        app:Its_title="@string/text_privacy_policy"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemAbout" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_line_setting"
+                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemPrivacy"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemPrivacy"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemPrivacy"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:Its_icon="@drawable/ic_term_of_use"
+                        app:Its_title="@string/text_term_of_use"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemPrivacy" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_line_setting"
+                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemTemp"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemTemp"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemTemp"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:Its_icon="@drawable/ic_language"
+                        app:Its_title="@string/txt_language"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemTemp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_line_setting"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemLanguage"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemLanguage"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemLanguage"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemGenerating"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:visibility="gone"
+                        app:Its_icon="@drawable/ic_term_of_use"
+                        app:Its_style="Its_switch"
+                        app:Its_title="@string/txt_auto_generating"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemLanguage" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/fmSettingUpdateTvStay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/text_stay_in_touch"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateTvSupport"
+                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateSupportContainer" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/fmSettingUpdateStayContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/bg_item_settinground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateTvStay"
+                    app:layout_constraintWidth_percent="0.872">
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        app:Its_icon="@drawable/ic_rate_app"
+                        app:Its_title="@string/text_rate_app"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/color_line_setting"
+                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemRate"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemRate"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemRate"
+                        app:layout_constraintWidth_percent="0.9" />
+
+                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
+                        android:id="@+id/fmSettingUpdateItemFeedBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_56sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:Its_icon="@drawable/ic_feedback"
+                        app:Its_title="@string/text_send_feedback"
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemRate" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/fmSettingUpdateTvVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/text_version"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateStayContainer" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

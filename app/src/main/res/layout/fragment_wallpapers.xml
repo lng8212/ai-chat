@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data></data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_bg_gradient"
+            android:focusable="true"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/fmWall_tvTitleCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_create_photo"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/color_white_50"
+                android:fontFamily="@font/font_bold"/>
+
+            <TextView
+                android:id="@+id/fmWall_tvMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:layout_alignParentEnd="true"
+                android:textSize="@dimen/_14sdp"
+                android:padding="@dimen/_4sdp"
+                android:textColor="@color/color_green_base"
+                android:fontFamily="@font/font_bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fmWall_rcvCreatePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fmWall_tvMore"
+                android:layout_marginTop="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/fmWall_tvTitlePopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_popular"
+                android:textSize="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_below="@id/fmWall_rcvCreatePhoto"
+                android:textColor="@color/color_white_50"
+                android:fontFamily="@font/font_bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fmWall_rcvPopularPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fmWall_tvTitlePopular"
+                android:layout_marginTop="@dimen/_4sdp"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

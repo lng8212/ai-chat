@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_dialog_rate_app"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogLostInternet_contentView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/dialogLostInternet_contentView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dialogLostInternet_contentView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/dialogLostInternet_imgExit"
+                    android:layout_width="@dimen/_88sdp"
+                    android:layout_height="@dimen/_102sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="anim_offline.json"
+                    app:lottie_loop="true" />
+
+                <TextView
+                    android:id="@+id/dialogLostInternet_tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:fontFamily="@font/font_medium"
+                    android:gravity="center"
+                    android:text="@string/txt_no_internet"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dialogLostInternet_imgExit" />
+
+                <TextView
+                    android:id="@+id/dialogLostInternet_tvDes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:gravity="center"
+                    android:text="@string/txt_check_internet"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dialogLostInternet_tvTitle" />
+
+                <TextView
+                    android:id="@+id/dialogLostInternet_tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_24sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:text="@string/text_cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_grey_89"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/dialogLostInternet_tvSubmit"
+                    app:layout_constraintTop_toBottomOf="@+id/dialogLostInternet_tvDes" />
+
+                <TextView
+                    android:id="@+id/dialogLostInternet_tvSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_24sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:text="@string/text_setting"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_green_base"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dialogLostInternet_tvDes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

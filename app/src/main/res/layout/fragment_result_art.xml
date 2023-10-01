@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg_gradient"
+        tools:context=".feature.art.ResultArtFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fmResultCtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:paddingTop="@dimen/_24sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/fmResultArtImvBack"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_16sdp"
+                android:src="@drawable/ic_back_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/fmResultArtImv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            app:layout_constraintBottom_toTopOf="@+id/fmResultArtLlDes"
+            android:src="@drawable/img_default_art"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmResultCtHeader" />
+
+        <LinearLayout
+            android:id="@+id/fmResultArtLlDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_20sdp"
+            app:layout_constraintBottom_toTopOf="@+id/fmResultArtCtAction">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/prompt"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/fmResultArtTvPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:minLines="2"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/font_regular"
+                    android:text="@string/style"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/fmResultArtTvStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/font_regular"
+                    android:text="No Style"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fmResultArtCtAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:paddingHorizontal="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/fmResultArtImvShare"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_share_art"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/fmResultArtImvDownload"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_download_art"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/fmResultArtImvShare"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fmResultArtTvRegenerate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/bg_border_background_12_selector"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:text="@string/regenerate"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toStartOf="@+id/fmResultArtImvDownload"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fmResultArtCtLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_bg_gradient"
+            android:visibility="visible"
+            tools:context=".feature.art.MoreStyleArtFragment">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/fmResultArtLatLoading"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_42sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="273:246"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="anim_ai_art_loading.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/fmResultArtTvDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:fontFamily="@font/font_medium"
+                android:text="@string/applying_style"
+                android:textColor="@color/color_white_50"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fmResultArtLatLoading" />
+
+            <TextView
+                android:id="@+id/fmResultArtTvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/font_medium"
+                android:text="0.00s"
+                android:textColor="@color/color_white_50"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fmResultArtTvDes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/fmResultArtLLDownloaded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/black_50"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/bg_exit_app"
+                android:padding="@dimen/_16sdp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/fmResultArtLatDownloaded"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    app:lottie_fileName="anim_downloaded.json" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/font_medium"
+                    android:text="@string/downloaded"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

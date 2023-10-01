@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/lln_chat_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_16sdp"
+        android:background="@drawable/bg_border_background_dialog_chat_topic"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/_6sdp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:background="@drawable/bg_border_top_sheet"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/dialogExit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_title_exit_app"
+            android:layout_below="@id/view"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/font_regular"
+            android:textColor="@color/color_white"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/dialogExit_btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_below="@id/dialogExit_title"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/bg_boder_white10"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</layout>

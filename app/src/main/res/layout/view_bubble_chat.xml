@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_boder_top_main"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewBubbleChatContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fitsSystemWindows="true"
+                android:theme="@style/Theme.BaseProjectMaterial"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/viewBubbleChat_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp"
+                    android:drawableEnd="@drawable/ic_arrow_up"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/font_medium"
+                    android:text="Chat GPT 3.5"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/viewBubbleChat_rcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@+id/viewBubbleChat_tvStopAnimateText"
+                    app:layout_constraintTop_toBottomOf="@id/viewBubbleChat_model"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_editor_absoluteX="0dp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/chat_item_list_left"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/fmChatBottomContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_18sdp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/viewBubbleChat_edt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:background="@drawable/bg_border_input_chat"
+                        android:fontFamily="@font/font_regular"
+                        android:hint="@string/type_here"
+                        android:imeOptions="actionSend"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:minHeight="@dimen/_52sdp"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_50sdp"
+                        android:textColor="@color/color_white"
+                        android:textColorHint="@color/color_white_50"
+                        android:textSize="@dimen/_14sdp"
+                        android:paddingBottom="@dimen/_14sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/viewBubbleChat_btnSend"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/viewBubbleChat_btnSend"
+                        android:layout_width="@dimen/_52sdp"
+                        android:layout_height="@dimen/_52sdp"
+                        android:background="@drawable/bg_background_chat_selector"
+                        android:padding="@dimen/_14sdp"
+                        android:src="@drawable/ic_send_chat"
+                        app:layout_constraintBottom_toBottomOf="@+id/viewBubbleChat_edt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/viewBubbleChat_edt" />
+
+                    <TextView
+                        android:id="@+id/chatFmLimitText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="10/100"
+                        android:textColor="@color/color_white_50"
+                        android:textSize="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/viewBubbleChat_edt"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/viewBubbleChat_tvStopAnimateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:background="@drawable/bg_topic_item"
+                    android:fontFamily="@font/font_medium"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="@string/txt_skip_generating"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/fmChatBottomContainer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <include
+                    android:id="@+id/fmChat_llnSelectModel"
+                    layout="@layout/layout_select_model_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewBubbleChat_model"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:visibility="gone"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

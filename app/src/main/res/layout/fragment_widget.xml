@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".feature.widget.WidgetFragment"
+        android:background="@color/color_top"
+        android:orientation="vertical"
+        >
+        <com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
+            android:id="@+id/fmWidget_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_24sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/fmWidgetTvDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/font_regular"
+            android:text="@string/personalize_your_home_screen"
+            android:textColor="@color/color_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmWidget_header" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/font_regular"
+            android:text="@string/_4x1_widget"
+            android:textColor="@color/color_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmWidgetTvDes" />
+
+        <include
+            android:id="@+id/fmWidgetNoTopic"
+            layout="@layout/layout_widget_no_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="16dp" />
+        <TextView
+            android:id="@+id/fmWidgetTvAddNoTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            app:layout_constraintTop_toBottomOf="@+id/fmWidgetNoTopic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_14sdp"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:textColor="@color/color_white"
+            android:background="@drawable/bg_boder_white10"
+            android:text="@string/add_to_home_screen"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:fontFamily="@font/font_regular"
+            android:text="@string/_4x2_widget"
+            android:textColor="@color/color_white"
+            android:layout_marginTop="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmWidgetTvAddNoTopic" />
+
+        <include
+            android:id="@+id/fmWidgetTopic"
+            layout="@layout/layout_widget_topic"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <TextView
+            android:id="@+id/fmWidgetTvAddTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            app:layout_constraintTop_toBottomOf="@+id/fmWidgetTopic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_14sdp"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:textColor="@color/color_white"
+            android:background="@drawable/bg_boder_white10"
+            android:text="@string/add_to_home_screen"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

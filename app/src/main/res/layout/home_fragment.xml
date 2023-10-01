@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by CuongNV on 2/3/23, 1:53 PM
+  ~ Copyright (c) by Begamob.com 2023 . All rights reserved.
+  ~ Last modified 2/3/23, 11:56 AM
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fmHome_ctViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/home_bg_gradient">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_new_home_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/homeFmSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/font_bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFmLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/homeFmStartChat"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeFmCtHeaderHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_bold"
+                    android:padding="4dp"
+                    android:text="@string/txt_history"
+                    android:textColor="@color/color_white"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/homeFmTvSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_regular"
+                    android:padding="4dp"
+                    android:text="@string/see_all"
+                    android:textColor="@color/color_green_base"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeFmCtConversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/bg_history_14"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@+id/homeFmCtHeaderHistory">
+
+                <TextView
+                    android:id="@+id/homeFmTvUserChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:background="@drawable/bg_chat_user"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:paddingHorizontal="@dimen/_17sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="24dp"
+                    android:textColor="@color/color_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_max="wrap"
+                    app:layout_constraintWidth_percent="0.63" />
+
+                <TextView
+                    android:id="@+id/homeFmTvBotChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:background="@drawable/bg_chat_bot"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:text="Lorem faucibus ac cursus scelerisque nam ac "
+                    android:textColor="@color/color_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/homeFmTvUserChat"
+                    app:layout_constraintWidth_max="wrap"
+                    app:layout_constraintWidth_percent="0.73" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFmLayoutEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/homeFmStartChat"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/homeFmTvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:text="@string/you_don_t_have"
+                android:textColor="@color/color_white_50"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/homeFm_imvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:src="@drawable/img_history_empty"
+                app:layout_constraintDimensionRatio="328:190"
+                app:layout_constraintTop_toBottomOf="@+id/homeFmTvTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFmStartChat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:background="@drawable/ripper_btn_full_green_round"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9">
+
+            <TextView
+                android:id="@+id/homeFmStartTvChat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_48sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/font_bold"
+                android:gravity="center"
+                android:text="@string/text_start_chat"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_16sdp"
+                app:drawableStartCompat="@drawable/ic_chat_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/homeFmStartTvChatNumber"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/homeFmStartTvChatNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_48sdp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/homeFmStartTvChat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeFm_ctLevelDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_home_des_round_14"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.9">
+
+            <TextView
+                android:id="@+id/homeFm_tvLevelDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:fontFamily="@font/font_regular"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/weird_description"
+                android:textColor="@color/color_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/homeFm_viewDirector"
+            android:visibility="visible"
+            android:background="@color/color_black_40"/>
+        <ImageView
+            android:id="@+id/homeFm_imvWidget"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_widget"
+            app:layout_constraintBottom_toBottomOf="@+id/homeFmSelectTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/homeFmSelectTitle" />
+        <ImageView
+            android:id="@+id/homeFmImvDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_director_widget"
+            app:layout_constraintTop_toBottomOf="@+id/homeFm_imvWidget"
+            app:layout_constraintEnd_toStartOf="@+id/homeFm_imvWidget"/>
+        <LinearLayout
+            android:id="@+id/homeFmAddWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:gravity="center"
+            android:background="@drawable/bg_boder_e3"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/homeFmImvDirector"
+            app:layout_constraintStart_toStartOf="@+id/homeFmImvDirector"
+            app:layout_constraintEnd_toEndOf="@+id/homeFmImvDirector"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/ic_add_widget"
+                app:tint="@color/color_green_base" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_medium"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:text="@string/add_a_new_widget"
+                android:drawablePadding="@dimen/_4sdp"
+                android:textColor="@color/color_green_base"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

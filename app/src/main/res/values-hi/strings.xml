@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_ui_crash">ऐप/यूआई क्रैश हो गया</string>
+    <string name="sorry_string">क्षमा करें, ऐसा नहीं होना चाहिए था।</string>
+    <string name="error_report_button_text">इस त्रुटि की सूचना ई–मेल के माध्यम से दें</string>
+    <string name="error_report_button_telegram">इस त्रुटि की रिपोर्ट टेलीग्राम के माध्यम से करें</string>
+    <string name="copy_format">स्वरूपित रिपोर्ट की प्रतिलिपि बनाएँ</string>
+    <string name="error_report_open_issue_button_text">प्रतिवेदन</string>
+    <string name="error_report_open_github_notice">कृपया जांचें कि क्या आपके क्रैश की चर्चा करने वाला कोई मुद्दा पहले से मौजूद है।</string>
+    <string name="what_device_headline">जानकारी:</string>
+    <string name="what_happened_headline">क्या हुआ:</string>
+    <string name="info_labels">क्या:\\nअनुरोध:\\nGMT समय:\\nपैकेज:\\nसंस्करण:\\nOS संस्करण:\\nडिवाइस:\\nमॉडल:\\nउत्पाद:</string>
+    <string name="your_comment">आपकी टिप्पणी (अंग्रेज़ी में):</string>
+    <string name="error_details_headline">विवरण:</string>
+    <string name="error_report_title">त्रुटि की रिपोर्ट</string>
+    <string name="crash_report_copied">क्रैश रिपोर्ट क्लिपबोर्ड पर कॉपी की गई</string>
+    <string name="error_snackbar_message">क्षमा करें, कुछ गलत हो गया।</string>
+    <string name="error_snackbar_action">प्रतिवेदन</string>
+    <string name="text_setting">समायोजन</string>
+    <string name="text_start_chat">बातचीत शुरू कीजिए</string>
+    <string name="text_your_chat_ai">आपका चैटबॉट एआई</string>
+    <string name="text_ads_splash">इस प्रक्रिया में विज्ञापन हो सकते हैं</string>
+    <string name="text_chat_detail_title">जीपीटी एआई चैटबॉट</string>
+    <string name="text_intro_first">आपका दिन कैसा चल रहा है?\nमुझसे चैट करते हैं!</string>
+    <string name="text_wonderful">आश्चर्यजनक</string>
+    <string name="text_great">महान</string>
+    <string name="text_intro_second">तुम जो जानना चाहते हो मुझसे पूछो, \nमैं तुम्हारी मदद करूँगा।</string>
+    <string name="text_select_character">चरित्र का चयन करें</string>
+    <string name="hi_there">नमस्ते!</string>
+    <string name="device_not_support">दुर्भाग्य से डिवाइस समर्थित नहीं है!</string>
+    <string name="input_empty_error">कृपया कुछ इनपुट करें!</string>
+    <string name="something_error">अरे नहीं, कुछ गलत हो गया, कृपया पुन: प्रयास करें!</string>
+    <string name="type_here">यहाँ टाइप करें…</string>
+    <string name="text_thanks">हमारे आवेदन का उपयोग करने के लिए धन्यवाद। आप CHPlay पर ऐप को रेट कर सकते हैं। इससे हमें काफी मदद और प्रोत्साहन मिलेगा। धन्यवाद और फिर मिलते हैं!</string>
+    <string name="text_cancel">रद्द करना</string>
+    <string name="text_update_to_premium">पूर्ण संस्करण के लिए उन्नयन करें</string>
+    <string name="text_update_to_premium_des">सभी सुविधाओं के साथ असीमित एक्सेस का आनंद लें।</string>
+    <string name="text_support">सहायता</string>
+    <string name="text_restore_purchase">पुनःस्थापन क्रय</string>
+    <string name="text_about_us">हमारे बारे में</string>
+    <string name="text_privacy_policy">गोपनीयता नीति</string>
+    <string name="text_term_of_use">उपयोग की शर्त</string>
+    <string name="text_stay_in_touch">संपर्क में रहना</string>
+    <string name="text_rate_app">एप्प का मूल्यांकन</string>
+    <string name="text_send_feedback">प्रतिक्रिया भेजें</string>
+    <string name="txt_comming_soon">जल्द आ रहा है!</string>
+    <string name="text_rate_des">हम बेहतर उपयोगकर्ता अनुभव के लिए कड़ी मेहनत कर रहे हैं। यदि आप हमें रेट कर सकते हैं तो हम बहुत सराहना करेंगे।</string>
+    <string name="text_rate">दर</string>
+    <string name="text_version">संस्करण:</string>
+    <string name="text_rate_suggest">सबसे अच्छा हम ♥ प्राप्त कर सकते हैं</string>
+    <string name="text_premium_update">प्रीमियम अपग्रेड</string>
+    <string name="text_unlimited">असीमित प्रश्न और उत्तर</string>
+    <string name="text_no_ads">कोई विज्ञापन नहीं</string>
+    <string name="text_unlock">पूर्ण चरित्र अनलॉक</string>
+    <string name="text_start_trial">नि: शुल्क परीक्षण और योजना शुरू करें</string>
+    <string name="text_trial_free_day">3–दिन का निःशुल्क परीक्षण</string>
+    <string name="text_trial_free_price">फिर %s/सप्ताह, स्वतः – नवीकरणीय</string>
+    <string name="text_best_offer">सबसे अच्छा प्रस्ताव</string>
+    <string name="text_lifetime_price">– आजीवन – एकमुश्त भुगतान</string>
+    <string name="text_sub_temp">सदस्यता शर्तें</string>
+    <string name="text_sub_temp_1">नियम एवं शर्तें</string>
+    <string name="privacy_sub">सब्स्क्राइब्ड उपयोगकर्ताओं के पास बिना किसी विज्ञापन के, इसकी सभी प्रीमियम सुविधाओं तक असीमित उपयोग और पहुंच है। \n– खरीद की पुष्टि होने पर आपके Google खाते से भुगतान लिया जाएगा। वर्तमान अवधि के अंत से 24 घंटे पहले, और नवीनीकरण की लागत की पहचान करें।</string>
+    <string name="privacy_sub2">\n– नि: शुल्क परीक्षण अवधि के किसी भी अप्रयुक्त हिस्से को, यदि पेशकश की जाती है, तब जब्त कर लिया जाएगा जब उपयोगकर्ता उस प्रकाशन की सदस्यता खरीदता है, जहां लागू हो।– सदस्यता को उपयोगकर्ता द्वारा प्रबंधित किया जा सकता है और ऑटो–नवीनीकरण पर जाकर बंद किया जा सकता है खरीद के बाद उपयोगकर्ता खाता सेटिंग्स। ध्यान दें कि ऐप को अनइंस्टॉल करने से आपकी सदस्यता रद्द नहीं होगी।\n1। अपने Android फ़ोन या टैबलेट पर, Google Play Store खोलें।\n2। देखें कि आपने सही Google खाते में साइन इन किया है या नहीं.\n3. मेन्यू सब्सक्रिप्शन पर टैप करें और उस सब्सक्रिप्शन को चुनें जिसे आप रद्द करना चाहते हैं।\n4. सदस्यता रद्द करें टैप करें।</string>
+    <string name="txt_billing_unavailable">इन–ऐप बिलिंग सेवा अनुपलब्ध है, कृपया Android Market/Play को 3.9.16 या उच्चतर संस्करण में अपग्रेड करें!</string>
+    <string name="txt_first_error_billing">खरीदारी के दौरान कोई गड़बड़ी हुई, कृपया बाद में फिर से कोशिश करें!</string>
+    <string name="txt_check_internet">सुनिश्चित करें कि वाई–फाई या मोबाइल डेटा चालू है। तो कृपया पुनः प्रयास करें</string>
+    <string name="txt_check_wifi">अपने वाईफाई कनेक्शन की जांच करें और पुनः प्रयास करें!</string>
+    <string name="txt_no_internet">कोई इंटरनेट कनेक्शन नहीं!</string>
+    <string name="txt_no_wifi">कृपया वाईफाई से कनेक्ट करें</string>
+    <string name="txt_title_exit">क्या आप निश्चित हैं आपकी बाहर निकलने की इच्छा है?</string>
+    <string name="txt_billing_premium_success">ख़रीदने के लिए धन्यवाद!</string>
+    <string name="txt_billing_premium_fail">खेद है कि आपने खरीदा नहीं है या खरीदा पैकेज समाप्त हो गया है!</string>
+    <string name="txt_billing_restart_app">खरीदारी करने के बाद ऐप अपने सबसे अच्छे तरीके से काम करे, इसके लिए कृपया वीआईपी उपयोगकर्ता में रूपांतरण पूरा करने के लिए ऐप को पुनरारंभ करें!</string>
+    <string name="txt_get_premium">प्रीमियम प्राप्त करना</string>
+    <string name="txt_mess_number_premium1">आपके पास</string>
+    <string name="txt_mess_number_premium2">मुफ्त संदेश बाकी</string>
+    <string name="txt_gift_title">सिर्फ आपके लिए एक खास तोहफा।</string>
+    <string name="txt_gift_title_des">अब समझे।</string>
+    <string name="txt_free_message">मुफ्त संदेश:</string>
+    <string name="txt_start_trial">निशुल्क आजमाइश शुरु करें</string>
+    <string name="txt_month">महीने के</string>
+    <string name="txt_lifetime">जीवनभर</string>
+    <string name="txt_start_month_auto">ऑटो–नवीनीकरण सदस्यता शुल्क मासिक</string>
+    <string name="txt_start_one_time_auto">एक – बारगी भुगतान। सभी नई सुविधा – हमेशा के लिए</string>
+    <string name="txt_not_support_title">ओह तेरी!</string>
+    <string name="txt_not_support_title_des">हमें खेद है कि यह सुविधा आपके डिवाइस पर उपलब्ध नहीं है। हम सुधार करने की कोशिश करेंगे, अगले संस्करण में मिलते हैं।</string>
+    <string name="txt_topic">विषय</string>
+    <string name="txt_chat_ai">एआई चैट</string>
+    <string name="txt_topic_interview">मैं साक्षात्कारकर्ता के रूप में कार्य करूंगा और आप जिस पद के लिए आवेदन कर रहे हैं, उसके बारे में आपसे प्रश्न पूछूंगा। आप सवालों का जवाब देंगे जैसे कि आप उम्मीदवार हैं। चलो शुरू करें!</string>
+    <string name="txt_topic_develop">मैं एक डेवलपर हूं जिसके पास सुरक्षित वेब और ऐप समाधान विकसित करने का अनुभव है। मैं आपकी आवश्यकताओं को पूरा करने के लिए एक आर्किटेक्चर बनाने और कोड लिखने में सक्षम हूं। अपनी दृष्टि को जीवन में लाने के लिए आइए मिलकर काम करें और एक मजबूत और सुरक्षित मंच बनाएं!</string>
+    <string name="txt_topic_business">मैं व्यापार में आपके कौशल को बेहतर बनाने के लिए युक्तियों और टेम्पलेट्स के साथ आपकी सहायता करूंगा और आपके दैनिक कार्य संबंधी मामलों में आपकी सहायता करूंगा। आइए आपकी व्यावसायिक सूझबूझ को बढ़ाने के लिए शुरुआत करें!</string>
+    <string name="txt_topic_ad">मैं आपकी पसंद के उत्पाद या सेवा को बढ़ावा देने के लिए मार्केटिंग अभियान बनाने में आपकी मदद कर सकता हूं। अभियान को प्रभावशाली और सफल बनाने के लिए आइए मिलकर काम करें!</string>
+    <string name="txt_topic_language">मैं अंग्रेजी भाषा का विशेषज्ञ हूं, अनुवाद करने, वर्तनी को सही करने और व्याकरण में सुधार करने के कौशल के साथ। आपकी लिखित भाषा सटीक और पॉलिश है यह सुनिश्चित करने में मुझे आपकी सहायता करने दें।</string>
+    <string name="txt_topic_chef">मैं स्वादिष्ट और पौष्टिक व्यंजनों के सुझाव दे सकता हूं जो बनाने में आसान हैं और ज्यादा समय की आवश्यकता नहीं है। मेरे पास व्यंजनों और विचारों की एक विस्तृत श्रृंखला है जो खाना पकाने के विभिन्न कौशल स्तरों को पूरा करती है। आइए स्वस्थ और स्वादिष्ट भोजन बनाने के लिए मिलकर काम करें!</string>
+    <string name="txt_topic_composer">मैं यहां आपकी गाने की जरूरतों को पूरा करने में आपकी मदद करने के लिए हूं। चाहे आप किसी विशिष्ट गीत के बोल ढूंढ रहे हों या अपने मन में किसी अवधारणा के आधार पर गीत लिखना चाहते हों, मैं आपकी सहायता कर सकता हूं। मेरे पास किसी भी गीत के बोल खोजने या आपकी अवधारणा के आधार पर नए गीत लिखने की क्षमता है। आइए कुछ यादगार और प्रभावशाली गीत बनाते हैं!</string>
+    <string name="txt_topic_mental">मैं यहां भावनाओं, तनाव, चिंता और अन्य मानसिक स्वास्थ्य मुद्दों के प्रबंधन पर मार्गदर्शन और सलाह देने के लिए हूं। मेरा लक्ष्य इन चुनौतियों से निपटने और सामना करने के स्वस्थ तरीके खोजने में आपकी सहायता करना है। आइए आपके समग्र कल्याण और भावनात्मक स्थिरता को बेहतर बनाने के लिए मिलकर काम करें।</string>
+    <string name="txt_topic_interview_title">साक्षात्कारकर्ता</string>
+    <string name="txt_topic_develop_title">डेवलपर</string>
+    <string name="txt_topic_business_title">व्यापार सहायक</string>
+    <string name="txt_topic_ad_title">विज्ञापनदाता</string>
+    <string name="txt_topic_language_title">भाषा विशेषज्ञ</string>
+    <string name="txt_topic_chef_title">बावर्ची</string>
+    <string name="txt_topic_composer_title">संगीतकार</string>
+    <string name="txt_topic_mental_title">मानसिक स्वास्थ्य विज्ञापन</string>
+    <string name="txt_topic_interview_q1">सबसे आम साक्षात्कार प्रश्न क्या हैं?</string>
+    <string name="txt_topic_interview_q2">मैं साक्षात्कार की तैयारी कैसे करूँ?</string>
+    <string name="txt_topic_interview_q3">उम्मीदवारों से पूछने के लिए सबसे अच्छा साक्षात्कार प्रश्न क्या हैं?</string>
+    <string name="txt_topic_interview_q4">मैं एक सफल नौकरी साक्षात्कार कैसे आयोजित करूं?</string>
+    <string name="txt_topic_interview_q5">मैं एक उम्मीदवार के कौशल और योग्यता का मूल्यांकन कैसे करूं?</string>
+    <string name="txt_topic_interview_q6">मैं उम्मीदवार के सांस्कृतिक फिट का निर्धारण कैसे करूं?</string>
+    <string name="txt_topic_interview_q7">उम्मीदवारों के मूल्यांकन के लिए कुछ प्रभावी साक्षात्कार तकनीकें क्या हैं?</string>
+    <string name="txt_topic_interview_q8">मैं कठिन साक्षात्कार स्थितियों को कैसे संभाल सकता हूँ?</string>
+    <string name="txt_topic_interview_q9">मैं वृद्धि और विकास के लिए उम्मीदवार की क्षमता का आकलन कैसे करूं?</string>
+    <string name="txt_topic_interview_q10">निष्पक्ष और निष्पक्ष साक्षात्कार प्रक्रिया के लिए कुछ सर्वोत्तम अभ्यास क्या हैं?</string>
+    <string name="txt_topic_develop_q1">मुझे कौन सी प्रोग्रामिंग लैंग्वेज सीखनी चाहिए?</string>
+    <string name="txt_topic_develop_q2">चंचल विकास क्या है और यह कैसे काम करता है?</string>
+    <string name="txt_topic_develop_q3">सॉफ्टवेयर डेवलपमेंट सीखने के लिए सबसे अच्छे संसाधन कौन से हैं?</string>
+    <string name="txt_topic_develop_q4">सबसे अधिक मांग वाले प्रोग्रामिंग कौशल क्या हैं?</string>
+    <string name="txt_topic_develop_q5">मैं एक डेवलपर के रूप में कैसे आरंभ करूं?</string>
+    <string name="txt_topic_develop_q6">DevOps क्या है और यह विकास से कैसे संबंधित है?</string>
+    <string name="txt_topic_develop_q7">मैं नवीनतम प्रौद्योगिकी प्रवृत्तियों के साथ अद्यतित कैसे रहूँ?</string>
+    <string name="txt_topic_develop_q8">एक सफल विकास परियोजना के प्रमुख घटक क्या हैं?</string>
+    <string name="txt_topic_develop_q9">मैं अपने कोडिंग कौशल में सुधार कैसे करूं?</string>
+    <string name="txt_topic_develop_q10">उपयोग करने के लिए सर्वोत्तम विकास उपकरण और सॉफ्टवेयर कौन से हैं?</string>
+    <string name="txt_topic_business_q1">एक व्यापार सहायक की जिम्मेदारियां क्या हैं?</string>
+    <string name="txt_topic_business_q2">मैं एक सफल व्यवसाय सहायक कैसे बनूँ?</string>
+    <string name="txt_topic_business_q3">व्यवसाय सहायक के लिए कौन से कौशल आवश्यक हैं?</string>
+    <string name="txt_topic_business_q4">व्यवसाय सहायकों के लिए सबसे अच्छे उपकरण और सॉफ्टवेयर कौन से हैं?</string>
+    <string name="txt_topic_business_q5">वर्चुअल बिजनेस असिस्टेंट की भूमिका क्या है?</string>
+    <string name="txt_topic_business_q6">मैं व्यवसाय सहायक के रूप में अपने संगठनात्मक कौशल में सुधार कैसे करूँ?</string>
+    <string name="txt_topic_business_q7">एक व्यवसाय सहायक के रूप में मैं अनेक कार्यों और प्राथमिकताओं का प्रबंधन कैसे करूँ?</string>
+    <string name="txt_topic_business_q8">व्यवसाय सहायक के रूप में प्रभावी संचार के लिए सर्वोत्तम अभ्यास क्या हैं?</string>
+    <string name="txt_topic_business_q9">एक व्यवसाय सहायक के रूप में मैं संवेदनशील और गोपनीय जानकारी को कैसे प्रबंधित करूं?</string>
+    <string name="txt_topic_business_q10">व्यवसाय सहायक के लिए औसत वेतन क्या है?</string>
+    <string name="txt_topic_ad_q1">विज्ञापन क्या है और यह कैसे काम करता है?</string>
+    <string name="txt_topic_ad_q2">विज्ञापन के विभिन्न प्रकार क्या हैं?</string>
+    <string name="txt_topic_ad_q3">मैं एक सफल विज्ञापन अभियान कैसे बना सकता हूँ?</string>
+    <string name="txt_topic_ad_q4">विज्ञापन के लिए सबसे प्रभावी चैनल कौन से हैं?</string>
+    <string name="txt_topic_ad_q5">मैं किसी विज्ञापन अभियान की सफलता का आकलन कैसे करूं?</string>
+    <string name="txt_topic_ad_q6">विज्ञापन देने के लिए सबसे अच्छे उपकरण और सॉफ्टवेयर कौन से हैं?</string>
+    <string name="txt_topic_ad_q7">मैं अपने विज्ञापन अभियान के लिए सही ऑडियंस को कैसे लक्षित करूं?</string>
+    <string name="txt_topic_ad_q8">विज्ञापन में नवीनतम रुझान और नवाचार क्या हैं?</string>
+    <string name="txt_topic_ad_q9">मैं सम्मोहक और यादगार विज्ञापन संदेश कैसे बना सकता हूँ?</string>
+    <string name="txt_topic_ad_q10">विज्ञापन की लागत कितनी है और विज्ञापन के लिए निवेश पर प्रतिफल क्या है?</string>
+    <string name="txt_topic_language_q1">भाषा विशेषज्ञ बनने का सबसे अच्छा तरीका क्या है?</string>
+    <string name="txt_topic_language_q2">मैं अपने भाषा कौशल में सुधार कैसे करूँ?</string>
+    <string name="txt_topic_language_q3">भाषा सीखने के सबसे महत्वपूर्ण टिप्स क्या हैं?</string>
+    <string name="txt_topic_language_q4">भाषा सीखने के लिए सबसे अच्छे संसाधन कौन से हैं?</string>
+    <string name="txt_topic_language_q5">व्यवसाय और करियर की सफलता के लिए सीखने के लिए सबसे अच्छी भाषा कौन सी है?</string>
+    <string name="txt_topic_language_q6">मैं भाषा सीखने की बाधाओं और चुनौतियों से कैसे पार पा सकता हूँ?</string>
+    <string name="txt_topic_language_q7">मैं अपने उच्चारण और बोलने के कौशल को कैसे सुधार सकता हूँ?</string>
+    <string name="txt_topic_language_q8">शब्दावली और व्याकरण याद करने के लिए सबसे अच्छी तकनीकें क्या हैं?</string>
+    <string name="txt_topic_language_q9">मैं एक नई भाषा बोलने में प्रवाह और आत्मविश्वास कैसे बढ़ा सकता हूँ?</string>
+    <string name="txt_topic_language_q10">मैं किसी भाषा को तेजी से और प्रभावी ढंग से कैसे सीख सकता हूँ?</string>
+    <string name="txt_topic_chef_q1">शेफ क्या करता है और शेफ की क्या जिम्मेदारियां होती हैं?</string>
+    <string name="txt_topic_chef_q2">मैं एक बावर्ची कैसे बनूँ और किस शिक्षा या प्रशिक्षण की आवश्यकता है?</string>
+    <string name="txt_topic_chef_q3">सबसे अच्छा कुकिंग स्कूल और पाक कला कार्यक्रम कौन से हैं?</string>
+    <string name="txt_topic_chef_q4">एक बावर्ची के लिए सबसे महत्वपूर्ण खाना पकाने और रसोई कौशल क्या हैं?</string>
+    <string name="txt_topic_chef_q5">मैं अपने खाना पकाने के कौशल और तकनीकों को कैसे सुधारूं?</string>
+    <string name="txt_topic_chef_q6">एक शेफ के लिए सबसे अच्छे रसोई के उपकरण और उपकरण कौन से हैं?</string>
+    <string name="txt_topic_chef_q7">मैं एक सफल रसोई और भोजन अनुभव के लिए एक मेनू और योजना कैसे बना सकता हूँ?</string>
+    <string name="txt_topic_chef_q8">मैं रसोई और रसोइयों और कर्मचारियों की एक टीम का प्रबंधन कैसे करूँ?</string>
+    <string name="txt_topic_chef_q9">शेफ के रूप में बनाए रखने के लिए सबसे अच्छा भोजन और खाना पकाने के रुझान क्या हैं?</string>
+    <string name="txt_topic_chef_q10">मैं रसोई में खाद्य सुरक्षा और खाद्य रचनात्मकता को कैसे संतुलित करूँ?</string>
+    <string name="txt_topic_composer_q1">एक संगीतकार क्या करता है और एक संगीतकार की क्या जिम्मेदारियां होती हैं?</string>
+    <string name="txt_topic_composer_q2">मैं संगीतकार कैसे बनूँ और किस शिक्षा या प्रशिक्षण की आवश्यकता है?</string>
+    <string name="txt_topic_composer_q3">संगीतकारों के लिए सर्वश्रेष्ठ संगीत विद्यालय और कार्यक्रम कौन से हैं?</string>
+    <string name="txt_topic_composer_q4">एक संगीतकार के लिए सबसे महत्वपूर्ण गुण क्या हैं?</string>
+    <string name="txt_topic_composer_q5">मैं अपने रचना कौशल और तकनीकों में सुधार कैसे करूँ?</string>
+    <string name="txt_topic_composer_q6">संगीत रचना के लिए सबसे अच्छे उपकरण और सॉफ्टवेयर कौन से हैं?</string>
+    <string name="txt_topic_composer_q7">मैं एक सफल संगीत रचना कैसे बना सकता हूँ?</string>
+    <string name="txt_topic_composer_q8">मैं संगीत उद्योग में अन्य संगीतकारों, कलाकारों और निर्माताओं के साथ कैसे सहयोग करूँ?</string>
+    <string name="txt_topic_composer_q9">संगीतकार के रूप में मेरे संगीत को बढ़ावा देने और उसकी मार्केटिंग करने के सर्वोत्तम तरीके क्या हैं?</string>
+    <string name="txt_topic_composer_q10">मैं संगीत रचना में नवीनतम रुझानों और नवाचारों के साथ अद्यतित कैसे रहूं?</string>
+    <string name="txt_topic_mental_q1">मानसिक स्वास्थ्य विज्ञापन क्या है और यह क्यों महत्वपूर्ण है?</string>
+    <string name="txt_topic_mental_q2">विज्ञापन मानसिक स्वास्थ्य और कल्याण को कैसे प्रभावित करता है?</string>
+    <string name="txt_topic_mental_q3">विज्ञापन के माध्यम से मानसिक स्वास्थ्य जागरूकता को बढ़ावा देने के सर्वोत्तम तरीके क्या हैं?</string>
+    <string name="txt_topic_mental_q4">मैं एक प्रभावी मानसिक स्वास्थ्य विज्ञापन अभियान कैसे बना सकता हूँ?</string>
+    <string name="txt_topic_mental_q5">मानसिक स्वास्थ्य उत्पादों और सेवाओं के विज्ञापन के लिए नैतिक विचार क्या हैं?</string>
+    <string name="txt_topic_mental_q6">मानसिक स्वास्थ्य विज्ञापन के लिए सबसे प्रभावी चैनल कौन से हैं?</string>
+    <string name="txt_topic_mental_q7">मैं अपने मानसिक स्वास्थ्य विज्ञापन अभियान के लिए सही ऑडियंस को कैसे लक्षित करूं?</string>
+    <string name="txt_topic_mental_q8">मानसिक स्वास्थ्य विज्ञापन में नवीनतम रुझान और नवाचार क्या हैं?</string>
+    <string name="txt_topic_mental_q9">मैं मानसिक स्वास्थ्य विज्ञापनों के लिए सम्मोहक और संवेदनशील संदेश कैसे बना सकता हूँ?</string>
+    <string name="txt_topic_mental_q10">अप्रभावी या हानिकारक मानसिक स्वास्थ्य विज्ञापन के संभावित परिणाम क्या हैं?</string>
+    <string name="txt_confirm">पुष्टि करना</string>
+    <string name="text_confirm_restart_change">क्या आप परिवर्तन लागू करने के लिए एप्लिकेशन को पुनरारंभ करना चाहते हैं?</string>
+    <string name="text_content_sale_not_purchase2">हमारी सीमित समय की सेल से न चूकें! अभी ऐप खोलें और प्रीमियम सामग्री पर बचत करें।</string>
+    <string name="text_content_sale_not_purchase3">जल्दी करो! सीमित स्टॉक छूट पर उपलब्ध है। अपनी छूट का दावा करने के लिए अभी ऐप खोलें।</string>
+    <string name="text_content_sale_not_purchase4">वापसी पर स्वागत है! धन्यवाद के रूप में, हम आपको आपकी अगली खरीदारी पर छूट प्रदान कर रहे हैं। रिडीम करने के लिए अभी ऐप खोलें।</string>
+    <string name="text_content_sale_not_purchase5">अभी ऐप खोलें और अपनी अगली खरीदारी पर विशेष छूट प्राप्त करें! याद मत करो!</string>
+    <string name="text_content_sale_not_purchase6">जब आप अभी ऐप खोलें तो प्रीमियम सामग्री पर छूट प्राप्त करें। यह केवल सीमित समय के लिए है, इसलिए जल्दी करें!</string>
+    <string name="text_content_sale_not_purchase7">बड़ी बचत करने के लिए तैयार हैं? अभी ऐप खोलें और अपनी खरीदारी पर छूट पाने के लिए कोड DISCOUNT का उपयोग करें।</string>
+    <string name="text_content_sale_not_purchase8">नए उत्पाद अभी जोड़े गए हैं और छूट दी गई है! अपनी खरीदारी पर छूट पाने के लिए अभी ऐप खोलें। आप चूकना नहीं चाहेंगे
+        यह!</string>
+    <string name="text_title_sale_not_purchase2">सीमित समय की पेशकश &#127881;&#127881;&#127881;</string>
+    <string name="text_title_sale_not_purchase3">आपके लिए विशेष छूट &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase4">&#127881;&#127873;&#127881; मिस न करें</string>
+    <string name="text_title_sale_not_purchase5">नई छूट जोड़ी गई &#127881;&#127881;&#127881;</string>
+    <string name="txt_auto_generating">एनिमेट ऑटो जनरेटिंग टेक्स्ट</string>
+    <string name="txt_skip_generating">बनाना छोड़ दें</string>
+    <string name="txt_weekly">साप्ताहिक</string>
+    <string name="txt_start_weekly_auto">ऑटो–नवीनीकरण सदस्यता शुल्क साप्ताहिक</string>
+    <string name="txt_premium_des_image">एआई विवरण से यथार्थवादी छवियां बनाएं</string>
+    <string name="text_sale_off" formatted="false">केवल आपके लिए विशेष %s छूट</string>
+    <string name="txt_special_gift">आपके लिए विशेष उपहार</string>
+    <string name="txt_discount">छूट</string>
+    <string name="txt_get_now">अब प्राप्त करें</string>
+    <string name="txt_you_are_vip">आप एक वीआईपी हैं</string>
+    <string name="txt_unlock_chat_ai">चैट करने के लिए विज्ञापन देखना</string>
+    <string name="text_no_ads_toShow">दिखाने के लिए कोई विज्ञापन नहीं, कृपया देर से प्रयास करें!</string>
+    <string name="txt_next">अगला</string>
+    <string name="onetime_payment">एक – बारगी भुगतान</string>
+    <string name="get_premium_now">अभी प्रीमियम प्राप्त करें</string>
+    <string name="sorry_you_ve_used_up_today">क्षमा करें, आपने आज की निःशुल्क चैट का उपयोग कर लिया है। कल मिलते हैं या हमारे प्रीमियम संस्करण का उपयोग करें</string>
+    <string name="weird_description"><b>Weird:</b>सरल उत्तर, सही समस्या</string>
+    <string name="smart_description"><b>Smart:</b>स्मार्ट जवाब, सही समस्या</string>
+    <string name="brainiac_description"><b>Brainiac:</b>सुपर स्मार्ट जवाब, विस्तारित समस्या समाधान</string>
+    <string name="content_free_chat_1">हम हर रोज आपकी मदद करने के लिए तैयार हैं &#129299; वापस आना याद रखें और अपने 3 प्रश्नों का निःशुल्क दावा करें!</string>
+    <string name="content_free_chat_2">हर दिन 3 नि:शुल्क प्रश्न एकत्र करें और आपको आवश्यक उत्तर प्राप्त हों!&#128526;</string>
+    <string name="content_free_chat_3">मुझसे पूछने के लिए प्रतिदिन 3 निःशुल्क प्रश्नों का उपयोग करना न भूलें!&#129299;</string>
+    <string name="content_free_chat_4">हम आपकी सहायता के लिए 3 नि:शुल्क दैनिक प्रश्न प्रस्तुत करते हैं! वापसी करना याद रखें!&#128526;</string>
+    <string name="title_notify_daily_1">आज मैं आपकी मदद करने में कैसे सक्षम हूं?</string>
+    <string name="title_notify_daily_3">अपने काम से फँस गया?</string>
+    <string name="title_notify_daily_4">आप अकेला महसूस करते हैं?</string>
+    <string name="title_notify_daily_5">गृहकार्य करने, सामग्री लिखने में कठिनाई हो रही है?</string>
+    <string name="title_content_daily_1">बस मुझसे कुछ भी पूछो &#129299;</string>
+    <string name="title_content_daily_2">याद रखें कि चैटएआई आपके सवालों के जवाब देने के लिए हमेशा मौजूद है! &#129299;</string>
+    <string name="title_content_daily_3">चैटएआई को आपकी मदद करने दें!&#128522;</string>
+    <string name="title_content_daily_4">चैटएआई यहां आपके लिए है &#128526;</string>
+    <string name="title_content_daily_5">मुझसे कुछ भी पूछें! &#128526;</string>
+    <string name="title_content_daily_6">चलिए मैं आज आपके लिए शेयर बाजार का विश्लेषण करता हूं!&#128200;</string>
+    <string name="txt_continue">जारी रखना</string>
+
+    <string name="choose_the_topics">उन विषयों को चुनें जिनमें आपकी रुचि \na है:</string>
+    <string name="txt_history">इतिहास</string>
+    <string name="see_all">सभी देखें</string>
+    <string name="hello_blank_fragment">हैलो खाली टुकड़ा</string>
+    <string name="delete_x">मिटाएं (%s)</string>
+    <string name="you_re_a_premium">आप एक प्रीमियम हैं</string>
+    <string name="enjoy_the_premium">पूर्ण सुविधाओं के साथ प्रीमियम \nसंस्करण का आनंद लें</string>
+    <string name="toast_copy_text">टेक्स्ट क्लिपबोर्ड पर कॉपी किया गया</string>
+    <string name="you_don_t_have">आपकी अभी तक कोई बातचीत नहीं हुई है,<font color='#00B085'>अभी चैट करें!</font></string>
+    <string name="earn_2_free_messages">2 निःशुल्क संदेश अर्जित करने के लिए</string>
+    <string name="you_can_choose">आप चुन सकते हैं:</string>
+    <string name="watch_ads">विज्ञापन देखें</string>
+    <string name="txt_exception_date">एक त्रुटि है, कृपया जांचें कि क्या आपके फोन पर स्वचालित तिथि और समय सक्षम है।</string>
+    <string name="personalize_your_home_screen">एक टैप से अपने होम स्क्रीन को वैयक्तिकृत करें।</string>
+    <string name="add_to_home_screen">+ होम स्क्रीन में जोड़ें</string>
+    <string name="ask_ai_chat_anything"><b>AI चैट</b>से कुछ भी पूछें</string>
+    <string name="add_widget">विजेट जोड़ें</string>
+    <string name="add_a_new_widget">एक नया विजेट जोड़ें</string>
+    <string name="widget">विजेट</string>
+    <string name="convenient_with_bubble_chat">बबल चैट के साथ सुविधाजनक</string>
+    <string name="text_policy">गोपनीयता नीति</string>
+    <string name="text_policy_terms">शर्तें</string>
+    <string name="text_des_policy">मैं करने के लिए सहमत हूं</string>
+    <string name="text_des_guide_widget">होम स्क्रीन पर मैन्युअल रूप से रखने के लिए स्पर्श करके रखें।</string>
+    <string name="_4x1_widget">4x1 विजेट</string>
+    <string name="_4x2_widget">4x2 विजेट</string>
+    <string name="gpt_4_access"><b><font color='#4AE89F'>GPT–4</font></b>पहुंच</string>
+    <string name="txt_premium_unlimited"><b><font color='#4AE89F'>असीमित</font></b>प्रश्न और उत्तर</string>
+    <string name="txt_premium_ads"><b><font color='#4AE89F'>विज्ञापन मुक्त</font></b>अनुभव</string>
+    <string name="txt_premium_convenient">बबल चैट के साथ<b><font color='#4AE89F'>सुविधाजनक</font></b></string>
+    <string name="enter_your_prompt">अपना संकेत दर्ज करें</string>
+    <string name="get_inspired"><u>प्रेरणा लें</u></string>
+    <string name="choose_an_art_style" formatted="false">एक कला शैली चुनें</string>
+    <string name="generate" formatted="false">बनाना</string>
+    <string name="free_tries_left_s">नि:शुल्क शेष प्रयास: %s</string>
+    <string name="left_s">बायां: %s</string>
+    <string name="txt_painting">चित्रकारी</string>
+    <string name="txt_magical">मैजिकल</string>
+    <string name="txt_steampunk">स्टीमपंक</string>
+    <string name="txt_oil_painting">तैल चित्र</string>
+    <string name="txt_anime">एनिमे</string>
+    <string name="txt_digital_art">डिजिटल कला</string>
+    <string name="txt_cyberpunk">साइबरपंक</string>
+    <string name="txt_3d">3डी</string>
+    <string name="txt_ghibli">घिब्ली</string>
+    <string name="txt_game_art">खेल कला</string>
+    <string name="txt_vaporwave">वाष्प तरंगें</string>
+    <string name="txt_comic">हास्य</string>
+    <string name="txt_pixel_art">पिक्सेल कला</string>
+    <string name="txt_synthwave">सिंथवेव</string>
+    <string name="txt_watercolor">आबरंग</string>
+    <string name="txt_picasso">पिकासो</string>
+    <string name="watermark">वाटर–मार्क</string>
+    <string name="regenerate">पुनः जेनरेट</string>
+    <string name="prompt">तत्पर</string>
+    <string name="style">शैली</string>
+    <string name="not_acceptable">स्वीकार्य नहीं है</string>
+    <string name="des_fail_art">क्षमा करें, कोई त्रुटि हुई या इस संकेत ने सुरक्षा फ़िल्टर को दूषित कर दिया। कृपया केवल कार्य–सुरक्षित सामग्री बनाने का प्रयास करें।</string>
+    <string name="i_got_it">मैं समझ गया</string>
+    <string name="content_doesn_t_contain">सामग्री में संवेदनशील शब्द नहीं हैं।</string>
+    <string name="more">अधिक</string>
+    <string name="midj_art">मिज कला</string>
+    <string name="done">पूर्ण</string>
+    <string name="choose_style_art">स्टाइल आर्ट चुनें</string>
+    <string name="applying_style">शैली लागू की जा रही है…</string>
+    <string name="adjusting_colors">रंगों का समायोजन…</string>
+    <string name="enhancing_quality">गुणवत्ता बढ़ाना…</string>
+    <string name="creating_artwork">कलाकृति बनाई जा रही है…</string>
+    <string name="no_style">कोई शैली नहीं</string>
+    <string name="s_by_s" formatted="false">%s शैली %s द्वारा</string>
+    <string name="grantfailed">अनुमति नहीं दी गई</string>
+    <string name="downloaded">डाउनलोड किया गया!</string>
+    <string name="error">गलती!</string>
+    <string name="txt_premium_create"><b><font color='#4AE89F'>बनाएं</font></b> एआई के साथ अद्भुत कला</string>
+    <string name="txt_premium_faster"><b><font color='#4AE89F'>तेज़</font></b> इमेज प्रोसेसिंग</string>
+    <string name="txt_premium_no"><b><font color='#4AE89F'>नहीं</font></b> वॉटरमार्क!</string>
+    <string name="txt_premium_quality"><b><font color='#4AE89F'>सर्वश्रेष्ठ</font></b> छवि गुणवत्ता</string>
+    <string name="generate_art_with_midjourney_pro"><b>10 Generate Art</b> with\n Midjourney Pro</string>
+
+    <string name="purchase">खरीदना</string>
+    <string name="sharing_image">छवि साझा करना</string>
+    <string name="inspired_1">मानव विलुप्त होने के बाद पृथ्वी, एक नई शुरुआत, प्रकृति ग्रह को वापस ले रही है, सद्भाव, शांति, पृथ्वी संतुलित</string>
+    <string name="inspired_2">नोयर जासूस श्री। रबर की बतख। धुआँ, वर्षा, मूंछें और शौर्य। वह कोई भी पहेली सुलझा सकता है। लेकिन अपने भीतर के राक्षसों को नहीं हरा सकता। अभिव्यंजक डार्क मैट गौचे पेंटिंग</string>
+    <string name="inspired_3">एक एशिया के पुराने योद्धा प्रमुख का पोर्ट्रेट फोटो, ट्राइबल पैंथर मेकअप, लाल पर नीला, साइड प्रोफाइल, दूर देखना, गंभीर आंखें, 50 मिमी पोर्ट्रेट फोटोग्राफी, हार्ड रिम लाइटिंग फोटोग्राफी</string>
+    <string name="inspired_4">एक प्यारा जादुई उड़ने वाला कुत्ता, डिज़्नी कॉन्सेप्ट कलाकारों द्वारा बनाई गई फंतासी कला, सुनहरा रंग, उच्च गुणवत्ता, अत्यधिक विस्तृत, सुरुचिपूर्ण, तेज फोकस, अवधारणा कला, चरित्र अवधारणाएं, डिजिटल पेंटिंग, रहस्य, साहसिक कार्य</string>
+    <string name="inspired_5">इंटीरियर, मानव तराजू में रोशनी के साथ काई और लंबी गोल खिड़कियों के साथ कंक्रीट के विशाल ब्लॉकों के भीतर एक कैप्सूल मल्टीपल हाउस का यथार्थवादी वास्तुशिल्प प्रतिपादन</string>
+    <string name="image_type_object_any_details_ne_g_a_beautiful_magical_kingdom">छवि प्रकार, वस्तु, कोई भी विवरण \nउदा. एक सुंदर जादुई साम्राज्य</string>
+    <string name="str_title_start_chat">हेलो, मैं आपकी कैसे मदद कर सकता हूं?</string>
+    <string name="str_trending">रुझान</string>
+    <string name="str_ask_a_question">प्रश्न पूछें…</string>
+    <string name="str_bus">बस</string>
+    <string name="str_music">संगीत</string>
+    <string name="str_mathematics">अंक शास्त्र</string>
+    <string name="str_history">इतिहास</string>
+    <string name="str_content">संतुष्ट</string>
+    <string name="str_email_topic">ईमेल</string>
+    <string name="str_cooking_techniques">खाना पकाने की तकनीक</string>
+    <string name="str_cooking_tool">खाना पकाने के उपकरण</string>
+    <string name="str_cooking_ingredients">खाना पकाने की सामग्री</string>
+    <string name="str_cooking_styles">खाना पकाने की शैलियाँ</string>
+    <string name="str_cooking_recipes">खाना पकाने की विधि</string>
+    <string name="str_cooking_environment">पर्यावरण के लिए खाना बनाना</string>
+    <string name="str_science">विज्ञान</string>
+    <string name="str_essays">निबंध</string>
+    <string name="str_physics">भौतिक विज्ञान</string>
+    <string name="str_travel_experiences">यात्रा के अनुभव</string>
+    <string name="str_travel_skill">यात्रा कौशल</string>
+    <string name="str_travel_trend">यात्रा रुझान</string>
+    <string name="str_travel_impact">यात्रा प्रभाव</string>
+    <string name="str_travel_tip">यात्रा युक्तियां</string>
+    <string name="str_travel_des">यात्रा गंतव्य</string>
+    <string name="str_company_bio">कंपनी बायो</string>
+    <string name="str_company_slogan">नारा</string>
+    <string name="str_company_name">नाम जनरेटर</string>
+    <string name="str_business_trend">व्यापार रुझान</string>
+    <string name="str_business_innov">बिजनेस इनोवेशन</string>
+    <string name="str_business_strategy">व्यापार रणनीति</string>
+    <string name="str_bus_detail">हमारी प्रीमियम निबंध लेखन सेवाओं के साथ अपने असाइनमेंट में महारत हासिल करें।</string>
+    <string name="str_music_detail">एक राग, एक गीत लिखें। ध्वनि, ताल, सामंजस्य और रचना के बारे में जानें।</string>
+    <string name="str_science_detail">जीव विज्ञान, रसायन विज्ञान, खगोल विज्ञान में रोमांचक ज्ञान उत्पन्न करें …</string>
+    <string name="str_mathematics_detail">गणित के किसी भी प्रश्न का उत्तर आसानी से प्राप्त करें</string>
+    <string name="str_history_detail">अतीत में हुई घटनाओं और महत्वपूर्ण मील के पत्थर का अन्वेषण करें</string>
+    <string name="str_content_detail">बेहतर पठनीयता के लिए सामग्री में सुधार और सरलीकरण करें।</string>
+    <string name="str_email_topic_detail">एक अच्छी तरह से तैयार की गई ईमेल लिखें जो विचारपूर्वक संरचित और व्यवस्थित हो।</string>
+    <string name="str_cooking_techniques_detail">खाना पकाने में बुनियादी कौशल में महारत हासिल करना सीखना</string>
+    <string name="str_cooking_tool_detail">किचन में अलग–अलग टूल्स के इस्तेमाल की जानकारी</string>
+    <string name="str_cooking_ingredients_detail">खाना पकाने में विभिन्न सामग्रियों की खोज करना</string>
+    <string name="str_travel_des_detail">दुनिया के अजूबों का अन्वेषण करें</string>
+    <string name="str_popular_des_detail">दैनिक नुस्खा सिफारिशें</string>
+    <string name="str_company_bio_detail">आपकी कंपनी की कहानी: विकास, नवाचार, सफलता।</string>
+    <string name="str_company_slogan_detail">अपने व्यवसाय के लिए एक यादगार नारा डिज़ाइन करें</string>
+    <string name="str_essays_detail">बिना प्रयास के 200 शब्दों में एक निबंध लिखें</string>
+    <string name="str_physics_detail">चैटजीपीटी की शक्ति से ब्रह्मांड के रहस्य का अन्वेषण करें</string>
+    <string name="str_cooking_styles_detail">खाना पकाने की विभिन्न शैलियों के साथ प्रयोग</string>
+    <string name="str_cooking_recipes_detail">अपने भोजन की योजना आसानी से बनाएं</string>
+    <string name="str_cooking_environment_detail">अधिक पर्यावरण के अनुकूल तरीके से खाना बनाना सीखना</string>
+    <string name="str_travel_experiences_detail">अनुभवों को सुनने से यात्रा करने का आपका दृष्टिकोण समृद्ध हो सकता है</string>
+    <string name="str_travel_skill_detail">कौशल विकसित करना जो आपके यात्रा अनुभव को बढ़ा सकता है</string>
+    <string name="str_travel_trend_detail">यात्रा और पकड़ने में नए रुझानों को चित्रित करें</string>
+    <string name="str_travel_impact_detail">यात्रा करते समय अपने प्रभाव को जानना</string>
+    <string name="str_travel_tip_detail">स्मार्ट, सुरक्षित और सस्ते यात्रा करने के बारे में व्यावहारिक सलाह प्राप्त करना।</string>
+    <string name="str_company_name_detail">अपने ब्रांड या उत्पाद के लिए एक आकर्षक नाम बनाएं।</string>
+    <string name="str_business_trend_detail">नए रुझानों की खोज करना और जल्दी से अनुकूल होना</string>
+    <string name="str_business_innov_detail">उत्पादों, सेवाओं, प्रदर्शन में सुधार के लिए नए विचार उत्पन्न करें</string>
+    <string name="str_business_strategy_detail">अपने व्यवसाय का मूल्यांकन करें और लक्ष्यों, योजनाओं और कार्यों पर सलाह दें</string>
+    <string name="str_music_ques">हम संगीत में आपकी मदद कैसे कर सकते हैं?</string>
+    <string name="str_mathematics_ques">आप गणित के कौन से सवाल हल करना चाहते हैं?</string>
+    <string name="str_history_ques">आप किन घटनाओं या समयरेखा को जानना चाहते हैं?</string>
+    <string name="str_science_ques">आप किन घटनाओं या समयरेखा को जानना चाहते हैं?</string>
+    <string name="str_essays_ques">निबंध का विषय क्या है?</string>
+    <string name="str_physics_ques">आप भौतिकी में क्या जानना चाहते हैं?</string>
+    <string name="str_cooking_techniques_ques">आप किन तकनीकों पर ध्यान दे रहे हैं?</string>
+    <string name="str_cooking_tool_ques">आप कौन से खाना पकाने के उपकरण का उपयोग कर रहे हैं?</string>
+    <string name="str_cooking_ingredients_ques">आप किन सामग्रियों से जूझ रहे हैं?</string>
+    <string name="str_cooking_styles_ques">आप किस खाना पकाने की शैली की तलाश कर रहे हैं?</string>
+    <string name="str_cooking_recipes_ques">आप कौन सी रेसिपी एक्सप्लोर करना चाहते हैं?</string>
+    <string name="str_cooking_environment_ques">आप टिकाऊ तरीके से खाना पकाने के बारे में क्या जानना चाहते हैं?</string>
+    <string name="str_travel_des_ques">जिस देश में आप जाना चाहते हैं?</string>
+    <string name="str_travel_experiences_ques">यात्रा में आप किन गलतियों, सफलताओं, चुनौतियों के बारे में जानना चाहते हैं?</string>
+    <string name="str_travel_skill_ques">यात्रा कौशल में सुधार करने में आपकी क्या चिंता है?</string>
+    <string name="str_travel_trend_ques">क्या आप किसी विशिष्ट प्रवृत्ति में रूचि रखते हैं?</string>
+    <string name="str_travel_impact_ques">पर्यावरण के अनुकूल यात्रा में आप क्या जानना चाहते हैं?</string>
+    <string name="str_travel_tip_ques">आप कौन से आसान टिप्स जानना चाहते हैं?</string>
+    <string name="str_company_name_ques">आपका ब्रांड/उत्पाद क्या करता है?</string>
+    <string name="str_business_trend_ques">आप किस विशिष्ट श्रेणी पर ध्यान केंद्रित करना चाहते हैं?</string>
+    <string name="str_business_innov_ques">आप किस नवाचार विषय को पूरा करना चाहते हैं?</string>
+    <string name="str_business_strategy_ques">हम आपके व्यवसाय में आपकी सहायता कैसे कर सकते हैं?</string>
+    <string name="str_company_bio_ques">आपकी कंपनी का नाम और विशेषता क्या है?</string>
+    <string name="str_company_slogan_ques">कंपनी की उत्पत्ति के बारे में एक संक्षिप्त, मनोरम किस्सा साझा करें।</string>
+    <string name="str_premium_txt"><![CDATA[<b> %s </b>बढ़िया डील के साथ प्रीमियम आज़माएं।\n<b>इसे अभी प्राप्त करें।</b>]]></string>
+    <string name="txt_continue_to_chat">चैट करना जारी रखें</string>
+    <string name="str_copy">प्रतिलिपि</string>
+    <string name="str_regenerate">पुनः जेनरेट</string>
+    <string name="str_fashion_ques">क्या आप चाहते हैं कि हम आपको इस प्रवृत्ति के बारे में कुछ विचार दें?</string>
+    <string name="str_relax_ques">इस गर्मी में नेटफ्लिक्स पर देखने के लिए अनुशंसित श्रृंखला।</string>
+    <string name="str_tech_ques">आर्टिफिशियल इंटेलिजेंस अब दुनिया पर महत्वपूर्ण प्रभाव डाल रहा है। और खोजना चाहते हैं?</string>
+    <string-array name="topic_title">
+        <item>सभी</item>
+        <item>व्यापार विशेषज्ञ</item>
+        <item>सामग्री निर्माता</item>
+        <item>लाइफस्टाइल बडी</item>
+        <item>चैटएआई के साथ सीखें</item>
+        <item>कुकिंग मास्टर</item>
+        <item>यात्रा</item>
+    </string-array>
+
+    <string-array name="select_input_fashion">
+        <item>सिल्वर हैंडबैग</item>
+        <item>रेन बूट्स</item>
+        <item>न्यूजीन्स फैशन</item>
+        <item>वर्दी</item>
+        <item>दिल का हार</item>
+        <item>हिमकट हेयर</item>
+    </string-array>
+
+    <string-array name="select_input_relax">
+        <item>गिन्नी &amp; जॉर्जिया</item>
+        <item>बाहरी बैंक</item>
+        <item>हार्टस्टॉपर</item>
+        <item>स्ट्रेंजर थिंग्स</item>
+        <item>कमबख्त दुनिया का अंत</item>
+        <item>रानी का गैम्बिट</item>
+        <item>के-ड्रामा</item>
+    </string-array>
+
+    <string-array name="select_input_tech">
+        <item>एआई आर्ट</item>
+        <item>एआई चैट</item>
+        <item>एआई इमेज जेनरेटर</item>
+        <item>एआई सॉन्ग</item>
+        <item>एआई बॉट्स</item>
+        <item>एआई वीडियो</item>
+    </string-array>
+
+    <string-array name="arr_science">
+        <item>जीवविज्ञान</item>
+        <item>रसायन विज्ञान</item>
+        <item>खगोल विज्ञान</item>
+    </string-array>
+
+    <string-array name="arr_cooking_techniques">
+        <item>रोस्टिंग</item>
+        <item>उबलते हुए</item>
+        <item>उबलते</item>
+        <item>डीग्लेज़िंग</item>
+        <item>सौते हुए</item>
+    </string-array>
+
+    <string-array name="arr_cooking_tool">
+        <item>चाकू</item>
+        <item>बर्तन</item>
+        <item>पैन</item>
+        <item>मिक्सर</item>
+        <item>ब्लेंडर्स</item>
+        <item>थर्मामीटर</item>
+        <item>स्केल्स</item>
+    </string-array>
+
+    <string-array name="arr_cooking_ingredients">
+        <item>मसाले</item>
+        <item>जड़ी-बूटी</item>
+        <item>तेल</item>
+        <item>विनेगर</item>
+        <item>अनाज</item>
+        <item>बीन्स</item>
+        <item>नट्स</item>
+        <item>बीज</item>
+        <item>फल</item>
+        <item>सब्जियां</item>
+    </string-array>
+
+    <string-array name="arr_cooking_style">
+        <item>बेकिंग</item>
+        <item>ग्रिलिंग</item>
+        <item>तलना</item>
+        <item>स्टीमिंग</item>
+        <item>अवैध शिकार</item>
+        <item>बीन्स</item>
+        <item>ब्रोइलिंग</item>
+        <item>और माइक्रोवेव करना</item>
+    </string-array>
+
+    <string-array name="arr_travle_des">
+        <item>वियतनाम</item>
+        <item>जापान</item>
+        <item>अमेरिका</item>
+        <item>यूके</item>
+        <item>फ्रांस</item>
+        <item>जर्मनी</item>
+        <item>नॉर्वेजियन</item>
+        <item>दक्षिण कोरिया</item>
+    </string-array>
+
+    <string-array name="arr_business_innovation">
+        <item>मार्केटिंग</item>
+        <item>रसद</item>
+        <item>मानव प्रबंधन</item>
+        <item>वित्त</item>
+        <item>अन्य</item>
+    </string-array>
+
+    <string-array name="arr_business_trends">
+        <item>प्रौद्योगिकी</item>
+        <item>रसद</item>
+        <item>मार्केटिंग</item>
+        <item>पावर</item>
+        <item>कृषि</item>
+        <item>वाणिज्यिक</item>
+        <item>ई-कॉमर्स</item>
+        <item>अन्य</item>
+    </string-array>
+
+    <string-array name="arr_art_page">
+        <item>कला उत्पन्न करें</item>
+        <item>वॉलपेपर</item>
+    </string-array>
+    <string name="txt_random">अनियमित</string>
+
+    <string name="str_create_photo">फोटो बनाएं</string>
+    <string name="str_square">वर्ग</string>
+    <string name="str_original">मूल</string>
+    <string name="str_wallpaper">वॉलपेपर</string>
+    <string name="str_set_wallpaper">वॉलपेपर सेट करो</string>
+    <string name="str_popular">लोकप्रिय</string>
+    <string name="str_see_more">और देखें</string>
+    <string name="str_see_more_1">…और देखें</string>
+    <string name="str_fashion_title">पहनावा</string>
+    <string name="str_relax_title">आराम करना</string>
+    <string name="str_techlogy_title">तकनीकी</string>
+    <string name="str_title_exit_app">क्या आप निश्चित हैं आपकी बाहर निकलने की इच्छा है?</string>
+
+    <string name='str_choose_action'>कार्रवाई चुनें:</string>
+    <string name='str_open_camera'>कैमरा खोलें</string>
+    <string name='str_select_photo'>फ़ोटो पर जाएँ</string>
+    <string name='str_recognize'>पहचानें</string>
+    <string name='str_recognising'>पहचान रहा है...</string>
+    <string name='str_txt_recognize'>पाठ पहचान</string>
+    <string name='str_txt_choose_image'>फ़ोटो चुनें</string>
+    <string name='str_txt_apply_text'>टेक्स्ट लागू करें</string>
+    <string name='str_summary'>सारांश</string>
+    <string name='str_summary_sub_title'>फ़ाइलों से टेक्स्ट का सारांश बनाएं और किसी भी प्रश्न का उत्तर दें</string>
+    <string name='str_summary_upload_files'>फ़ाइलें अपलोड करें</string>
+    <string name='str_summary_upload_image'>फ़ोटो अपलोड करें</string>
+    <string name='str_summary_upload_des1'>किसी चीज़ या किसी व्यक्ति के बारे में सबसे महत्वपूर्ण तथ्यों या विचारों को संक्षिप्त और स्पष्ट रूप में व्यक्त करना</string>
+    <string name='str_summary_upload_des2'>महत्वपूर्ण बिंदुओं का स्पष्ट विवरण प्रदान करने के लिए।</string>
+    <string name='str_summary_upload_des3'>किसी रिपोर्ट, चर्चा आदि में मुख्य विचारों या तथ्यों को कुछ शब्दों में प्रस्तुत करने के लिए...</string>
+    <string name='str_error_summary'>कुछ गलत हो गया!</string>
+    <string name='str_error_summary_des'>आप अधिकतम 1एमबी ही अपलोड कर सकते हैं। कृपया प्रीमियम में अपग्रेड करें और बड़ी फ़ाइलों को संसाधित करें।</string>
+    <string name='str_txt_unlock_premium'>प्रीमियम अनलॉक करें</string>
+    <string name='str_sub_unlock_premium'>GPT4 द्वारा संचालित, कोई सीमा नहीं, कोई विज्ञापन नहीं</string>
+    <string name='str_no_image'>कोई छवि नहीं</string>
+    <string name='str_premium_des1'>चैट GPT-4 द्वारा संचालित</string>
+    <string name='str_premium_des2'>असीमित प्रश्न और amp; उत्तर</string>
+    <string name='str_premium_des3'>चुनने के लिए विभिन्न विषय</string>
+    <string name='str_premium_des4'>फ़ाइल अपलोड करें &amp; कुछ भी पूछो</string>
+    <string name='str_premium_des5'>असीमित पीढ़ी AI कला</string>
+    <string name='str_best_choose'>सर्वश्रेष्ठ चुनें</string>
+    <string name='str_file_summary'>फ़ाइल सारांश:</string>
+    <string name='str_summary_text'>सारांश पाठ</string>
+    <string name='str_your_chats'>आपकी चैट</string>
+    <string name='str_out_of_times_summary'>ओह नहीं, आपके पास आज के लिए रीकैप्स खत्म हो गए हैं, कल %d रीकैप्स के साथ इसका उपयोग करना जारी रखें! एप्लिकेशन पर असीमित अन्य सुविधाओं का उपयोग जारी रखें।</string>
+    <string name='str_intro_summary'>आप केवल वे पीडीएफ फ़ाइलें अपलोड कर सकते हैं जिनका आकार %dMB से कम है।</string>
+    <string name='str_uploading'>अपलोड हो रहा है...</string>
+    <string name='str_upload_s_photo'>%d फ़ोटो अपलोड करें</string>
+    <string name='str_upload_photo_msg'>आप एक अपलोड के लिए केवल 3 फ़ोटो चुन सकते हैं।</string>
+    <string name='txt_continue_to_summary'>सारांश जारी रखें</string>
+    <string name="txt_premium_topic"><b><font color='#4AE89F'>विभिन्न</font></b> चुनने के लिए विषय</string>
+    <string name='txt_premium_upload_file'><b><font color='#4AE89F'>फ़ाइल अपलोड करें</font></b> &amp; कुछ भी पूछो</string>
+    <string name='txt_premium_generate_art'><b><font color='#4AE89F'>अनलॉक</font></b> जनरेशन AI आर्ट</string>
+    <string name='str_summary_now'>अभी सारांश!</string>
+    <string name="str_i_got_it">मैं समझ गया</string>
+    <string name="str_mes_loading_summary_file">AI आपकी फ़ाइल से सीखता है, और दस्तावेज़ के आकार के आधार पर इसमें कुछ समय लग सकता है।</string>
+    <string name="str_go_to_chat">चैट पर जाएँ</string>
+    <string name="str_exists_file_mes">फ़ाइल पहले से मौजूद है, कृपया चैट पर वापस लौटें।</string>
+
+    <string-array name="arr_strategy_type">
+        <item>सामग्री विपणन</item>
+        <item>आईएमसी (एकीकृत विपणन संचार)</item>
+        <item>ई-कॉमर्स मार्केटिंग</item>
+        <item>सोशल मीडिया मार्केटिंग</item>
+    </string-array>
+
+    <string-array name="arr_interviewer_detail">
+        <item>पृष्ठभूमि  &amp; अनुभव</item>
+        <item>नेतृत्व</item>
+        <item>कैरियर लक्ष्य</item>
+        <item>तकनीकी कौशल</item>
+        <item>आलोचनात्मक सोच</item>
+        <item>मानसिकता</item>
+    </string-array>
+
+    <string-array name="arr_key_segment">
+        <item>ताकतें</item>
+        <item>कमजोरियां</item>
+        <item>बिक्री रणनीति</item>
+        <item>विपणन रणनीतियाँ</item>
+        <item>आवाज का हिस्सा</item>
+        <item>राजस्व</item>
+    </string-array>
+
+    <string-array name="arr_tone_voice">
+        <item>औपचारिक</item>
+        <item>आशावादी</item>
+        <item>मैत्रीपूर्ण</item>
+        <item>प्रोत्साहित करना</item>
+        <item>मुखर</item>
+        <item>सहयोगी</item>
+    </string-array>
+
+    <string-array name="arr_genre_song">
+        <item>इंडी</item>
+        <item>आरएनबी</item>
+        <item>पॉप</item>
+        <item>देश</item>
+        <item>रॉक</item>
+        <item>शास्त्रीय</item>
+        <item>धातु</item>
+        <item>जैज़</item>
+        <item>गाथागीत</item>
+        <item>नीला</item>
+    </string-array>
+
+    <string-array name="arr_mood_song">
+        <item>खुश</item>
+        <item>ऊर्जावान</item>
+        <item>अवसाद</item>
+        <item>चिंतित/दुखद</item>
+        <item>मुलायम</item>
+        <item>कठिन</item>
+        <item>रोमांटिक</item>
+        <item>शांत</item>
+    </string-array>
+
+    <string-array name="arr_media_plalform">
+        <item>लिंक्डइन</item>
+        <item>इंस्टाग्राम</item>
+        <item>फेसबुक</item>
+        <item>ट्विटर</item>
+    </string-array>
+
+    <string-array name="arr_media_goal">
+        <item>सगाई</item>
+        <item>इंप्रेशन</item>
+    </string-array>
+    <string-array name="arr_gender">
+        <item>पुरुष</item>
+        <item>महिला</item>
+        <item>अन्य</item>
+    </string-array>
+    <string-array name="arr_outfit_designer_style">
+        <item>रेट्रो</item>
+        <item>गॉथिक</item>
+        <item>इमो</item>
+        <item>टेकवियर</item>
+        <item>हाइपबीस्ट</item>
+        <item>विंटेज</item>
+        <item>क्लासिक</item>
+        <item>पुराना पैसा</item>
+        <item>स्ट्रीटवियर</item>
+        <item>कवई</item>
+        <item>न्यूनतम</item>
+        <item>रॉक</item>
+    </string-array>
+
+    <string-array name="arr_information_horoscope">
+        <item>प्यार</item>
+        <item>कैरियर</item>
+        <item>विशेषताएं</item>
+        <item>राशि मिलान</item>
+    </string-array>
+
+    <string-array name="arr_information_travel">
+        <item>भोजन</item>
+        <item>राष्ट्रीय अवकाश</item>
+        <item>संस्कृति</item>
+        <item>परिदृश्य</item>
+    </string-array>
+
+    <string-array name="language_programing">
+        <item>एसक्यूएल</item>
+        <item>जावा</item>
+        <item>जावा स्क्रिप्ट</item>
+        <item>एचटीएमएल</item>
+        <item>सीएसएस</item>
+        <item>पायथन</item>
+        <item>पीएचपी</item>
+        <item>रूबी</item>
+        <item>अन्य</item>
+    </string-array>
+
+    <string-array name='arr_techniques_cooking'>
+        <item>भूनना</item>
+        <item>उबला रहा है</item>
+        <item>उबलना</item>
+        <item>डीग्लेज़िंग</item>
+        <item>तलना</item>
+        <item>अन्य</item>
+    </string-array>
+
+    <string name="str_marketing_plan">विपणन की योजना</string>
+    <string name="str_marketing_plan_detail">क्या आप अपने उत्पाद के विपणन में संघर्ष कर रहे हैं? ChatGPT को आपकी सहायता करने दें</string>
+    <string name="str_marketing_plan_ques">आप एक व्यवसाय विशेषज्ञ हैं. मुझे %s के लिए एक मार्केटिंग योजना सुझाएं. उत्पाद %s है. अभियान का लक्ष्य %s है. मैं जिस रणनीति प्रकार को कार्यान्वित करना चाहता हूं वह %s अभियान है।</string>
+    <string name="str_interviewer_support">साक्षात्कारकर्ता सहायता</string>
+    <string name="str_interviewer_support_detail">ChatGPT के साथ एक सेकंड में साक्षात्कार प्रश्न प्राप्त करें</string>
+    <string name="str_interviewer_support_ques">आप एक मानव संसाधन भर्तीकर्ता हैं। मुझे %s के लिए 10 प्रश्न सुझाएं। आवश्यकताओं में %s शामिल हैं.</string>
+    <string name="str_competitors_research">प्रतियोगी अनुसंधान</string>
+    <string name="str_competitors_research_detail">ChatGPT को अपने प्रतिस्पर्धियों पर शोध करने दें</string>
+    <string name="str_competitors_research_ques">आप एक बाज़ार शोधकर्ता हैं. %s उद्योग में %s के प्रमुख उत्पाद/सेवाओं के साथ %s पर प्रतिस्पर्धी शोध करें। शोध में %s शामिल होना चाहिए.</string>
+    <string name="str_customers_insights_research">ग्राहक अंतर्दृष्टि अनुसंधान</string>
+    <string name="str_customers_insights_research_detail">क्या आप अपने ग्राहक को और अधिक समझना चाहते हैं?</string>
+    <string name="str_customers_insights_research_ques">आप एक पेशेवर विपणन विशेषज्ञ हैं. %s के दर्शकों पर ग्राहक अंतर्दृष्टि अनुसंधान करें। अनुसंधान में इन विशेषताओं वाले लोगों को शामिल किया जाना चाहिए: %s, %s, %s।</string>
+    <string name="str_write_paragraph">एक अनुच्छेद लिखें</string>
+    <string name="str_write_paragraph_detail">ChatGPT कुछ ही समय में एक उत्कृष्ट अनुच्छेद लिख सकता है</string>
+    <string name="str_write_paragraph_ques">आप एक पेशेवर लेखक हैं. मुझे %s का एक अनुच्छेद %s स्वर के साथ लिखें। पैराग्राफ %s में होना चाहिए.</string>
+    <string name="str_write_song_lyrics">एक गीत के बोल लिखें</string>
+    <string name="str_write_song_lyrics_detail">चैटजीपीटी के साथ एक पेशेवर गीत संगीतकार बनें</string>
+    <string name="str_write_song_lyrics_ques">आप एक पेशेवर संगीतकार हैं. मेरे लिए %s विषय पर एक गीत लिखें। गाना %s मूड के साथ %s संगीत में होना चाहिए.</string>
+    <string name="str_write_social_media_post">एक सोशल मीडिया पोस्ट लिखें</string>
+    <string name="str_str_write_social_media_post_detail">चैटजीपीटी के साथ सामाजिक पोस्ट लिखने में कोई प्रयास न करें</string>
+    <string name="str_str_write_social_media_post_ques">आप एक पेशेवर सोशल मीडिया मार्केटर हैं। मुझे %s पर %s की सामग्री के साथ एक मनोरम पोस्ट लिखें। पोस्ट का लक्ष्य %s स्वर के साथ %s करना है।</string>
+    <string name="str_write_email">एक ईमेल लिखना</string>
+    <string name="str_write_email_detail">ChatGPT को आपके लिए ईमेल लिखने दें</string>
+    <string name="str_write_email_ques">मुझे %s सामग्री के साथ एक ईमेल लिखें। आवाज का स्वर %s होना चाहिए.</string>
+    <string name="str_outfit_designer">पोशाक डिजाइनर</string>
+    <string name="str_outfit_designer_detail">क्या आप नहीं जानते कि आज क्या पहनें? ChatGPT को आपका #ootd सुझाने दें</string>
+    <string name="str_outfit_designer_ques">आप एक स्टाइलिस्ट और आउटफिट डिजाइनर हैं। मुझे %s के लिए %s शैली वाला एक परिधान सुझाएं।</string>
+    <string name="str_write_pickup_line">एक पिक अप लाइन लिखें</string>
+    <string name="str_write_pickup_line_detail">अपने मित्र को प्रभावित करने के लिए मज़ेदार पिक–अप लाइनें प्राप्त करें</string>
+    <string name="str_write_pickup_line_ques">मुझे %s में %s स्वर के साथ एक पिक अप लाइन लिखें।</string>
+    <string name="str_write_joke">एक चुटकुला लिखें</string>
+    <string name="str_write_joke_detail">हर किसी के पास बताने के लिए मज़ेदार कहानियाँ नहीं होतीं। चैटजीपीटी को यह करने दीजिए</string>
+    <string name="str_write_joke_ques">%s के सन्दर्भ में मुझे %s में एक चुटकुला लिखें।</string>
+    <string name="str_horoscope_reader">कुंडली वाचक</string>
+    <string name="str_horoscope_reader_detail">प्रौद्योगिकी रहस्य की मित्र है। क्या आपको नहीं लगता?</string>
+    <string name="str_horoscope_reader_ques">आप ज्योतिषी एवं कुण्डली वाचक हैं। %s में जन्मे व्यक्ति की कुंडली का विश्लेषण करें। जानकारी में %s शामिल होना चाहिए.</string>
+    <string name="str_solve_math_problem">गणित की एक समस्या हल करें</string>
+    <string name="str_solve_math_problem_detail">गणित के किसी भी प्रश्न का उत्तर आसानी से प्राप्त करें</string>
+    <string name="str_solve_math_problem_ques">आप गणित वैज्ञानिक हैं. मेरी निम्नलिखित समस्या हल करें: %s.</string>
+    <string name="str_history_events">इतिहास की घटनाएँ</string>
+    <string name="str_history_events_detail">अतीत में हुई घटनाओं और महत्वपूर्ण मील के पत्थर का अन्वेषण करें</string>
+    <string name="str_history_events_ques">मुझे इतिहास की घटनाएँ बताएं जो %s में, %s में घटित हुईं।</string>
+    <string name="str_code_supporter">कोड समर्थक</string>
+    <string name="str_code_supporter_detail">कोड के साथ संघर्ष कर रहे हैं और और अधिक सीखना चाहते हैं? ChatGPT आपकी सहायता कर सकता है</string>
+    <string name="str_code_supporter_ques">आप एक उत्कृष्ट कोडर हैं. %s में %s के कोड से मेरा समर्थन करें।</string>
+    <string name="str_latino_dishes">लातीनी व्यंजन</string>
+    <string name="str_latino_dishes_detail">ChatGPT के साथ लातीनी व्यंजन बनाना सीखें</string>
+    <string name="str_latino_dishes_ques">आप 3–सितारा मिशेलिन शेफ हैं। मुझे लातीनी व्यंजन सुझाएँ। डिश %s तकनीक के साथ %s है. सामग्री में %s शामिल होना चाहिए. मुझे %s लोगों के लिए सामग्री की मात्रा का सुझाव दें।</string>
+    <string name="str_african_dishes">अफ़्रीकी व्यंजन</string>
+    <string name="str_african_dishes_detail">ChatGPT के साथ अफ़्रीकी व्यंजन पकाना सीखें</string>
+    <string name="str_african_dishes_ques">आप 3–सितारा मिशेलिन शेफ हैं। मुझे कोई अफ़्रीकी व्यंजन सुझाएँ। डिश %s तकनीक के साथ %s है. सामग्री में %s शामिल होना चाहिए. मुझे %s लोगों के लिए सामग्री की मात्रा का सुझाव दें।</string>
+    <string name="str_asian_dishes">एशियाई व्यंजन</string>
+    <string name="str_asian_dishes_detail">ChatGPT के साथ एशियाई व्यंजन पकाना सीखें</string>
+    <string name="str_asian_dishes_ques">आप 3–सितारा मिशेलिन शेफ हैं। मुझे कोई एशियाई व्यंजन सुझाइये। डिश %s तकनीक के साथ %s है. सामग्री में %s शामिल होना चाहिए. मुझे %s लोगों के लिए सामग्री की मात्रा का सुझाव दें।</string>
+    <string name="str_western_dishes">पश्चिमी व्यंजन</string>
+    <string name="str_western_dishes_detail">चैटजीपीटी के साथ पश्चिमी व्यंजन बनाना सीखें</string>
+    <string name="str_western_dishes_ques">आप 3–सितारा मिशेलिन शेफ हैं। मुझे कोई पश्चिमी व्यंजन सुझाएँ। डिश %s तकनीक के साथ %s है. सामग्री में %s शामिल होना चाहिए. मुझे %s लोगों के लिए सामग्री की मात्रा का सुझाव दें।</string>
+    <string name="str_travel_destination">यात्रा गंतव्य</string>
+    <string name="str_travel_destination_detail">चैटजीपीटी आपके यात्रा गंतव्य के सभी हस्ताक्षरों का सुझाव दे सकता है!</string>
+    <string name="str_travel_destination_ques">आप एक पर्यटक गाइड हैं. मुझे सुझाव दें कि %s को %s में अन्वेषण करना चाहिए।</string>
+    <string name="str_travel_experience">यात्रा अनुभव</string>
+    <string name="str_travel_experience_detail">चैटजीपीटी द्वारा सुझाए गए यात्रा के दौरान युक्तियाँ और तरकीबें!</string>
+    <string name="str_travel_experience_ques">आप एक पर्यटक गाइड हैं. %s की यात्रा करते समय मुझे %s से संबंधित कुछ सुझाव सुझाएं।</string>
+    <string name="str_brand_name">ब्रांड का नाम</string>
+    <string name="str_product_services">उत्पाद/सेवाएँ</string>
+    <string name="str_goals">लक्ष्य</string>
+    <string name="str_position">पद</string>
+    <string name="str_details">विवरण</string>
+    <string name="str_name">नाम</string>
+    <string name="str_industry">उद्योग</string>
+    <string name="str_key_segment">मुख्य खंड</string>
+    <string name="str_age">आयु</string>
+    <string name="str_gender">लिंग</string>
+    <string name="str_region">क्षेत्र</string>
+    <string name="str_subject">विषय</string>
+    <string name="str_length">लंबाई</string>
+    <string name="str_context">प्रसंग</string>
+    <string name="str_genre">शैली</string>
+    <string name="str_mood">मनोदशा</string>
+    <string name="str_platform">प्लैटफ़ॉर्म</string>
+    <string name="str_style">शैली</string>
+    <string name="str_language">भाषा</string>
+    <string name="str_information">जानकारी</string>
+    <string name="str_tone_of_voice">आवाज़ का लहज़ा</string>
+    <string name="str_year">वर्ष</string>
+    <string name="str_birth_date">जन्मतिथि/समय</string>
+    <string name="str_country_region">देश/क्षेत्र</string>
+    <string name="str_issue">मुद्दा</string>
+    <string name="str_dishes">व्यंजन</string>
+    <string name="str_techniques">TECHNIQUES</string>
+    <string name="str_ingredients">अवयव</string>
+    <string name="str_potion">पोशन</string>
+    <string name="str_context_strategy_type">आप किस प्रकार की रणनीति लागू करना चाहते हैं?</string>
+    <string name="str_context_position">इस पद के लिए साक्षात्कार के लिए मुझे 10 प्रश्न सुझाएं</string>
+    <string name="str_context_name">वह कौन सा प्रतिस्पर्धी है जिस पर आप नज़र डालना चाहते हैं?</string>
+    <string name="str_context_product_services">वे कौन से उत्पाद/सेवाएँ हैं जिन्हें आप दर्शकों तक लक्षित करना चाहते हैं?</string>
+    <string name="str_context_subject">आपका अनुच्छेद किस बारे में है?</string>
+    <string name="str_context_song">आपका गाना किस बारे में है?</string>
+    <string name="str_context_post_media">आपकी पोस्ट किस बारे में है?</string>
+    <string name="str_context_gmail">आपका ईमेल किस बारे में है?</string>
+    <string name="str_context_style">आप वर्तमान में किस शैली में हैं?</string>
+    <string name="str_context_joke">आपका मजाक किस बारे में है?</string>
+    <string name="str_context_birth_date_time">आपका जन्म समय और दिन क्या है?</string>
+    <string name="str_context_information">आप अपने बारे में क्या जानना चाहते हैं?</string>
+    <string name="str_context_solve_math_problem">गणित में आपकी समस्या क्या है?</string>
+    <string name="str_context_issue">इस बारे में आपकी क्या चिंता है?</string>
+    <string name="str_context_dishes">आप कौन सा व्यंजन पकाने की योजना बना रहे हैं?</string>
+    <string name="str_context_techniques">आप इस व्यंजन के लिए किस तकनीक का उपयोग करने की योजना बना रहे हैं?</string>
+    <string name="str_context_ingredients">आप इस व्यंजन में किस प्रकार की सामग्री का उपयोग करना चाहते हैं?</string>
+    <string name="str_context_potion">आप कितने लोगों के लिए यह व्यंजन बनाना चाहते हैं?</string>
+    <string name="str_context_information_travel">आप क्या तलाशना चाहते हैं?</string>
+    <string name="str_context_information_travel2">इस स्थान की यात्रा करते समय आप क्या जानना चाहते हैं?</string>
+    <string name="str_context_country">आप कहाँ जाने की योजना बना रहे हैं?</string>
+    <string name="str_select_model">मॉडल चुनें:</string>
+    <string name="str_message_model_3_5">जीपीटी – 3.5 मॉडल विभिन्न पाठ–संबंधी गतिविधियों के लिए प्रदर्शन और दक्षता को अनुकूलित करता है।</string>
+    <string name="str_reasoning">विचार</string>
+    <string name="str_speed">रफ़्तार</string>
+    <string name="str_concisenes">संक्षेपण</string>
+    <string name="str_message_model_4">जीपीटी – 4 मॉडल बेहतर तर्क, सटीक निर्देशों की समझ और बढ़ी हुई कल्पना की आवश्यकता वाली गतिविधियों में अच्छा प्रदर्शन करता है।</string>
+    <string name="str_you_may_be_interested_in_these_questions">आपको इन प्रश्नों में रुचि हो सकती है:</string>
+    <string name="str_close">बंद करना</string>
+    <string name="str_preview_your_files">यदि आप\nअपनी फ़ाइलों का पूर्वावलोकन करना चाहते हैं तो यहां क्लिक करें</string>
+    <string name='str_has_your_payment_expired'>क्या आपका भुगतान\n समाप्त हो गया है?</string>
+    <string name='str_has_your_payment_sale'>विशेष ऑफर आपको बुला रहे हैं!!</string>
+    <string name='str_has_your_payment_cancel'>अद्भुत सौदों से न चूकें!</string>
+    <string name='str_oh_no'>ओह, नहीं!</string>
+    <string name='str_great'>बहुत बढ़िया!!!</string>
+    <string name='str_welcome_back'>वापस स्वागत है!</string>
+    <string name='str_super_sale'>सुपर सेल</string>
+    <string name='str_limited_time_only'>केवल सीमित समय</string>
+    <string name='str_the_file_no_content'>फ़ाइल में\nकोई सामग्री नहीं है!</string>
+    <string name='str_we_found_no_content'>हमें संक्षेप में बताने के लिए कोई सामग्री नहीं मिली या पर्याप्त सामग्री नहीं मिली। कृपया कोई अन्य फ़ाइल आज़माएँ.</string>
+    <string name='str_msg_free_message'>%d निःशुल्क संदेश अर्जित करने के लिए</string>
+    <string name='str_msg_free_summary'>%d निःशुल्क सारांश अर्जित करने के लिए</string>
+    <string name='str_msg_free_generate_art'>%d मुफ़्त अर्जित करने के लिए कला उत्पन्न करें</string>
+
+    <string name='str_msg_sale_weekly_t3'>ऑटो - नवीनीकरण सबस्क्रिप्शन का शुल्क साप्ताहिक लिया जाता है</string>
+    <string name='str_intro_gpt_4'><![CDATA[ संचालित <br><b> <font color=#FFFFFF>GPT-4</font></b>]]></string>
+    <string name='str_intro_topic'><![CDATA[ विभिन्न <br><b> <font color=#FFFFFF>विषय</font></b>]]></string>
+    <string name='str_intro_image_to_text'><![CDATA[ छवि से <br><b> <font color=#FFFFFF> टेक्स्ट (OCR) </font></b>]]></string>
+    <string name='str_intro_free_ads'><![CDATA[ निःशुल्क <br><b> <font color=#FFFFFF> 100% विज्ञापन </font></b>]]></string>
+    <string name='str_intro_unlimit_art'><![CDATA[ UnIimited <br><b> <font color=#FFFFFF> AI Art </font></b>]]></string>
+    <string name='str_intro_upload_file'><![CDATA[ फ़ाइल अपलोड करें <br><b> <font color=#FFFFFF> कुछ भी पूछें </font></b>]]></string>
+    <string name='str_detail_price_yearly_new'> फिर %s/year, ऑटो-नवीकरणीय। </string>
+    <string name='txt_yearly'>वार्षिक</string>
+    <string name='txt_start_yeal_auto'>ऑटो - वार्षिक सदस्यता नवीनीकरण शुल्क लिया जाता है</string>
+</resources>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_topic_item"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_16sdp">
+
+        <ImageView
+            android:id="@+id/topicItemImg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:minWidth="@dimen/_114sdp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.32"
+            tools:background="@color/accent_red" />
+
+        <TextView
+            android:id="@+id/topicItemTvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="0dp"
+            android:fontFamily="@font/font_bold"
+            android:maxLines="1"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/topicItemImg"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ádjsakldjlas" />
+
+        <TextView
+            android:id="@+id/topicItemTvDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/font_regular"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:textColor="@color/color_white_50"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/topicItemTvTitle"
+            app:layout_constraintStart_toStartOf="@+id/topicItemTvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/topicItemTvTitle"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text everLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever ..." />
+
+        <TextView
+            android:id="@+id/topicItemTvChat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/ripper_btn_topic_blue"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/font_medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:text="@string/text_start_chat"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_12sdp"
+            app:drawableStartCompat="@drawable/ic_chat_small_topic"
+            app:layout_constraintBottom_toBottomOf="@+id/topicItemImg"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/topicItemTvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/topicItemTvDes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

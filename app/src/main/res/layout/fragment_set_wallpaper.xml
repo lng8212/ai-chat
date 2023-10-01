@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg_gradient"
+        android:focusable="true"
+        android:paddingTop="@dimen/_16sdp"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/baseHeader_btnLeft"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:padding="@dimen/_16sdp"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/baseHeader_tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_56sdp"
+            android:gravity="center"
+            android:text="@string/str_set_wallpaper"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/font_bold"
+            app:layout_constraintStart_toEndOf="@+id/baseHeader_btnLeft"
+            app:layout_constraintBottom_toBottomOf="@id/baseHeader_btnLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpUsage" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:maxWidth="840dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/backgroungImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedCorners"
+            app:layout_constraintBottom_toBottomOf="@id/backgroungImage"
+            tools:src="@drawable/img_set_wallpaper_first"/>
+
+        <ImageView
+            android:id="@+id/backgroungImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:translationY="-16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/baseHeader_btnLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_mokup_android"/>
+
+        <TextView
+            android:id="@+id/btnSetWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_set_wallpaper"
+            android:textColor="@color/color_white"
+            android:gravity="center"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/font_bold"
+            android:padding="@dimen/_12sdp"
+            android:layout_margin="@dimen/_16sdp"
+            android:background="@drawable/bg_layout_background_premium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/fmResultArtLLDownloaded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/black_50"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/bg_exit_app"
+                android:padding="@dimen/_16sdp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/fmResultArtLatDownloaded"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    app:lottie_fileName="anim_downloaded.json" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<resources>
+    <string name="app_ui_crash">앱/UI 충돌</string>
+    <string name="sorry_string">죄송합니다. 그런 일은 일어나지 말았어야 했습니다.</string>
+    <string name="error_report_button_text">이메일을 통해 이 오류를 보고하십시오.</string>
+    <string name="error_report_button_telegram">이 오류를 텔레그램으로 보고하세요</string>
+    <string name="copy_format">서식이 지정된 보고서 복사</string>
+    <string name="error_report_open_issue_button_text">보고서</string>
+    <string name="error_report_open_github_notice">충돌을 논의하는 문제가 이미 존재하는지 확인하십시오.</string>
+    <string name="what_device_headline">정보:</string>
+    <string name="what_happened_headline">무슨 일이에요:</string>
+    <string name="info_labels">내용:\\n요청:\\nGMT 시간:\\n패키지:\\n버전:\\nOS 버전:\\n장치:\\n모델:\\n제품:</string>
+    <string name="your_comment">귀하의 의견(영문):</string>
+    <string name="error_details_headline">세부:</string>
+    <string name="error_report_title">오류 보고서</string>
+    <string name="crash_report_copied">충돌 보고서가 클립보드에 복사되었습니다.</string>
+    <string name="error_snackbar_message">죄송합니다. 문제가 발생했습니다.</string>
+    <string name="error_snackbar_action">보고서</string>
+    <string name="text_setting">설정</string>
+    <string name="text_start_chat">채팅 시작</string>
+    <string name="text_your_chat_ai">당신의 챗봇 AI</string>
+    <string name="text_ads_splash">이 프로세스에는 광고가 포함될 수 있습니다.</string>
+    <string name="text_chat_detail_title">GPT AI 챗봇</string>
+    <string name="text_intro_first">당신의 하루는 어떻게 되어가나요?\n나와 채팅하자!</string>
+    <string name="text_wonderful">아주 멋진</string>
+    <string name="text_great">엄청난</string>
+    <string name="text_intro_second">알고 싶은 것이 있으면 무엇이든 물어보세요. \n도와드리겠습니다.</string>
+    <string name="text_select_character">캐릭터 선택</string>
+    <string name="hi_there">안녕하세요!</string>
+    <string name="device_not_support">불행히도 장치가 지원되지 않습니다!</string>
+    <string name="input_empty_error">무언가를 입력하십시오!</string>
+    <string name="something_error">문제가 발생했습니다. 다시 시도해 주세요.</string>
+    <string name="type_here">여기에 입력하세요…</string>
+    <string name="text_thanks">우리의 응용 프로그램을 사용해 주셔서 감사합니다. CHPlay에서 앱을 평가할 수 있습니다. 이것은 우리에게 많은 도움과 격려가 될 것입니다. 감사합니다. 또 뵙겠습니다!</string>
+    <string name="text_cancel">취소</string>
+    <string name="text_update_to_premium">정식 버전으로 업그레이드</string>
+    <string name="text_update_to_premium_des">모든 기능을 무제한으로 이용하세요.</string>
+    <string name="text_support">지원하다</string>
+    <string name="text_restore_purchase">구매 복원</string>
+    <string name="text_about_us">회사 소개</string>
+    <string name="text_privacy_policy">개인 정보 정책</string>
+    <string name="text_term_of_use">이용기간</string>
+    <string name="text_stay_in_touch">연락을 유지하다</string>
+    <string name="text_rate_app">앱 평가</string>
+    <string name="text_send_feedback">피드백 보내기</string>
+    <string name="txt_comming_soon">곧!</string>
+    <string name="text_rate_des">우리는 더 나은 사용자 경험을 위해 열심히 노력하고 있습니다. 평가해 주시면 대단히 감사하겠습니다.</string>
+    <string name="text_rate">비율</string>
+    <string name="text_version">버전:</string>
+    <string name="text_rate_suggest">우리가 얻을 수 있는 최고의 ♥</string>
+    <string name="text_premium_update">프리미엄 업그레이드</string>
+    <string name="text_unlimited">무제한 질문 및 답변</string>
+    <string name="text_no_ads">광고 없음</string>
+    <string name="text_unlock">전체 캐릭터 잠금 해제</string>
+    <string name="text_start_trial">무료 평가판 시작 및 계획</string>
+    <string name="text_trial_free_day">3일 무료 평가판</string>
+    <string name="text_trial_free_price">그런 다음 %s/주, 자동 – 재생 가능</string>
+    <string name="text_best_offer">최고의 제안</string>
+    <string name="text_lifetime_price">– 평생 – 일회성 지불</string>
+    <string name="text_sub_temp">구독 조건</string>
+    <string name="text_sub_temp_1">이용약관</string>
+    <string name="privacy_sub">구독 사용자는 광고 없이 모든 프리미엄 기능을 무제한으로 사용하고 액세스할 수 있습니다.\n– 구독하지 않은 사용자는 광고와 함께 앱을 계속 사용할 수 있으며 프리미엄 기능 사용이 제한됩니다. \n– 구매 확인 시 귀하의 Google 계정으로 요금이 청구됩니다.\n– 현재 기간이 종료되기 최소 24시간 전에 자동 갱신이 비활성화되지 않으면 구독이 자동으로 갱신됩니다.\n– 계정은 다음 기간 내에 갱신 요금이 청구됩니다. 현재 기간이 끝나기 24시간 전에 갱신 비용을 확인합니다.</string>
+    <string name="privacy_sub2">\n– 무료 평가판 기간의 미사용 부분이 제공되는 경우 해당하는 경우 사용자가 해당 간행물에 대한 구독을 구매할 때 자격이 상실됩니다.– 구독은 사용자가 관리할 수 있으며 다음으로 이동하여 자동 갱신을 해제할 수 있습니다. 구매 후 사용자 계정 설정. 앱을 제거해도 구독은 취소되지 않습니다.\n1. Android 휴대전화 또는 태블릿에서 Google Play 스토어를 엽니다.\n2. 올바른 Google 계정에 로그인했는지 확인하세요.\n3. 메뉴 구독을 탭하고 취소하려는 구독을 선택합니다.\n4. 구독 취소를 탭합니다.</string>
+    <string name="txt_billing_unavailable">인앱 결제 서비스를 이용할 수 없습니다. Android Market/Play를 버전 3.9.16 이상으로 업그레이드하세요!</string>
+    <string name="txt_first_error_billing">구매 중 오류가 발생했습니다. 나중에 다시 시도해 주세요!</string>
+    <string name="txt_check_internet">Wi–Fi 또는 모바일 데이터가 켜져 있는지 확인합니다. 그런 다음 다시 시도하십시오</string>
+    <string name="txt_check_wifi">Wi–Fi 연결을 확인하고 다시 시도하세요!</string>
+    <string name="txt_no_internet">인터넷에 연결되지 않음!</string>
+    <string name="txt_no_wifi">와이파이에 연결해주세요</string>
+    <string name="txt_title_exit">종료하시겠습니까?</string>
+    <string name="txt_billing_premium_success">구매 해주셔서 감사합니다!</string>
+    <string name="txt_billing_premium_fail">죄송합니다. 구매하지 않았거나 구매한 패키지가 만료되었습니다!</string>
+    <string name="txt_billing_restart_app">구매 후 앱이 최상의 상태로 작동하려면 앱을 다시 시작하여 VIP 사용자로 전환을 완료하세요!</string>
+    <string name="txt_get_premium">프리미엄 받기</string>
+    <string name="txt_mess_number_premium1">당신은</string>
+    <string name="txt_mess_number_premium2">남은 무료 메시지</string>
+    <string name="txt_gift_title">당신만을 위한 특별한 선물.</string>
+    <string name="txt_gift_title_des">지금 사세요.</string>
+    <string name="txt_free_message">무료 메시지:</string>
+    <string name="txt_start_trial">무료 평가판 시작</string>
+    <string name="txt_month">월간 간행물</string>
+    <string name="txt_lifetime">일생</string>
+    <string name="txt_start_month_auto">자동 – 매월 청구되는 구독 갱신</string>
+    <string name="txt_start_one_time_auto">일회성 지불. 모든 새로운 기능 – 영원히</string>
+    <string name="txt_not_support_title">안 돼!</string>
+    <string name="txt_not_support_title_des">죄송합니다. 이 기능은 기기에서 사용할 수 없습니다. 개선하도록 노력하겠습니다. 다음 버전에서 뵙겠습니다.</string>
+    <string name="txt_topic">주제</string>
+    <string name="txt_chat_ai">AI 채팅</string>
+    <string name="txt_topic_interview">제가 면접관 역할을 하여 귀하가 지원하는 직책에 대한 질문을 할 것입니다. 귀하가 후보자인 것처럼 질문에 답변할 것입니다. 의 시작하자!</string>
+    <string name="txt_topic_develop">보안 웹 및 앱 솔루션 개발 경험이 있는 개발자입니다. 저는 귀하의 요구를 충족하는 아키텍처를 만들고 코드를 작성할 수 있습니다. 비전을 실현하고 강력하고 안전한 플랫폼을 만들기 위해 함께 노력합시다!</string>
+    <string name="txt_topic_business">비즈니스 기술을 향상시키고 일상 업무 관련 문제에 도움이 되는 팁과 템플릿을 제공해 드리겠습니다. 귀하의 비즈니스 통찰력을 향상시키기 위해 시작합시다!</string>
+    <string name="txt_topic_ad">귀하가 선택한 제품이나 서비스를 홍보하기 위한 마케팅 캠페인 작성을 도와드릴 수 있습니다. 캠페인을 영향력 있고 성공적으로 만들기 위해 함께 노력합시다!</string>
+    <string name="txt_topic_language">저는 번역, 맞춤법 교정, 문법 개선 능력을 갖춘 영어 전문가입니다. 서면 언어가 정확하고 세련되도록 도와 드리겠습니다.</string>
+    <string name="txt_topic_chef">만들기 쉽고 많은 시간이 필요하지 않은 맛있고 영양가 있는 요리법을 제안해 드릴 수 있습니다. 저는 다양한 요리 기술 수준에 맞는 다양한 레시피와 아이디어를 가지고 있습니다. 건강하고 맛있는 식사를 만들기 위해 함께 노력합시다!</string>
+    <string name="txt_topic_composer">나는 당신의 노래 요구를 돕기 위해 여기 있습니다. 특정 노래의 가사를 찾거나 마음에 두고 있는 컨셉에 따라 가사를 쓰길 원하신다면 제가 도와드릴 수 있습니다. 나는 어떤 노래의 가사를 찾거나 당신의 컨셉에 따라 새로운 가사를 쓰는 능력을 가지고 있습니다. 기억에 남고 임팩트 있는 가사를 만들어 봅시다!</string>
+    <string name="txt_topic_mental">저는 감정, 스트레스, 불안 및 기타 정신 건강 문제 관리에 대한 지침과 조언을 제공하기 위해 이 자리에 있습니다. 제 목표는 여러분이 이러한 문제에 대처하고 건강한 대처 방법을 찾는 데 도움을 주는 것입니다. 전반적인 웰빙과 정서적 안정을 개선하기 위해 함께 노력합시다.</string>
+    <string name="txt_topic_interview_title">면접관</string>
+    <string name="txt_topic_develop_title">개발자</string>
+    <string name="txt_topic_business_title">비즈니스 어시스턴트</string>
+    <string name="txt_topic_ad_title">신문</string>
+    <string name="txt_topic_language_title">언어 전문가</string>
+    <string name="txt_topic_chef_title">요리사</string>
+    <string name="txt_topic_composer_title">작곡가</string>
+    <string name="txt_topic_mental_title">정신 건강 광고</string>
+    <string name="txt_topic_interview_q1">가장 일반적인 면접 질문은 무엇입니까?</string>
+    <string name="txt_topic_interview_q2">면접 준비는 어떻게 하나요?</string>
+    <string name="txt_topic_interview_q3">후보자에게 물어볼 최고의 인터뷰 질문은 무엇입니까?</string>
+    <string name="txt_topic_interview_q4">성공적인 취업 면접을 진행하려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_interview_q5">지원자의 기술과 자격을 어떻게 평가합니까?</string>
+    <string name="txt_topic_interview_q6">후보자의 문화적 적합성을 어떻게 판단합니까?</string>
+    <string name="txt_topic_interview_q7">지원자를 평가하기 위한 효과적인 면접 기술은 무엇입니까?</string>
+    <string name="txt_topic_interview_q8">어려운 면접 상황을 어떻게 처리합니까?</string>
+    <string name="txt_topic_interview_q9">후보자의 성장 및 발전 잠재력을 어떻게 평가합니까?</string>
+    <string name="txt_topic_interview_q10">공정하고 편견 없는 인터뷰 프로세스를 위한 모범 사례는 무엇입니까?</string>
+    <string name="txt_topic_develop_q1">어떤 프로그래밍 언어를 배워야 하나요?</string>
+    <string name="txt_topic_develop_q2">애자일 개발이란 무엇이며 어떻게 작동합니까?</string>
+    <string name="txt_topic_develop_q3">소프트웨어 개발 학습을 위한 최고의 리소스는 무엇입니까?</string>
+    <string name="txt_topic_develop_q4">가장 수요가 많은 프로그래밍 기술은 무엇입니까?</string>
+    <string name="txt_topic_develop_q5">개발자로 시작하려면 어떻게 해야 하나요?</string>
+    <string name="txt_topic_develop_q6">DevOps는 무엇이며 개발과 어떤 관련이 있습니까?</string>
+    <string name="txt_topic_develop_q7">최신 기술 동향에 대한 최신 정보를 얻으려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_develop_q8">성공적인 개발 프로젝트의 핵심 구성 요소는 무엇입니까?</string>
+    <string name="txt_topic_develop_q9">코딩 기술을 향상시키려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_develop_q10">사용하기에 가장 좋은 개발 도구와 소프트웨어는 무엇입니까?</string>
+    <string name="txt_topic_business_q1">비즈니스 보조원의 책임은 무엇입니까?</string>
+    <string name="txt_topic_business_q2">성공적인 비즈니스 어시스턴트가 되려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_business_q3">비즈니스 어시스턴트에게 필요한 기술은 무엇입니까?</string>
+    <string name="txt_topic_business_q4">비즈니스 비서를 위한 최고의 도구와 소프트웨어는 무엇입니까?</string>
+    <string name="txt_topic_business_q5">가상 비즈니스 비서의 역할은 무엇입니까?</string>
+    <string name="txt_topic_business_q6">비즈니스 비서로서 조직 능력을 어떻게 향상시킬 수 있습니까?</string>
+    <string name="txt_topic_business_q7">비즈니스 비서로서 여러 작업과 우선 순위를 어떻게 관리합니까?</string>
+    <string name="txt_topic_business_q8">비즈니스 비서로서 효과적인 커뮤니케이션을 위한 모범 사례는 무엇입니까?</string>
+    <string name="txt_topic_business_q9">업무 보조로서 민감한 기밀 정보를 어떻게 처리합니까?</string>
+    <string name="txt_topic_business_q10">사업 보조원의 평균 급여는 얼마입니까?</string>
+    <string name="txt_topic_ad_q1">광고란 무엇이며 어떻게 작동합니까?</string>
+    <string name="txt_topic_ad_q2">다양한 유형의 광고는 무엇입니까?</string>
+    <string name="txt_topic_ad_q3">성공적인 광고 캠페인을 만들려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_ad_q4">가장 효과적인 광고 채널은 무엇입니까?</string>
+    <string name="txt_topic_ad_q5">광고 캠페인의 성공을 어떻게 측정합니까?</string>
+    <string name="txt_topic_ad_q6">광고에 가장 적합한 도구와 소프트웨어는 무엇입니까?</string>
+    <string name="txt_topic_ad_q7">내 광고 캠페인에 적합한 고객을 어떻게 타겟팅합니까?</string>
+    <string name="txt_topic_ad_q8">광고의 최신 트렌드와 혁신은 무엇입니까?</string>
+    <string name="txt_topic_ad_q9">매력적이고 기억에 남는 광고 메시지를 작성하려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_ad_q10">광고 비용은 얼마이며 광고 투자수익은 얼마입니까?</string>
+    <string name="txt_topic_language_q1">언어 전문가가 되는 가장 좋은 방법은 무엇입니까?</string>
+    <string name="txt_topic_language_q2">어학 실력을 향상시키려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_language_q3">가장 중요한 언어 학습 요령은 무엇입니까?</string>
+    <string name="txt_topic_language_q4">언어 학습을 위한 최고의 리소스는 무엇입니까?</string>
+    <string name="txt_topic_language_q5">비즈니스 및 경력 성공을 위해 배우기에 가장 좋은 언어는 무엇입니까?</string>
+    <string name="txt_topic_language_q6">언어 학습 장애와 어려움을 어떻게 극복합니까?</string>
+    <string name="txt_topic_language_q7">발음과 말하기 능력을 향상시키려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_language_q8">어휘와 문법을 암기하는 데 가장 좋은 기술은 무엇입니까?</string>
+    <string name="txt_topic_language_q9">새로운 언어를 말할 때 유창함과 자신감을 어떻게 키울 수 있습니까?</string>
+    <string name="txt_topic_language_q10">언어를 빠르고 효과적으로 배우는 방법은 무엇입니까?</string>
+    <string name="txt_topic_chef_q1">셰프는 무슨 일을 하며 셰프의 책임은 무엇인가요?</string>
+    <string name="txt_topic_chef_q2">셰프가 되려면 어떻게 해야 하며 어떤 교육이나 훈련이 필요합니까?</string>
+    <string name="txt_topic_chef_q3">최고의 요리 학교와 요리 프로그램은 무엇입니까?</string>
+    <string name="txt_topic_chef_q4">셰프에게 가장 중요한 요리 및 주방 기술은 무엇입니까?</string>
+    <string name="txt_topic_chef_q5">요리 기술과 기술을 어떻게 향상시킬 수 있습니까?</string>
+    <string name="txt_topic_chef_q6">셰프가 갖추어야 할 최고의 주방 도구와 장비는 무엇입니까?</string>
+    <string name="txt_topic_chef_q7">성공적인 주방 및 식사 경험을 위한 메뉴와 계획은 어떻게 만드나요?</string>
+    <string name="txt_topic_chef_q8">주방과 요리사 및 직원 팀을 어떻게 관리합니까?</string>
+    <string name="txt_topic_chef_q9">요리사로서 따라야 할 최고의 음식과 요리 트렌드는 무엇입니까?</string>
+    <string name="txt_topic_chef_q10">주방에서 식품 안전과 식품 창의성의 균형을 어떻게 맞추나요?</string>
+    <string name="txt_topic_composer_q1">작곡가는 어떤 일을 하며 작곡가의 책임은 무엇인가요?</string>
+    <string name="txt_topic_composer_q2">작곡가가 되려면 어떻게 해야 하며 어떤 교육이나 훈련이 필요합니까?</string>
+    <string name="txt_topic_composer_q3">작곡가를 위한 최고의 음악 학교와 프로그램은 무엇입니까?</string>
+    <string name="txt_topic_composer_q4">작곡가가 갖추어야 할 가장 중요한 능력은 무엇입니까?</string>
+    <string name="txt_topic_composer_q5">작곡 기술과 기법을 어떻게 향상시킬 수 있습니까?</string>
+    <string name="txt_topic_composer_q6">음악 작곡에 가장 적합한 도구와 소프트웨어는 무엇입니까?</string>
+    <string name="txt_topic_composer_q7">성공적인 음악 작곡을 하려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_composer_q8">음악 업계의 다른 뮤지션, 아티스트, 프로듀서와 어떻게 협업할 수 있나요?</string>
+    <string name="txt_topic_composer_q9">작곡가로서 내 음악을 홍보하고 마케팅하는 가장 좋은 방법은 무엇입니까?</string>
+    <string name="txt_topic_composer_q10">음악 작곡의 최신 동향과 혁신을 어떻게 최신 상태로 유지합니까?</string>
+    <string name="txt_topic_mental_q1">정신 건강 광고란 무엇이며 왜 중요한가요?</string>
+    <string name="txt_topic_mental_q2">광고는 정신 건강과 웰빙에 어떤 영향을 미칩니까?</string>
+    <string name="txt_topic_mental_q3">광고를 통해 정신 건강에 대한 인식을 높이는 가장 좋은 방법은 무엇입니까?</string>
+    <string name="txt_topic_mental_q4">효과적인 정신 건강 광고 캠페인을 만들려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_mental_q5">정신 건강 제품 및 서비스 광고에 대한 윤리적 고려 사항은 무엇입니까?</string>
+    <string name="txt_topic_mental_q6">정신 건강 광고에 가장 효과적인 채널은 무엇입니까?</string>
+    <string name="txt_topic_mental_q7">내 정신 건강 광고 캠페인에 적합한 고객을 어떻게 타겟팅합니까?</string>
+    <string name="txt_topic_mental_q8">정신 건강 광고의 최신 트렌드와 혁신은 무엇입니까?</string>
+    <string name="txt_topic_mental_q9">정신 건강 광고를 위한 설득력 있고 민감한 메시지를 작성하려면 어떻게 해야 합니까?</string>
+    <string name="txt_topic_mental_q10">비효율적이거나 유해한 정신 건강 광고의 잠재적인 결과는 무엇입니까?</string>
+    <string name="txt_confirm">확인하다</string>
+    <string name="text_confirm_restart_change">변경 사항을 적용하기 위해 응용 프로그램을 다시 시작하시겠습니까?</string>
+    <string name="text_content_sale_not_purchase2">기간 한정 세일을 놓치지 마세요! 지금 앱을 열고 프리미엄 콘텐츠를 절약하세요.</string>
+    <string name="text_content_sale_not_purchase3">서두르다! 제한된 재고를 할인된 가격으로 제공합니다. 지금 앱을 열어 할인을 요청하세요.</string>
+    <string name="text_content_sale_not_purchase4">다시 오신 것을 환영합니다! 감사의 의미로 다음 구매 시 할인 혜택을 드립니다. 지금 앱을 열어 사용하세요.</string>
+    <string name="text_content_sale_not_purchase5">지금 앱을 열고 다음 구매 시 독점 할인을 받으세요! 놓치지 마세요!</string>
+    <string name="text_content_sale_not_purchase6">지금 앱을 열면 프리미엄 콘텐츠를 할인받을 수 있습니다. 기간 한정이니 서두르세요!</string>
+    <string name="text_content_sale_not_purchase7">크게 저장할 준비가 되셨습니까? 지금 앱을 열고 할인 코드를 사용하여 구매 시 할인을 받으세요.</string>
+    <string name="text_content_sale_not_purchase8">새로운 제품이 추가 및 할인되었습니다! 구매 시 할인을 받으려면 지금 앱을 여세요. 당신은 놓치고 싶지 않을 것입니다
+        이것!</string>
+    <string name="text_title_sale_not_purchase2">기간 한정 특가 &#127881;&#127881;&#127881;</string>
+    <string name="text_title_sale_not_purchase3">당신을 위한 독점 할인 &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase4">놓치지 마세요 &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase5">새로운 할인이 추가되었습니다 &#127881;&#127881;&#127881;</string>
+    <string name="txt_auto_generating">자동 생성 텍스트 애니메이션</string>
+    <string name="txt_skip_generating">생성 건너뛰기</string>
+    <string name="txt_weekly">주간</string>
+    <string name="txt_start_weekly_auto">자동 – 매주 청구되는 구독 갱신</string>
+    <string name="txt_premium_des_image">AI 설명에서 사실적인 이미지 생성</string>
+    <string formatted="false" name="text_sale_off">당신만을 위한 독점 %s 할인</string>
+    <string name="txt_special_gift">당신을 위한 특별한 선물</string>
+    <string name="txt_discount">할인</string>
+    <string name="txt_get_now">지금 받기</string>
+    <string name="txt_you_are_vip">당신은 VIP입니다</string>
+    <string name="txt_unlock_chat_ai">광고보고 채팅하기</string>
+    <string name="text_no_ads_toShow">표시할 광고가 없습니다. 늦게 시도하세요!</string>
+    <string name="txt_next">다음</string>
+    <string name="onetime_payment">일회성 지불</string>
+    <string name="get_premium_now">지금 프리미엄 받기</string>
+    <string name="sorry_you_ve_used_up_today">죄송합니다. 오늘의 무료 채팅을 모두 사용하셨습니다. 내일 뵙거나 프리미엄 버전을 사용하세요</string>
+    <string name="weird_description"><b>Weird:</b>간단한 답, 올바른 문제</string>
+    <string name="smart_description"><b>Smart:</b>똑똑한 대답, 올바른 문제</string>
+    <string name="brainiac_description"><b>Brainiac:</b>매우 스마트한 답장, 확장된 문제 해결</string>
+    <string name="content_free_chat_1">우리는 매일 당신을 도울 준비가 되어 있습니다 &#129299; 돌아와서 무료 3가지 질문을 요청하는 것을 잊지 마세요!</string>
+    <string name="content_free_chat_2">매일 3개의 무료 질문을 모아 필요한 답을 얻으세요!&#128526;</string>
+    <string name="content_free_chat_3">매일 3개의 무료 질문을 사용하여 저에게 질문하는 것을 잊지 마세요!&#129299;</string>
+    <string name="content_free_chat_4">우리는 당신을 돕기 위해 매일 3개의 무료 질문을 제공합니다! 컴백을 기억하세요!&#128526;</string>
+    <string name="title_notify_daily_1">무엇을 도와드릴까요?</string>
+    <string name="title_notify_daily_3">당신의 일에 갇혀?</string>
+    <string name="title_notify_daily_4">외롭다고 느끼세요?</string>
+    <string name="title_notify_daily_5">숙제, 콘텐츠 작성에 어려움을 겪고 있습니까?</string>
+    <string name="title_content_daily_1">무엇이든 물어보세요&#129299;</string>
+    <string name="title_content_daily_2">ChatAI는 항상 귀하의 질문에 답변해 드릴 것입니다! &#129299;</string>
+    <string name="title_content_daily_3">ChatAI가 도와드리겠습니다!&#128522;</string>
+    <string name="title_content_daily_4">ChatAI가 당신을 위해 여기 있습니다 &#128526;</string>
+    <string name="title_content_daily_5">무엇이든 물어보세요! &#128526;</string>
+    <string name="title_content_daily_6">오늘 주식 시장을 분석해 드리겠습니다!&#128200;</string>
+    <string name="txt_continue">계속하다</string>
+
+    <string name="choose_the_topics">관심 있는 주제를 \n선택하세요.</string>
+    <string name="txt_history">역사</string>
+    <string name="see_all">모두 보기</string>
+    <string name="hello_blank_fragment">안녕하세요 빈 조각</string>
+    <string name="delete_x">삭제(%s)</string>
+    <string name="you_re_a_premium">당신은 프리미엄입니다</string>
+    <string name="enjoy_the_premium">모든 기능을 갖춘 프리미엄 \n버전을 즐기세요</string>
+    <string name="toast_copy_text">클립보드에 복사된 텍스트</string>
+    <string name="you_don_t_have">아직 대화가 없습니다.<font color='#00B085'>지금 채팅하세요!</font></string>
+    <string name="earn_2_free_messages">2개의 무료 메시지를 받으려면</string>
+    <string name="you_can_choose">다음을 선택할 수 있습니다.</string>
+    <string name="watch_ads">광고 보기</string>
+    <string name="txt_exception_date">오류가 있습니다. 휴대폰에서 자동 날짜 및 시간이 활성화되어 있는지 확인하십시오.</string>
+    <string name="personalize_your_home_screen">한 번의 탭으로 홈 화면을 개인화하십시오.</string>
+    <string name="add_to_home_screen">+ 홈 화면에 추가</string>
+    <string name="ask_ai_chat_anything"><b>AI 채팅</b>무엇이든 물어보세요</string>
+    <string name="add_widget">위젯 추가</string>
+    <string name="add_a_new_widget">새 위젯 추가</string>
+    <string name="widget">위젯</string>
+    <string name="convenient_with_bubble_chat">버블챗으로 편리하게</string>
+    <string name="text_policy">개인 정보 정책</string>
+    <string name="text_policy_terms">자귀</string>
+    <string name="text_des_policy">나는 동의 함</string>
+    <string name="text_des_guide_widget">홈 화면에 수동으로 배치하려면 길게 터치하세요.</string>
+    <string name="_4x1_widget">4x1 위젯</string>
+    <string name="_4x2_widget">4x2 위젯</string>
+    <string name="gpt_4_access"><b><font color='#4AE89F'>GPT–4</font></b>액세스</string>
+    <string name="txt_premium_unlimited"><b><font color='#4AE89F'>무제한</font></b>질문 및 답변</string>
+    <string name="txt_premium_ads"><b><font color='#4AE89F'>광고 없는</font></b>경험</string>
+    <string name="txt_premium_convenient"><b><font color='#4AE89F'>편리한</font></b>버블 채팅</string>
+    <string name="enter_your_prompt">프롬프트를 입력하십시오</string>
+    <string name="get_inspired"><u>영감 얻기</u></string>
+    <string name="choose_an_art_style">아트 스타일 선택</string>
+    <string name="generate" formatted="false">생성하다</string>
+    <string name="free_tries_left_s">남은 무료 시도: %s</string>
+    <string name="left_s">왼쪽: %s</string>
+    <string name="txt_painting">그림</string>
+    <string name="txt_magical">마법 같은</string>
+    <string name="txt_steampunk">스팀펑크</string>
+    <string name="txt_oil_painting">오일 페인팅</string>
+    <string name="txt_anime">일본 만화 영화</string>
+    <string name="txt_digital_art">디지털 아트</string>
+    <string name="txt_cyberpunk">사이버펑크</string>
+    <string name="txt_3d">3D</string>
+    <string name="txt_ghibli">지브리</string>
+    <string name="txt_game_art">게임 아트</string>
+    <string name="txt_vaporwave">증기파</string>
+    <string name="txt_comic">만화</string>
+    <string name="txt_pixel_art">픽셀 아트</string>
+    <string name="txt_synthwave">신디웨이브</string>
+    <string name="txt_watercolor">수채화</string>
+    <string name="txt_picasso">피카소</string>
+    <string name="watermark">양수표</string>
+    <string name="regenerate">재생하다</string>
+    <string name="prompt">즉각적인</string>
+    <string name="style">스타일</string>
+    <string name="not_acceptable">받아 드릴 수없는</string>
+    <string name="des_fail_art">죄송합니다. 오류가 발생했거나 이 메시지로 인해 안전 필터가 손상되었습니다. 업무에 안전한 콘텐츠만 만드시기 바랍니다.</string>
+    <string name="i_got_it">알겠어요</string>
+    <string name="content_doesn_t_contain">콘텐츠에 민감한 단어가 포함되어 있지 않습니다.</string>
+    <string name="more">더</string>
+    <string name="midj_art">미즈 아트</string>
+    <string name="done">완료</string>
+    <string name="choose_style_art">스타일 아트 선택</string>
+    <string name="applying_style">스타일 적용 중…</string>
+    <string name="adjusting_colors">색상 조정 중…</string>
+    <string name="enhancing_quality">품질 향상…</string>
+    <string name="creating_artwork">작품을 만드는 중…</string>
+    <string name="no_style">스타일 없음</string>
+    <string name="s_by_s" formatted="false">%s 스타일 %s 기준</string>
+    <string name="grantfailed">권한이 부여되지 않음</string>
+    <string name="downloaded">다운로드!</string>
+    <string name="error">오류!</string>
+    <string name="txt_premium_create"><b><font color='#4AE89F'>만들기</font></b> AI로 놀라운 예술</string>
+    <string name="txt_premium_faster"><b><font color='#4AE89F'>빠른</font></b> 이미지 처리</string>
+    <string name="txt_premium_no"><b><font color='#4AE89F'>아니</font></b> 워터마크!</string>
+    <string name="txt_premium_quality"><b><font color='#4AE89F'>최고의</font></b> 이미지 품질</string>
+    <string name="generate_art_with_midjourney_pro">Midjourney Pro로\n <b>10개의 예술 생성</b></string>
+    <string name="purchase">구입</string>
+    <string name="sharing_image">이미지 공유</string>
+    <string name="inspired_1">인간 멸종 후 지구, 새로운 시작, 지구를 되찾는 자연, 조화, 평화, 지구 균형</string>
+    <string name="inspired_2">느와르 형사 씨. 러버덕. 연기, 비, 콧수염과 용기. 그는 어떤 퍼즐도 풀 수 있습니다. 그러나 내면의 악마를 이길 수는 없습니다. 표현력이 풍부한 다크 매트 구슈 페인팅</string>
+    <string name="inspired_3">아시아의 전사 추장의 초상 사진, 부족 표범 메이크업, 빨간색 바탕에 파란색, 옆모습, 멀리 바라보고, 진지한 눈, 50mm 인물 사진, 하드 림 조명 사진</string>
+    <string name="inspired_4">귀여운 마법의 날아다니는 개, 디즈니 컨셉 아티스트가 그린 판타지 아트, 황금색, 고품질, 매우 섬세하고 우아하고 날카로운 초점, 컨셉 아트, 캐릭터 컨셉, 디지털 페인팅, 미스터리, 모험</string>
+    <string name="inspired_5">내부에 조명이 있는 이끼와 크고 둥근 창문이 있는 콘크리트 거대한 블록 안에 있는 캡슐 다중 주택의 사실적인 건축 렌더링, 인간 비늘</string>
+    <string name="image_type_object_any_details_ne_g_a_beautiful_magical_kingdom">이미지 유형, 개체, 모든 세부 정보 \nE.g. 아름다운 마법의 왕국</string>
+    <string name="str_title_start_chat">안녕하세요, 무엇을 도와드릴까요?</string>
+    <string name="str_trending">트렌드</string>
+    <string name="str_ask_a_question">질문하세요…</string>
+    <string name="str_bus">버스</string>
+    <string name="str_music">음악</string>
+    <string name="str_mathematics">수학</string>
+    <string name="str_history">역사</string>
+    <string name="str_content">콘텐츠</string>
+    <string name="str_email_topic">이메일</string>
+    <string name="str_cooking_techniques">요리 기술</string>
+    <string name="str_cooking_tool">요리 도구</string>
+    <string name="str_cooking_ingredients">요리 재료</string>
+    <string name="str_cooking_styles">요리 스타일</string>
+    <string name="str_cooking_recipes">요리법</string>
+    <string name="str_cooking_environment">환경을 위한 요리</string>
+    <string name="str_science">과학</string>
+    <string name="str_essays">에세이</string>
+    <string name="str_physics">물리학</string>
+    <string name="str_travel_experiences">여행 경험</string>
+    <string name="str_travel_skill">여행 기술</string>
+    <string name="str_travel_trend">여행 트렌드</string>
+    <string name="str_travel_impact">여행에 미치는 영향</string>
+    <string name="str_travel_tip">여행 팁</string>
+    <string name="str_travel_des">여행 목적지</string>
+    <string name="str_company_bio">회사 약력</string>
+    <string name="str_company_slogan">슬로건</string>
+    <string name="str_company_name">이름 생성기</string>
+    <string name="str_business_trend">비즈니스 동향</string>
+    <string name="str_business_innov">비즈니스 혁신</string>
+    <string name="str_business_strategy">사업 전략</string>
+    <string name="str_bus_detail">프리미엄 에세이 작성 서비스로 과제를 마스터하세요.</string>
+    <string name="str_music_detail">멜로디, 노래를 씁니다. 소리, 리듬, 하모니 및 구성에 대해 배웁니다.</string>
+    <string name="str_science_detail">생물학, 화학, 천문학 등 흥미로운 지식을 생성합니다.</string>
+    <string name="str_mathematics_detail">모든 수학 질문에 대한 답을 쉽게 얻으십시오.</string>
+    <string name="str_history_detail">과거에 일어난 사건과 중요한 이정표를 탐색하십시오.</string>
+    <string name="str_content_detail">더 나은 가독성을 위해 콘텐츠를 개선하고 단순화합니다.</string>
+    <string name="str_email_topic_detail">세심하게 구조화되고 정리된 잘 만들어진 이메일을 작성하십시오.</string>
+    <string name="str_cooking_techniques_detail">요리의 기본 기술을 익히는 방법 배우기</string>
+    <string name="str_cooking_tool_detail">주방에서 다양한 도구를 사용하는 방법 알기</string>
+    <string name="str_cooking_ingredients_detail">요리의 다양한 재료 탐색</string>
+    <string name="str_travel_des_detail">세계의 불가사의를 탐험하세요</string>
+    <string name="str_popular_des_detail">일일 레시피 추천</string>
+    <string name="str_company_bio_detail">귀사의 스토리: 성장, 혁신, 성공.</string>
+    <string name="str_company_slogan_detail">비즈니스를 위한 기억에 남을 슬로건 디자인</string>
+    <string name="str_essays_detail">노력 없이 200자 이상의 에세이 쓰기</string>
+    <string name="str_physics_detail">ChatGPT의 힘으로 우주의 신비를 탐험하세요</string>
+    <string name="str_cooking_styles_detail">다양한 요리 스타일 실험</string>
+    <string name="str_cooking_recipes_detail">쉽게 식사를 계획</string>
+    <string name="str_cooking_environment_detail">보다 친환경적인 방법으로 요리하는 방법을 배웁니다.</string>
+    <string name="str_travel_experiences_detail">경험을 들으면 여행에 대한 관점을 풍부하게 할 수 있습니다.</string>
+    <string name="str_travel_skill_detail">여행 경험을 향상시킬 수 있는 기술 개발</string>
+    <string name="str_travel_trend_detail">여행의 새로운 트렌드 파악 및 따라잡기</string>
+    <string name="str_travel_impact_detail">여행할 때 당신의 영향 알기</string>
+    <string name="str_travel_tip_detail">더 똑똑하고 안전하며 저렴하게 여행하는 방법에 대한 실용적인 조언을 얻으십시오.</string>
+    <string name="str_company_name_detail">브랜드 또는 제품에 대한 매력적인 이름을 만드십시오.</string>
+    <string name="str_business_trend_detail">새로운 트렌드를 탐색하고 빠르게 적응</string>
+    <string name="str_business_innov_detail">제품, 서비스, 성능 개선에 대한 새로운 아이디어 창출</string>
+    <string name="str_business_strategy_detail">비즈니스를 평가하고 목표, 계획 및 조치에 대한 조언 제공</string>
+    <string name="str_music_ques">음악에 대해 어떻게 도와드릴까요?</string>
+    <string name="str_mathematics_ques">어떤 수학 문제를 풀고 싶나요?</string>
+    <string name="str_history_ques">어떤 이벤트 또는 일정을 알고 싶습니까?</string>
+    <string name="str_science_ques">어떤 이벤트 또는 일정을 알고 싶습니까?</string>
+    <string name="str_essays_ques">에세이의 주제는 무엇입니까?</string>
+    <string name="str_physics_ques">물리학에서 무엇을 알고 싶습니까?</string>
+    <string name="str_cooking_techniques_ques">어떤 기술에 집중하고 있습니까?</string>
+    <string name="str_cooking_tool_ques">어떤 요리 도구를 사용하고 있습니까?</string>
+    <string name="str_cooking_ingredients_ques">어떤 재료로 고생하시나요?</string>
+    <string name="str_cooking_styles_ques">어떤 요리 스타일을 찾고 있나요?</string>
+    <string name="str_cooking_recipes_ques">어떤 레시피를 탐색하고 싶습니까?</string>
+    <string name="str_cooking_environment_ques">지속 가능한 방식으로 요리하는 것에 대해 무엇을 알고 싶습니까?</string>
+    <string name="str_travel_des_ques">가보고 싶은 나라?</string>
+    <string name="str_travel_experiences_ques">여행에서 알고 싶은 실수, 성공, 도전은 무엇입니까?</string>
+    <string name="str_travel_skill_ques">여행 기술 향상에 관심이 있는 것은 무엇입니까?</string>
+    <string name="str_travel_trend_ques">특정 트렌드에 관심이 있습니까?</string>
+    <string name="str_travel_impact_ques">친환경 여행에서 알고 싶은 것은?</string>
+    <string name="str_travel_tip_ques">어떤 편리한 팁을 알고 싶습니까?</string>
+    <string name="str_company_name_ques">귀하의 브랜드/제품은 무엇을 합니까?</string>
+    <string name="str_business_trend_ques">집중하고 싶은 특정 카테고리는 무엇입니까?</string>
+    <string name="str_business_innov_ques">이루고 싶은 혁신과제는?</string>
+    <string name="str_business_strategy_ques">귀하의 비즈니스를 어떻게 도와드릴까요?</string>
+    <string name="str_company_bio_ques">회사 이름과 전문 분야는 무엇입니까?</string>
+    <string name="str_company_slogan_ques">회사의 기원에 대한 짧고 매혹적인 일화를 공유하십시오.</string>
+    <string name="str_premium_txt"><![CDATA[특가로 제공되는<b> %s </b>Premium을 사용해 보세요.\n<b>지금 구입하세요.</b>]]></string>
+    <string name="txt_continue_to_chat">채팅 계속하기</string>
+    <string name="str_copy">복사</string>
+    <string name="str_regenerate">재생하다</string>
+    <string name="str_fashion_ques">이 추세에 대한 몇 가지 아이디어를 제공하시겠습니까?</string>
+    <string name="str_relax_ques">올 여름 넷플릭스에서 볼만한 추천 시리즈.</string>
+    <string name="str_tech_ques">인공 지능은 이제 세상에 큰 영향을 미치고 있습니다. 더 알아보고 싶으신가요?</string>
+    <string name="txt_random">무작위의</string>
+    <string-array name="topic_title">
+        <item>모두</item>
+        <item>비즈니스 전문가</item>
+        <item>콘텐츠 작성자</item>
+        <item>라이프스타일 친구</item>
+        <item>ChatAI로 배우기</item>
+        <item>요리의 달인</item>
+        <item>여행</item>
+    </string-array>
+
+    <string-array name="select_input_fashion">
+        <item>은색 핸드백</item>
+        <item>장화</item>
+        <item>뉴진 패션</item>
+        <item>유니폼</item>
+        <item>하트 목걸이</item>
+        <item>히메컷 헤어</item>
+    </string-array>
+
+    <string-array name="select_input_relax">
+        <item>지니 &amp; 조지아</item>
+        <item>외부 은행</item>
+        <item>하트스토퍼</item>
+        <item>기묘한 것들</item>
+        <item>빌어먹을 세상의 종말</item>
+        <item>여왕의 도박</item>
+        <item>K- 드라마</item>
+    </string-array>
+
+    <string-array name="select_input_tech">
+        <item>AI 아트</item>
+        <item>AI 채팅</item>
+        <item>AI 이미지 생성기</item>
+        <item>AI 노래</item>
+        <item>AI 봇</item>
+        <item>AI 비디오</item>
+    </string-array>
+
+    <string-array name="arr_science">
+        <item>생물학</item>
+        <item>화학</item>
+        <item>천문학</item>
+    </string-array>
+
+    <string-array name="arr_cooking_techniques">
+        <item>구이</item>
+        <item>끓이기</item>
+        <item>끓는다</item>
+        <item>디글레이징</item>
+        <item>볶음</item>
+    </string-array>
+
+    <string-array name="arr_cooking_tool">
+        <item>나이프</item>
+        <item>냄비</item>
+        <item>팬</item>
+        <item>믹서</item>
+        <item>블렌더</item>
+        <item>온도계</item>
+        <item>비늘</item>
+    </string-array>
+
+    <string-array name="arr_cooking_ingredients">
+        <item>향신료</item>
+        <item>허브</item>
+        <item>기름</item>
+        <item>식초</item>
+        <item>곡물</item>
+        <item>콩</item>
+        <item>견과류</item>
+        <item>씨앗</item>
+        <item>과일</item>
+        <item>야채</item>
+    </string-array>
+
+    <string-array name="arr_cooking_style">
+        <item>굽기</item>
+        <item>구이</item>
+        <item>튀김</item>
+        <item>찜</item>
+        <item>밀렵</item>
+        <item>콩</item>
+        <item>굽기</item>
+        <item>및 전자레인지</item>
+    </string-array>
+
+    <string-array name="arr_travle_des">
+        <item>베트남</item>
+        <item>일본</item>
+        <item>미국</item>
+        <item>영국</item>
+        <item>프랑스</item>
+        <item>독일</item>
+        <item>노르웨이어</item>
+        <item>대한민국</item>
+    </string-array>
+
+    <string-array name="arr_business_innovation">
+        <item>마케팅</item>
+        <item>물류</item>
+        <item>인적 관리</item>
+        <item>재정</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="arr_business_trends">
+        <item>기술</item>
+        <item>물류</item>
+        <item>마케팅</item>
+        <item>힘</item>
+        <item>농업</item>
+        <item>상업용</item>
+        <item>전자상거래</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="arr_art_page">
+        <item>예술 생성</item>
+        <item>배경화면</item>
+    </string-array>
+
+    <string name="str_create_photo">사진 만들기</string>
+    <string name="str_square">정사각형</string>
+    <string name="str_original">원래의</string>
+    <string name="str_wallpaper">벽지</string>
+    <string name="str_set_wallpaper">배경화면 설정</string>
+    <string name="str_popular">인기 있는</string>
+    <string name="str_see_more">더보기</string>
+    <string name="str_see_more_1">…더보기</string>
+    <string name="str_fashion_title">패션</string>
+    <string name="str_relax_title">안심하다</string>
+    <string name="str_techlogy_title">기술</string>
+    <string name="str_title_exit_app">종료하시겠습니까?</string>
+
+    <string name="str_choose_action">작업 선택:</string>
+    <string name="str_open_camera">카메라 열기</string>
+    <string name="str_select_photo">사진으로 이동</string>
+    <string name="str_recognize">인식</string>
+    <string name="str_recognizing">인식 중...</string>
+    <string name="str_txt_recognize">텍스트 인식</string>
+    <string name="str_txt_choose_image">사진 선택</string>
+    <string name="str_txt_apply_text">텍스트 적용</string>
+    <string name="str_summary">요약</string>
+    <string name="str_summary_sub_title">파일의 텍스트를 요약하고 안에 있는 질문에 답하세요</string>
+    <string name="str_summary_upload_files">파일 업로드</string>
+    <string name="str_summary_upload_image">사진 업로드</string>
+    <string name="str_summary_upload_des1">뭔가 또는 누군가에 대한 가장 중요한 사실이나 생각을 간결하고 명확한 형식으로 표현하기 위해</string>
+    <string name="str_summary_upload_des2">중요한 사항을 명확하게 설명하기 위해</string>
+    <string name="str_summary_upload_des3">보고서, 토론 등에서 주요 아이디어나 사실을 몇 마디로 표현하려면...</string>
+    <string name="str_error_summary">문제가 발생했습니다!</string>
+    <string name="str_error_summary_des">최대 1MB만 업로드할 수 있습니다. 프리미엄으로 업그레이드하고 대용량 파일을 처리하세요.</string>
+    <string name="str_txt_unlock_premium">프리미엄 잠금 해제</string>
+    <string name="str_sub_unlock_premium">GPT4 지원, 제한 없음, 광고 없음</string>
+    <string name="str_no_image">이미지 없음</string>
+    <string name="str_premium_des1">Chat GPT-4 제공</string>
+    <string name="str_premium_des2">무제한 질문 &amp; 답변</string>
+    <string name="str_premium_des3">선택할 수 있는 다양한 주제</string>
+    <string name="str_premium_des4">파일 업로드 &amp; 무엇이든 물어보세요</string>
+    <string name="str_premium_des5">무제한 AI 아트 생성</string>
+    <string name="str_best_choose">최상의 선택</string>
+    <string name="str_file_summary">파일 요약:</string>
+    <string name="str_summary_text">요약 텍스트</string>
+    <string name="str_your_chats">대화</string>
+    <string name="str_out_of_times_summary">아니요, 오늘의 요약이 다 떨어졌습니다. 내일 %d개의 요약과 함께 계속 사용하세요! 애플리케이션의 다른 기능을 계속해서 무제한으로 사용하세요.</string>
+    <string name="str_intro_summary">%dMB 미만의 PDF 파일만 업로드할 수 있습니다.</string>
+    <string name="str_uploading">업로드 중...</string>
+    <string name="str_upload_s_photo">%d 사진 업로드</string>
+    <string name="str_upload_photo_msg">한 번의 업로드에 3장의 사진만 선택할 수 있습니다.</string>
+    <string name="txt_continue_to_summary">요약으로 계속</string>
+    <string name="txt_premium_topic"><b><font color='#4AE89F'>다양한</font></b> 주제 선택</string>
+    <string name="txt_premium_upload_file"><b><font color='#4AE89F'>파일 업로드</font></b> &amp; 무엇이든 물어보세요</string>
+    <string name="txt_premium_generate_art"><b><font color='#4AE89F'>잠금 해제</font></b> AI 아트 생성</string>
+    <string name="str_summary_now">지금 요약하세요!</string>
+    <string name="str_i_got_it">알겠어요</string>
+    <string name="str_mes_loading_summary_file">AI는 파일에서 학습하며 문서 크기에 따라 시간이 걸릴 수 있습니다.</string>
+    <string name="str_go_to_chat">채팅으로 이동</string>
+    <string name="str_exists_file_mes">파일이 이미 존재합니다. 채팅으로 돌아가십시오.</string>
+
+    <string-array name="arr_strategy_type">
+        <item>콘텐츠 마케팅</item>
+        <item>IMC(통합 마케팅 커뮤니케이션)</item>
+        <item>전자상거래 마케팅</item>
+        <item>소셜 미디어 마케팅</item>
+    </string-array>
+
+    <string-array name="arr_interviewer_detail">
+        <item>배경 &amp; 경험치</item>
+        <item>리더십</item>
+        <item>경력 목표</item>
+        <item>기술력</item>
+        <item>비판적 사고</item>
+        <item>사고방식</item>
+    </string-array>
+
+    <string-array name="arr_key_segment">
+        <item>강점</item>
+        <item>약점</item>
+        <item>영업 전술</item>
+        <item>마케팅 전략</item>
+        <item>음성 점유율</item>
+        <item>수익</item>
+    </string-array>
+
+    <string-array name="arr_tone_voice">
+        <item>정식</item>
+        <item>낙관적</item>
+        <item>우호적</item>
+        <item>격려</item>
+        <item>독단적</item>
+        <item>협동</item>
+    </string-array>
+
+    <string-array name="arr_genre_song">
+        <item>인디</item>
+        <item>RnB</item>
+        <item>팝</item>
+        <item>국가</item>
+        <item>바위</item>
+        <item>클래식</item>
+        <item>금속</item>
+        <item>재즈</item>
+        <item>발라드</item>
+        <item>파란색</item>
+    </string-array>
+
+    <string-array name="arr_mood_song">
+        <item>행복</item>
+        <item>에너지</item>
+        <item>우울증</item>
+        <item>불안/슬픔</item>
+        <item>부드러움</item>
+        <item>어려움</item>
+        <item>로맨틱</item>
+        <item>진정</item>
+    </string-array>
+
+    <string-array name="arr_media_plalform">
+        <item>링크드인</item>
+        <item>인스타그램</item>
+        <item>페이스북</item>
+        <item>트위터</item>
+    </string-array>
+
+    <string-array name="arr_media_goal">
+        <item>약속</item>
+        <item>노출</item>
+    </string-array>
+    <string-array name="arr_gender">
+        <item>남성</item>
+        <item>여성</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="arr_outfit_designer_style">
+        <item>레트로</item>
+        <item>고딕</item>
+        <item>이모</item>
+        <item>테크웨어</item>
+        <item>하이프비스트</item>
+        <item>빈티지</item>
+        <item>클래식</item>
+        <item>오래된 돈</item>
+        <item>스트리트웨어</item>
+        <item>가와이</item>
+        <item>미니멀리스트</item>
+        <item>바위</item>
+    </string-array>
+
+    <string-array name="arr_information_horoscope">
+        <item>사랑</item>
+        <item>경력</item>
+        <item>특성</item>
+        <item>일치하는 조디악</item>
+    </string-array>
+
+    <string-array name="arr_information_travel">
+        <item>음식</item>
+        <item>공휴일</item>
+        <item>문화</item>
+        <item>풍경</item>
+    </string-array>
+
+    <string-array name="language_programing">
+        <item>SQL</item>
+        <item>자바</item>
+        <item>자바 스크립트</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>파이썬</item>
+        <item>PHP</item>
+        <item>루비</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="arr_techniques_cooking">
+        <item>구이</item>
+        <item>끓이기</item>
+        <item>끓는다</item>
+        <item>디글레이징</item>
+        <item>볶음</item>
+        <item>기타</item>
+    </string-array>
+
+    <string name="str_marketing_plan">마케팅 계획</string>
+    <string name="str_marketing_plan_detail">제품 마케팅에 어려움을 겪고 계십니까? ChatGPT가 도와드리겠습니다</string>
+    <string name="str_marketing_plan_ques">당신은 비즈니스 전문가입니다. %s의 마케팅 계획을 제안해 주세요. 제품은 %s입니다. 캠페인의 목표는 %s입니다. 구현하려는 전략 유형은 %s 캠페인입니다.</string>
+    <string name="str_interviewer_support">면접관 지원</string>
+    <string name="str_interviewer_support_detail">ChatGPT로 1초만에 인터뷰 질문 받기</string>
+    <string name="str_interviewer_support_ques">당신은 인적 자원 채용 담당자입니다. %s에 대한 10개의 질문을 제안해 주세요. 요구 사항에는 %s가 포함됩니다.</string>
+    <string name="str_competitors_research">경쟁사 조사</string>
+    <string name="str_competitors_research_detail">ChatGPT가 경쟁사에 대한 조사를 하도록 하세요</string>
+    <string name="str_competitors_research_ques">당신은 시장 조사원입니다. 주요 제품/서비스가 %s인 %s 업계에서 %s에 대한 경쟁사 조사를 수행하십시오. 연구에는 %s이(가) 포함되어야 합니다.</string>
+    <string name="str_customers_insights_research">고객 인사이트 리서치</string>
+    <string name="str_customers_insights_research_detail">고객을 더 이해하고 싶습니까?</string>
+    <string name="str_customers_insights_research_ques">당신은 전문 마케팅 전문가입니다. %s의 잠재고객에 대한 고객 통찰력 조사를 수행합니다. 연구에는 %s, %s, %s 특성을 가진 사람들이 포함되어야 합니다.</string>
+    <string name="str_write_paragraph">단락 작성</string>
+    <string name="str_write_paragraph_detail">ChatGPT는 순식간에 훌륭한 문단을 쓸 수 있습니다</string>
+    <string name="str_write_paragraph_ques">당신은 전문 작가입니다. %s의 어조로 %s 단락을 작성해 주세요. 단락은 %s에 있어야 합니다.</string>
+    <string name="str_write_song_lyrics">노래 가사 쓰기</string>
+    <string name="str_write_song_lyrics_detail">ChatGPT로 전문 작곡가가 되어보세요</string>
+    <string name="str_write_song_lyrics_ques">당신은 전문 음악 작곡가입니다. %s라는 주제로 노래를 써주세요. 노래는 %s 분위기의 %s 음악이어야 합니다.</string>
+    <string name="str_write_social_media_post">소셜 미디어 게시물 작성</string>
+    <string name="str_str_write_social_media_post_detail">ChatGPT로 소셜 게시물 작성에 노력을 기울이지 마세요</string>
+    <string name="str_str_write_social_media_post_ques">당신은 전문적인 소셜 미디어 마케터입니다. %s의 콘텐츠로 %s에 매력적인 게시물을 작성해 주세요. 게시물의 목표는 %s 목소리 톤으로 %s하는 것입니다.</string>
+    <string name="str_write_email">이메일을 쓰다</string>
+    <string name="str_write_email_detail">ChatGPT가 당신을 위해 이메일을 쓰도록 하세요</string>
+    <string name="str_write_email_ques">내용이 %s인 이메일을 보내주세요. 목소리 톤은 %s여야 합니다.</string>
+    <string name="str_outfit_designer">의상 디자이너</string>
+    <string name="str_outfit_designer_detail">오늘 무엇을 입어야할지 모르겠나요? ChatGPT가 귀하의 #ootd를 제안하게 하십시오</string>
+    <string name="str_outfit_designer_ques">당신은 스타일리스트이자 의상 디자이너입니다. %s 스타일의 %s 의상을 제안해 주세요.</string>
+    <string name="str_write_pickup_line">픽업 라인 작성</string>
+    <string name="str_write_pickup_line_detail">친구에게 감동을 줄 재미있는 픽업 라인을 얻으십시오.</string>
+    <string name="str_write_pickup_line_ques">%s 톤의 목소리로 %s에서 픽업 라인을 작성해 주세요.</string>
+    <string name="str_write_joke">농담 쓰기</string>
+    <string name="str_write_joke_detail">모두에게 재미있는 이야기가 있는 것은 아닙니다. ChatGPT가 하도록 하세요</string>
+    <string name="str_write_joke_ques">%s의 컨텍스트와 함께 %s에 농담을 적어주세요.</string>
+    <string name="str_horoscope_reader">운세 판독기</string>
+    <string name="str_horoscope_reader_detail">기술은 수수께끼를 가진 친구입니다. 당신은 생각하지 않는다?</string>
+    <string name="str_horoscope_reader_ques">당신은 점성술사이자 점성술사입니다. %s에 태어난 사람의 운세를 분석합니다. 정보에는 %s가 포함되어야 합니다.</string>
+    <string name="str_solve_math_problem">수학 문제 풀기</string>
+    <string name="str_solve_math_problem_detail">모든 수학 질문에 대한 답을 쉽게 얻으십시오.</string>
+    <string name="str_solve_math_problem_ques">당신은 수학 과학자입니다. 다음 문제를 해결해 주세요: %s.</string>
+    <string name="str_history_events">역사 이벤트</string>
+    <string name="str_history_events_detail">과거에 일어난 사건과 중요한 이정표를 탐색하십시오.</string>
+    <string name="str_history_events_ques">%s, %s에서 발생한 기록 이벤트를 알려주세요.</string>
+    <string name="str_code_supporter">코드 서포터</string>
+    <string name="str_code_supporter_detail">코드와 씨름하고 더 배우고 싶습니까? ChatGPT가 당신을 지원할 수 있습니다</string>
+    <string name="str_code_supporter_ques">당신은 뛰어난 코더입니다. %s에 있는 %s의 코드로 지원해 주세요.</string>
+    <string name="str_latino_dishes">라틴 요리</string>
+    <string name="str_latino_dishes_detail">ChatGPT로 라틴 요리를 요리하는 법을 배워보세요</string>
+    <string name="str_latino_dishes_ques">당신은 미슐랭 3스타 셰프입니다. 나에게 라틴계 요리를 제안하십시오. 요리는 %s 기술을 사용한 %s입니다. 재료에는 %s가 포함되어야 합니다. %s명을 위한 자료의 양을 제안해 주세요.</string>
+    <string name="str_african_dishes">아프리카 요리</string>
+    <string name="str_african_dishes_detail">ChatGPT로 아프리카 요리를 요리하는 법을 배워보세요</string>
+    <string name="str_african_dishes_ques">당신은 미슐랭 3스타 셰프입니다. 나에게 아프리카 요리를 제안하십시오. 요리는 %s 기술을 사용한 %s입니다. 재료에는 %s가 포함되어야 합니다. %s명을 위한 자료의 양을 제안해 주세요.</string>
+    <string name="str_asian_dishes">아시아 요리</string>
+    <string name="str_asian_dishes_detail">ChatGPT로 아시아 요리를 요리하는 법을 배워보세요</string>
+    <string name="str_asian_dishes_ques">당신은 미슐랭 3스타 셰프입니다. 아시아 요리를 제안해주세요. 요리는 %s 기술을 사용한 %s입니다. 재료에는 %s가 포함되어야 합니다. %s명을 위한 자료의 양을 제안해 주세요.</string>
+    <string name="str_western_dishes">서양 요리</string>
+    <string name="str_western_dishes_detail">ChatGPT로 서양 요리 배우기</string>
+    <string name="str_western_dishes_ques">당신은 미슐랭 3스타 셰프입니다. 서양 요리를 제안해 주세요. 요리는 %s 기술을 사용한 %s입니다. 재료에는 %s가 포함되어야 합니다. %s명을 위한 자료의 양을 제안해 주세요.</string>
+    <string name="str_travel_destination">여행 목적지</string>
+    <string name="str_travel_destination_detail">ChatGPT는 여행지의 모든 시그니처를 제안할 수 있습니다!</string>
+    <string name="str_travel_destination_ques">당신은 관광 가이드입니다. %s이(가) %s에서 탐색해야 한다고 제안해 주세요.</string>
+    <string name="str_travel_experience">여행 경험</string>
+    <string name="str_travel_experience_detail">ChatGPT가 제안하는 여행 꿀팁!</string>
+    <string name="str_travel_experience_ques">당신은 관광 가이드입니다. %s로 여행할 때 %s와 관련된 몇 가지 팁을 제안해 주세요.</string>
+    <string name="str_brand_name">상표명</string>
+    <string name="str_product_services">제품/서비스</string>
+    <string name="str_goals">목표</string>
+    <string name="str_position">위치</string>
+    <string name="str_details">세부</string>
+    <string name="str_name">이름</string>
+    <string name="str_industry">산업</string>
+    <string name="str_key_segment">주요 세그먼트</string>
+    <string name="str_age">나이</string>
+    <string name="str_gender">성별</string>
+    <string name="str_region">지역</string>
+    <string name="str_subject">주제</string>
+    <string name="str_length">길이</string>
+    <string name="str_context">문맥</string>
+    <string name="str_genre">장르</string>
+    <string name="str_mood">분위기</string>
+    <string name="str_platform">플랫폼</string>
+    <string name="str_style">스타일</string>
+    <string name="str_language">언어</string>
+    <string name="str_information">정보</string>
+    <string name="str_tone_of_voice">목소리 톤</string>
+    <string name="str_year">년도</string>
+    <string name="str_birth_date">생년월일/시간</string>
+    <string name="str_country_region">국가/지역</string>
+    <string name="str_issue">문제</string>
+    <string name="str_dishes">그릇</string>
+    <string name="str_techniques">기법</string>
+    <string name="str_ingredients">재료</string>
+    <string name="str_potion">물약</string>
+    <string name="str_context_strategy_type">구현하려는 전략 유형은 무엇입니까?</string>
+    <string name="str_context_position">이 직책에 대한 면접 질문 10개 제안</string>
+    <string name="str_context_name">당신이 보고 싶은 경쟁자는 무엇입니까?</string>
+    <string name="str_context_product_services">잠재 고객에게 타겟팅하려는 제품/서비스는 무엇입니까?</string>
+    <string name="str_context_subject">당신의 단락은 무엇에 관한 것입니까?</string>
+    <string name="str_context_song">당신의 노래는 무엇에 관한 것입니까?</string>
+    <string name="str_context_post_media">귀하의 게시물은 무엇입니까?</string>
+    <string name="str_context_gmail">당신의 이메일은 무엇입니까?</string>
+    <string name="str_context_style">현재 어떤 스타일에 빠져 있습니까?</string>
+    <string name="str_context_joke">당신의 농담은 무엇입니까?</string>
+    <string name="str_context_birth_date_time">태어난 시간과 요일은 무엇입니까?</string>
+    <string name="str_context_information">당신에 대해 무엇을 알고 싶습니까?</string>
+    <string name="str_context_solve_math_problem">수학에서 당신의 문제는 무엇입니까?</string>
+    <string name="str_context_issue">이것에 대한 당신의 우려는 무엇입니까?</string>
+    <string name="str_context_dishes">어떤 요리를 만들 계획인가요?</string>
+    <string name="str_context_techniques">이 요리에 어떤 기술을 사용할 계획입니까?</string>
+    <string name="str_context_ingredients">이 요리에 어떤 종류의 재료를 사용하고 싶습니까?</string>
+    <string name="str_context_potion">이 요리를 몇 명의 물약(사람)에게 만들고 싶습니까?</string>
+    <string name="str_context_information_travel">무엇을 탐색하고 싶습니까?</string>
+    <string name="str_context_information_travel2">이곳을 여행할 때 무엇을 알고 싶습니까?</string>
+    <string name="str_context_country">어디로 갈 계획이세요?</string>
+    <string name="str_select_model">모델 선택:</string>
+    <string name="str_message_model_3_5">GPT – 3.5 모델은 다양한 텍스트 관련 활동의 성능과 효율성을 최적화합니다.</string>
+    <string name="str_reasoning">추리</string>
+    <string name="str_speed">속도</string>
+    <string name="str_concisenes">간결함</string>
+    <string name="str_message_model_4">GPT – 4 모델은 향상된 추론, 정확한 지침의 이해 및 증가된 상상력이 필요한 활동에서 잘 수행합니다.</string>
+    <string name="str_you_may_be_interested_in_these_questions">다음 질문에 관심이 있을 수 있습니다.</string>
+    <string name="str_close">닫다</string>
+    <string name="str_preview_your_files">파일을\n미리 보려면 여기를 클릭하십시오.</string>
+
+    <string name="str_has_your_payment_expired">결제가\n 만료되었습니까?</string>
+    <string name="str_has_your_payment_sale">독점 혜택이 \n 여러분을 부르고 있습니다!!</string>
+    <string name="str_has_your_payment_cancel">놀라운 거래를 \n 놓치지 마세요!</string>
+    <string name="str_oh_no">아, 안 돼요!</string>
+    <string name="str_great">훌륭해요!!!</string>
+    <string name="str_welcome_back">돌아오신 것을 환영합니다!</string>
+    <string name="str_super_sale">슈퍼세일</string>
+    <string name="str_limited_time_only">제한된 시간만</string>
+    <string name="str_the_file_no_content">파일에\n콘텐츠가 없습니다!</string>
+    <string name="str_we_found_no_content">요약할 콘텐츠가 없거나 충분하지 않습니다. 다른 파일을 사용해 보세요.</string>
+    <string name="str_msg_free_message">%d개의 무료 메시지를 얻으려면</string>
+    <string name="str_msg_free_summary">%d개의 무료 요약을 얻으려면</string>
+    <string name="str_msg_free_generate_art">%d개의 무료 생성 아트를 얻으려면</string>
+    <string name="str_msg_sale_weekly_t3">자동 - 매주 청구되는 구독 갱신</string>
+    <string name="str_intro_gpt_4"><![CDATA[ 제공: <br><b> <font color=#FFFFFF>GPT-4</font></b>]]></string>
+    <string name="str_intro_topic"><![CDATA[ 다양한 <br><b> <font color=#FFFFFF>주제</font></b>]]></string>
+    <string name="str_intro_image_to_text"><![CDATA[ 이미지를 <br><b> <font color=#FFFFFF> 텍스트(OCR) </font></b>]]></string>
+    <string name="str_intro_free_ads"><![CDATA[ 무료 <br><b> <font color=#FFFFFF> 100% 광고 </font></b>]]></string>
+    <string name="str_intro_unlimit_art"><![CDATA[ 무제한 <br><b> <font color=#FFFFFF> AI 아트 </font></b>]]></string>
+    <string name="str_intro_upload_file"><![CDATA[ 파일 업로드 <br><b> <font color=#FFFFFF> 무엇이든 물어보세요 </font></b>]]></string>
+    <string name="str_detail_price_yearly_new"> 그 다음에는 %s/년, 자동으로 갱신됩니다. </string>
+    <string name="txt_yearly">연간</string>
+    <string name="txt_start_yeal_auto">자동 - 매년 청구되는 구독 갱신</string>
+</resources>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fmMoreStyleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg_gradient"
+        tools:context=".feature.art.MoreStyleArtFragment">
+
+
+
+        <com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
+            android:id="@+id/fmMoreStyleArtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:paddingTop="@dimen/_24sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fmMoreStyleArtRcv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_82sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmMoreStyleArtHeader" />
+
+        <TextView
+            android:id="@+id/fmMoreStyleArtTvDone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/bg_border14_green"
+            android:fontFamily="@font/font_bold"
+            android:gravity="center"
+            android:text="@string/done"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

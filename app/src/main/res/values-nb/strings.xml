@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_ui_crash">App/UI krasjet</string>
+    <string name="sorry_string">Beklager, det skulle ikke ha skjedd.</string>
+    <string name="error_report_button_text">Rapporter denne feilen via e–post</string>
+    <string name="error_report_button_telegram">Rapporter denne feilen via telegram</string>
+    <string name="copy_format">Kopier formatert rapport</string>
+    <string name="error_report_open_issue_button_text">Rapportere</string>
+    <string name="error_report_open_github_notice">Vennligst sjekk om det allerede eksisterer et problem som diskuterer krasj.</string>
+    <string name="what_device_headline">Info:</string>
+    <string name="what_happened_headline">Hva skjedde:</string>
+    <string name="info_labels">Hva:\\nForespørsel:\\nGMT–tid:\\nPakke:\\nVersjon:\\nOS–versjon:\\nEnhet:\\nModell:\\nProdukt:</string>
+    <string name="your_comment">Din kommentar (på engelsk):</string>
+    <string name="error_details_headline">Detaljer:</string>
+    <string name="error_report_title">Feilrapport</string>
+    <string name="crash_report_copied">Krasjrapport kopiert til utklippstavlen</string>
+    <string name="error_snackbar_message">Beklager, noe gikk galt.</string>
+    <string name="error_snackbar_action">Rapportere</string>
+    <string name="text_setting">Innstillinger</string>
+    <string name="text_start_chat">Start Chat</string>
+    <string name="text_your_chat_ai">Din Chatbot AI</string>
+    <string name="text_ads_splash">Denne prosessen kan inneholde annonser</string>
+    <string name="text_chat_detail_title">GPT AI Chatbot</string>
+    <string name="text_intro_first">Hvordan går dagen din?\nLa oss chatte med meg!</string>
+    <string name="text_wonderful">Herlig</string>
+    <string name="text_great">Flott</string>
+    <string name="text_intro_second">Spør meg om alt du vil vite, \nJeg skal hjelpe deg.</string>
+    <string name="text_select_character">Velg Tegn</string>
+    <string name="hi_there">Hei der!</string>
+    <string name="device_not_support">Dessverre støttes ikke enheten!</string>
+    <string name="input_empty_error">Skriv inn noe!</string>
+    <string name="something_error">Å nei, noe gikk galt, prøv igjen!</string>
+    <string name="type_here">Skriv her…</string>
+    <string name="text_thanks">Takk for at du bruker applikasjonen vår. Du kan rangere appen på CHPlay. Dette vil hjelpe og oppmuntre oss mye. Takk og se deg igjen!</string>
+    <string name="text_cancel">Avbryt</string>
+    <string name="text_update_to_premium">Oppgrader til fullversjon</string>
+    <string name="text_update_to_premium_des">Nyt ubegrenset tilgang med alle funksjoner.</string>
+    <string name="text_support">Brukerstøtte</string>
+    <string name="text_restore_purchase">Gjenopprett kjøp</string>
+    <string name="text_about_us">Om oss</string>
+    <string name="text_privacy_policy">Personvernerklæring</string>
+    <string name="text_term_of_use">Brukstid</string>
+    <string name="text_stay_in_touch">Holde kontakten</string>
+    <string name="text_rate_app">Vurder app</string>
+    <string name="text_send_feedback">Send tilbakemelding</string>
+    <string name="txt_comming_soon">Kommer snart!</string>
+    <string name="text_rate_des">Vi jobber hardt for en bedre brukeropplevelse. Vi vil sette stor pris på om du kan vurdere oss.</string>
+    <string name="text_rate">Vurdere</string>
+    <string name="text_version">Versjon:</string>
+    <string name="text_rate_suggest">Det beste vi kan få ♥</string>
+    <string name="text_premium_update">Premium oppgradering</string>
+    <string name="text_unlimited">Ubegrenset spørsmål og svar</string>
+    <string name="text_no_ads">Ingen annonsering</string>
+    <string name="text_unlock">Full karakteropplåsing</string>
+    <string name="text_start_trial">Start gratis prøveversjon og plan</string>
+    <string name="text_trial_free_day">3–dagers gratis prøveperiode</string>
+    <string name="text_trial_free_price">deretter %s/uke, automatisk – fornybar</string>
+    <string name="text_best_offer">Beste tilbudet</string>
+    <string name="text_lifetime_price">– Livstid – Engangsbetaling</string>
+    <string name="text_sub_temp">Abonnementsvilkår</string>
+    <string name="text_sub_temp_1">Betingelser og vilkår</string>
+    <string name="privacy_sub">Abonnerte brukere har ubegrenset bruk og tilgang til alle Premium–funksjonene, uten noen annonser.\n– Ikke–abonnenter kan kontinuerlig bruke appen med annonser, og har begrenset bruk av Premium–funksjoner. \n– Betaling vil bli belastet Google–kontoen din ved bekreftelse av kjøpet.\n– Abonnementer fornyes automatisk med mindre automatisk fornyelse er deaktivert minst 24 timer før slutten av gjeldende periode.\n– Kontoen belastes for fornyelse innen 24 timer før slutten av gjeldende periode, og identifiser kostnadene ved fornyelse.</string>
+    <string name="privacy_sub2">\n– Enhver ubrukt del av en gratis prøveperiode, hvis den tilbys, vil bli tapt når brukeren kjøper et abonnement på den publikasjonen, der det er aktuelt.– Abonnementer kan administreres av brukeren og automatisk fornyelse kan slås av ved å gå til brukerkontoinnstillingene etter kjøpet. Merk at avinstallering av appen ikke vil kansellere abonnementet ditt.\n1. La åpne Google Play Butikk på Android–telefonen eller –nettbrettet ditt.\n2. Sjekk om du er logget på riktig Google–konto.\n3. Trykk på Meny Abonnementer og velg abonnementet du vil kansellere.\n4. Trykk på Avbryt abonnement.</string>
+    <string name="txt_billing_unavailable">Faktureringstjeneste i appen er utilgjengelig. Oppgrader Android Market/Play til versjon 3.9.16 eller nyere!</string>
+    <string name="txt_first_error_billing">Det oppstod en feil under kjøpet, prøv igjen senere!</string>
+    <string name="txt_check_internet">Sørg for at Wi–Fi eller mobildata er slått på. Så prøv igjen</string>
+    <string name="txt_check_wifi">Sjekk wifi–tilkoblingen din og prøv igjen!</string>
+    <string name="txt_no_internet">Ingen internettforbindelse!</string>
+    <string name="txt_no_wifi">Koble til wifi</string>
+    <string name="txt_title_exit">Er du sikker på at du vil avslutte?</string>
+    <string name="txt_billing_premium_success">Takk for at du kjøpte!</string>
+    <string name="txt_billing_premium_fail">Beklager at du ikke har kjøpt eller kjøpt pakke er utløpt!</string>
+    <string name="txt_billing_restart_app">For at appen skal fungere på sitt beste etter at du har foretatt et kjøp, må du starte appen på nytt for å fullføre konverteringen til en VIP–bruker!</string>
+    <string name="txt_get_premium">Få Premium</string>
+    <string name="txt_mess_number_premium1">Du har</string>
+    <string name="txt_mess_number_premium2">gratis meldinger igjen</string>
+    <string name="txt_gift_title">En spesiell gave til deg.</string>
+    <string name="txt_gift_title_des">Få det nå.</string>
+    <string name="txt_free_message">Gratis meldinger:</string>
+    <string name="txt_start_trial">Start gratis prøveperiode</string>
+    <string name="txt_month">Månedlig</string>
+    <string name="txt_lifetime">Livstid</string>
+    <string name="txt_start_month_auto">Automatisk – fornyelse av abonnement belastes månedlig</string>
+    <string name="txt_start_one_time_auto">Engangsbetaling. Helt ny funksjon – For alltid</string>
+    <string name="txt_not_support_title">Å nei!</string>
+    <string name="txt_not_support_title_des">Vi beklager at denne funksjonen ikke er tilgjengelig på enheten din. Vi vil prøve å forbedre oss, vi sees i neste versjon.</string>
+    <string name="txt_topic">Emner</string>
+    <string name="txt_chat_ai">AI–chat</string>
+    <string name="txt_topic_interview">Jeg vil fungere som intervjuer og stille deg spørsmål angående stillingen du søker på. Du vil svare på spørsmålene som om du er kandidaten. La oss begynne!</string>
+    <string name="txt_topic_develop">Jeg er en utvikler med erfaring i å utvikle sikre web– og appløsninger. Jeg er i stand til å lage en arkitektur og skrive kode for å møte dine behov. La oss jobbe sammen for å bringe din visjon til live og skape en robust og sikker plattform!</string>
+    <string name="txt_topic_business">Jeg vil hjelpe deg med tips og maler for å forbedre dine ferdigheter i virksomheten og hjelpe deg i dine daglige arbeidsrelaterte saker. La oss komme i gang med å forbedre forretningssansen din!</string>
+    <string name="txt_topic_ad">Jeg kan hjelpe deg med å lage en markedsføringskampanje for å markedsføre et produkt eller en tjeneste du velger. La oss jobbe sammen for å gjøre kampanjen effektiv og vellykket!</string>
+    <string name="txt_topic_language">Jeg er en ekspert på engelsk språk, med ferdigheter til å oversette, rette stavemåten og forbedre grammatikk. La meg hjelpe deg med å sikre at skriftspråket ditt er nøyaktig og polert.</string>
+    <string name="txt_topic_chef">Jeg kan gi forslag til deilige og næringsrike oppskrifter som er enkle å lage og som ikke krever mye tid. Jeg har et bredt spekter av oppskrifter og ideer som passer til forskjellige matlagingsnivåer. La oss jobbe sammen for å lage sunne og smakfulle måltider!</string>
+    <string name="txt_topic_composer">Jeg er her for å hjelpe deg med sangbehovene dine. Enten du leter etter teksten til en spesifikk sang eller ønsker tekster skrevet basert på et konsept du har i tankene, kan jeg hjelpe deg. Jeg har muligheten til å finne teksten til enhver sang eller skrive ny tekst basert på konseptet ditt. La oss lage noen minneverdige og virkningsfulle tekster!</string>
+    <string name="txt_topic_mental">Jeg er her for å gi veiledning og råd om håndtering av følelser, stress, angst og andre psykiske problemer. Målet mitt er å hjelpe deg med å takle disse utfordringene og finne sunne måter å takle. La oss jobbe sammen for å forbedre ditt generelle velvære og følelsesmessige stabilitet.</string>
+    <string name="txt_topic_interview_title">Intervjuer</string>
+    <string name="txt_topic_develop_title">Utvikler</string>
+    <string name="txt_topic_business_title">Forretningsassistent</string>
+    <string name="txt_topic_ad_title">Annonsør</string>
+    <string name="txt_topic_language_title">Språkekspert</string>
+    <string name="txt_topic_chef_title">Kokk</string>
+    <string name="txt_topic_composer_title">Komponist</string>
+    <string name="txt_topic_mental_title">Annonse for psykisk helse</string>
+    <string name="txt_topic_interview_q1">Hva er de vanligste intervjuspørsmålene?</string>
+    <string name="txt_topic_interview_q2">Hvordan forbereder jeg meg til et intervju?</string>
+    <string name="txt_topic_interview_q3">Hva er de beste intervjuspørsmålene å stille kandidater?</string>
+    <string name="txt_topic_interview_q4">Hvordan gjennomfører jeg et vellykket jobbintervju?</string>
+    <string name="txt_topic_interview_q5">Hvordan vurderer jeg en kandidats ferdigheter og kvalifikasjoner?</string>
+    <string name="txt_topic_interview_q6">Hvordan bestemmer jeg den kulturelle passformen til en kandidat?</string>
+    <string name="txt_topic_interview_q7">Hva er noen effektive intervjuteknikker for å evaluere kandidater?</string>
+    <string name="txt_topic_interview_q8">Hvordan takler jeg vanskelige intervjusituasjoner?</string>
+    <string name="txt_topic_interview_q9">Hvordan vurderer jeg en kandidats potensial for vekst og utvikling?</string>
+    <string name="txt_topic_interview_q10">Hva er noen beste fremgangsmåter for en rettferdig og objektiv intervjuprosess?</string>
+    <string name="txt_topic_develop_q1">Hvilke programmeringsspråk bør jeg lære?</string>
+    <string name="txt_topic_develop_q2">Hva er smidig utvikling og hvordan fungerer det?</string>
+    <string name="txt_topic_develop_q3">Hva er de beste ressursene for å lære programvareutvikling?</string>
+    <string name="txt_topic_develop_q4">Hva er de mest etterspurte programmeringsferdighetene?</string>
+    <string name="txt_topic_develop_q5">Hvordan kommer jeg i gang som utvikler?</string>
+    <string name="txt_topic_develop_q6">Hva er DevOps og hvordan forholder det seg til utvikling?</string>
+    <string name="txt_topic_develop_q7">Hvordan holder jeg meg oppdatert med de nyeste teknologitrendene?</string>
+    <string name="txt_topic_develop_q8">Hva er nøkkelkomponentene i et vellykket utviklingsprosjekt?</string>
+    <string name="txt_topic_develop_q9">Hvordan forbedrer jeg kodeferdighetene mine?</string>
+    <string name="txt_topic_develop_q10">Hva er de beste utviklingsverktøyene og programvaren å bruke?</string>
+    <string name="txt_topic_business_q1">Hva er oppgavene til en forretningsassistent?</string>
+    <string name="txt_topic_business_q2">Hvordan blir jeg en vellykket forretningsassistent?</string>
+    <string name="txt_topic_business_q3">Hvilke ferdigheter kreves for en bedriftsassistent?</string>
+    <string name="txt_topic_business_q4">Hva er de beste verktøyene og programvaren for forretningsassistenter?</string>
+    <string name="txt_topic_business_q5">Hva er rollen til en virtuell forretningsassistent?</string>
+    <string name="txt_topic_business_q6">Hvordan forbedrer jeg mine organisatoriske ferdigheter som forretningsassistent?</string>
+    <string name="txt_topic_business_q7">Hvordan administrerer jeg flere oppgaver og prioriteringer som forretningsassistent?</string>
+    <string name="txt_topic_business_q8">Hva er de beste praksisene for effektiv kommunikasjon som forretningsassistent?</string>
+    <string name="txt_topic_business_q9">Hvordan håndterer jeg sensitiv og konfidensiell informasjon som forretningsassistent?</string>
+    <string name="txt_topic_business_q10">Hva er gjennomsnittslønnen for en bedriftsassistent?</string>
+    <string name="txt_topic_ad_q1">Hva er reklame og hvordan fungerer det?</string>
+    <string name="txt_topic_ad_q2">Hva er de forskjellige typene reklame?</string>
+    <string name="txt_topic_ad_q3">Hvordan lager jeg en vellykket reklamekampanje?</string>
+    <string name="txt_topic_ad_q4">Hva er de mest effektive kanalene for annonsering?</string>
+    <string name="txt_topic_ad_q5">Hvordan måler jeg suksessen til en reklamekampanje?</string>
+    <string name="txt_topic_ad_q6">Hva er de beste verktøyene og programvaren for annonsering?</string>
+    <string name="txt_topic_ad_q7">Hvordan målretter jeg den rette målgruppen for annonsekampanjen min?</string>
+    <string name="txt_topic_ad_q8">Hva er de siste trendene og innovasjonene innen reklame?</string>
+    <string name="txt_topic_ad_q9">Hvordan lager jeg overbevisende og minneverdige reklamemeldinger?</string>
+    <string name="txt_topic_ad_q10">Hvor mye koster annonsering og hva er avkastningen på investeringen for annonsering?</string>
+    <string name="txt_topic_language_q1">Hva er den beste måten å bli språkekspert på?</string>
+    <string name="txt_topic_language_q2">Hvordan forbedrer jeg språkkunnskapene mine?</string>
+    <string name="txt_topic_language_q3">Hva er de viktigste språklæringstipsene?</string>
+    <string name="txt_topic_language_q4">Hva er de beste ressursene for språklæring?</string>
+    <string name="txt_topic_language_q5">Hva er det beste språket å lære for forretnings– og karrieresuksess?</string>
+    <string name="txt_topic_language_q6">Hvordan overvinner jeg hindringer og utfordringer for språklæring?</string>
+    <string name="txt_topic_language_q7">Hvordan forbedrer jeg mine uttale– og taleferdigheter?</string>
+    <string name="txt_topic_language_q8">Hva er de beste teknikkene for å huske ordforråd og grammatikk?</string>
+    <string name="txt_topic_language_q9">Hvordan bygger jeg flyt og selvtillit i å snakke et nytt språk?</string>
+    <string name="txt_topic_language_q10">Hvordan lærer jeg et språk raskt og effektivt?</string>
+    <string name="txt_topic_chef_q1">Hva gjør en kokk og hva er kokkens ansvar?</string>
+    <string name="txt_topic_chef_q2">Hvordan blir jeg kokk og hvilken utdanning eller opplæring kreves?</string>
+    <string name="txt_topic_chef_q3">Hva er de beste kokkeskolene og kulinariske programmene?</string>
+    <string name="txt_topic_chef_q4">Hva er de viktigste matlagings– og kjøkkenferdighetene for en kokk å ha?</string>
+    <string name="txt_topic_chef_q5">Hvordan forbedrer jeg mine matlagingsferdigheter og –teknikker?</string>
+    <string name="txt_topic_chef_q6">Hva er det beste kjøkkenverktøyet og utstyret for en kokk å ha?</string>
+    <string name="txt_topic_chef_q7">Hvordan lager jeg en meny og planlegger for en vellykket kjøkken– og matopplevelse?</string>
+    <string name="txt_topic_chef_q8">Hvordan administrerer jeg et kjøkken og et team med kokker og ansatte?</string>
+    <string name="txt_topic_chef_q9">Hva er de beste mat– og matlagstrendene å holde tritt med som kokk?</string>
+    <string name="txt_topic_chef_q10">Hvordan balanserer jeg mattrygghet og matkreativitet på kjøkkenet?</string>
+    <string name="txt_topic_composer_q1">Hva gjør en komponist og hva er komponistens ansvar?</string>
+    <string name="txt_topic_composer_q2">Hvordan blir jeg komponist og hvilken utdanning eller opplæring kreves?</string>
+    <string name="txt_topic_composer_q3">Hva er de beste musikkskolene og programmene for komponister?</string>
+    <string name="txt_topic_composer_q4">Hva er de viktigste ferdighetene for en komponist å ha?</string>
+    <string name="txt_topic_composer_q5">Hvordan forbedrer jeg komponeringsferdighetene og teknikkene mine?</string>
+    <string name="txt_topic_composer_q6">Hva er de beste verktøyene og programvaren for å komponere musikk?</string>
+    <string name="txt_topic_composer_q7">Hvordan lager jeg en vellykket musikalsk komposisjon?</string>
+    <string name="txt_topic_composer_q8">Hvordan samarbeider jeg med andre musikere, artister og produsenter i musikkbransjen?</string>
+    <string name="txt_topic_composer_q9">Hva er de beste måtene å markedsføre og markedsføre musikken min som komponist?</string>
+    <string name="txt_topic_composer_q10">Hvordan holder jeg meg oppdatert med de siste trendene og nyvinningene innen musikkkomposisjon?</string>
+    <string name="txt_topic_mental_q1">Hva er reklame for psykisk helse og hvorfor er det viktig?</string>
+    <string name="txt_topic_mental_q2">Hvordan påvirker reklame mental helse og velvære?</string>
+    <string name="txt_topic_mental_q3">Hva er de beste måtene å fremme bevissthet om psykisk helse gjennom reklame?</string>
+    <string name="txt_topic_mental_q4">Hvordan lager jeg en effektiv reklamekampanje for psykisk helse?</string>
+    <string name="txt_topic_mental_q5">Hva er de etiske vurderingene for annonsering av produkter og tjenester for psykisk helse?</string>
+    <string name="txt_topic_mental_q6">Hva er de mest effektive kanalene for reklame for psykisk helse?</string>
+    <string name="txt_topic_mental_q7">Hvordan målretter jeg mot den rette målgruppen for reklamekampanjen min for psykisk helse?</string>
+    <string name="txt_topic_mental_q8">Hva er de siste trendene og innovasjonene innen reklame for psykisk helse?</string>
+    <string name="txt_topic_mental_q9">Hvordan lager jeg overbevisende og sensitive meldinger for psykisk helsereklame?</string>
+    <string name="txt_topic_mental_q10">Hva er de potensielle konsekvensene av ineffektiv eller skadelig reklame for psykisk helse?</string>
+    <string name="txt_confirm">Bekrefte</string>
+    <string name="text_confirm_restart_change">Vil du starte applikasjonen på nytt for å bruke endringen?</string>
+    <string name="text_content_sale_not_purchase2">Ikke gå glipp av vårt tidsbegrensede salg! Åpne appen nå og spar på premiuminnhold.</string>
+    <string name="text_content_sale_not_purchase3">Skynde deg! Begrenset lager tilgjengelig med rabatt. Åpne appen nå for å få rabatten din.</string>
+    <string name="text_content_sale_not_purchase4">Velkommen tilbake! Som takk tilbyr vi deg rabatt på ditt neste kjøp. Åpne appen nå for å løse inn.</string>
+    <string name="text_content_sale_not_purchase5">Åpne appen nå og få en eksklusiv rabatt på ditt neste kjøp! Ikke gå glipp av det!</string>
+    <string name="text_content_sale_not_purchase6">Få rabatt på premiuminnhold når du åpner appen nå. Det er bare i en begrenset periode, så skynd deg!</string>
+    <string name="text_content_sale_not_purchase7">Klar til å spare stort? Åpne appen nå og bruk koden RABATT for å få rabatt på kjøpet.</string>
+    <string name="text_content_sale_not_purchase8">Nye produkter nettopp lagt til og rabattert! Åpne appen nå for å få rabatt på kjøpet. Du vil ikke gå glipp av
+        dette!</string>
+    <string name="text_title_sale_not_purchase2">Tidsbegrenset tilbud &#127881;&#127881;&#127881;</string>
+    <string name="text_title_sale_not_purchase3">Eksklusiv rabatt til deg &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase4">Ikke gå glipp av &#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase5">Nye rabatter lagt til &#127881;&#127881;&#127881;</string>
+    <string name="txt_auto_generating">Animer automatisk genererende tekst</string>
+    <string name="txt_skip_generating">Hopp over generering</string>
+    <string name="txt_weekly">Ukentlig</string>
+    <string name="txt_start_weekly_auto">Auto – fornyelse av abonnement belastes ukentlig</string>
+    <string name="txt_premium_des_image">AI Lag realistiske bilder fra en beskrivelse</string>
+    <string formatted="false" name="text_sale_off">Eksklusiv %s rabatt bare for deg</string>
+    <string name="txt_special_gift">Special Gift For You</string>
+    <string name="txt_discount">Discount</string>
+    <string name="txt_get_now">Get Now</string>
+    <string name="txt_you_are_vip">You are a VIP</string>
+    <string name="txt_unlock_chat_ai">Watching ads to chat</string>
+    <string name="text_no_ads_toShow">No ads to show, please try late!</string>
+    <string name="txt_next">Next</string>
+    <string name="onetime_payment">Onetime Payment</string>
+    <string name="get_premium_now">Get Premium now</string>
+    <string name="sorry_you_ve_used_up_today">Sorry, you\'ve used up today\'s free chats. See you tomorrow or use our premium version</string>
+    <string name="weird_description"><b>Weird:</b>Simple answer, right problem</string>
+    <string name="smart_description"><b>Smart:</b>Smart answer, right problem</string>
+    <string name="brainiac_description"><b>Brainiac:</b>Super smart reply, extended problem solving</string>
+    <string name="content_free_chat_1">We are ready to help you everyday &#129299; Remember to comeback and claim your free 3 questions!</string>
+    <string name="content_free_chat_2">Collect 3 free questions everyday to get the answers you need!&#128526;</string>
+    <string name="content_free_chat_3">Don’t forget to use 3 free questions everyday to ask me!&#129299;</string>
+    <string name="content_free_chat_4">We offer 3 free daily questions to help you! Remember to comeback!&#128526;</string>
+    <string name="title_notify_daily_1">How can I help you today?</string>
+    <string name="title_notify_daily_3">Stuck with your work?</string>
+    <string name="title_notify_daily_4">You feel lonely?</string>
+    <string name="title_notify_daily_5">Struggling doing homework, writing content?</string>
+    <string name="title_content_daily_1">Just ask me anything you want &#129299;</string>
+    <string name="title_content_daily_2">Remember ChatAI is always here to answer your questions! &#129299;</string>
+    <string name="title_content_daily_3">Let ChatAI help you!&#128522;</string>
+    <string name="title_content_daily_4">ChatAI is here for you &#128526;</string>
+    <string name="title_content_daily_5">Ask me anything! &#128526;</string>
+    <string name="title_content_daily_6">Let me analyze stock market today for you!&#128200;</string>
+    <string name="txt_continue">Continue</string>
+
+    <string name="choose_the_topics">Choose the topics you \nare interested in:</string>
+    <string name="txt_history">History</string>
+    <string name="see_all">See all</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_x">Delete (%s)</string>
+    <string name="you_re_a_premium">You\'re a Premium</string>
+    <string name="enjoy_the_premium">Enjoy the premium \nversion with full features</string>
+    <string name="toast_copy_text">Text copied to clipboard</string>
+    <string name="you_don_t_have">You don\'t have any conversation yet,<font color='#00B085'>Chat now!</font></string>
+    <string name="earn_2_free_messages">to earn 2 free messages</string>
+    <string name="you_can_choose">You can choose:</string>
+    <string name="watch_ads">Watch Ads</string>
+    <string name="txt_exception_date">There is an error, please check if automatic date and time are enabled on your phone.</string>
+    <string name="personalize_your_home_screen">Personalize your home screen with one tap.</string>
+    <string name="add_to_home_screen">+ Add to home screen</string>
+    <string name="ask_ai_chat_anything">Ask<b>AI Chat</b>anything</string>
+    <string name="add_widget">add widget</string>
+    <string name="add_a_new_widget">add a new widget</string>
+    <string name="widget">Widget</string>
+    <string name="convenient_with_bubble_chat">Convenient with bubble chat</string>
+    <string name="text_policy">Privacy Policy</string>
+    <string name="text_policy_terms">Terms</string>
+    <string name="text_des_policy">I agree to the</string>
+    <string name="text_des_guide_widget">Touch &amp; hold to place manually on the Home screen.</string>
+    <string name="_4x1_widget">4x1 widget</string>
+    <string name="_4x2_widget">4x2 widget</string>
+    <string name="gpt_4_access"><b><font color='#4AE89F'>GPT-4</font></b> Access</string>
+    <string name="txt_premium_unlimited"><b><font color='#4AE89F'>Unlimited</font></b> question &amp; Answers</string>
+    <string name="txt_premium_ads"><b><font color='#4AE89F'>Ads Free</font></b> experience</string>
+    <string name="txt_premium_convenient"><b><font color='#4AE89F'>Convenient</font></b> with bubble chat</string>
+    <string name="enter_your_prompt">Skriv inn forespørselen din</string>
+    <string name="get_inspired"><u>Bli inspirert</u></string>
+    <string name="choose_an_art_style">Velg en kunststil</string>
+    <string name="generate" formatted="false">generere</string>
+    <string name="free_tries_left_s">Gratis forsøk igjen: %s</string>
+    <string name="left_s">Til venstre: %s</string>
+    <string name="txt_painting">Maleri</string>
+    <string name="txt_magical">Magisk</string>
+    <string name="txt_steampunk">Steampunk</string>
+    <string name="txt_oil_painting">Oljemaleri</string>
+    <string name="txt_anime">Anime</string>
+    <string name="txt_digital_art">Digital kunst</string>
+    <string name="txt_cyberpunk">Cyberpunk</string>
+    <string name="txt_3d">3D</string>
+    <string name="txt_ghibli">Ghibli</string>
+    <string name="txt_game_art">Spill Art</string>
+    <string name="txt_vaporwave">Dampbølger</string>
+    <string name="txt_comic">Komisk</string>
+    <string name="txt_pixel_art">Pixel Art</string>
+    <string name="txt_synthwave">Synthwave</string>
+    <string name="txt_watercolor">Akvarell</string>
+    <string name="txt_picasso">Picasso</string>
+    <string name="watermark">Vannmerke</string>
+    <string name="regenerate">Regenerer</string>
+    <string name="prompt">Spør</string>
+    <string name="style">Stil</string>
+    <string name="not_acceptable">Ikke akseptabelt</string>
+    <string name="des_fail_art">Beklager, det oppstod en feil eller denne forespørselen skadet sikkerhetsfilteret. Prøv å bare lage arbeidssikkert innhold.</string>
+    <string name="i_got_it">JEG HAR DET</string>
+    <string name="content_doesn_t_contain">Innholdet inneholder ikke sensitive ord.</string>
+    <string name="more">Mer</string>
+    <string name="midj_art">Midj Art</string>
+    <string name="done">Ferdig</string>
+    <string name="choose_style_art">Velg Style Art</string>
+    <string name="applying_style">Bruker stil…</string>
+    <string name="adjusting_colors">Justerer farger…</string>
+    <string name="enhancing_quality">Forbedrer kvaliteten…</string>
+    <string name="creating_artwork">Oppretter kunstverk …</string>
+    <string name="no_style">Ingen stil</string>
+    <string name="s_by_s" formatted="false">%s etter stil %s</string>
+    <string name="grantfailed">Tillatelse ikke gitt</string>
+    <string name="downloaded">Lastet ned!</string>
+    <string name="error">Feil!</string>
+    <string name="txt_premium_create"><b><font color='#4AE89F'>Lag</font></b> fantastisk kunst med kunstig intelligens</string>
+    <string name="txt_premium_faster"><b><font color='#4AE89F'>Raskere</font></b> Bildebehandling</string>
+    <string name="txt_premium_no"><b><font color='#4AE89F'>Ingen</font></b> vannmerker!</string>
+    <string name="txt_premium_quality"><b><font color='#4AE89F'>Den beste</font></b> bildekvaliteten</string>
+    <string name="generate_art_with_midjourney_pro"><b>10 Generer kunst</b>med\n Midjourney Pro</string>
+    <string name="purchase">Kjøp</string>
+    <string name="sharing_image">Deler bilde</string>
+    <string name="inspired_1">Jorden etter menneskelig utryddelse, en ny begynnelse, naturen tar tilbake planeten, harmoni, fred, jorden balansert</string>
+    <string name="inspired_2">Noir–detektiv mr. Gummi–and. Røyk, regn, bart og tapperhet. Han kan løse ethvert puslespill. Men kan ikke slå sine indre demoner. Ekspressiv mørk matt gouch–maling</string>
+    <string name="inspired_3">Portrettbilde av en asiatisk krigersjef, stammepantersminke, blått på rødt, sideprofil, ser bort, seriøse øyne, 50 mm portrettfotografering, belysningsfotografering med hard kant</string>
+    <string name="inspired_4">En søt magisk flygende hund, fantasikunst tegnet av disney konseptkunstnere, gylden farge, høy kvalitet, svært detaljert, elegant, skarpt fokus, konseptkunst, karakterkonsepter, digitalt maleri, mystikk, eventyr</string>
+    <string name="inspired_5">Realistisk arkitektonisk gjengivelse av et kapsel–flerhus i gigantiske betongblokker med mose og høye avrundede vinduer med lys i interiøret, menneskelige skalaer</string>
+    <string name="image_type_object_any_details_ne_g_a_beautiful_magical_kingdom">Bildetype, objekt, eventuelle detaljer \nF.eks. Et vakkert magisk rike</string>
+    <string name="str_title_start_chat">Hei, hvordan kan jeg hjelpe deg?</string>
+    <string name="str_trending">Trender</string>
+    <string name="str_ask_a_question">Spør et spørsmål…</string>
+    <string name="str_bus">Buss</string>
+    <string name="str_music">Musikk</string>
+    <string name="str_mathematics">Matematikk</string>
+    <string name="str_history">Historie</string>
+    <string name="str_content">Innhold</string>
+    <string name="str_email_topic">E–post</string>
+    <string name="str_cooking_techniques">Matlagingsteknikker</string>
+    <string name="str_cooking_tool">Matlagingsverktøy</string>
+    <string name="str_cooking_ingredients">Matlagingsingredienser</string>
+    <string name="str_cooking_styles">Matlagingsstiler</string>
+    <string name="str_cooking_recipes">Matlagingsoppskrifter</string>
+    <string name="str_cooking_environment">Matlaging for miljøet</string>
+    <string name="str_science">Vitenskap</string>
+    <string name="str_essays">Essays</string>
+    <string name="str_physics">Fysikk</string>
+    <string name="str_travel_experiences">Reiseopplevelser</string>
+    <string name="str_travel_skill">Reiseferdigheter</string>
+    <string name="str_travel_trend">Reisetrender</string>
+    <string name="str_travel_impact">Reiseeffekt</string>
+    <string name="str_travel_tip">Reisetips</string>
+    <string name="str_travel_des">Reisemål</string>
+    <string name="str_company_bio">Bedriftens bio</string>
+    <string name="str_company_slogan">Slagord</string>
+    <string name="str_company_name">Navnegenerator</string>
+    <string name="str_business_trend">Forretningstrender</string>
+    <string name="str_business_innov">Forretningsinnovasjon</string>
+    <string name="str_business_strategy">Forretningsstrategi</string>
+    <string name="str_bus_detail">Mestre oppgavene dine med våre førsteklasses essayskrivingstjenester.</string>
+    <string name="str_music_detail">Skriv en melodi, en sang. Lær om lyd, rytme, harmoni og komposisjon.</string>
+    <string name="str_science_detail">Generer spennende kunnskap innen biologi, kjemi, astronomi,…</string>
+    <string name="str_mathematics_detail">Få svar på alle matematikkspørsmål enkelt</string>
+    <string name="str_history_detail">Utforsk hendelsene som har skjedd i fortiden og viktige milepæler</string>
+    <string name="str_content_detail">Forbedre og forenkle innholdet for bedre lesbarhet.</string>
+    <string name="str_email_topic_detail">Lag en godt utformet e–post som er gjennomtenkt strukturert og organisert.</string>
+    <string name="str_cooking_techniques_detail">Lære å mestre grunnleggende ferdigheter i matlaging</string>
+    <string name="str_cooking_tool_detail">Å vite hvordan du bruker forskjellige verktøy på kjøkkenet</string>
+    <string name="str_cooking_ingredients_detail">Utforske ulike ingredienser i matlaging</string>
+    <string name="str_travel_des_detail">Utforsk verdens underverker</string>
+    <string name="str_popular_des_detail">Daglige oppskriftsanbefalinger</string>
+    <string name="str_company_bio_detail">Din bedrifts historie: Vekst, innovasjon, suksess.</string>
+    <string name="str_company_slogan_detail">Design et minneverdig slagord for bedriften din</string>
+    <string name="str_essays_detail">Skriv et essay på over 200 ord uten anstrengelse</string>
+    <string name="str_physics_detail">Utforsk universets mysterium med kraften til ChatGPT</string>
+    <string name="str_cooking_styles_detail">Eksperimenterer med forskjellige matlagingsstiler</string>
+    <string name="str_cooking_recipes_detail">Planlegg måltidene dine enkelt</string>
+    <string name="str_cooking_environment_detail">Lær å lage mat på en mer miljøvennlig måte</string>
+    <string name="str_travel_experiences_detail">Å lytte til opplevelser kan berike perspektivet ditt på å reise</string>
+    <string name="str_travel_skill_detail">Utvikle ferdigheter som kan forbedre reiseopplevelsen din</string>
+    <string name="str_travel_trend_detail">Finn nye trender innen reise og ta igjen</string>
+    <string name="str_travel_impact_detail">Å kjenne din innvirkning når du reiser</string>
+    <string name="str_travel_tip_detail">Få praktiske råd om hvordan du kan reise smartere, tryggere og billigere.</string>
+    <string name="str_company_name_detail">Lag et fengslende navn for merkevaren eller produktet ditt.</string>
+    <string name="str_business_trend_detail">Utforsker nye trender og tilpasser seg raskt</string>
+    <string name="str_business_innov_detail">Generer nye ideer for å forbedre produkter, tjenester, ytelse</string>
+    <string name="str_business_strategy_detail">Evaluer virksomheten din og gi råd om mål, planer og handlinger</string>
+    <string name="str_music_ques">Hvordan kan vi hjelpe deg med musikk?</string>
+    <string name="str_mathematics_ques">Hvilke matematiske oppgaver vil du løse?</string>
+    <string name="str_history_ques">Hvilke hendelser eller tidslinje vil du vite?</string>
+    <string name="str_science_ques">Hvilke hendelser eller tidslinje vil du vite?</string>
+    <string name="str_essays_ques">Hva er temaet for essayet?</string>
+    <string name="str_physics_ques">Hva vil du vite i fysikk?</string>
+    <string name="str_cooking_techniques_ques">Hvilke teknikker fokuserer du på?</string>
+    <string name="str_cooking_tool_ques">Hvilke matlagingsverktøy bruker du?</string>
+    <string name="str_cooking_ingredients_ques">Hvilke ingredienser sliter du med?</string>
+    <string name="str_cooking_styles_ques">Hvilken matlagingsstil ser du etter?</string>
+    <string name="str_cooking_recipes_ques">Hvilken oppskrift vil du utforske?</string>
+    <string name="str_cooking_environment_ques">Hva vil du vite om matlaging på en bærekraftig måte?</string>
+    <string name="str_travel_des_ques">Landet du vil besøke?</string>
+    <string name="str_travel_experiences_ques">Hvilke feil, suksesser, utfordringer med å reise vil du vite?</string>
+    <string name="str_travel_skill_ques">Hva er din bekymring for å forbedre reiseferdighetene?</string>
+    <string name="str_travel_trend_ques">Er du interessert i en bestemt trend?</string>
+    <string name="str_travel_impact_ques">Hva vil du vite om miljøvennlig reise?</string>
+    <string name="str_travel_tip_ques">Hvilke nyttige tips vil du vite?</string>
+    <string name="str_company_name_ques">Hva gjør ditt merke/produkt?</string>
+    <string name="str_business_trend_ques">Hvilken kategori vil du fokusere på?</string>
+    <string name="str_business_innov_ques">Hvilket innovasjonsfag ønsker du å gjennomføre?</string>
+    <string name="str_business_strategy_ques">Hvordan kan vi hjelpe deg med din bedrift?</string>
+    <string name="str_company_bio_ques">Hva er firmanavnet og spesialiteten din?</string>
+    <string name="str_company_slogan_ques">Del en kort, fengslende anekdote om selskapets opprinnelse.</string>
+    <string name="str_premium_txt"><![CDATA[Prøv<b> %s </b>Premium med gode tilbud.\n<b>Få det nå.</b>]]></string>
+    <string name="txt_continue_to_chat">Fortsett til Chat</string>
+    <string name="str_copy">Kopiere</string>
+    <string name="str_regenerate">Regenerer</string>
+    <string name="str_fashion_ques">Vil du at vi skal gi deg noen ideer om denne trenden?</string>
+    <string name="str_relax_ques">Anbefalte serier å se på Netflix i sommer.</string>
+    <string name="str_tech_ques">Den kunstige intelligensen gjør nå betydelig innvirkning på verden. Vil du oppdage mer?</string>
+    <string-array name="topic_title">
+        <item>Alle</item>
+        <item>Bedriftsekspert</item>
+        <item>Innholdsskaper</item>
+        <item>Livsstilsvenn</item>
+        <item>Lær med ChatAI</item>
+        <item>Matlagingsmester</item>
+        <item>Reise</item>
+    </string-array>
+
+    <string-array name="select_input_fashion">
+        <item>Sølvveske</item>
+        <item>Regnstøvler</item>
+        <item>Newjeans-mote</item>
+        <item>Uniform</item>
+        <item>Hjertekjede</item>
+        <item>Himecut hår</item>
+    </string-array>
+
+    <string-array name="select_input_relax">
+        <item>Ginny &amp; Georgia</item>
+        <item>Ytre banker</item>
+        <item>Hjertestopper</item>
+        <item>Stranger Things</item>
+        <item>Enden på den jævla verden</item>
+        <item>Dronningens gambit</item>
+        <item>K-drama</item>
+    </string-array>
+
+    <string-array name="select_input_tech">
+        <item>AI Art</item>
+        <item>AI Chat</item>
+        <item>AI Images Generator</item>
+        <item>AI-sang</item>
+        <item>AI Bots</item>
+        <item>AI-video</item>
+    </string-array>
+
+    <string-array name="arr_science">
+        <item>Biologi</item>
+        <item>Kjemi</item>
+        <item>Astronomi</item>
+    </string-array>
+
+    <string-array name="arr_cooking_techniques">
+        <item>Stekt</item>
+        <item>Simmer</item>
+        <item>Koking</item>
+        <item>Avglass</item>
+        <item>Sautering</item>
+    </string-array>
+
+    <string-array name="arr_cooking_tool">
+        <item>Kniver</item>
+        <item>Gryner</item>
+        <item>Pannen</item>
+        <item>Blandere</item>
+        <item>Blendere</item>
+        <item>Termometre</item>
+        <item>Vekt</item>
+    </string-array>
+
+    <string-array name="arr_cooking_ingredients">
+        <item>krydder</item>
+        <item>urter</item>
+        <item>oljer</item>
+        <item>eddik</item>
+        <item>korn</item>
+        <item>bønner</item>
+        <item>nøtter</item>
+        <item>frø</item>
+        <item>frukt</item>
+        <item>grønnsaker</item>
+    </string-array>
+
+    <string-array name="arr_cooking_style">
+        <item>baking</item>
+        <item>grilling</item>
+        <item>steking</item>
+        <item>dampende</item>
+        <item>krypskyting</item>
+        <item>bønner</item>
+        <item>broiling</item>
+        <item>og mikrobølgeovn</item>
+    </string-array>
+
+    <string-array name="arr_travle_des">
+        <item>Vietnam</item>
+        <item>Japan</item>
+        <item>USA</item>
+        <item>Storbritannia</item>
+        <item>Frankrike</item>
+        <item>Tyskland</item>
+        <item>Norsk</item>
+        <item>Sør-Korea</item>
+    </string-array>
+
+    <string-array name="arr_business_innovation">
+        <item>Markedsføring</item>
+        <item>Logistikk</item>
+        <item>Menneskelig ledelse</item>
+        <item>Finans</item>
+        <item>andre</item>
+    </string-array>
+
+    <string-array name="arr_business_trends">
+        <item>Teknologi</item>
+        <item>Logistikk</item>
+        <item>Markedsføring</item>
+        <item>Kraft</item>
+        <item>Landbruk</item>
+        <item>Kommersiell</item>
+        <item>E-handel</item>
+        <item>andre</item>
+    </string-array>
+
+    <string name="str_create_photo">Lag bilde</string>
+    <string name="str_square">Torget</string>
+    <string name="str_original">Opprinnelig</string>
+    <string name="str_wallpaper">Bakgrunn</string>
+    <string name="str_set_wallpaper">Sett bakgrunn</string>
+    <string name="str_popular">Populær</string>
+    <string name="str_see_more">Se mer</string>
+    <string name="str_see_more_1">…Se mer</string>
+    <string name="str_fashion_title">Modus</string>
+    <string name="str_relax_title">Se détendre</string>
+    <string name="str_techlogy_title">Teknologi</string>
+    <string name="txt_random">tilfeldig</string>
+    <string name="str_title_exit_app">Er du sikker på at du vil avslutte?</string>
+
+    <string-array name="arr_art_page">
+        <item>Generer kunst</item>
+        <item>Bakgrunnsbilder</item>
+    </string-array>
+
+    <string name="str_choose_action">Velg handling:</string>
+    <string name="str_open_camera">Åpne kamera</string>
+    <string name="str_select_photo">Gå til Bilder</string>
+    <string name="str_recognize">Gjenkjenne</string>
+    <string name="str_recognizing">Gjenkjenner...</string>
+    <string name="str_txt_recognize">Tekstgjenkjenning</string>
+    <string name="str_txt_choose_image">Velg bilder</string>
+    <string name="str_txt_apply_text">Bruk tekst</string>
+    <string name="str_summary">Sammendrag</string>
+    <string name="str_summary_sub_title">Oppsummer tekster fra filer og svar på spørsmål innen</string>
+    <string name="str_summary_upload_files">Last opp filer</string>
+    <string name="str_summary_upload_image">Last opp bilder</string>
+    <string name="str_summary_upload_des1">For å uttrykke de viktigste fakta eller ideer om noe eller noen i en kortfattet og klar form</string>
+    <string name="str_summary_upload_des2">For å gi en klar erklæring om viktige punkter.</string>
+    <string name="str_summary_upload_des3">For å presentere med noen få ord hovedideene eller fakta i en rapport, diskusjon osv...</string>
+    <string name="str_error_summary">Noe gikk galt!</string>
+    <string name="str_error_summary_des">Du kan kun laste opp 1 MB maks. Oppgrader til premium og behandle store filer.</string>
+    <string name="str_txt_unlock_premium">Lås opp Premium</string>
+    <string name="str_sub_unlock_premium">Drevet av GPT4, ingen grense, ingen annonser</string>
+    <string name="str_no_image">Ingen bilde</string>
+    <string name="str_premium_des1">Drevet av Chat GPT-4</string>
+    <string name="str_premium_des2">Ubegrenset Spørsmål &amp; Svar</string>
+    <string name="str_premium_des3">Ulike emne å velge</string>
+    <string name="str_premium_des4">Last opp fil &amp; spør hva som helst</string>
+    <string name="str_premium_des5">Ubegrenset generasjon AI Art</string>
+    <string name="str_best_choose">Beste valg</string>
+    <string name="str_file_summary">Filsammendrag:</string>
+    <string name="str_summary_text">Sammendragstekst</string>
+    <string name="str_your_chats">Chattene dine</string>
+    <string name="str_out_of_times_summary">Å nei, du har gått tom for oppsummeringer for i dag, fortsett å bruke det med %d oppsummeringer i morgen! Fortsett å bruke ubegrensede andre funksjoner i applikasjonen.</string>
+    <string name="str_intro_summary">Du kan bare laste opp pdf-filer som er mindre enn %dMB i størrelse.</string>
+    <string name="str_uploading">Laster opp...</string>
+    <string name="str_upload_s_photo">Last opp %d bilder</string>
+    <string name="str_upload_photo_msg">Du kan bare velge 3 bilder for én opplasting.</string>
+    <string name="txt_continue_to_summary">Fortsett til sammendrag</string>
+    <string name="txt_premium_topic"><b><font color='#4AE89F'>Ulike</font></b> Emne å velge</string>
+    <string name="txt_premium_upload_file"><b><font color='#4AE89F'>Last opp fil</font></b> &amp; spør hva som helst</string>
+    <string name="txt_premium_generate_art"><b><font color='#4AE89F'>Lås opp</font></b> generasjon AI Art</string>
+    <string name="str_summary_now">Oppsummering nå!</string>
+    <string name="str_i_got_it">jeg har det</string>
+    <string name="str_mes_loading_summary_file">AI lærer av filen din, og det kan ta en stund avhengig av størrelsen på dokumentet.</string>
+    <string name="str_go_to_chat">Gå til chat</string>
+    <string name="str_exists_file_mes">Filen eksisterer allerede, vennligst gå tilbake til chatten.</string>
+
+    <string-array name="arr_strategy_type">
+        <item>Innholdsmarkedsføring</item>
+        <item>IMC (Integrated Marketing Communications)</item>
+        <item>Markedsføring for netthandel</item>
+        <item>Markedsføring for sosiale medier</item>
+    </string-array>
+
+    <string-array name="arr_interviewer_detail">
+        <item>Bakgrunn &amp; Erfaring</item>
+        <item>Lederskap</item>
+        <item>Karrieremål</item>
+        <item>Teknisk ferdighet</item>
+        <item>Kritisk tenkning</item>
+        <item>Tankesett</item>
+    </string-array>
+
+    <string-array name="arr_key_segment">
+        <item>Styrker</item>
+        <item>Svakheter</item>
+        <item>Salgstaktikk</item>
+        <item>Markedsføringsstrategier</item>
+        <item>Share of Voice</item>
+        <item>Inntekt</item>
+    </string-array>
+
+    <string-array name="arr_tone_voice">
+        <item>Formelt</item>
+        <item>Optimistisk</item>
+        <item>Vennlig</item>
+        <item>Oppmuntrende</item>
+        <item>Sikker</item>
+        <item>Kooperativ</item>
+    </string-array>
+
+    <string-array name="arr_genre_song">
+        <item>Indie</item>
+        <item>RnB</item>
+        <item>Pop</item>
+        <item>Land</item>
+        <item>Rock</item>
+        <item>Klassisk</item>
+        <item>Metal</item>
+        <item>Jazz</item>
+        <item>Ballader</item>
+        <item>Blå</item>
+    </string-array>
+
+    <string-array name="arr_mood_song">
+        <item>Glad</item>
+        <item>Energetisk</item>
+        <item>Depresjon</item>
+        <item>Angstelig/trist</item>
+        <item>Myk</item>
+        <item>Hard</item>
+        <item>Romantisk</item>
+        <item>Rolig</item>
+    </string-array>
+
+    <string-array name="arr_media_plalform">
+        <item>LinkedIn</item>
+        <item>Instagram</item>
+        <item>Facebook</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="arr_media_goal">
+        <item>Engasjement</item>
+        <item>Visninger</item>
+    </string-array>
+    <string-array name="arr_gender">
+        <item>Mann</item>
+        <item>Kvinne</item>
+        <item>Andre</item>
+    </string-array>
+    <string-array name="arr_outfit_designer_style">
+        <item>Retro</item>
+        <item>Gotisk</item>
+        <item>Emo</item>
+        <item>Techwear</item>
+        <item>Hypebeast</item>
+        <item>Vintage</item>
+        <item>Klassisk</item>
+        <item>Gamle penger</item>
+        <item>Gatetøy</item>
+        <item>Kawaii</item>
+        <item>Minimalistisk</item>
+        <item>Rock</item>
+    </string-array>
+
+    <string-array name="arr_information_horoscope">
+        <item>Kjærlighet</item>
+        <item>Karriere</item>
+        <item>Kenskaper</item>
+        <item>Samsvarende stjernetegn</item>
+    </string-array>
+
+    <string-array name="arr_information_travel">
+        <item>Mat</item>
+        <item>Nasjonale helligdager</item>
+        <item>Kultur</item>
+        <item>Scenario</item>
+    </string-array>
+
+    <string-array name="language_programing">
+        <item>SQL</item>
+        <item>Java</item>
+        <item>Java-skript</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>Python</item>
+        <item>PHP</item>
+        <item>Ruby</item>
+        <item>Andre</item>
+    </string-array>
+
+    <string-array name="arr_techniques_cooking">
+        <item>Stekt</item>
+        <item>Simmer</item>
+        <item>Koking</item>
+        <item>Avglass</item>
+        <item>Sautering</item>
+        <item>andre</item>
+    </string-array>
+
+    <string name="str_marketing_plan">Markedsplan</string>
+    <string name="str_marketing_plan_detail">Sliter du med å markedsføre produktet ditt? La ChatGPT hjelpe deg</string>
+    <string name="str_marketing_plan_ques">Du er en forretningsekspert. Foreslå meg en markedsføringsplan for %s. Produktet er %s. Målet med kampanjen er å %s. Strategitypen jeg ønsker å implementere er %s kampanje.</string>
+    <string name="str_interviewer_support">Intervjuerstøtte</string>
+    <string name="str_interviewer_support_detail">Få intervjuspørsmål på ett sekund med ChatGPT</string>
+    <string name="str_interviewer_support_ques">Du er en Human Resource Recruiter. Foreslå meg 10 spørsmål for %s. Kravene inkluderer %s.</string>
+    <string name="str_competitors_research">Konkurrentforskning</string>
+    <string name="str_competitors_research_detail">La ChatGPT gjøre research på konkurrentene dine</string>
+    <string name="str_competitors_research_ques">Du er en markedsforsker. Gjør en konkurrentundersøkelse på %s i %s–bransjen med nøkkelproduktet/–tjenestene er %s. Undersøkelsen bør inkludere %s.</string>
+    <string name="str_customers_insights_research">Kundeinnsiktsundersøkelse</string>
+    <string name="str_customers_insights_research_detail">Vil du forstå kunden din mer?</string>
+    <string name="str_customers_insights_research_ques">Du er en profesjonell markedsføringsspesialist. Utfør en kundeinnsiktsundersøkelse på publikummet til %s. Forskningen bør inkludere personer med disse egenskapene: %s, %s, %s.</string>
+    <string name="str_write_paragraph">Skriv et avsnitt</string>
+    <string name="str_write_paragraph_detail">ChatGPT kan skrive et utmerket avsnitt på kort tid</string>
+    <string name="str_write_paragraph_ques">Du er en profesjonell forfatter. Skriv meg et avsnitt på %s med %s tonefall. Avsnittet skal være i %s.</string>
+    <string name="str_write_song_lyrics">Skriv en sangtekst</string>
+    <string name="str_write_song_lyrics_detail">Vær en profesjonell sangkomponist med ChatGPT</string>
+    <string name="str_write_song_lyrics_ques">Du er en profesjonell musikkkomponist. Skriv meg en sang med emnet %s. Sangen skal være i %s musikk med %s stemning.</string>
+    <string name="str_write_social_media_post">Skriv et innlegg på sosiale medier</string>
+    <string name="str_str_write_social_media_post_detail">Bruk ingen krefter på å skrive sosiale innlegg med ChatGPT</string>
+    <string name="str_str_write_social_media_post_ques">Du er en profesjonell markedsfører i sosiale medier. Skriv meg et fengslende innlegg på %s med innholdet %s. Målet med innlegget er å %s med %s tonefall.</string>
+    <string name="str_write_email">Skrive en epost</string>
+    <string name="str_write_email_detail">La ChatGPT skrive e–post for deg</string>
+    <string name="str_write_email_ques">Skriv meg en e–post med innholdet %s. Tonen i stemmen skal være %s.</string>
+    <string name="str_outfit_designer">Antrekksdesigner</string>
+    <string name="str_outfit_designer_detail">Vet du ikke hva du skal ha på deg i dag? La ChatGPT foreslå din #ootd</string>
+    <string name="str_outfit_designer_ques">Du er en stylist og antrekksdesigner. Foreslå meg et antrekk for %s med %s–stilen.</string>
+    <string name="str_write_pickup_line">Skriv en hentelinje</string>
+    <string name="str_write_pickup_line_detail">Få morsomme linjer for å imponere vennen din</string>
+    <string name="str_write_pickup_line_ques">Skriv meg en hentelinje i %s med %s tonefall.</string>
+    <string name="str_write_joke">Skriv en vits</string>
+    <string name="str_write_joke_detail">Ikke alle har morsomme historier å fortelle. La ChatGPT gjøre det</string>
+    <string name="str_write_joke_ques">Skriv meg en vits i %s med konteksten %s.</string>
+    <string name="str_horoscope_reader">Horoskopleser</string>
+    <string name="str_horoscope_reader_detail">Teknologi er en venn med mystikk. Tror du ikke?</string>
+    <string name="str_horoscope_reader_ques">Du er en astrolog og horoskopleser. Analyser horoskopet til en person født i %s. Informasjonen skal inneholde %s.</string>
+    <string name="str_solve_math_problem">Løs et matematisk problem</string>
+    <string name="str_solve_math_problem_detail">Få svar på alle matematikkspørsmål enkelt</string>
+    <string name="str_solve_math_problem_ques">Du er en matematiker. Løs meg følgende problem: %s.</string>
+    <string name="str_history_events">Historiehendelser</string>
+    <string name="str_history_events_detail">Utforsk hendelsene som har skjedd i fortiden og viktige milepæler</string>
+    <string name="str_history_events_ques">Fortell meg at historiehendelsene skjedde i %s, i %s.</string>
+    <string name="str_code_supporter">Kodestøtte</string>
+    <string name="str_code_supporter_detail">Sliter du med kode og ønsker å lære mer? ChatGPT kan støtte deg</string>
+    <string name="str_code_supporter_ques">Du er en enestående koder. Støtt meg med koden til %s i %s.</string>
+    <string name="str_latino_dishes">Latino retter</string>
+    <string name="str_latino_dishes_detail">Lær hvordan du lager Latino–retter med ChatGPT</string>
+    <string name="str_latino_dishes_ques">Du er en 3–stjerners Michelin–kokk. Foreslå meg en Latino–retter. Retten er %s med %s teknikk. Ingrediensene skal inneholde %s. Foreslå mengden materiale for %s personer.</string>
+    <string name="str_african_dishes">afrikanske retter</string>
+    <string name="str_african_dishes_detail">Lær hvordan du lager afrikanske retter med ChatGPT</string>
+    <string name="str_african_dishes_ques">Du er en 3–stjerners Michelin–kokk. Foreslå meg en afrikansk mat. Retten er %s med %s teknikk. Ingrediensene skal inneholde %s. Foreslå mengden materiale for %s personer.</string>
+    <string name="str_asian_dishes">Asiatiske retter</string>
+    <string name="str_asian_dishes_detail">Lær hvordan du lager asiatiske retter med ChatGPT</string>
+    <string name="str_asian_dishes_ques">Du er en 3–stjerners Michelin–kokk. Foreslå meg en asiatisk mat. Retten er %s med %s teknikk. Ingrediensene skal inneholde %s. Foreslå mengden materiale for %s personer.</string>
+    <string name="str_western_dishes">Vestlige retter</string>
+    <string name="str_western_dishes_detail">Lær hvordan du lager vestlige retter med ChatGPT</string>
+    <string name="str_western_dishes_ques">Du er en 3–stjerners Michelin–kokk. Foreslå meg en vestlig retter. Retten er %s med %s teknikk. Ingrediensene skal inneholde %s. Foreslå mengden materiale for %s personer.</string>
+    <string name="str_travel_destination">Reisemål</string>
+    <string name="str_travel_destination_detail">ChatGPT kan foreslå alle signaturene til reisemålet ditt!</string>
+    <string name="str_travel_destination_ques">Du er en turistguide. Foreslå meg at %s bør utforske om %s.</string>
+    <string name="str_travel_experience">Reiseopplevelser</string>
+    <string name="str_travel_experience_detail">Tips og triks når du reiser foreslått av ChatGPT!</string>
+    <string name="str_travel_experience_ques">Du er en turistguide. Foreslå noen tips knyttet til %s når du reiser til %s.</string>
+    <string name="str_brand_name">Merkenavn</string>
+    <string name="str_product_services">Produkt/ Tjenester</string>
+    <string name="str_goals">Mål</string>
+    <string name="str_position">Posisjon</string>
+    <string name="str_details">Detaljer</string>
+    <string name="str_name">Navn</string>
+    <string name="str_industry">Industri</string>
+    <string name="str_key_segment">Nøkkelsegment</string>
+    <string name="str_age">Alder</string>
+    <string name="str_gender">Kjønn</string>
+    <string name="str_region">Region</string>
+    <string name="str_subject">Emne</string>
+    <string name="str_length">Lengde</string>
+    <string name="str_context">Kontekst</string>
+    <string name="str_genre">Sjanger</string>
+    <string name="str_mood">Humør</string>
+    <string name="str_platform">Plattform</string>
+    <string name="str_style">Stil</string>
+    <string name="str_language">Språk</string>
+    <string name="str_information">Informasjon</string>
+    <string name="str_tone_of_voice">Tonefall</string>
+    <string name="str_year">År</string>
+    <string name="str_birth_date">Fødselsdato/tid</string>
+    <string name="str_country_region">Land/region</string>
+    <string name="str_issue">Utgave</string>
+    <string name="str_dishes">Retter</string>
+    <string name="str_techniques">Teknikker</string>
+    <string name="str_ingredients">Ingredienser</string>
+    <string name="str_potion">Trylledrikk</string>
+    <string name="str_context_strategy_type">Hva er strategitypene du ønsker å implementere?</string>
+    <string name="str_context_position">Foreslå meg 10 spørsmål til intervju for denne stillingen</string>
+    <string name="str_context_name">Hva er konkurrenten du vil se på?</string>
+    <string name="str_context_product_services">Hva er produktene/tjenestene du ønsker å målrette mot publikum?</string>
+    <string name="str_context_subject">Hva handler avsnittet ditt om?</string>
+    <string name="str_context_song">Hva handler sangen din om?</string>
+    <string name="str_context_post_media">Hva handler innlegget ditt om?</string>
+    <string name="str_context_gmail">Hva handler e–posten din om?</string>
+    <string name="str_context_style">Hvilken stil er du inne på nå?</string>
+    <string name="str_context_joke">Hva er vitsen din om?</string>
+    <string name="str_context_birth_date_time">Hva er fødselstiden og –dagen din?</string>
+    <string name="str_context_information">Hva vil du vite om deg?</string>
+    <string name="str_context_solve_math_problem">Hva er problemet ditt i matematikk?</string>
+    <string name="str_context_issue">Hva er din bekymring for dette?</string>
+    <string name="str_context_dishes">Hvilken rett har du tenkt å lage?</string>
+    <string name="str_context_techniques">Hvilken teknikk har du tenkt å bruke til denne retten?</string>
+    <string name="str_context_ingredients">Hvilken type ingredienser vil du bruke i denne retten?</string>
+    <string name="str_context_potion">Hvor mange potions (personer) vil du lage denne retten til?</string>
+    <string name="str_context_information_travel">Hva vil du utforske?</string>
+    <string name="str_context_information_travel2">Hva vil du vite når du reiser til dette stedet?</string>
+    <string name="str_context_country">Hvor planlegger du å dra?</string>
+    <string name="str_select_model">Velg modell:</string>
+    <string name="str_message_model_3_5">GPT – 3.5–modellen optimaliserer ytelse og effektivitet for en rekke tekstrelaterte aktiviteter.</string>
+    <string name="str_reasoning">Argumentasjon</string>
+    <string name="str_speed">Hastighet</string>
+    <string name="str_concisenes">Sammenfattende</string>
+    <string name="str_message_model_4">GPT – 4–modellen fungerer godt i aktiviteter som krever forbedret resonnement, forståelse av presise instruksjoner og økt fantasi.</string>
+    <string name="str_you_may_be_interested_in_these_questions">Du kan være interessert i disse spørsmålene:</string>
+    <string name="str_close">Lukk</string>
+    <string name="str_preview_your_files">Klikk her hvis du vil\nforhåndsvise filene dine</string>
+
+    <string name="str_has_your_payment_expired">Har betalingen\n utløpt?</string>
+    <string name="str_has_your_payment_sale">Eksklusive tilbud \n ringer deg!</string>
+    <string name="str_has_your_payment_cancel">Gå ikke glipp av \n fantastiske tilbud!</string>
+    <string name="str_oh_no">Å, nei!</string>
+    <string name="str_great">Flott!!!</string>
+    <string name="str_welcome_back">Velkommen tilbake!</string>
+    <string name="str_super_sale">Supersalg</string>
+    <string name="str_limited_time_only">Bare begrenset tid</string>
+    <string name="str_the_file_no_content">Filen inneholder\nikke innhold!</string>
+    <string name="str_we_found_no_content">Vi fant ikke noe innhold eller ikke nok innhold til å oppsummere. Prøv en annen fil.</string>
+    <string name="str_msg_free_message">for å tjene %d gratis meldinger</string>
+    <string name="str_msg_free_summary">for å få %d gratis sammendrag</string>
+    <string name="str_msg_free_generate_art">for å tjene %d gratis generere kunst</string>
+
+    <string name="str_msg_sale_weekly_t3">Auto - fornyelse av abonnement belastes ukentlig</string>
+    <string name="str_intro_gpt_4"><![CDATA[ Drevet av <br><b> <font color=#FFFFFF>GPT-4</font></b>]]></string>
+    <string name="str_intro_topic"><![CDATA[ Diverse <br><b> <font color=#FFFFFF>Emner</font></b>]]></string>
+    <string name="str_intro_image_to_text"><![CDATA[ Bilde til <br><b> <font color=#FFFFFF> Tekst (OCR) </font></b>]]></string>
+    <string name="str_intro_free_ads"><![CDATA[ Gratis <br><b> <font color=#FFFFFF> 100 % annonser </font></b>]]></string>
+    <string name="str_intro_unlimit_art"><![CDATA[ Uimited <br><b> <font color=#FFFFFF> AI Art </font></b>]]></string>
+    <string name="str_intro_upload_file"><![CDATA[ Last opp fil <br><b> <font color=#FFFFFF> Spør hva som helst </font></b>]]></string>
+    <string name="str_detail_price_yearly_new"> deretter %s / år, automatisk - fornybar. </string>
+    <string name="txt_yearly">Årlig</string>
+    <string name="txt_start_yeal_auto">Auto - fornyelse av abonnement belastes årlig</string>
+</resources>

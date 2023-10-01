@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topicFm_containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_top"
+        android:paddingTop="@dimen/_12sdp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/baseHeader_btnLeft"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingBottom="@dimen/_24sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/topicFm_flexbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    android:paddingLeft="@dimen/_24sdp"
+                    android:paddingRight="@dimen/_24sdp"
+                    android:layout_gravity="center"
+                    app:flexWrap="wrap"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/topicFm_btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/ripper_btn_full_green_round"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/font_medium"
+                    android:gravity="center"
+                    android:text="@string/txt_continue"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    app:layout_constraintTop_toBottomOf="@id/topicFm_flexbox"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/baseHeader_btnLeft"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:padding="@dimen/_16sdp"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/baseHeader_tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_56sdp"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/font_bold"
+            app:layout_constraintStart_toEndOf="@+id/baseHeader_btnLeft"
+            app:layout_constraintBottom_toBottomOf="@id/baseHeader_btnLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Interviewer Support" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

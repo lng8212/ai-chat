@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
+            android:id="@+id/crash_headerView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_56sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/errorSorryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/sorry_string"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/messageWhatHappenedView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_grey_888"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/what_happened_headline"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/errorMessageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_labels"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/color_base_blue" />
+
+                <TextView
+                    android:id="@+id/errorDeviceHeadlineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_grey_888"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/what_device_headline"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <LinearLayout
+                    android:id="@+id/errorInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/errorInfoLabelsView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_labels"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/color_base_blue"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_10sdp">
+
+                        <TextView
+                            android:id="@+id/errorInfosView"
+                            android:layout_width="wrap_content"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_height="wrap_content" />
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/errorYourComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/color_grey_888"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/your_comment"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/errorCommentBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_8sdp"
+                    android:inputType="" />
+
+                <TextView
+                    android:id="@+id/errorDetailView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/color_grey_888"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/error_details_headline"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/errorView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/_8sdp"
+                        android:typeface="monospace" />
+                </HorizontalScrollView>
+
+                <Button
+                    android:id="@+id/errorReportCopyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/copy_format" />
+
+                <Button
+                    android:id="@+id/errorReportEmailButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_report_button_text" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+</layout>

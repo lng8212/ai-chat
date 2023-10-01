@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/summaryFm_containerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_top"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="@dimen/_20sdp">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/llnTopContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/fmChatBottomContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/baseHeader_btnLeft"
+                    android:layout_width="@dimen/_56sdp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:padding="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:src="@drawable/ic_back_white"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/baseHeader_tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/baseHeader_btnLeft"
+                    android:layout_alignBottom="@id/baseHeader_btnLeft"
+                    android:layout_marginEnd="@dimen/_56sdp"
+                    android:layout_toRightOf="@id/baseHeader_btnLeft"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/str_summary"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_18sdp"
+                    tools:ignore="SpUsage" />
+
+                <LinearLayout
+                    android:id="@+id/summaryFm_uploadFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_52sdp"
+                    android:layout_below="@id/baseHeader_btnLeft"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:background="@drawable/bg_border_btn"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/font_bold"
+                        android:gravity="center"
+                        android:text="@string/str_summary_upload_files"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_16sdp"
+                        app:drawableStartCompat="@drawable/ic_summary_upload_file" />
+
+                    <TextView
+                        android:id="@+id/summaryFm_tvTimesSummary1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_regular"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_12sdp"
+                        tools:text="Left: 5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/summaryFm_uploadImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_52sdp"
+                    android:layout_below="@id/summaryFm_uploadFile"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:background="@drawable/bg_border_btn"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/font_bold"
+                        android:gravity="center"
+                        android:text="@string/str_summary_upload_image"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_16sdp"
+                        app:drawableStartCompat="@drawable/ic_summary_gallery" />
+
+                    <TextView
+                        android:id="@+id/summaryFm_tvTimesSummary2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_regular"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/_12sdp"
+                        tools:text="Left: 5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/summaryFm_llnNoHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/summaryFm_uploadImage"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_42sdp"
+                    tools:visibility="gone">
+                    <ImageView
+                        android:id="@+id/summaryFm_imageFind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_find_summary_file" />
+
+                    <TextView
+                        android:id="@+id/summaryFm_tvDes1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/summaryFm_imageFind"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:drawablePadding="@dimen/_12sdp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/str_summary_upload_des1"
+                        android:textColor="@color/color_white_50"
+                        android:textSize="@dimen/_16sdp"
+                        app:drawableStartCompat="@drawable/ic_frame_success" />
+
+                    <TextView
+                        android:id="@+id/summaryFm_tvDes2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/summaryFm_tvDes1"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:drawablePadding="@dimen/_12sdp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/str_summary_upload_des2"
+                        android:textColor="@color/color_white_50"
+                        android:textSize="@dimen/_16sdp"
+                        app:drawableStartCompat="@drawable/ic_frame_success" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/summaryFm_tvDes2"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:drawablePadding="@dimen/_12sdp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/str_summary_upload_des3"
+                        android:textColor="@color/color_white_50"
+                        android:textSize="@dimen/_16sdp"
+                        app:drawableStartCompat="@drawable/ic_frame_success" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/summaryFm_listSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/summaryFm_uploadImage"
+                    tools:visibility="visible">
+                    <TextView
+                        android:id="@+id/summaryFm_tvChats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/str_your_chats"
+                        android:textSize="@dimen/_17sdp"
+                        android:textColor="@color/color_white"
+                        android:fontFamily="@font/font_bold"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_18sdp"/>
+
+                    <TextView
+                        android:id="@+id/summaryFm_tvMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:fontFamily="@font/font_bold"
+                        android:text="@string/more"
+                        android:textColor="@color/color_green_base"
+                        android:textSize="@dimen/_17sdp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/summaryFm_rcl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/summaryFm_tvChats"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:clipToPadding="false"
+                        android:paddingBottom="@dimen/_80sdp"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_history_summary" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fmChatBottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_18sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summaryFm_llnChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/summaryFm_edt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:background="@drawable/bg_border_input_chat"
+                    android:fontFamily="@font/font_regular"
+                    android:hint="@string/type_here"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minHeight="@dimen/_52sdp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_50sdp"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white_50"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/summaryFm_btnSend"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/summaryFm_btnOcr"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    app:lottie_autoPlay="true"
+                    android:layout_centerVertical="true"
+                    app:lottie_fileName="anim_ocr.json"
+                    app:lottie_loop="true"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/summaryFm_edt"
+                    app:layout_constraintEnd_toStartOf="@+id/summaryFm_btnSend"
+                    app:layout_constraintTop_toTopOf="@+id/summaryFm_edt" />
+
+                <ImageView
+                    android:id="@+id/summaryFm_btnSend"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_52sdp"
+                    android:background="@drawable/bg_background_chat_selector"
+                    android:padding="@dimen/_14sdp"
+                    android:src="@drawable/ic_send_chat"
+                    app:layout_constraintBottom_toBottomOf="@+id/summaryFm_edt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/summaryFm_edt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/btnContinueSummary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_52sdp"
+                android:background="@drawable/bg_border14_green"
+                android:textColor="@color/color_white"
+                android:textStyle="bold"
+                android:textSize="@dimen/_18sdp"
+                android:text="@string/txt_continue_to_summary"
+                android:gravity="center"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:id="@+id/summaryFm_duplica"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_50"
+            android:focusable="true"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="@dimen/_260sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_rounded_main_16"
+                android:orientation="vertical"
+                android:padding="@dimen/_24sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/img_duplica_file" />
+
+                <TextView
+                    android:id="@+id/summaryFm_fileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/color_green_base"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textSize="@dimen/_16sdp"
+                    tools:text="filename.pdf"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_regular"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/str_exists_file_mes"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:id="@+id/summaryFm_btnGoToChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_border14_green"
+                    android:fontFamily="@font/font_medium"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/str_go_to_chat"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/summaryFm_btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_medium"
+                    android:text="@string/text_cancel"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/summaryFm_showLoadingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_50"
+            android:focusable="true"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="@dimen/_260sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_rounded_main_16"
+                android:orientation="vertical"
+                android:padding="@dimen/_24sdp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/summaryFm_loading"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_gravity="center"
+                    app:lottie_fileName="anim_recongize.json"
+                    app:lottie_loop="true"  />
+
+                <TextView
+                    android:id="@+id/summaryFm_titleLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_medium"
+                    android:textColor="@color/color_green_base"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textSize="@dimen/_16sdp"
+                    tools:text="filename.pdf"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_regular"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/str_mes_loading_summary_file"
+                    android:textColor="@color/color_white_50"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

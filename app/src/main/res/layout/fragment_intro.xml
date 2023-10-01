@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/intro_bg_gradient"
+        android:theme="@style/Theme.BaseProjectMaterial">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_19sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_intro"
+            app:layout_constraintDimensionRatio="341:409"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/fmIntro_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/fmIntro_tvDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/text_intro_first"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/fmIntro_indicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/fmIntro_indicator"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:background="#00000000"
+            app:layout_constraintBottom_toTopOf="@+id/fmIntroLlPolicy"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="@dimen/_36sdp"
+            app:tabBackground="@drawable/indicator_selector"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/transparent_color"
+            app:tabIndicatorFullWidth="false" />
+        <LinearLayout
+            android:id="@+id/fmIntroLlPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/fmIntro_confirm"
+            >
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:button="@drawable/bg_checkbox"
+                android:checked="true"
+                android:id="@+id/fmIntroCb"/>
+            <TextView
+                android:id="@+id/fmIntroTvPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="I agree to the Terms and Privacy Policy"
+                android:fontFamily="@font/font_regular"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/fmIntro_confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@drawable/ripper_btn_full_green_round"
+            android:fontFamily="@font/font_bold"
+            android:gravity="center"
+            android:text="@string/txt_continue"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@+id/fmIntroBottomGL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.83"
+            />
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintTop_toTopOf="@+id/fmIntro_confirm"
+            app:layout_constraintBottom_toBottomOf="@+id/fmIntro_confirm"
+            app:layout_constraintRight_toRightOf="@+id/fmIntro_confirm"
+            android:layout_marginRight="@dimen/_15sdp"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/fmIntroBottomGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

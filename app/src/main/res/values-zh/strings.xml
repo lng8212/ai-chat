@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_ui_crash">应用程序/用户界面崩溃</string>
+    <string name="sorry_string">对不起，那不应该发生。</string>
+    <string name="error_report_button_text">通过电子邮件报告此错误</string>
+    <string name="error_report_button_telegram">通过电报报告此错误</string>
+    <string name="copy_format">复制格式化报告</string>
+    <string name="error_report_open_issue_button_text">报告</string>
+    <string name="error_report_open_github_notice">请检查讨论您的崩溃的问题是否已经存在。</string>
+    <string name="what_device_headline">信息：</string>
+    <string name="what_happened_headline">发生了什么：</string>
+    <string name="info_labels">内容：\\n请求：\\nGMT 时间：\\n包：\\n版本：\\n操作系统版本：\\n设备：\\n型号：\\n产品：</string>
+    <string name="your_comment">您的评论（英文）：</string>
+    <string name="error_details_headline">细节：</string>
+    <string name="error_report_title">错误报告</string>
+    <string name="crash_report_copied">崩溃报告已复制到剪贴板</string>
+    <string name="error_snackbar_message">抱歉，出了一些问题。</string>
+    <string name="error_snackbar_action">报告</string>
+    <string name="text_setting">设置</string>
+    <string name="text_start_chat">开始聊天</string>
+    <string name="text_your_chat_ai">您的聊天机器人 AI</string>
+    <string name="text_ads_splash">此过程可能包含广告</string>
+    <string name="text_chat_detail_title">GPT 人工智能聊天机器人</string>
+    <string name="text_intro_first">你今天过得怎么样？\n来和我聊天吧！</string>
+    <string name="text_wonderful">精彩的</string>
+    <string name="text_great">伟大的</string>
+    <string name="text_intro_second">想知道什么就问我，\n我会帮你的。</string>
+    <string name="text_select_character">选择角色</string>
+    <string name="hi_there">你好呀！</string>
+    <string name="device_not_support">不幸的是设备不支持！</string>
+    <string name="input_empty_error">请输入内容！</string>
+    <string name="something_error">哦不，出了点问题，请重试！</string>
+    <string name="type_here">在此输入…</string>
+    <string name="text_thanks">感谢您使用我们的应用程序。您可以在 CHPlay 上为该应用评分。这会给我们很大的帮助和鼓励。谢谢你，再见！</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_update_to_premium">升级到完整版</string>
+    <string name="text_update_to_premium_des">享受所有功能的无限制访问。</string>
+    <string name="text_support">支持</string>
+    <string name="text_restore_purchase">恢复购买</string>
+    <string name="text_about_us">关于我们</string>
+    <string name="text_privacy_policy">隐私政策</string>
+    <string name="text_term_of_use">使用条款</string>
+    <string name="text_stay_in_touch">保持联系</string>
+    <string name="text_rate_app">评价应用</string>
+    <string name="text_send_feedback">发送反馈</string>
+    <string name="txt_comming_soon">即将推出！</string>
+    <string name="text_rate_des">我们正在为更好的用户体验而努力。如果您能给我们评分，我们将不胜感激。</string>
+    <string name="text_rate">速度</string>
+    <string name="text_version">版本：</string>
+    <string name="text_rate_suggest">我们能得到的最好的♥</string>
+    <string name="text_premium_update">高级升级</string>
+    <string name="text_unlimited">无限问答</string>
+    <string name="text_no_ads">无广告</string>
+    <string name="text_unlock">全角色解锁</string>
+    <string name="text_start_trial">开始免费试用和计划</string>
+    <string name="text_trial_free_day">3 天免费试用</string>
+    <string name="text_trial_free_price">然后 %s/周，自动 – 可再生</string>
+    <string name="text_best_offer">最好的报价</string>
+    <string name="text_lifetime_price">– 终身 – 一次性付款</string>
+    <string name="text_sub_temp">订阅条款</string>
+    <string name="text_sub_temp_1">条款和条件</string>
+    <string name="privacy_sub">订阅用户可以无限制地使用和访问其所有高级功能，没有任何广告。\n– 非订阅用户可以继续使用带有广告的应用程序，并且对高级功能的使用有限。 \n– 付款将在确认购买时从您的 Google 帐户中扣除。\n– 除非在当前订阅期结束前至少 24 小时禁用自动续订，否则订阅会自动续订。\n– 帐户将在以下时间内收取续订费用当前期间结束前 24 小时，并确定续订费用。</string>
+    <string name="privacy_sub2">\n– 免费试用期的任何未使用部分（如果提供）将在用户购买该出版物的订阅（如适用）时被没收。– 订阅可由用户管理，自动续订可通过转至购买后的用户帐户设置。请注意，卸载该应用不会取消您的订阅。\n1.在您的 Android 手机或平板电脑上，打开 Google Play 商店。\n2.检查您是否登录了正确的 Google 帐户。\n3.点击菜单订阅并选择您要取消的订阅。\n4.点击取消订阅。</string>
+    <string name="txt_billing_unavailable">应用内支付服务不可用，请升级Android Market/Play至3.9.16或更高版本！</string>
+    <string name="txt_first_error_billing">购买时出现错误，请稍后重试！</string>
+    <string name="txt_check_internet">确保 Wi–Fi 或移动数据已打开。那么请再试一次</string>
+    <string name="txt_check_wifi">请检查您的 wifi 连接，然后重试！</string>
+    <string name="txt_no_internet">没有网络连接！</string>
+    <string name="txt_no_wifi">请连接到wifi</string>
+    <string name="txt_title_exit">你确定要离开？</string>
+    <string name="txt_billing_premium_success">感谢您购买！</string>
+    <string name="txt_billing_premium_fail">抱歉，您还没有购买或购买的套餐已过期！</string>
+    <string name="txt_billing_restart_app">为使您购买后应用发挥最佳性能，请重启应用完成VIP用户转换！</string>
+    <string name="txt_get_premium">获得保费</string>
+    <string name="txt_mess_number_premium1">你有</string>
+    <string name="txt_mess_number_premium2">留下免费留言</string>
+    <string name="txt_gift_title">一份特别的礼物，只为你。</string>
+    <string name="txt_gift_title_des">立即获取。</string>
+    <string name="txt_free_message">免费留言：</string>
+    <string name="txt_start_trial">开启免费体验</string>
+    <string name="txt_month">每月</string>
+    <string name="txt_lifetime">寿命</string>
+    <string name="txt_start_month_auto">自动 – 每月续订订阅</string>
+    <string name="txt_start_one_time_auto">一次性支付。所有新功能 – 永远</string>
+    <string name="txt_not_support_title">不好了！</string>
+    <string name="txt_not_support_title_des">很抱歉，您的设备无法使用此功能。我们会努力改进，下个版本见。</string>
+    <string name="txt_topic">主题</string>
+    <string name="txt_chat_ai">AI聊天</string>
+    <string name="txt_topic_interview">我将作为面试官，就您所申请的职位向您提问。您将像候选人一样回答问题。让我们开始！</string>
+    <string name="txt_topic_develop">我是一名开发人员，在开发安全 Web 和应用程序解决方案方面拥有丰富经验。我能够创建架构并编写代码来满足您的需求。让我们共同努力，将您的愿景变为现实，并创建一个强大而安全的平台！</string>
+    <string name="txt_topic_business">我将协助您提供技巧和模板，以提高您的业务技能并帮助您处理日常工作相关事宜。让我们开始提高您的商业头脑吧！</string>
+    <string name="txt_topic_ad">我可以帮助您创建营销活动来推广您选择的产品或服务。让我们共同努力，使活动具有影响力并取得成功！</string>
+    <string name="txt_topic_language">我是英语语言专家，具有翻译、纠正拼写和改进语法的技能。让我协助您确保您的书面语言准确且优美。</string>
+    <string name="txt_topic_chef">我可以为制作简单且不需要很多时间的美味营养食谱提供建议。我有各种各样的食谱和想法，可以满足不同的烹饪技能水平。让我们一起努力，创造健康美味的饭菜！</string>
+    <string name="txt_topic_composer">我在这里帮助您满足您的歌曲需求。无论您是要寻找特定歌曲的歌词，还是想要根据您心中的概念编写歌词，我都可以为您提供帮助。我有能力根据你的想法找到任何歌曲的歌词或写新的歌词。让我们创作一些令人难忘且有影响力的歌词！</string>
+    <string name="txt_topic_mental">我在这里提供有关管理情绪、压力、焦虑和其他心理健康问题的指导和建议。我的目标是帮助您应对这些挑战并找到健康的应对方式。让我们共同努力，改善您的整体幸福感和情绪稳定性。</string>
+    <string name="txt_topic_interview_title">面试官</string>
+    <string name="txt_topic_develop_title">开发商</string>
+    <string name="txt_topic_business_title">商务助理</string>
+    <string name="txt_topic_ad_title">广告商</string>
+    <string name="txt_topic_language_title">语言专家</string>
+    <string name="txt_topic_chef_title">厨师</string>
+    <string name="txt_topic_composer_title">作曲家</string>
+    <string name="txt_topic_mental_title">心理健康广告</string>
+    <string name="txt_topic_interview_q1">最常见的面试问题是什么？</string>
+    <string name="txt_topic_interview_q2">我如何准备面试？</string>
+    <string name="txt_topic_interview_q3">问应聘者的最佳面试问题是什么？</string>
+    <string name="txt_topic_interview_q4">如何进行成功的求职面试？</string>
+    <string name="txt_topic_interview_q5">我如何评估候选人的技能和资格？</string>
+    <string name="txt_topic_interview_q6">我如何确定候选人的文化契合度？</string>
+    <string name="txt_topic_interview_q7">评估候选人的有效面试技巧有哪些？</string>
+    <string name="txt_topic_interview_q8">我如何处理困难的面试情况？</string>
+    <string name="txt_topic_interview_q9">我如何评估候选人的成长和发展潜力？</string>
+    <string name="txt_topic_interview_q10">公平公正的面试过程有哪些最佳实践？</string>
+    <string name="txt_topic_develop_q1">我应该学习哪些编程语言？</string>
+    <string name="txt_topic_develop_q2">什么是敏捷开发，它是如何工作的？</string>
+    <string name="txt_topic_develop_q3">学习软件开发的最佳资源是什么？</string>
+    <string name="txt_topic_develop_q4">最需要的编程技能是什么？</string>
+    <string name="txt_topic_develop_q5">作为一名开发人员，我该如何开始？</string>
+    <string name="txt_topic_develop_q6">什么是 DevOps，它与开发有什么关系？</string>
+    <string name="txt_topic_develop_q7">我如何了解最新的技术趋势？</string>
+    <string name="txt_topic_develop_q8">成功的开发项目的关键组成部分是什么？</string>
+    <string name="txt_topic_develop_q9">我如何提高我的编码技能？</string>
+    <string name="txt_topic_develop_q10">最好使用的开发工具和软件是什么？</string>
+    <string name="txt_topic_business_q1">商务助理的职责是什么？</string>
+    <string name="txt_topic_business_q2">我如何成为一名成功的商务助理？</string>
+    <string name="txt_topic_business_q3">业务助理需要什么技能？</string>
+    <string name="txt_topic_business_q4">商务助理最好的工具和软件是什么？</string>
+    <string name="txt_topic_business_q5">虚拟业务助理的作用是什么？</string>
+    <string name="txt_topic_business_q6">作为业务助理，我如何提高我的组织能力？</string>
+    <string name="txt_topic_business_q7">作为业务助理，我如何管理多个任务和优先级？</string>
+    <string name="txt_topic_business_q8">作为商务助理，有效沟通的最佳实践是什么？</string>
+    <string name="txt_topic_business_q9">作为业务助理，我如何处理敏感和机密信息？</string>
+    <string name="txt_topic_business_q10">商务助理的平均工资是多少？</string>
+    <string name="txt_topic_ad_q1">什么是广告，它是如何运作的？</string>
+    <string name="txt_topic_ad_q2">有哪些不同类型的广告？</string>
+    <string name="txt_topic_ad_q3">如何制作成功的广告活动？</string>
+    <string name="txt_topic_ad_q4">什么是最有效的广告渠道？</string>
+    <string name="txt_topic_ad_q5">我如何衡量广告活动的成功与否？</string>
+    <string name="txt_topic_ad_q6">最好的广告工具和软件是什么？</string>
+    <string name="txt_topic_ad_q7">我如何为我的广告活动定位合适的受众？</string>
+    <string name="txt_topic_ad_q8">广告的最新趋势和创新是什么？</string>
+    <string name="txt_topic_ad_q9">如何创建引人注目且令人难忘的广告信息？</string>
+    <string name="txt_topic_ad_q10">广告费用是多少，广告的投资回报率是多少？</string>
+    <string name="txt_topic_language_q1">成为语言专家的最佳途径是什么？</string>
+    <string name="txt_topic_language_q2">我如何提高我的语言技能？</string>
+    <string name="txt_topic_language_q3">最重要的语言学习技巧是什么？</string>
+    <string name="txt_topic_language_q4">什么是语言学习的最佳资源？</string>
+    <string name="txt_topic_language_q5">为了商业和职业成功而学习的最佳语言是什么？</string>
+    <string name="txt_topic_language_q6">我如何克服语言学习的障碍和挑战？</string>
+    <string name="txt_topic_language_q7">如何提高我的发音和口语技巧？</string>
+    <string name="txt_topic_language_q8">记忆词汇和语法的最佳技巧是什么？</string>
+    <string name="txt_topic_language_q9">我如何建立流利和自信的说一门新语言的能力？</string>
+    <string name="txt_topic_language_q10">如何快速有效地学习一门语言？</string>
+    <string name="txt_topic_chef_q1">厨师是做什么的，厨师的职责是什么？</string>
+    <string name="txt_topic_chef_q2">我如何成为一名厨师，需要接受哪些教育或培训？</string>
+    <string name="txt_topic_chef_q3">最好的烹饪学校和烹饪课程是什么？</string>
+    <string name="txt_topic_chef_q4">厨师最重要的烹饪和厨房技能是什么？</string>
+    <string name="txt_topic_chef_q5">我如何提高我的烹饪技巧和技巧？</string>
+    <string name="txt_topic_chef_q6">厨师最好的厨房工具和设备是什么？</string>
+    <string name="txt_topic_chef_q7">如何为成功的厨房和用餐体验创建菜单和计划？</string>
+    <string name="txt_topic_chef_q8">我如何管理厨房以及厨师和员工团队？</string>
+    <string name="txt_topic_chef_q9">作为一名厨师，最好的食物和烹饪趋势是什么？</string>
+    <string name="txt_topic_chef_q10">我如何在厨房中平衡食品安全和食品创意？</string>
+    <string name="txt_topic_composer_q1">作曲家做什么，作曲家的职责是什么？</string>
+    <string name="txt_topic_composer_q2">我如何成为作曲家，需要接受哪些教育或培训？</string>
+    <string name="txt_topic_composer_q3">适合作曲家的最佳音乐学校和课程是什么？</string>
+    <string name="txt_topic_composer_q4">作曲家最重要的技能是什么？</string>
+    <string name="txt_topic_composer_q5">我如何提高我的作曲技巧和技巧？</string>
+    <string name="txt_topic_composer_q6">作曲的最佳工具和软件是什么？</string>
+    <string name="txt_topic_composer_q7">我如何创作成功的音乐作品？</string>
+    <string name="txt_topic_composer_q8">我如何与音乐行业的其他音乐家、艺术家和制作人合作？</string>
+    <string name="txt_topic_composer_q9">作为作曲家推广和营销我的音乐的最佳方式是什么？</string>
+    <string name="txt_topic_composer_q10">我如何了解音乐创作的最新趋势和创新？</string>
+    <string name="txt_topic_mental_q1">什么是心理健康广告，为什么它很重要？</string>
+    <string name="txt_topic_mental_q2">广告如何影响心理健康和福祉？</string>
+    <string name="txt_topic_mental_q3">通过广告提高心理健康意识的最佳方式是什么？</string>
+    <string name="txt_topic_mental_q4">如何制作有效的心理健康广告活动？</string>
+    <string name="txt_topic_mental_q5">宣传心理健康产品和服务的伦理考虑是什么？</string>
+    <string name="txt_topic_mental_q6">心理健康广告最有效的渠道是什么？</string>
+    <string name="txt_topic_mental_q7">我如何为我的心理健康广告活动定位合适的受众？</string>
+    <string name="txt_topic_mental_q8">心理健康广告的最新趋势和创新是什么？</string>
+    <string name="txt_topic_mental_q9">如何为心理健康广告制作引人注目且敏感的信息？</string>
+    <string name="txt_topic_mental_q10">无效或有害的心理健康广告的潜在后果是什么？</string>
+    <string name="txt_confirm">确认</string>
+    <string name="text_confirm_restart_change">是否要重新启动应用程序以应用更改？</string>
+    <string name="text_content_sale_not_purchase2">不要错过我们的限时特卖！立即打开应用程序并节省优质内容。</string>
+    <string name="text_content_sale_not_purchase3">匆忙！库存有限，可打折。立即打开应用程序以领取折扣。</string>
+    <string name="text_content_sale_not_purchase4">欢迎回来！作为感谢，我们为您下次购买提供折扣。立即打开应用程序进行兑换。</string>
+    <string name="text_content_sale_not_purchase5">立即打开应用程序，下次购买可享受独家折扣！不要错过！</string>
+    <string name="text_content_sale_not_purchase6">立即打开应用程序即可享受优质内容的折扣。它只是在有限的时间内，所以快点！</string>
+    <string name="text_content_sale_not_purchase7">准备好存大钱了吗？立即打开应用程序并使用代码 DISCOUNT 获得购买折扣。</string>
+    <string name="text_content_sale_not_purchase8">新品刚刚上架打折！立即打开应用程序以获得购买折扣。你不会想错过
+        这！</string>
+    <string name="text_title_sale_not_purchase2">限时优惠&#127881;&#127881;&#127881;</string>
+    <string name="text_title_sale_not_purchase3">独家折扣给你&#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase4">不要错过了&#127881;&#127873;&#127881;</string>
+    <string name="text_title_sale_not_purchase5">新增折扣 &#127881;&#127881;&#127881;</string>
+    <string name="txt_auto_generating">动画自动生成文本</string>
+    <string name="txt_skip_generating">跳过生成</string>
+    <string name="txt_weekly">每周</string>
+    <string name="txt_start_weekly_auto">自动 – 每周续订订阅费用</string>
+    <string name="txt_premium_des_image">AI 根据描述创建逼真的图像</string>
+    <string formatted="false" name="text_sale_off">专属于您的 %s 折扣</string>
+    <string name="txt_special_gift">给你的特别礼物</string>
+    <string name="txt_discount">折扣</string>
+    <string name="txt_get_now">立即获取</string>
+    <string name="txt_you_are_vip">你是贵宾</string>
+    <string name="txt_unlock_chat_ai">看广告聊天</string>
+    <string name="text_no_ads_toShow">没有广告显示，请稍后再试！</string>
+    <string name="txt_next">下一个</string>
+    <string name="onetime_payment">一次性支付</string>
+    <string name="get_premium_now">立即获取 Premium</string>
+    <string name="sorry_you_ve_used_up_today">抱歉，您已经用完了今天的免费聊天。明天见或使用我们的高级版本</string>
+    <string name="weird_description"><b>Weird:</b>简单的答案，正确的问题</string>
+    <string name="smart_description"><b>Smart:</b>聪明的答案，正确的问题</string>
+    <string name="brainiac_description"><b>Brainiac:</b>超级智能回复，扩展问题解决</string>
+    <string name="content_free_chat_1">我们每天都准备好为您提供帮助&#129299;记得回来领取您的免费3个问题！</string>
+    <string name="content_free_chat_2">每天收集3个免费问题，得到你需要的答案！&#128526;</string>
+    <string name="content_free_chat_3">不要忘记每天使用3个免费问题来问我！&#129299;</string>
+    <string name="content_free_chat_4">我们每天提供 3 个免费问题来帮助您！记得回来哦！&#128526;</string>
+    <string name="title_notify_daily_1">今天我能帮到你什么？</string>
+    <string name="title_notify_daily_3">坚持你的工作？</string>
+    <string name="title_notify_daily_4">你感到孤独吗？</string>
+    <string name="title_notify_daily_5">努力做作业，写内容？</string>
+    <string name="title_content_daily_1">只要问我任何你想要的&#129299;</string>
+    <string name="title_content_daily_2">请记住，ChatAI 始终在这里回答您的问题！ &#129299;</string>
+    <string name="title_content_daily_3">让ChatAI来帮助你！&#128522;</string>
+    <string name="title_content_daily_4">ChatAI 在这里为您服务&#128526;</string>
+    <string name="title_content_daily_5">有什么事问我！ &#128526;</string>
+    <string name="title_content_daily_6">今天小编就为大家分析一下股市吧！&#128200;</string>
+    <string name="txt_continue">繼續</string>
+
+    <string name="choose_the_topics">選擇您\n感興趣的主題：</string>
+    <string name="txt_history" formatted="false">歷史</string>
+    <string name="see_all">查看全部</string>
+    <string name="hello_blank_fragment">你好空白片段</string>
+    <string name="delete_x">刪除（%s）</string>
+    <string name="you_re_a_premium">你是溢價</string>
+    <string name="enjoy_the_premium">享受功能齊全的高級\n版本</string>
+    <string name="toast_copy_text">複製到剪貼板的文本</string>
+    <string name="you_don_t_have">您還沒有任何對話，<font color='#00B085'>現在聊天！</font></string>
+    <string name="earn_2_free_messages">获得 2 条免费消息</string>
+    <string name="you_can_choose">你可以选择：</string>
+    <string name="watch_ads">观看广告</string>
+    <string name="txt_exception_date">出现错误，请检查您的手机是否启用了自动日期和时间。</string>
+    <string name="personalize_your_home_screen">一键个性化您的主屏幕。</string>
+    <string name="add_to_home_screen">+ 添加到主屏幕</string>
+    <string name="ask_ai_chat_anything">问<b>AI Chat</b>任何问题</string>
+    <string name="add_widget">添加小部件</string>
+    <string name="add_a_new_widget">添加一个新的小部件</string>
+    <string name="widget">微件</string>
+    <string name="convenient_with_bubble_chat">方便的泡泡聊天</string>
+    <string name="text_policy">隐私政策</string>
+    <string name="text_policy_terms">条款</string>
+    <string name="text_des_policy">我同意</string>
+    <string name="text_des_guide_widget">触摸并按住以手动放置在主屏幕上。</string>
+    <string name="_4x1_widget">4x1 小部件</string>
+    <string name="_4x2_widget">4x2 小部件</string>
+    <string name="gpt_4_access"><b><font color='#4AE89F'>GPT–4</font></b>访问</string>
+    <string name="txt_premium_unlimited"><b><font color='#4AE89F'>无限</font></b>问题与答案</string>
+    <string name="txt_premium_ads"><b><font color='#4AE89F'>无广告</font></b>体验</string>
+    <string name="txt_premium_convenient"><b><font color='#4AE89F'>方便</font></b>气泡聊天</string>
+    <string name="enter_your_prompt">輸入您的提示</string>
+    <string name="get_inspired"><u>獲得靈感</u></string>
+    <string name="choose_an_art_style">選擇藝術風格</string>
+    <string name="generate" formatted="false">產生</string>
+    <string name="free_tries_left_s">剩餘免費試聽次數：%s</string>
+    <string name="left_s">左邊：%s</string>
+    <string name="txt_painting">繪畫</string>
+    <string name="txt_magical">神奇</string>
+    <string name="txt_steampunk">蒸汽朋克</string>
+    <string name="txt_oil_painting">油畫</string>
+    <string name="txt_anime">日本動畫片</string>
+    <string name="txt_digital_art">數字藝術</string>
+    <string name="txt_cyberpunk">賽博朋克</string>
+    <string name="txt_3d">3D</string>
+    <string name="txt_ghibli">吉卜力</string>
+    <string name="txt_game_art">遊戲美術</string>
+    <string name="txt_vaporwave">蒸氣波</string>
+    <string name="txt_comic">漫畫</string>
+    <string name="txt_pixel_art">像素藝術</string>
+    <string name="txt_synthwave">合成波</string>
+    <string name="txt_watercolor">水彩</string>
+    <string name="txt_picasso">畢加索</string>
+    <string name="watermark">水印</string>
+    <string name="regenerate">再生</string>
+    <string name="prompt">迅速的</string>
+    <string name="style">風格</string>
+    <string name="not_acceptable">不能接受的</string>
+    <string name="des_fail_art">抱歉，發生錯誤或此提示損壞了安全過濾器。請盡量只創建工作安全的內容。</string>
+    <string name="i_got_it">我得到了它</string>
+    <string name="content_doesn_t_contain">內容不含敏感詞。</string>
+    <string name="more">更多的</string>
+    <string name="midj_art">Midj 藝術</string>
+    <string name="done">完畢</string>
+    <string name="choose_style_art">選擇風格藝術</string>
+    <string name="applying_style">應用樣式…</string>
+    <string name="adjusting_colors">調整顏色…</string>
+    <string name="enhancing_quality">提高質量…</string>
+    <string name="creating_artwork">創建藝術品…</string>
+    <string name="no_style">無風格</string>
+    <string name="s_by_s" formatted="false">%s 風格 %s</string>
+    <string name="grantfailed">未授予權限</string>
+    <string name="downloaded">下載！</string>
+    <string name="error">錯誤！</string>
+    <string name="txt_premium_create"><b><font color='#4AE89F'>用 AI 創造</font></b> 令人驚嘆的藝術</string>
+    <string name="txt_premium_faster"><b><font color='#4AE89F'>更快</font></b> 圖像處理</string>
+    <string name="txt_premium_no"><b><font color='#4AE89F'>無</font></b> 水印！</string>
+    <string name="txt_premium_quality"><b><font color='#4AE89F'>最佳</font></b> 圖像質量</string>
+    <string name="generate_art_with_midjourney_pro">使用\n Midjourney Pro<b>10 生成藝術</b></string>
+    <string name="purchase">購買</string>
+    <string name="sharing_image">共享圖像</string>
+    <string name="inspired_1">人類滅絕後的地球，新的開始，大自然收回地球，和諧，和平，地球平衡</string>
+    <string name="inspired_2">黑色偵探先生橡皮鴨。煙，雨，小鬍子和勇敢。他可以解決任何難題。卻無法戰勝內心的惡魔。富有表現力的深色啞光水粉畫</string>
+    <string name="inspired_3">亞洲老武士首領的肖像照片，部落黑豹妝，紅底藍，側臉，望向遠方，嚴肅的眼睛，50mm 人像攝影，硬邊照明攝影</string>
+    <string name="inspired_4">一隻可愛的魔法飛狗，由迪士尼概念藝術家繪製的奇幻藝術，金色，高品質，高度精細，優雅，焦點清晰，概念藝術，角色概念，數字繪畫，神秘，冒險</string>
+    <string name="inspired_5">混凝土巨型砌塊內的膠囊多戶住宅的逼真建築渲染，帶有苔蘚和高大的圓形窗戶，內部有燈光，人體尺度</string>
+    <string name="image_type_object_any_details_ne_g_a_beautiful_magical_kingdom">圖像類型、對象、任何詳細信息\n例如美麗的魔法王國</string>
+    <string name="str_title_start_chat">您好，請問有什麼可以幫到您的嗎？</string>
+    <string name="str_trending">熱門</string>
+    <string name="str_ask_a_question">問一個問題…</string>
+    <string name="str_bus">公共汽車</string>
+    <string name="str_music">音樂</string>
+    <string name="str_mathematics">數學</string>
+    <string name="str_history">歷史</string>
+    <string name="str_content">內容</string>
+    <string name="str_email_topic">電子郵件</string>
+    <string name="str_cooking_techniques">烹飪技巧</string>
+    <string name="str_cooking_tool">烹飪工具</string>
+    <string name="str_cooking_ingredients">烹飪原料</string>
+    <string name="str_cooking_styles">烹飪風格</string>
+    <string name="str_cooking_recipes">烹飪食譜</string>
+    <string name="str_cooking_environment">環保烹飪</string>
+    <string name="str_science">科學</string>
+    <string name="str_essays">隨筆</string>
+    <string name="str_physics">物理</string>
+    <string name="str_travel_experiences">旅行經歷</string>
+    <string name="str_travel_skill">旅遊技巧</string>
+    <string name="str_travel_trend">旅遊趨勢</string>
+    <string name="str_travel_impact">旅遊影響</string>
+    <string name="str_travel_tip">旅行小貼士</string>
+    <string name="str_travel_des">旅行目的地</string>
+    <string name="str_company_bio">公司簡介</string>
+    <string name="str_company_slogan">口號</string>
+    <string name="str_company_name">名稱生成器</string>
+    <string name="str_business_trend">商業趨勢</string>
+    <string name="str_business_innov">業務創新</string>
+    <string name="str_business_strategy">經營策略</string>
+    <string name="str_bus_detail">通過我們的高級論文寫作服務掌握您的作業。</string>
+    <string name="str_music_detail">寫一段旋律，一首歌。了解聲音、節奏、和聲和作曲。</string>
+    <string name="str_science_detail">產生令人興奮的生物學、化學、天文學、…</string>
+    <string name="str_mathematics_detail">輕鬆獲得任何數學問題的答案</string>
+    <string name="str_history_detail">探索過去發生的事件和重要的里程碑</string>
+    <string name="str_content_detail">改進和簡化內容以提高可讀性。</string>
+    <string name="str_email_topic_detail">撰寫精心設計和組織的精心製作的電子郵件。</string>
+    <string name="str_cooking_techniques_detail">學習如何掌握基本的烹飪技巧</string>
+    <string name="str_cooking_tool_detail">了解如何在廚房中使用不同的工具</string>
+    <string name="str_cooking_ingredients_detail">探索烹飪中的不同成分</string>
+    <string name="str_travel_des_detail">探索世界奇觀</string>
+    <string name="str_popular_des_detail">每日食譜推薦</string>
+    <string name="str_company_bio_detail">貴公司的故事：成長、創新、成功。</string>
+    <string name="str_company_slogan_detail">為您的企業設計一個令人難忘的口號</string>
+    <string name="str_essays_detail">毫不費力地寫一篇超過200字的文章</string>
+    <string name="str_physics_detail">借助 ChatGPT 的力量探索宇宙的奧秘</string>
+    <string name="str_cooking_styles_detail">嘗試不同風格的烹飪</string>
+    <string name="str_cooking_recipes_detail">輕鬆計劃您的膳食</string>
+    <string name="str_cooking_environment_detail">學習如何以更環保的方式烹飪</string>
+    <string name="str_travel_experiences_detail">聆聽體驗可以豐富你的旅行視角</string>
+    <string name="str_travel_skill_detail">培養可以提升旅行體驗的技能</string>
+    <string name="str_travel_trend_detail">了解旅行的新趨勢並趕上潮流</string>
+    <string name="str_travel_impact_detail">了解您在旅行時的影響</string>
+    <string name="str_travel_tip_detail">獲得有關如何更智能、更安全和更便宜地旅行的實用建議。</string>
+    <string name="str_company_name_detail">為您的品牌或產品創建一個迷人的名稱。</string>
+    <string name="str_business_trend_detail">探索新趨勢，快速適應</string>
+    <string name="str_business_innov_detail">產生關於改進產品、服務和性能的新想法</string>
+    <string name="str_business_strategy_detail">評估您的業務並就目標、計劃和行動提供建議</string>
+    <string name="str_music_ques">我們如何在音樂方面為您提供幫助？</string>
+    <string name="str_mathematics_ques">你想解決什麼數學問題？</string>
+    <string name="str_history_ques">您想知道哪些事件或時間表？</string>
+    <string name="str_science_ques">您想知道哪些事件或時間表？</string>
+    <string name="str_essays_ques">論文的主題是什麼？</string>
+    <string name="str_physics_ques">你想了解什麼物理知識？</string>
+    <string name="str_cooking_techniques_ques">你關注什麼技術？</string>
+    <string name="str_cooking_tool_ques">你用什麼烹飪工具？</string>
+    <string name="str_cooking_ingredients_ques">您正在為哪些成分而苦苦掙扎？</string>
+    <string name="str_cooking_styles_ques">您在尋找什麼烹飪風格？</string>
+    <string name="str_cooking_recipes_ques">你想探索什麼食譜？</string>
+    <string name="str_cooking_environment_ques">關於可持續烹飪，您想知道什麼？</string>
+    <string name="str_travel_des_ques">你想去的國家？</string>
+    <string name="str_travel_experiences_ques">您想知道旅行中的哪些錯誤、成功和挑戰？</string>
+    <string name="str_travel_skill_ques">您在提高旅行技能方面關注什麼？</string>
+    <string name="str_travel_trend_ques">您對任何特定趨勢感興趣嗎？</string>
+    <string name="str_travel_impact_ques">環保旅遊你想知道什麼？</string>
+    <string name="str_travel_tip_ques">您想知道哪些實用技巧？</string>
+    <string name="str_company_name_ques">你的品牌/產品是做什麼的？</string>
+    <string name="str_business_trend_ques">您要關注哪個特定類別？</string>
+    <string name="str_business_innov_ques">你想完成什麼創新課題？</string>
+    <string name="str_business_strategy_ques">我們如何幫助您開展業務？</string>
+    <string name="str_company_bio_ques">你的公司名稱和專長是什麼？</string>
+    <string name="str_company_slogan_ques">分享有關公司起源的簡短而迷人的軼事。</string>
+    <string name="str_premium_txt"><![CDATA[>試用<b> %s </b>Premium 享受超值優惠。\n<b>立即獲取。</b>]]></string>
+    <string name="txt_continue_to_chat">繼續聊天</string>
+    <string name="str_copy">複製</string>
+    <string name="str_regenerate">再生</string>
+    <string name="str_fashion_ques">您希望我們就這一趨勢給您一些想法嗎？</string>
+    <string name="str_relax_ques">推薦今年夏天在 Netflix 上觀看的系列。</string>
+    <string name="str_tech_ques">人工智能現在正在對世界產生重大影響。想發現更多？</string>
+    <string-array name="topic_title">
+        <item>全部</item>
+        <item>業務專家</item>
+        <item>內容創建者</item>
+        <item>生活方式好友</item>
+        <item>通過 ChatAI 學習</item>
+        <item>烹飪大師</item>
+        <item>旅行</item>
+    </string-array>
+
+    <string-array name="select_input_fashion">
+        <item>銀色手提包</item>
+        <item>雨靴</item>
+        <item>新牛仔褲時尚</item>
+        <item>制服</item>
+        <item>心形項鍊</item>
+        <item>Himecut 頭髮</item>
+    </string-array>
+
+    <string-array name="select_input_relax">
+        <item>金妮 &amp; 格魯吉亞</item>
+        <item>外銀行</item>
+        <item>竭心石</item>
+        <item>怪奇物語</item>
+        <item>他媽的世界的盡頭</item>
+        <item>女王的詭計</item>
+        <item>韓劇</item>
+    </string-array>
+
+    <string-array name="select_input_tech">
+        <item>人工智能藝術</item>
+        <item>人工智能聊天</item>
+        <item>AI 圖像生成器</item>
+        <item>人工智能歌曲</item>
+        <item>人工智能機器人</item>
+        <item>人工智能視頻</item>
+    </string-array>
+
+    <string-array name="arr_science">
+        <item>生物學</item>
+        <item>化學</item>
+        <item>天文學</item>
+    </string-array>
+
+    <string-array name="arr_cooking_techniques">
+        <item>烘烤</item>
+        <item>沸騰</item>
+        <item>沸騰</item>
+        <item>去釉</item>
+        <item>炒</item>
+    </string-array>
+
+    <string-array name="arr_cooking_tool">
+        <item>刀</item>
+        <item>花盆</item>
+        <item>平底鍋</item>
+        <item>混合器</item>
+        <item>攪拌器</item>
+        <item>溫度計</item>
+        <item>體重秤</item>
+    </string-array>
+
+    <string-array name="arr_cooking_ingredients">
+        <item>香料</item>
+        <item>藥草</item>
+        <item>油</item>
+        <item>醋</item>
+        <item>穀物</item>
+        <item>豆子</item>
+        <item>堅果</item>
+        <item>種子</item>
+        <item>水果</item>
+        <item>蔬菜</item>
+    </string-array>
+
+    <string-array name="arr_cooking_style">
+        <item>烘焙</item>
+        <item>燒烤</item>
+        <item>油炸</item>
+        <item>蒸</item>
+        <item>偷獵</item>
+        <item>豆子</item>
+        <item>烤</item>
+        <item>和微波爐</item>
+    </string-array>
+
+    <string-array name="arr_travle_des">
+        <item>越南</item>
+        <item>日本</item>
+        <item>美國</item>
+        <item>英國</item>
+        <item>法國</item>
+        <item>德國</item>
+        <item>挪威語</item>
+        <item>韓國</item>
+    </string-array>
+
+    <string-array name="arr_business_innovation">
+        <item>營銷</item>
+        <item>物流</item>
+        <item>人力管理</item>
+        <item>財務</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="arr_business_trends">
+        <item>技術</item>
+        <item>物流</item>
+        <item>營銷</item>
+        <item>能量</item>
+        <item>農業</item>
+        <item>商業</item>
+        <item>電子商務</item>
+        <item>其他</item>
+    </string-array>
+
+    <string name="str_create_photo">創建照片</string>
+    <string name="str_square">正方形</string>
+    <string name="str_original">原來的</string>
+    <string name="str_wallpaper">牆紙</string>
+    <string name="str_set_wallpaper">設置壁紙</string>
+    <string name="str_popular">受歡迎的</string>
+    <string name="str_see_more">查看更多</string>
+    <string name="str_see_more_1">…查看更多</string>
+    <string name="str_fashion_title">時尚</string>
+    <string name="str_relax_title">放鬆</string>
+    <string name="str_techlogy_title">技術</string>
+    <string name="txt_random">隨機的</string>
+
+    <string-array name="arr_art_page">
+        <item>生成藝術</item>
+        <item>壁紙</item>
+    </string-array>
+    <string name="str_title_exit_app">你確定要離開？</string>
+
+    <string name="str_choose_action">選擇操作：</string>
+    <string name="str_open_camera">打開相機</string>
+    <string name="str_select_photo">轉到照片</string>
+    <string name="str_recognize">識別</string>
+    <string name="str_recognizing">正在識別...</string>
+    <string name="str_txt_recognize">文本識別</string>
+    <string name="str_txt_choose_image">選擇照片</string>
+    <string name="str_txt_apply_text">應用文本</string>
+    <string name="str_summary">摘要</string>
+    <string name="str_summary_sub_title">總結文件中的文本並回答其中的任何問題</string>
+    <string name="str_summary_upload_files">上傳文件</string>
+    <string name="str_summary_upload_image">上傳照片</string>
+    <string name="str_summary_upload_des1">以簡潔明了的形式表達關於某事或某人的最重要的事實或想法</string>
+    <string name="str_summary_upload_des2">提供重要要點的清晰陳述。</string>
+    <string name="str_summary_upload_des3">用幾句話表達報告、討論等中的主要觀點或事實...</string>
+    <string name="str_error_summary">出了點問題！</string>
+    <string name="str_error_summary_des">您最多只能上傳 1MB。 請升級到高級版並處理大文件。</string>
+    <string name="str_txt_unlock_premium">解鎖高級版</string>
+    <string name="str_sub_unlock_premium">由 GPT4 提供支持，無限制，無廣告</string>
+    <string name="str_no_image">沒有圖像</string>
+    <string name="str_premium_des1">由 Chat GPT-4 提供支持</string>
+    <string name="str_premium_des2">無限問題和問題 答案</string>
+    <string name="str_premium_des3">多種主題可供選擇</string>
+    <string name="str_premium_des4">上傳文件&amp; 詢問任何事情</string>
+    <string name="str_premium_des5">無限生成AI藝術</string>
+    <string name="str_best_choose">最佳選擇</string>
+    <string name="str_file_summary">文件摘要：</string>
+    <string name="str_summary_text">摘要文本</string>
+    <string name="str_your_chats">您的聊天記錄</string>
+    <string name="str_out_of_times_summary">哦不，今天的回顧已經用完了，明天繼續使用 %d 回顧！ 繼續使用應用程序上無限制的其他功能。</string>
+    <string name="str_intro_summary">您只能上傳大小小於 %dMB 的 pdf 文件。</string>
+    <string name="str_uploading">正在上傳...</string>
+    <string name="str_upload_s_photo">上傳 %d 張照片</string>
+    <string name="str_upload_photo_msg">一次上傳只能選擇 3 張照片。</string>
+    <string name="txt_continue_to_summary">繼續摘要</string>
+    <string name="txt_premium_topic"><b><font color='#4AE89F'>各種</font></b>可供選擇的主題</string>
+    <string name="txt_premium_upload_file"><b><font color='#4AE89F'>上傳文件</font></b> &amp; 詢問任何事情</string>
+    <string name="txt_premium_generate_art"><b><font color='#4AE89F'>解鎖</font></b>一代AI藝術</string>
+    <string name="str_summary_now">現在總結!</string>
+    <string name="str_i_got_it">我得到了它</string>
+    <string name="str_mes_loading_summary_file">人工智能會從您的文件中學習，這可能需要一段時間，具體取決於文檔的大小。</string>
+    <string name="str_go_to_chat">去聊天</string>
+    <string name="str_exists_file_mes">文件已存在，請返回聊天。</string>
+
+    <string-array name="arr_strategy_type">
+        <item>內容營銷</item>
+        <item>IMC（整合營銷傳播）</item>
+        <item>電子商務營銷</item>
+        <item>社交媒體營銷</item>
+    </string-array>
+
+    <string-array name="arr_interviewer_detail">
+        <item>背景 &amp; 經驗</item>
+        <item>領導力</item>
+        <item>職業目標</item>
+        <item>技術技能</item>
+        <item>批判性思維</item>
+        <item>心態</item>
+    </string-array>
+
+    <string-array name="arr_key_segment">
+        <item>優勢</item>
+        <item>弱點</item>
+        <item>銷售策略</item>
+        <item>營銷策略</item>
+        <item>聲音份額</item>
+        <item>收入</item>
+    </string-array>
+
+    <string-array name="arr_tone_voice">
+        <item>正式</item>
+        <item>樂觀</item>
+        <item>友好</item>
+        <item>鼓舞人心</item>
+        <item>自信</item>
+        <item>合作</item>
+    </string-array>
+
+    <string-array name="arr_genre_song">
+        <item>獨立</item>
+        <item>RnB</item>
+        <item>流行音樂</item>
+        <item>國家</item>
+        <item>搖滾</item>
+        <item>古典</item>
+        <item>金屬</item>
+        <item>爵士樂</item>
+        <item>民謠</item>
+        <item>藍色</item>
+    </string-array>
+
+    <string-array name="arr_mood_song">
+        <item>快樂</item>
+        <item>精力充沛</item>
+        <item>抑鬱症</item>
+        <item>焦慮/悲傷</item>
+        <item>軟</item>
+        <item>硬</item>
+        <item>浪漫</item>
+        <item>平靜</item>
+    </string-array>
+
+    <string-array name="arr_media_plalform">
+        <item>領英</item>
+        <item>Instagram</item>
+        <item>臉書</item>
+        <item>推特</item>
+    </string-array>
+
+    <string-array name="arr_media_goal">
+        <item>參與度</item>
+        <item>展示次數</item>
+    </string-array>
+    <string-array name="arr_gender">
+        <item>男性</item>
+        <item>女性</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="arr_outfit_designer_style">
+        <item>復古</item>
+        <item>哥特式</item>
+        <item>情緒</item>
+        <item>科技服裝</item>
+        <item>Hypebeast</item>
+        <item>復古</item>
+        <item>經典</item>
+        <item>舊錢</item>
+        <item>街頭服飾</item>
+        <item>卡哇伊</item>
+        <item>極簡主義</item>
+        <item>搖滾</item>
+    </string-array>
+
+    <string-array name="arr_information_horoscope">
+        <item>愛</item>
+        <item>職業生涯</item>
+        <item>特徵</item>
+        <item>匹配生肖</item>
+    </string-array>
+
+    <string-array name="arr_information_travel">
+        <item>食物</item>
+        <item>國定假日</item>
+        <item>文化</item>
+        <item>場景</item>
+    </string-array>
+
+    <string-array name="language_programing">
+        <item>SQL</item>
+        <item>Java</item>
+        <item>Java 腳本</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>Python</item>
+        <item>PHP</item>
+        <item>紅寶石</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="arr_techniques_cooking">
+        <item>烘烤</item>
+        <item>小火煮</item>
+        <item>沸騰</item>
+        <item>脫釉</item>
+        <item>炒</item>
+        <item>其他</item>
+    </string-array>
+
+    <string name="str_marketing_plan">營銷計劃</string>
+    <string name="str_marketing_plan_detail">在營銷您的產品時遇到困難？讓 ChatGPT 幫助您</string>
+    <string name="str_marketing_plan_ques">你是一位商業專家。向我建議 %s 的營銷計劃。產品是 %s。該活動的目標是%s。我想要實施的策略類型是 %s 活動。</string>
+    <string name="str_interviewer_support">面試官支持</string>
+    <string name="str_interviewer_support_detail">使用 ChatGPT 一秒獲取面試問題</string>
+    <string name="str_interviewer_support_ques">您是一名人力資源招聘人員。向我建議 %s 的 10 個問題。要求包括 %s。</string>
+    <string name="str_competitors_research">競爭對手研究</string>
+    <string name="str_competitors_research_detail">讓 ChatGPT 對您的競爭對手進行研究</string>
+    <string name="str_competitors_research_ques">您是一名市場研究員。對 %s 行業中的 %s 進行競爭對手研究，關鍵產品/服務是 %s。該研究應包括 %s。</string>
+    <string name="str_customers_insights_research">客戶洞察研究</string>
+    <string name="str_customers_insights_research_detail">想更多地了解您的客戶嗎？</string>
+    <string name="str_customers_insights_research_ques">您是一位專業的營銷專家。對 %s 的受眾進行客戶洞察研究。研究應包括具有以下特徵的人：%s、%s、%s。</string>
+    <string name="str_write_paragraph">寫一段話</string>
+    <string name="str_write_paragraph_detail">ChatGPT 可以立即寫出精彩的段落</string>
+    <string name="str_write_paragraph_ques">你是一位職業作家。用%s的語氣給我寫一段%s。該段落應位於 %s 中。</string>
+    <string name="str_write_song_lyrics">寫一首歌詞</string>
+    <string name="str_write_song_lyrics_detail">使用 ChatGPT 成為專業歌曲作曲家</string>
+    <string name="str_write_song_lyrics_ques">你是一位專業的音樂作曲家。給我寫一首主題為%s 的歌曲。這首歌應該是 %s 的音樂，帶有 %s 的心情。</string>
+    <string name="str_write_social_media_post">撰寫社交媒體帖子</string>
+    <string name="str_str_write_social_media_post_detail">使用 ChatGPT 輕鬆撰寫社交帖子</string>
+    <string name="str_str_write_social_media_post_ques">您是一名專業的社交媒體營銷人員。請在 %s 上給我寫一篇內容為 %s 的精彩帖子。該帖子的目標是以 %s 的語氣發送給 %s。</string>
+    <string name="str_write_email">寫一封電子郵件</string>
+    <string name="str_write_email_detail">讓 ChatGPT 為您寫電子郵件</string>
+    <string name="str_write_email_ques">給我寫一封電子郵件，內容為 %s。語氣應該是%s。</string>
+    <string name="str_outfit_designer">服裝設計師</string>
+    <string name="str_outfit_designer_detail">不知道今天穿什麼？讓 ChatGPT 建議您的#ootd</string>
+    <string name="str_outfit_designer_ques">您是一名造型師和服裝設計師。為我推薦 %s 風格的服裝。</string>
+    <string name="str_write_pickup_line">寫一條接機線</string>
+    <string name="str_write_pickup_line_detail">用有趣的搭訕台詞來打動你的好友</string>
+    <string name="str_write_pickup_line_ques">用 %s 用 %s 語氣給我寫一條搭訕台詞。</string>
+    <string name="str_write_joke">寫一個笑話</string>
+    <string name="str_write_joke_detail">並不是每個人都有有趣的故事可講。讓 ChatGPT 來做吧</string>
+    <string name="str_write_joke_ques">給我寫一個 %s 的笑話，上下文是 %s。</string>
+    <string name="str_horoscope_reader">星座閱讀器</string>
+    <string name="str_horoscope_reader_detail">科技是一位神秘的朋友。你不覺得嗎？</string>
+    <string name="str_horoscope_reader_ques">您是一位占星家和占星師。分析%s出生的人的星象。該信息應包括 %s。</string>
+    <string name="str_solve_math_problem">解決一道數學題</string>
+    <string name="str_solve_math_problem_detail">輕鬆獲得任何數學問題的答案</string>
+    <string name="str_solve_math_problem_ques">你是一位數學科學家。解決我以下問題：%s。</string>
+    <string name="str_history_events">歷史事件</string>
+    <string name="str_history_events_detail">探索過去發生的事件和重要里程碑</string>
+    <string name="str_history_events_ques">告訴我 %s、%s 發生的歷史事件。</string>
+    <string name="str_code_supporter">代碼支持者</string>
+    <string name="str_code_supporter_detail">正在為代碼而煩惱並想了解更多信息嗎？ ChatGPT 可以為您提供支持</string>
+    <string name="str_code_supporter_ques">你是一位傑出的編碼員。使用 %s 中 %s 的代碼支持我。</string>
+    <string name="str_latino_dishes">拉丁菜餚</string>
+    <string name="str_latino_dishes_detail">了解如何使用 ChatGPT 烹飪拉丁風味菜餚</string>
+    <string name="str_latino_dishes_ques">您是米其林三星級廚師。給我推薦拉丁風味菜餚。這道菜是 %s，採用 %s 技術。成分應包括%s。向我建議 %s 人的材料數量。</string>
+    <string name="str_african_dishes">非洲菜餚</string>
+    <string name="str_african_dishes_detail">通過 ChatGPT 學習如何烹飪非洲菜餚</string>
+    <string name="str_african_dishes_ques">您是米其林三星級廚師。給我推荐一道非洲菜。這道菜是 %s，採用 %s 技術。成分應包括%s。向我建議 %s 人的材料數量。</string>
+    <string name="str_asian_dishes">亞洲菜餚</string>
+    <string name="str_asian_dishes_detail">了解如何使用 ChatGPT 烹飪亞洲菜餚</string>
+    <string name="str_asian_dishes_ques">您是米其林三星級廚師。給我推薦亞洲菜。這道菜是 %s，採用 %s 技術。成分應包括%s。向我建議 %s 人的材料數量。</string>
+    <string name="str_western_dishes">西餐</string>
+    <string name="str_western_dishes_detail">使用 ChatGPT 學習如何烹飪西餐</string>
+    <string name="str_western_dishes_ques">您是米其林三星級廚師。給我推荐一道西餐。這道菜是 %s，採用 %s 技術。成分應包括%s。向我建議 %s 人的材料數量。</string>
+    <string name="str_travel_destination">旅行目的地</string>
+    <string name="str_travel_destination_detail">ChatGPT 可以建議您旅行目的地的所有簽名！</string>
+    <string name="str_travel_destination_ques">你是一名導遊。建議我 %s 應該在 %s 中探索。</string>
+    <string name="str_travel_experience">旅行經歷</string>
+    <string name="str_travel_experience_detail">ChatGPT 建議的旅行提示和技巧！</string>
+    <string name="str_travel_experience_ques">你是一名導遊。向我建議一些前往 %s 旅行時與 %s 相關的提示。</string>
+    <string name="str_brand_name">品牌</string>
+    <string name="str_product_services">產品/服務</string>
+    <string name="str_goals">目標</string>
+    <string name="str_position">位置</string>
+    <string name="str_details">細節</string>
+    <string name="str_name">姓名</string>
+    <string name="str_industry">行業</string>
+    <string name="str_key_segment">關鍵環節</string>
+    <string name="str_age">年齡</string>
+    <string name="str_gender">性別</string>
+    <string name="str_region">地區</string>
+    <string name="str_subject">主題</string>
+    <string name="str_length">長度</string>
+    <string name="str_context">語境</string>
+    <string name="str_genre">類型</string>
+    <string name="str_mood">情緒</string>
+    <string name="str_platform">平台</string>
+    <string name="str_style">風格</string>
+    <string name="str_language">語言</string>
+    <string name="str_information">信息</string>
+    <string name="str_tone_of_voice">說話的語氣</string>
+    <string name="str_year">年</string>
+    <string name="str_birth_date">出生日期/時間</string>
+    <string name="str_country_region">國家/地區</string>
+    <string name="str_issue">問題</string>
+    <string name="str_dishes">菜餚</string>
+    <string name="str_techniques">技巧</string>
+    <string name="str_ingredients">原料</string>
+    <string name="str_potion">藥水</string>
+    <string name="str_context_strategy_type">您想要實施哪些策略類型？</string>
+    <string name="str_context_position">建議我面試這個職位的 10 個問題</string>
+    <string name="str_context_name">您想看看哪個競爭對手？</string>
+    <string name="str_context_product_services">您想向受眾提供哪些產品/服務？</string>
+    <string name="str_context_subject">你的段落是關於什麼的？</string>
+    <string name="str_context_song">你的歌是關於什麼的？</string>
+    <string name="str_context_post_media">你的帖子是關於什麼的？</string>
+    <string name="str_context_gmail">您的電子郵件是關於什麼的？</string>
+    <string name="str_context_style">您目前喜歡哪種風格？</string>
+    <string name="str_context_joke">你的笑話是關於什麼的？</string>
+    <string name="str_context_birth_date_time">您的出生時間和日期是哪一天？</string>
+    <string name="str_context_information">你想了解你什麼？</string>
+    <string name="str_context_solve_math_problem">你的數學問題是什麼？</string>
+    <string name="str_context_issue">您對此有何擔憂？</string>
+    <string name="str_context_dishes">你打算煮什麼菜？</string>
+    <string name="str_context_techniques">您打算使用哪種技術來製作這道菜？</string>
+    <string name="str_context_ingredients">您想在這道菜中使用什麼類型的食材？</string>
+    <string name="str_context_potion">您想為多少人（人）做這道菜？</string>
+    <string name="str_context_information_travel">你想探索什麼？</string>
+    <string name="str_context_information_travel2">去這個地方旅行時你想知道什麼？</string>
+    <string name="str_context_country">你打算去哪裡？</string>
+    <string name="str_select_model">選擇型號：</string>
+    <string name="str_message_model_3_5">GPT–3.5 模型優化了各種與文本相關的活動的性能和效率。</string>
+    <string name="str_reasoning">推理</string>
+    <string name="str_speed">速度</string>
+    <string name="str_concisenes">簡潔</string>
+    <string name="str_message_model_4">GPT–4 模型在需要改進推理、理解精確指令和增強想像力的活動中表現良好。</string>
+    <string name="str_you_may_be_interested_in_these_questions">您可能對這些問題感興趣：</string>
+    <string name="str_close">關閉</string>
+    <string name="str_preview_your_files">如果您想\n預覽您的文件，請單擊此處</string>
+    <string name="str_has_your_payment_expired">您的付款\n是否已過期？</string>
+    <string name="str_has_your_payment_sale">獨家優惠\n正在給您打電話！！</string>
+    <string name="str_has_your_payment_cancel">不要錯過 \n 超值優惠！</string>
+    <string name="str_oh_no">哦，不！</string>
+    <string name="str_great">太棒了！！！</string>
+    <string name="str_welcome_back">歡迎回來！</string>
+    <string name="str_super_sale">超級促銷</string>
+    <string name="str_limited_time_only">僅限時間</string>
+    <string name="str_the_file_no_content">該文件不包含\n內容！</string>
+    <string name="str_we_found_no_content">我們沒有找到任何內容或沒有足夠的內容來總結。 請嘗試另一個文件。</string>
+    <string name="str_msg_free_message">賺取 %d 條免費消息</string>
+    <string name="str_msg_free_summary">賺取 %d 免費摘要</string>
+    <string name="str_msg_free_generate_art">賺取 %d 免費生成藝術品</string>
+
+    <string name="str_msg_sale_weekly_t3">自動 - 每週訂閱續訂費用</string>
+    <string name="str_intro_gpt_4"><![CDATA[ 技術支持 <br><b> <font color=#FFFFFF>GPT-4</font></b>]]></string>
+    <string name="str_intro_topic"><![CDATA[ 各種 <br><b> <font color=#FFFFFF>主題</font></b>]]></string>
+    <string name="str_intro_image_to_text"><![CDATA[ 圖像到 <br><b> <font color=#FFFFFF> 文本 (OCR) </font></b>]]></string>
+    <string name="str_intro_free_ads"><![CDATA[ 免費 <br><b> <font color=#FFFFFF> 100% 廣告 </font></b>]]></string>
+    <string name="str_intro_unlimit_art"><![CDATA[無限<br><b> <font color=#FFFFFF>人工智能藝術</font></b>]]></string>
+    <string name="str_intro_upload_file"><![CDATA[上傳文件<br><b> <font color=#FFFFFF>詢問任何內容</font></b>]]></string>
+    <string name="str_detail_price_yearly_new"> 然後 %s/年，自動更新。 </string>
+    <string name="txt_yearly">每年</string>
+    <string name="txt_start_yeal_auto">自動續訂訂閱每年收費</string>
+</resources>
