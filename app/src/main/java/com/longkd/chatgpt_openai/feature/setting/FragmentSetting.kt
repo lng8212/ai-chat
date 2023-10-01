@@ -1,3 +1,9 @@
+/*
+ * Created by longkd on 10/1/23, 11:50 AM
+ * Copyright (c) by Begamob.com 2023 . All rights reserved.
+ * Last modified 10/1/23, 11:46 AM
+ */
+
 package com.longkd.chatgpt_openai.feature.setting
 
 import android.content.BroadcastReceiver
@@ -55,14 +61,6 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
 
     override fun initActions() {
         mBinding?.apply {
-            fmSettingUpdateItemRestore.setOnSingleClick {
-            }
-            fmSettingUpdateItemAbout.setOnSingleClick {
-                UtilsApp.openBrowser(
-                    context,
-                    "https://play.google.com/store/apps/dev?id=6788597056868513100"
-                )
-            }
             fmSettingUpdateItemPrivacy.setOnSingleClick {
                 UtilsApp.openBrowser(context, Constants.URL_POLICY)
             }

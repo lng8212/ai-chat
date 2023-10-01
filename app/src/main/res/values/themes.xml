@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.BaseProject" parent="Theme.AppCompat.Light.NoActionBar" />
-
-    <style name="Theme.Splash" parent="@style/Theme.BaseProject">
-        <item name="android:windowBackground">@drawable/bg_splash</item>
-    </style>
-
     <style name="BottomNavigationViewTextStyle">
         <item name="android:fontFamily">@font/font_medium</item>
     </style>
