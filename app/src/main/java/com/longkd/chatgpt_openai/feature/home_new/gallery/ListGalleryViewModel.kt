@@ -23,12 +23,16 @@ import com.longkd.chatgpt_openai.base.model.ChatType
 import com.longkd.chatgpt_openai.base.model.ModelData
 import com.longkd.chatgpt_openai.base.model.SummaryData
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
+import javax.inject.Inject
 
-class ListGalleryViewModel(
+@HiltViewModel
+class ListGalleryViewModel
+    @Inject constructor(
     private val dataRepository: DataRepository
 ) : BaseViewModel(dataRepository) {
 

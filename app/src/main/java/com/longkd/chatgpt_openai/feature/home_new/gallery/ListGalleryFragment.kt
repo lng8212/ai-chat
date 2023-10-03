@@ -10,6 +10,7 @@ import android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.longkd.chatgpt_openai.MyApp
@@ -21,17 +22,18 @@ import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentListGallaryBinding
 import com.longkd.chatgpt_openai.feature.chat.ChatDetailFragment
 import com.longkd.chatgpt_openai.base.model.SummaryData
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.TextRecognizer
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.PermissionUtils
+import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 
+@AndroidEntryPoint
 class ListGalleryFragment :
     BaseFragment<FragmentListGallaryBinding>(R.layout.fragment_list_gallary) {
-    private var mViewModel: ListGalleryViewModel? = null
+    private val mViewModel: ListGalleryViewModel by viewModels()
     private var fromType: String? = null
     private lateinit var adapter: GalleryAdapter
     var onClickItem: ((uri: String?) -> Unit)? = null
@@ -39,11 +41,6 @@ class ListGalleryFragment :
     override fun initViews() {
         fromType = arguments?.getString(KEY_GALLERY)
         validatePermission()
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[ListGalleryViewModel::class.java]
-        }
         context?.let { mViewModel?.getAllImages(it) }
         when (fromType) {
             Constants.GALLERY_TYPE.OCR -> {

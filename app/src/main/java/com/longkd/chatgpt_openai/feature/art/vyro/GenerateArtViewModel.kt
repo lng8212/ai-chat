@@ -12,11 +12,14 @@ import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.feature.art.vyro.adapter.AspectRatioData
 import com.longkd.chatgpt_openai.open.client.OpenAiService
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class GenerateArtViewModel(val dataRepository: DataRepository) : BaseViewModel(
+@HiltViewModel
+class GenerateArtViewModel @Inject constructor(val dataRepository: DataRepository) : BaseViewModel(
     dataRepository
 ) {
     val versionGenerate = MutableLiveData<String>()

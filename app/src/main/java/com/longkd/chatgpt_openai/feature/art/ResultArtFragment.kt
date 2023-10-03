@@ -14,13 +14,13 @@ import android.os.CountDownTimer
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.model.ErrorType
 import com.longkd.chatgpt_openai.base.model.GenerateArtByVyroRequest
 import com.longkd.chatgpt_openai.base.model.ResultDataDto
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentResultArtBinding
 import com.longkd.chatgpt_openai.dialog.DialogFailArt
@@ -31,9 +31,11 @@ import com.bumptech.glide.request.transition.Transition
 import com.longkd.chatgpt_openai.base.util.CommonAction
 import com.longkd.chatgpt_openai.base.util.Strings
 import com.longkd.chatgpt_openai.base.util.WatermarkImageDownloader
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragment_result_art) {
-    private var mViewModel: ResultArtViewModel? = null
+    private val mViewModel: ResultArtViewModel by viewModels()
     private var countDownTimer: CountDownTimer? = null
     private val TIMER_DEFAULT = 160000L
     private val TIMER_COLOR = 10000L
@@ -80,11 +82,6 @@ class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragme
     }
 
     override fun initViews() {
-        mViewModel = activity?.let {
-            ViewModelProvider(
-                it, DataViewModelFactory(context = it)
-            )[ResultArtViewModel::class.java]
-        }
         initTimer()
         prompt = arguments?.getString(KEY_PROMPT, "") ?: Strings.EMPTY
         modelId = arguments?.getString(KEY_MODEL_ID, "") ?: Strings.EMPTY

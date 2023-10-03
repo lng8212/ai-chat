@@ -18,11 +18,13 @@ import com.longkd.chatgpt_openai.base.util.MyActivityObserver
 import com.longkd.chatgpt_openai.databinding.ActivityMainBinding
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileFragment
 import com.longkd.chatgpt_openai.service.RemindAlarmReceiver
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+@AndroidEntryPoint
 @Suppress("SameParameterValue")
 class MainActivity : BaseActivity() {
     private var mBinding: ActivityMainBinding? = null

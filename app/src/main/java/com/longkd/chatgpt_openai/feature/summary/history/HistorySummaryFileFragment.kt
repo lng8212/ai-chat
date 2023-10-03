@@ -1,12 +1,12 @@
 package com.longkd.chatgpt_openai.feature.summary.history
 
 import android.os.Bundle
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.CommonAction
 import com.longkd.chatgpt_openai.base.util.gone
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
@@ -16,9 +16,11 @@ import com.longkd.chatgpt_openai.dialog.DialogConfirmDeleteChat
 import com.longkd.chatgpt_openai.feature.MainActivity
 import com.longkd.chatgpt_openai.feature.chat.ChatDetailFragment
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class HistorySummaryFileFragment: BaseFragment<FragmentHistorySummaryFileBinding>(R.layout.fragment_history_summary_file) {
-    private var mViewModel: SummaryFileViewModel? = null
+@AndroidEntryPoint
+class HistorySummaryFileFragment : BaseFragment<FragmentHistorySummaryFileBinding>(R.layout.fragment_history_summary_file) {
+    private val mViewModel: SummaryFileViewModel by viewModels()
     private var isDeleteSummary: Boolean = false
     private lateinit var adapter: HistorySummaryAdapter
 
@@ -87,11 +89,6 @@ class HistorySummaryFileFragment: BaseFragment<FragmentHistorySummaryFileBinding
     }
 
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[SummaryFileViewModel::class.java]
-        }
         mViewModel?.getAllSummaryFile()
         observerData()
     }

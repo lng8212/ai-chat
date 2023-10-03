@@ -1,18 +1,19 @@
 package com.longkd.chatgpt_openai.feature.art
 
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.CommonAction
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
 import com.longkd.chatgpt_openai.databinding.FragmentMoreStyleArtBinding
 import com.longkd.chatgpt_openai.feature.home.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MoreStyleArtFragment :
     BaseFragment<FragmentMoreStyleArtBinding>(R.layout.fragment_more_style_art) {
     companion object {
@@ -25,13 +26,8 @@ class MoreStyleArtFragment :
     }
     private var currentStyleArt : StyleArtDto? = null
 
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     override fun initViews() {
-        mViewModel = activity?.let {
-            ViewModelProvider(
-                it, DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
-        }
         val list = arrayListOf<StyleArtDto>()
         list.addAll(StyleArtHelper.getListStyleArt(context))
         var adapter: StyleArtAdapter? = null

@@ -22,7 +22,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.longkd.chatgpt_openai.BR
@@ -31,7 +31,6 @@ import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.data.TopicDto
 import com.longkd.chatgpt_openai.base.model.*
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
 import com.longkd.chatgpt_openai.databinding.FragmentChatWithTopicBinding
@@ -52,6 +51,7 @@ import com.longkd.chatgpt_openai.base.util.Strings
 import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.base.util.orZero
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -59,8 +59,9 @@ import kotlinx.coroutines.withContext
 import java.util.*
 import kotlin.collections.ArrayList
 
+@AndroidEntryPoint
 class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout.fragment_chat_with_topic) {
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     private var mAdapter: ChatDetailAdapter? = null
     private var mRequestSpeech: ActivityResultLauncher<Intent>? = null
     private var mSpeechRecognizer: SpeechRecognizer? = null
@@ -353,12 +354,6 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
 
     @SuppressLint("SetTextI18n", "StringFormatMatches", "SuspiciousIndentation")
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this,
-                DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
-        }
         mBinding?.setVariable(BR.mViewModel, mViewModel)
         lifecycleScope.launch(Dispatchers.Main) {
             showLoading()

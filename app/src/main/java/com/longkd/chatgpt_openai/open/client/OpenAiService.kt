@@ -32,6 +32,8 @@ import com.longkd.chatgpt_openai.base.model.ImageStyleResponse
 import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.TopicResponse
 import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -167,7 +169,7 @@ class OpenAiService {
 
     fun uploadSummaryFile(filepath: String): SummaryFileResponse? {
         val mFile = java.io.File(filepath)
-        val fileBody = RequestBody.create(MediaType.parse("application/pdf"), mFile)
+        val fileBody = RequestBody.create("application/pdf".toMediaTypeOrNull(), mFile)
         val body: MultipartBody.Part = MultipartBody.Part.createFormData("file", mFile.name, fileBody)
         return api.uploadSummaryFile(body).blockingGet()
     }
@@ -211,7 +213,7 @@ class OpenAiService {
     fun uploadFile(purpose: String?, filepath: String): File? {
         val file = java.io.File(filepath)
         val purposeBody = RequestBody.create(MultipartBody.FORM, purpose!!)
-        val fileBody = RequestBody.create(MediaType.get("text"), file)
+        val fileBody = RequestBody.create("text".toMediaType(), file)
         val body: MultipartBody.Part = MultipartBody.Part.createFormData("file", filepath, fileBody)
         return api.uploadFile(purposeBody, body).blockingGet()
     }
@@ -278,16 +280,16 @@ class OpenAiService {
         image: java.io.File?,
         mask: java.io.File?
     ): ImageResult? {
-        val imageBody = RequestBody.create(MediaType.parse("image"), image)
+        val imageBody = image?.let { RequestBody.create("image".toMediaTypeOrNull(), it) }
         val builder: MultipartBody.Builder = MultipartBody.Builder()
-            .setType(MediaType.get("multipart/form-data"))
+            .setType("multipart/form-data".toMediaType())
             .addFormDataPart("prompt", request.prompt)
             .addFormDataPart("size", request.size)
             .addFormDataPart("response_format", request.responseFormat)
-            .addFormDataPart("image", "image", imageBody)
+            .addFormDataPart("image", "image", imageBody!!)
         builder.addFormDataPart("n", request.n.toString())
         if (mask != null) {
-            val maskBody = RequestBody.create(MediaType.parse("image"), mask)
+            val maskBody = RequestBody.create("image".toMediaTypeOrNull(), mask)
             builder.addFormDataPart("mask", "mask", maskBody)
         }
         return api.createImageEdit(builder.build()).blockingGet()
@@ -305,9 +307,9 @@ class OpenAiService {
         request: CreateImageVariationRequest,
         image: java.io.File?
     ): ImageResult? {
-        val imageBody = RequestBody.create(MediaType.parse("image"), image!!)
+        val imageBody = RequestBody.create("image".toMediaTypeOrNull(), image!!)
         val builder: MultipartBody.Builder = MultipartBody.Builder()
-            .setType(MediaType.get("multipart/form-data"))
+            .setType("multipart/form-data".toMediaType())
             .addFormDataPart("size", request.size)
             .addFormDataPart("response_format", request.responseFormat)
             .addFormDataPart("image", "image", imageBody)
@@ -338,7 +340,7 @@ class OpenAiService {
     }
 
     companion object {
-        private const val BASE_URL = "http://10.0.2.2:8080"
+        private const val BASE_URL = "http://10.0.2.2:8088"
         private const val BASE_URL_ART = "https://aiapi-art.longkd.com"
         private const val BASE_URL_IMAGE = "https://images-server.longkd.com/"
     }

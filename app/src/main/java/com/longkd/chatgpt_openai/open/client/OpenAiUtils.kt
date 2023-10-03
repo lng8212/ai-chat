@@ -3,7 +3,6 @@ package com.longkd.chatgpt_openai.open.client
 import android.os.Build
 import com.longkd.chatgpt_openai.BuildConfig
 import com.google.android.gms.common.annotation.KeepName
-import okhttp3.internal.Version
 
 object OpenAiUtils {
     @KeepName
@@ -17,5 +16,5 @@ object OpenAiUtils {
                 "Build:${BuildConfig.VERSION_CODE}/" +
                 "VersionSDK:${Build.VERSION.SDK_INT}/" +
                 "OS:Android/" +
-                "UserAgent:${Version.userAgent()}"
+                "UserAgent:${System.getProperty("http.agent")}"
 }

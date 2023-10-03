@@ -13,23 +13,6 @@ import kotlinx.coroutines.withContext
  * @Param coreDao
  */
 open class DataRepository(private val coreDao: CoreDao) {
-    companion object {
-
-        @Volatile
-        private var instance: DataRepository? = null
-
-        fun getInstance(context: Context): DataRepository? {
-            return instance ?: synchronized(this) {
-                if (instance == null) {
-                    val database = ChatDatabase.getInstance(context)
-                    instance = DataRepository(database.demoDao())
-
-                }
-                return instance
-            }
-        }
-    }
-
     suspend fun insertChat(chatBaseDto: ChatBaseDto) {
         withContext(Dispatchers.IO) {
             coreDao.insertChat(chatBaseDto)

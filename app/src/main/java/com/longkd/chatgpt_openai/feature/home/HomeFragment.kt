@@ -4,13 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.HomeFragmentBinding
 import com.longkd.chatgpt_openai.feature.ShareDataViewModel
@@ -26,14 +25,14 @@ import com.longkd.chatgpt_openai.base.util.CommonAction
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.TopicsUtils
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     private val mShareDataViewModel: ShareDataViewModel by activityViewModels()
     private var chatDetailDto: ChatDetailDto? = null
 
@@ -121,11 +120,6 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
 
     @SuppressLint("SetTextI18n")
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
-        }
         mViewModel?.callGetTimeStamp()
         val isShowIntro = CommonSharedPreferences.getInstance(context)
             .getBoolean(Constants.FIRST_SHOW_INTRO, true)

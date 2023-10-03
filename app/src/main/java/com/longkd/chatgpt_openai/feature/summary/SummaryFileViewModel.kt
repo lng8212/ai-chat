@@ -20,11 +20,14 @@ import com.longkd.chatgpt_openai.base.model.ChatType
 import com.longkd.chatgpt_openai.base.model.ModelData
 import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class SummaryFileViewModel(
+@HiltViewModel
+class SummaryFileViewModel @Inject constructor(
     private val dataRepository: DataRepository
 ) : BaseViewModel(dataRepository) {
 

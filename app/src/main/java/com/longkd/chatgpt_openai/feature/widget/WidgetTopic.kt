@@ -14,14 +14,19 @@ import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.feature.splash.SplashActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class WidgetTopic : AppWidgetProvider() {
     private var mContext: Context? = null
+
+    @Inject
+    lateinit var dataRepository: DataRepository
 
     companion object {
         val ACTION_UPDATE = "com.longkd.chatgpt_openai.feature.widget.ACTION_UPDATE"
@@ -65,7 +70,6 @@ class WidgetTopic : AppWidgetProvider() {
                 val views: RemoteViews =
                     RemoteViews(context.packageName, R.layout.layout_widget_topic).apply {
                         MainScope().launch(Dispatchers.Default) {
-                            val dataRepository = DataRepository.getInstance(context)
                             withContext(Dispatchers.Default) {
                                 val dto = dataRepository?.getChatDto()
                                 dto?.chatDetail?.lastOrNull()?.let {
@@ -76,17 +80,16 @@ class WidgetTopic : AppWidgetProvider() {
                                     val intent = Intent(context, SplashActivity::class.java)
                                     intent.action = Constants.KEY_WIDGET_CLICK
                                     intent.putExtra(Constants.KEY_WIDGET_CLICK, dto.chatId)
-                                    intent.putExtra(TYPE_HISTORY,true)
+                                    intent.putExtra(TYPE_HISTORY, true)
                                     intent.putExtra("widget", WidgetTopic.ACTION)
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-                                    val pending = UtilsApp.getActivityIntent(context, 969696, intent)
+                                    val pending =
+                                        UtilsApp.getActivityIntent(context, 969696, intent)
                                     setOnClickPendingIntent(
                                         R.id.layoutWidgetTvLastChat,
                                         pending
                                     )
-                                }
-
-                                else
+                                } else
                                     setOnClickPendingIntent(
                                         R.id.layoutWidgetTvLastChat,
                                         createPendingIntent(context)

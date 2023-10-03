@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
 }
 android {
     compileSdk 33
@@ -14,6 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:8088\"")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", "Chatgpt-openai-$versionName")
         externalNativeBuild {// For ndk-build, instead use the ndkBuild block.
@@ -104,7 +106,6 @@ dependencies {
     compileOnly("com.google.auto.service:auto-service-annotations:$autoService")
 
     implementation("com.squareup.okio:okio:3.3.0")
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'com.github.bumptech.glide:glide:4.14.2'
@@ -113,6 +114,15 @@ dependencies {
         // Excludes the support library because it's already included by Glide.
         transitive = false
     }
+    // Hilt DI
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+    implementation "com.google.code.gson:gson:2.10.1"
+
     kapt 'com.github.bumptech.glide:compiler:4.14.2'
     implementation 'com.airbnb.android:lottie:5.2.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'

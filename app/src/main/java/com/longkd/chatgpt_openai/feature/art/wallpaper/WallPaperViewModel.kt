@@ -4,8 +4,12 @@ import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
 import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class WallPaperViewModel(
+
+@HiltViewModel
+class WallPaperViewModel @Inject constructor(
     private val dataRepository: DataRepository
 ) : BaseViewModel(dataRepository) {
 

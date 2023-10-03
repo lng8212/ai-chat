@@ -6,12 +6,10 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.TypedValue
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentHomeArtBinding
 import com.longkd.chatgpt_openai.feature.home.HomeViewModel
@@ -19,15 +17,18 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import com.longkd.chatgpt_openai.dialog.DialogFailArt
 import com.google.android.flexbox.FlexboxLayout
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.UtilsApp
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
+@AndroidEntryPoint
 @Suppress("IMPLICIT_BOXING_IN_IDENTITY_EQUALS")
 class HomeArtFragment : BaseFragment<FragmentHomeArtBinding>(R.layout.fragment_home_art) {
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     private var adapter: StyleArtAdapter? = null
     private var currentListStyleArt = arrayListOf<StyleArtDto>()
     private var selectedItems: SizeImageData? = null
@@ -61,11 +62,6 @@ class HomeArtFragment : BaseFragment<FragmentHomeArtBinding>(R.layout.fragment_h
                     mBinding?.llnViewArtContainer?.setPadding(0, 0, 0, 0)
                 }
             }
-        }
-        mViewModel = activity?.let {
-            ViewModelProvider(
-                it, DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
         }
         initAdapter()
         mBinding?.fmHomeArtEdtPrompt?.addTextChangedListener(object : TextWatcher {

@@ -1,18 +1,20 @@
 package com.longkd.chatgpt_openai.feature.art.wallpaper
 
 import android.os.Bundle
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentWallpapersBinding
 import com.longkd.chatgpt_openai.base.util.Constants
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class WallPapersFragment: BaseFragment<FragmentWallpapersBinding>(R.layout.fragment_wallpapers) {
-    private var viewModel: WallPaperViewModel? = null
+    private val viewModel: WallPaperViewModel by viewModels()
     private lateinit var mAdapter: WallPaperAdapter
     private lateinit var mAdapterGenerate: WallPaperAdapter
     override fun initViews() {
@@ -48,11 +50,6 @@ class WallPapersFragment: BaseFragment<FragmentWallpapersBinding>(R.layout.fragm
     override var initBackAction: Boolean = false
 
     override fun initData() {
-        viewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[WallPaperViewModel::class.java]
-        }
 
         mAdapter = WallPaperAdapter(viewModel?.listWallPaper ?: mutableListOf(), object :
             ItemClickListener<WallPaperData> {

@@ -30,15 +30,20 @@ import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.DateUtils
 import com.longkd.chatgpt_openai.base.util.LoggerUtil
 import com.longkd.chatgpt_openai.base.util.convertToChatBaseDto
+import com.longkd.chatgpt_openai.open.ChatRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 import javax.net.ssl.SSLHandshakeException
 import kotlin.collections.ArrayList
 
 
-class HomeViewModel(
-    val dataRepository: DataRepository
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val dataRepository: DataRepository,
+    private val chatRepository: ChatRepository
 ) : BaseViewModel(dataRepository) {
     private var mTimeStampService =
         TimeStampService(TOKEN, timeout = 60, type = 0)
@@ -560,9 +565,14 @@ class HomeViewModel(
                                 1, input, OpenAiService(TOKEN, timeout = Constants.TIME_OUT, type = 0), completionRequest, sharef
                             )
                         } ?: run {
-                            OpenAIHolder.callCompletion35(
-                                1, input, OpenAiService(TOKEN, timeout = Constants.TIME_OUT, type = 0), completionRequest, sharef
-                            )
+                            if (CommonSharedPreferences.getInstance().modelChatGpt == Constants.MODEL_CHAT.GPT_3_5){
+                                chatRepository.createCompletionV1Chat(completionRequest).data
+                            }
+                            else chatRepository.createCompletionV1ChatGPT4(completionRequest).data
+
+//                            OpenAIHolder.callCompletion35(
+//                                1, input, OpenAiService(TOKEN, timeout = Constants.TIME_OUT, type = 0), completionRequest, sharef
+//                            )
                         }
                     }
                 } catch (e: Throwable) {

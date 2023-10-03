@@ -24,7 +24,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.longkd.chatgpt_openai.BR
@@ -33,7 +33,6 @@ import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.data.TopicDto
 import com.longkd.chatgpt_openai.base.model.*
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
 import com.longkd.chatgpt_openai.databinding.ChatDetailsFragmentBinding
@@ -58,15 +57,17 @@ import com.longkd.chatgpt_openai.base.util.NetworkUtil
 import com.longkd.chatgpt_openai.base.util.Strings
 import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.base.util.orZero
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.*
 
+@AndroidEntryPoint
 class ChatDetailFragment :
     BaseFragment<ChatDetailsFragmentBinding>(R.layout.chat_details_fragment) {
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     private var mAdapter: ChatDetailAdapter? = null
     private var mRequestSpeech: ActivityResultLauncher<Intent>? = null
     private var mSpeechRecognizer: SpeechRecognizer? = null
@@ -578,12 +579,6 @@ class ChatDetailFragment :
 
     @SuppressLint("SetTextI18n", "StringFormatMatches", "SuspiciousIndentation")
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this,
-                DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
-        }
         mBinding?.setVariable(BR.mViewModel, mViewModel)
         handleDisplaySelectModelChat()
         updateChatHis()

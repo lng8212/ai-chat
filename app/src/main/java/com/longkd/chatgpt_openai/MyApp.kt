@@ -11,13 +11,14 @@ import com.longkd.chatgpt_openai.base.crashreport.ExErrorActivity
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.ContextUtilsLanguage
 import com.longkd.chatgpt_openai.feature.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.HiltAndroidApp
 import org.acra.ACRA
 import org.acra.config.ACRAConfigurationException
 import org.acra.data.StringFormat
 import org.acra.ktx.initAcra
 import java.lang.ref.WeakReference
-
-
+@HiltAndroidApp
 class MyApp : MultiDexApplication() {
 
     private lateinit var mContext: WeakReference<Context>

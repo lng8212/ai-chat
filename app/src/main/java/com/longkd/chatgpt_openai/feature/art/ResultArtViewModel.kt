@@ -14,11 +14,14 @@ import com.longkd.chatgpt_openai.open.client.OpenAiService
 import com.longkd.chatgpt_openai.open.client.TimeStampService
 import com.longkd.chatgpt_openai.open.dto.generate.GenerateArtRequest
 import com.longkd.chatgpt_openai.open.dto.generate.GenerateArtResult
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class ResultArtViewModel(
+@HiltViewModel
+class ResultArtViewModel @Inject constructor(
     val dataRepository: DataRepository
 ) : BaseViewModel(dataRepository) {
     private var mTimeStampService = TimeStampService(TOKEN_PAKE, timeout = 60, type = 0)

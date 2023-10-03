@@ -66,18 +66,24 @@ import com.longkd.chatgpt_openai.base.util.Strings
 import com.longkd.chatgpt_openai.base.util.gone
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.base.util.visible
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 import javax.net.ssl.SSLHandshakeException
 
 
+@AndroidEntryPoint
 class BubbleService : FloatingBubbleService(), LifecycleOwner {
 
     private lateinit var lifecycleRegistry: LifecycleRegistry
     private lateinit var layout: View
     private var actionPopToBubble : (() -> Unit)? = null
     private val mArrListPromt: ArrayList<Message35Request> = arrayListOf()
+
+    @Inject
+    lateinit var dataRepository: DataRepository
     override fun onCreate() {
         super.onCreate()
         lifecycleRegistry = LifecycleRegistry(this)
@@ -517,7 +523,6 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         valueError: String,
     ): LiveData<ResultDataDto> {
         val result: MutableLiveData<ResultDataDto> = MutableLiveData()
-        val dataRepository = DataRepository.getInstance(this)
         uiScope.launch(Dispatchers.Main) {
             val resultDataDto = ChatDetailDto(
                 "",
@@ -882,7 +887,6 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         isNewChat: Boolean,
         topicType: Int
     ): LiveData<ResultDataDto> {
-        val dataRepository = DataRepository.getInstance(this)
         val result: MutableLiveData<ResultDataDto> = MutableLiveData()
         val resultDataDto = ChatDetailDto(
             "",

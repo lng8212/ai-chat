@@ -1,6 +1,7 @@
 package com.longkd.chatgpt_openai.feature.art.vyro
 
 import android.os.Bundle
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,7 +10,6 @@ import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.model.ImageStyleData
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.databinding.FragmentGenerateArtBinding
@@ -18,17 +18,14 @@ import com.longkd.chatgpt_openai.feature.art.ResultArtFragment
 import com.longkd.chatgpt_openai.feature.art.vyro.adapter.AspectRatioAdapter
 import com.longkd.chatgpt_openai.feature.art.vyro.adapter.AspectRatioData
 import com.longkd.chatgpt_openai.feature.art.vyro.adapter.StyleGenerateAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GenerateArtFragment: BaseFragment<FragmentGenerateArtBinding>(R.layout.fragment_generate_art) {
-    private var mViewModel: GenerateArtViewModel ? = null
+    private val mViewModel: GenerateArtViewModel by viewModels()
     private lateinit var aspectRatioAdapter: AspectRatioAdapter
     private lateinit var styleAdapter: StyleGenerateAdapter
     override fun initViews() {
-        mViewModel = activity?.let {
-            ViewModelProvider(
-                it, DataViewModelFactory(context = it)
-            )[GenerateArtViewModel::class.java]
-        }
         mBinding?.setVariable(BR.mViewModel, mViewModel)
         mViewModel?.getListStyleImage()?.observe(this) {
             styleAdapter = StyleGenerateAdapter(it.data?.toMutableList()!!, object :

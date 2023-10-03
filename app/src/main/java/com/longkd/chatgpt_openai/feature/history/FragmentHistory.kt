@@ -1,13 +1,12 @@
 package com.longkd.chatgpt_openai.feature.history
 
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.model.HistoryDto
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.CommonAction
 import com.longkd.chatgpt_openai.base.util.gone
 import com.longkd.chatgpt_openai.base.util.invisible
@@ -20,10 +19,12 @@ import com.longkd.chatgpt_openai.feature.home.HomeViewModel
 import com.longkd.chatgpt_openai.feature.home.viewholder.ChatHistoryAdapter
 import com.longkd.chatgpt_openai.feature.home.viewholder.ChatItemHistoryVH
 import com.longkd.chatgpt_openai.feature.home_new.HomeNewFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FragmentHistory : BaseFragment<FragmentHistoryBinding>(R.layout.fragment_history) {
     private var mHistoryAdapter: ChatHistoryAdapter? = null
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     private val listHistory = ArrayList<HistoryDto>()
     private var homeFragment : HomeNewFragment? = null
     private var isSelectAll: Boolean = false
@@ -132,11 +133,6 @@ class FragmentHistory : BaseFragment<FragmentHistoryBinding>(R.layout.fragment_h
         return true
     }
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
-        }
         mViewModel?.getAllChatHistory()?.observe(this) {
             if (it.isNotEmpty()) {
                 mBinding?.fmHistoryHeader?.setEnableBtnRightIcon(R.drawable.ic_delete, true)

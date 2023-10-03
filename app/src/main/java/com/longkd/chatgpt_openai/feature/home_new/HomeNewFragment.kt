@@ -8,7 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,7 +19,6 @@ import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.model.*
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentNewHomeBinding
 import com.longkd.chatgpt_openai.dialog.*
@@ -41,18 +40,18 @@ import com.longkd.chatgpt_openai.base.model.TopicData
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.TopicsUtils
-import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.base.util.orZero
 import com.longkd.chatgpt_openai.feature.home_new.topic.TopicProvider
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.*
 
-
+@AndroidEntryPoint
 class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_new_home) {
-    private var mViewModel: HomeViewModel? = null
+    private val mViewModel: HomeViewModel by viewModels()
     private val mShareDataViewModel: ShareDataViewModel by activityViewModels()
     private var mIsDeviceSupported = true
     private lateinit var topicAdapter: TopicsAdapter
@@ -311,12 +310,7 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
 
     @SuppressLint("SetTextI18n")
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[HomeViewModel::class.java]
-        }
-        mViewModel?.callGetTimeStamp()
+        mViewModel.callGetTimeStamp()
         val isShowIntro = CommonSharedPreferences.getInstance(context)
             .getBoolean(Constants.FIRST_SHOW_INTRO, true)
         if (isShowIntro) {

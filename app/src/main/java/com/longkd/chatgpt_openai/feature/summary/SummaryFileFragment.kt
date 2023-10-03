@@ -5,15 +5,14 @@ import android.graphics.Rect
 import android.os.*
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
 import androidx.core.widget.doOnTextChanged
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.longkd.chatgpt_openai.MyApp
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
-import com.longkd.chatgpt_openai.base.mvvm.DataViewModelFactory
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentSummaryFileBinding
 import com.longkd.chatgpt_openai.dialog.DialogStatusSummaryFile
@@ -26,10 +25,12 @@ import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.PermissionUtils
 import com.longkd.chatgpt_openai.base.util.orZero
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SummaryFileFragment :
     BaseFragment<FragmentSummaryFileBinding>(R.layout.fragment_summary_file) {
-    private var mViewModel: SummaryFileViewModel? = null
+    private val mViewModel: SummaryFileViewModel by viewModels()
     private var isSelectFile: Boolean? = true
     private var heightToolbar: Int? = null
     private var isFirstShowIntro: Boolean = true
@@ -263,11 +264,6 @@ class SummaryFileFragment :
     }
 
     override fun initData() {
-        mViewModel = context?.let {
-            ViewModelProvider(
-                this, DataViewModelFactory(context = it)
-            )[SummaryFileViewModel::class.java]
-        }
         mViewModel?.callGetTimeStamp()
         mViewModel?.getAllSummaryFile()
         mViewModel?.resetNumberSummaryFile()
