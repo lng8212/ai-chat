@@ -5,19 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.OpenAIHolder
-import com.longkd.chatgpt_openai.base.model.*
-import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
-import com.longkd.chatgpt_openai.base.mvvm.DataRepository
-import com.longkd.chatgpt_openai.base.util.*
-import com.longkd.chatgpt_openai.feature.art.StyleArtDto
-import com.longkd.chatgpt_openai.feature.art.StyleArtHelper
-import com.longkd.chatgpt_openai.open.client.OpenAiService
-import com.longkd.chatgpt_openai.open.client.TimeStampService
-import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
-import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
-import com.longkd.chatgpt_openai.open.dto.generate.GenerateArtRequest
-import com.longkd.chatgpt_openai.open.dto.generate.GenerateArtResult
+import com.longkd.chatgpt_openai.base.model.ChatBaseDto
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.model.ChatRole
 import com.longkd.chatgpt_openai.base.model.ChatType
@@ -25,19 +13,26 @@ import com.longkd.chatgpt_openai.base.model.ErrorType
 import com.longkd.chatgpt_openai.base.model.ModelData
 import com.longkd.chatgpt_openai.base.model.ResultDataDto
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
+import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
+import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.DateUtils
 import com.longkd.chatgpt_openai.base.util.LoggerUtil
 import com.longkd.chatgpt_openai.base.util.convertToChatBaseDto
+import com.longkd.chatgpt_openai.feature.art.StyleArtDto
 import com.longkd.chatgpt_openai.open.ChatRepository
+import com.longkd.chatgpt_openai.open.client.OpenAiService
+import com.longkd.chatgpt_openai.open.client.TimeStampService
+import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
+import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.net.ssl.SSLHandshakeException
-import kotlin.collections.ArrayList
 
 
 @HiltViewModel
@@ -47,16 +42,12 @@ class HomeViewModel @Inject constructor(
 ) : BaseViewModel(dataRepository) {
     private var mTimeStampService =
         TimeStampService(TOKEN, timeout = 60, type = 0)
-    var mCurrentChatBaseDto: MutableLiveData<ChatBaseDto> = MutableLiveData()
+    private var mCurrentChatBaseDto: MutableLiveData<ChatBaseDto> = MutableLiveData()
     var mMessageMore: MutableLiveData<String> = MutableLiveData()
-    var mGenerateNumber: MutableLiveData<Int> = MutableLiveData()
     private var mTextAtTime: String = ""
-    private var mChatNumber: MutableLiveData<Int> = MutableLiveData()
     private val mHistoryList: MutableLiveData<ArrayList<ChatDetailDto>> = MutableLiveData()
     var currentStyleArt: MutableLiveData<ArrayList<StyleArtDto>> = MutableLiveData()
-    private var mGenerateArtResult: GenerateArtResult = GenerateArtResult()
-    private var position: Int = 1
-    val mArrListPromt: ArrayList<Message35Request> = arrayListOf()
+    private val mArrListPromt: ArrayList<Message35Request> = arrayListOf()
     val callChatWithTopic = MutableLiveData<Unit>()
     private val limitSavePrevConversation = CommonSharedPreferences.getInstance().limitSavePrevConversation.times(2).plus(1)
     private var isTextInputCopy: Boolean ? = null
@@ -116,9 +107,10 @@ class HomeViewModel @Inject constructor(
 
     fun initViewChatHis(chatBaseDto: ChatBaseDto) {
         chatBaseDto.let {
-            it.chatDetail.forEach {
-                val role = if (it.chatType == ChatType.SEND.value) ChatRole.USER.value else ChatRole.SYSTEM.value
-                mArrListPromt.add(Message35Request(role = role, content = "${it.message}"))
+            it.chatDetail.forEach { it ->
+                val role =
+                    if (it.chatType == ChatType.SEND.value) ChatRole.USER.value else ChatRole.SYSTEM.value
+                mArrListPromt.add(Message35Request(role = role, content = it.message))
             }
         }
         val sizeArrPromt = mArrListPromt.size.minus(limitSavePrevConversation)
@@ -130,61 +122,7 @@ class HomeViewModel @Inject constructor(
         mCurrentChatBaseDto.value = chatBaseDto
     }
 
-    fun getMessNumber(): LiveData<Int> {
-        uiScope.launch(Dispatchers.Main) {
-            val value = withContext(Dispatchers.Default) {
-                CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                    try {
-                        OpenAIHolder.getChatFreeMessage(1, it)
-                    } catch (e: Throwable) {
-                        0
-                    }
-                } ?: 0
-            }
-            mChatNumber.value = value
-        }
-        return mChatNumber
-    }
 
-    fun getGenerateNumber() {
-        uiScope.launch(Dispatchers.Main) {
-            val value = withContext(Dispatchers.Default) {
-                CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                    try {
-                        OpenAIHolder.getFreeNumberGenerate(it)
-                    } catch (e: Throwable) {
-                        0
-                    }
-                } ?: 0
-            }
-            mGenerateNumber.value = value
-        }
-    }
-
-    fun putGenerateNumber(numberGenerate: Int = 10) {
-        CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-            try {
-                OpenAIHolder.putNumberGenerate(it, numberGenerate)
-            } catch (e: Throwable) {
-
-            }
-        }
-    }
-
-    fun getMessNumberNormal(): LiveData<Int> {
-        val mChatNumber: MutableLiveData<Int> = MutableLiveData()
-        uiScope.launch(Dispatchers.Main) {
-            val value = withContext(Dispatchers.Default) {
-                CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                    try {
-                        OpenAIHolder.getChatFreeMessage(1, it)
-                    } catch (e: Throwable) { 0 }
-                } ?: 0
-            }
-            mChatNumber.value = value
-        }
-        return mChatNumber
-    }
 
     private suspend fun reFormatDate(dto: ChatBaseDto): ChatBaseDto {
         return withContext(Dispatchers.Default) {
@@ -196,18 +134,18 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun disconnectDataLinked(array: List<ChatDetailDto>): List<ChatDetailDto> {
+    private fun disconnectDataLinked(array: List<ChatDetailDto>): List<ChatDetailDto> {
         val newList: ArrayList<ChatDetailDto> = arrayListOf()
         array.forEach { dto ->
             newList.add(
                 ChatDetailDto(
-                    dto.message ?: "",
-                    dto.timeChat ?: 0,
-                    dto.timeChatString ?: "",
-                    dto.isTyping ?: false,
-                    dto.chatType ?: -1,
-                    dto.chatUserNane ?: "",
-                    dto.parentId ?: 0,
+                    dto.message,
+                    dto.timeChat,
+                    dto.timeChatString,
+                    dto.isTyping,
+                    dto.chatType,
+                    dto.chatUserNane,
+                    dto.parentId,
                     dto.isSeeMore
                 ).apply {
 
@@ -313,7 +251,7 @@ class HomeViewModel @Inject constructor(
                     mArrListPromt.add(Message35Request(ChatRole.USER.value, "$input"))
                 } else {
                     mArrListPromt.lastOrNull()?.let {
-                        it.content = "$input"
+                        it.content = input
                     }
                 }
                 if (!lastAssistantChat.isNullOrEmpty()) {
@@ -327,11 +265,7 @@ class HomeViewModel @Inject constructor(
                 completionRequest.maxTokens = 1500
                 try {
                     LoggerUtil.e("completionRequest: ${completionRequest.messages}")
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let { sharef ->
-                        OpenAIHolder.completeTopicChat(
-                            1, OpenAiService(TOKEN, timeout = Constants.TIME_OUT_TOPIC, type = 0), completionRequest, sharef
-                        )
-                    }
+                    chatRepository.completeTopicChat(completionRequest).data
                 } catch (e: Throwable) {
                     if (e.cause is SSLHandshakeException) {
                         resultText = try {
@@ -687,92 +621,12 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun createAiArt(
-        input: String,
-        modelId: String,
-        width: Int,
-        height: Int
-    ): LiveData<ResultDataDto> {
-        val result: MutableLiveData<ResultDataDto> = MutableLiveData()
-        uiScope.launch(Dispatchers.Main) {
-            val generateArtResult = withContext(Dispatchers.Default) {
-                val generateArtRequest = GenerateArtRequest()
-                generateArtRequest.model = modelId
-                generateArtRequest.messageId = ""
-                generateArtRequest.prompt = input
-                generateArtRequest.width = width
-                generateArtRequest.height = height
-                try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.generateAiArt(
-                            input,
-                            OpenAiService(TOKEN, timeout = 60, type = 0),
-                            generateArtRequest,
-                            it
-                        )
-                    }
-                } catch (e: Throwable) {
-                    e.printStackTrace()
-                    null
-                }
-            }
-            if (generateArtResult == null || generateArtResult.attachments?.get(0)?.url.isNullOrBlank()) {
-                result.value = ResultDataDto.Error(ErrorType.UNKNOWN)
-            } else {
-                mGenerateArtResult = generateArtResult
-                position = 1
-                result.value =
-                    ResultDataDto.SuccessImage(generateArtResult.attachments?.get(0)?.url ?: "")
-                CommonSharedPreferences.getInstance().setListGeneratePhoto(generateArtResult.attachments?.get(0)?.url)
-            }
-
-        }
-        return result
-
-    }
-
-    fun getListStyleArt(context: Context?) {
-        var listCurrent = arrayListOf<StyleArtDto>()
-        uiScope.launch(Dispatchers.Main) {
-            listCurrent = withContext(Dispatchers.Default) {
-                StyleArtHelper.getListStyleArt(context)
-            }
-            currentStyleArt.value = listCurrent
-        }
-    }
-
-    fun updateListStyleArt(context: Context?, data: StyleArtDto) {
-        val listCurrent = arrayListOf<StyleArtDto>()
-        var isDataExist = false
-        currentStyleArt.value?.forEach {
-            if (it.name == data.name) {
-                isDataExist = true
-            } else {
-                listCurrent.add(StyleArtDto(it.resID, it.name, it.modelId, false))
-            }
-        }
-        if (!isDataExist)
-            listCurrent.removeLast()
-        listCurrent.add(0, StyleArtDto(data.resID, data.name, data.modelId ,true))
-        currentStyleArt.value = listCurrent
-
-        uiScope.launch(Dispatchers.Default) {
-            withContext(Dispatchers.Default) {
-                CommonSharedPreferences.getInstance().setListStyleArt(listCurrent)
-            }
-        }
-
-    }
-
-    fun updateChatNumber() {
-        mChatNumber.value = (mChatNumber.value ?: 1) - 1
-    }
-
     fun initChatSummary(data: SummaryHistoryDto?) {
         data?.let {
-            it.chatDetail.forEach {
-                val role = if (it.chatType == ChatType.SEND.value) ChatRole.USER.value else ChatRole.SYSTEM.value
-                mArrListPromt.add(Message35Request(role = role, content = "${it.message}"))
+            it.chatDetail.forEach { it1 ->
+                val role =
+                    if (it1.chatType == ChatType.SEND.value) ChatRole.USER.value else ChatRole.SYSTEM.value
+                mArrListPromt.add(Message35Request(role = role, content = "${it1.message}"))
             }
             mArrListPromt.firstOrNull()?.content = it.summaryContent
             val sizeArrPromt = mArrListPromt.size.minus(limitSavePrevConversation)

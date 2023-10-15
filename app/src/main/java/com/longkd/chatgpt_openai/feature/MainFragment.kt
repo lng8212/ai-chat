@@ -1,5 +1,6 @@
 package com.longkd.chatgpt_openai.feature
 
+import BottomFloatingType
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
@@ -32,7 +33,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
                 0 -> {
                     mBinding?.mainFragmentBottomBar?.setCurrentTab(BottomFloatingType.TYPE_HOME)
                     val homeFragment = listFm.getOrNull(position) as? HomeNewFragment
-                    homeFragment?.getChatNumber()
                 }
 
 //                1 -> {

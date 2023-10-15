@@ -6,6 +6,7 @@
 
 package com.longkd.chatgpt_openai.feature.setting
 
+import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -20,12 +21,12 @@ import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.bubble.FloatingBubbleService
 import com.longkd.chatgpt_openai.base.bubble.isDrawOverlaysPermissionGranted
-import com.longkd.chatgpt_openai.base.util.*
-import com.longkd.chatgpt_openai.databinding.SettingFragmentBinding
-import com.longkd.chatgpt_openai.feature.language.LanguageActivity
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.UtilsApp
+import com.longkd.chatgpt_openai.base.util.setOnSingleClick
+import com.longkd.chatgpt_openai.databinding.SettingFragmentBinding
+import com.longkd.chatgpt_openai.feature.language.LanguageActivity
 import com.longkd.chatgpt_openai.service.BubbleService
 
 class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fragment) {
@@ -48,6 +49,7 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
         }
     }
 
+    @SuppressLint("SetTextI18n", "UnspecifiedRegisterReceiverFlag")
     override fun initViews() {
         mBinding?.fmSettingUpdateTvVersion?.text =
             getStringRes(R.string.text_version) + " ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
@@ -89,7 +91,6 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
             fmSettingBubble.setSwitchEnable(FloatingBubbleService.isRunning())
             fmSettingBubble.onSwitchChange {
                 if (it) {
-//                    FloatingBubblePermissions.startPermissionRequest(activity)
                     if (context?.isDrawOverlaysPermissionGranted() == true) {
                         val intent = Intent(activity, BubbleService::class.java)
                         if (!FloatingBubbleService.isRunning()) {
@@ -117,17 +118,18 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
         }
     }
 
-    var resultLauncherOverlay = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (context?.isDrawOverlaysPermissionGranted() == true) {
-            val intent = Intent(activity, BubbleService::class.java)
-            if (!FloatingBubbleService.isRunning()) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    activity?.startForegroundService(intent)
-                } else {
-                    activity?.startService(intent)
+    private var resultLauncherOverlay =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (context?.isDrawOverlaysPermissionGranted() == true) {
+                val intent = Intent(activity, BubbleService::class.java)
+                if (!FloatingBubbleService.isRunning()) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        activity?.startForegroundService(intent)
+                    } else {
+                        activity?.startService(intent)
+                    }
                 }
-            }
-        } else {
+            } else {
             mBinding?.fmSettingBubble?.setSwitchEnable(false)
         }
     }
@@ -135,9 +137,7 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
     override fun onDestroy() {
         super.onDestroy()
         kotlin.runCatching {
-            if (receiver != null) {
-                activity?.unregisterReceiver(receiver)
-            }
+            activity?.unregisterReceiver(receiver)
         }
     }
     override fun initData() {

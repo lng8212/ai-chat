@@ -2,18 +2,24 @@ package com.longkd.chatgpt_openai.feature.summary
 
 import android.Manifest
 import android.graphics.Rect
-import android.os.*
+import android.os.Build
+import android.os.Bundle
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.longkd.chatgpt_openai.MyApp
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
-import com.longkd.chatgpt_openai.base.util.*
+import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
+import com.longkd.chatgpt_openai.base.util.Constants
+import com.longkd.chatgpt_openai.base.util.PermissionUtils
+import com.longkd.chatgpt_openai.base.util.gone
+import com.longkd.chatgpt_openai.base.util.orZero
+import com.longkd.chatgpt_openai.base.util.setOnSingleClick
+import com.longkd.chatgpt_openai.base.util.visible
 import com.longkd.chatgpt_openai.databinding.FragmentSummaryFileBinding
 import com.longkd.chatgpt_openai.dialog.DialogStatusSummaryFile
 import com.longkd.chatgpt_openai.feature.MainActivity
@@ -21,10 +27,6 @@ import com.longkd.chatgpt_openai.feature.chat.ChatDetailFragment
 import com.longkd.chatgpt_openai.feature.home_new.gallery.ListGalleryFragment
 import com.longkd.chatgpt_openai.feature.summary.history.HistorySummaryAdapter
 import com.longkd.chatgpt_openai.feature.summary.history.HistorySummaryFileFragment
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.PermissionUtils
-import com.longkd.chatgpt_openai.base.util.orZero
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,7 +41,6 @@ class SummaryFileFragment :
     private var mFileName: String? = null
     private var isSummaryOver: Boolean = false
     private var sizeFile: Int = 1
-    private var isAdsRewarded: Boolean = false
     var onCallBackWhenPurchase: (() -> Unit) ? = null
 
     override fun initViews() {
@@ -74,7 +75,7 @@ class SummaryFileFragment :
     }
 
     fun onRefeshData() {
-        mViewModel?.getAllSummaryFile()
+        mViewModel.getAllSummaryFile()
     }
 
     override fun initActions() {
@@ -104,10 +105,13 @@ class SummaryFileFragment :
             if (isSummaryOver) {
                 return@setOnSingleClick
             }
-            if (mViewModel?.checkTimesSummaryFile() != true) {
+            if (!mViewModel.checkTimesSummaryFile()) {
                 DialogStatusSummaryFile.show(
                     childFragmentManager,
-                    getString(R.string.str_out_of_times_summary, CommonSharedPreferences.getInstance().summaryConfigData),
+                    getString(
+                        R.string.str_out_of_times_summary,
+                        CommonSharedPreferences.getInstance().summaryConfigData
+                    ),
                     true
                 )
                 return@setOnSingleClick
@@ -137,7 +141,7 @@ class SummaryFileFragment :
             if (isSummaryOver) {
                 return@setOnSingleClick
             }
-            if (mViewModel?.checkTimesSummaryFile() != true) {
+            if (!mViewModel.checkTimesSummaryFile()) {
                 DialogStatusSummaryFile.show(
                     childFragmentManager,
                     getString(
@@ -163,7 +167,7 @@ class SummaryFileFragment :
         }
 
         mBinding?.summaryFmBtnSend?.setOnSingleClick {
-            if (mViewModel?.checkTimesSummaryFile() != true) {
+            if (!mViewModel.checkTimesSummaryFile()) {
                 DialogStatusSummaryFile.show(
                     childFragmentManager,
                     getString(
@@ -175,13 +179,13 @@ class SummaryFileFragment :
                 return@setOnSingleClick
             }
             mFileName = getString(R.string.str_summary_text)
-            mViewModel?.uploadSummaryText(mBinding?.summaryFmEdt?.text.toString(), context)
+            mViewModel.uploadSummaryText(mBinding?.summaryFmEdt?.text.toString(), context)
         }
     }
 
 
     fun resetNumberSummaryFile() {
-        mViewModel?.resetNumberSummaryFile()
+        mViewModel.resetNumberSummaryFile()
     }
 
     fun setOcr(value: String) {
@@ -222,7 +226,7 @@ class SummaryFileFragment :
             val mFileSummaryData = FileSummaryUtils.getSummaryFile(
                 context,
                 it,
-                mViewModel?.getListSummaryHistory()?.value,
+                mViewModel.getListSummaryHistory().value,
                 maxSize
             )
             if (mFileSummaryData.first == StatusSummary.DUPLICATE.name) {
@@ -245,8 +249,8 @@ class SummaryFileFragment :
                     )
 
             } else if (mFileSummaryData.first != StatusSummary.ERROR.name) {
-                mFileSummaryData.second?.let {
-                    mViewModel?.uploadSummaryFile(it, context)
+                mFileSummaryData.second?.let { it1 ->
+                    mViewModel.uploadSummaryFile(it1, context)
                 }
             }
         }
@@ -256,22 +260,20 @@ class SummaryFileFragment :
 
     override fun handleOnBackPress(): Boolean {
         (activity as MainActivity).apply {
-
                 onBackPressed()
-
         }
         return true
     }
 
     override fun initData() {
-        mViewModel?.callGetTimeStamp()
-        mViewModel?.getAllSummaryFile()
-        mViewModel?.resetNumberSummaryFile()
+        mViewModel.callGetTimeStamp()
+        mViewModel.getAllSummaryFile()
+        mViewModel.resetNumberSummaryFile()
         observerData()
     }
 
     private fun observerData() {
-        mViewModel?.getListSummaryHistory()?.observe(this) {
+        mViewModel.getListSummaryHistory().observe(this) {
             if (it.isNullOrEmpty()) {
                 mBinding?.summaryFmLlnNoHistory?.visible()
                 mBinding?.summaryFmListSummary?.gone()
@@ -285,12 +287,12 @@ class SummaryFileFragment :
             }
         }
 
-        mViewModel?.showLoading?.observe(this) {
+        mViewModel.showLoading.observe(this) {
             mBinding?.summaryFmTitleLoading?.text = mFileName
             displayViewLoading(it)
         }
 
-        mViewModel?.summaryFileDto?.observe(this) {
+        mViewModel.summaryFileDto.observe(this) {
             it?.let {
                 mBinding?.summaryFmEdt?.text?.clear()
                 showFullAdsWhenStartChat(it)
@@ -299,12 +301,6 @@ class SummaryFileFragment :
                 mBinding?.fmChatBottomContainer?.gone()
             }
         }
-
-        mViewModel?.timesSummary?.observe(this) {
-            mBinding?.summaryFmTvTimesSummary1?.text = getString(R.string.left_s, it.toString())
-            mBinding?.summaryFmTvTimesSummary2?.text = getString(R.string.left_s, it.toString())
-        }
-
     }
 
     private fun displayViewLoading(isLoading: Boolean?) {
@@ -317,7 +313,7 @@ class SummaryFileFragment :
         }
     }
 
-    fun showDetailChat(summaryHistoryDto: SummaryHistoryDto) {
+    private fun showDetailChat(summaryHistoryDto: SummaryHistoryDto) {
         mainFragment?.pushScreenWithAnimate(
             ChatDetailFragment.newInstance(
                 summaryData = summaryHistoryDto,
@@ -326,12 +322,13 @@ class SummaryFileFragment :
             ChatDetailFragment::class.java.name
         )
     }
+
     private fun showFullAdsWhenStartChat(data: SummaryHistoryDto) {
         if (isSelectFile == null) {
             showDetailChat(data)
             return
         }
-                    showDetailChat(data)
+        showDetailChat(data)
     }
     companion object {
         fun newInstance(): SummaryFileFragment {

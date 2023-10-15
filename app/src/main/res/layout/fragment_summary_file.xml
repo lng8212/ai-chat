@@ -74,14 +74,6 @@
                         android:textSize="@dimen/_16sdp"
                         app:drawableStartCompat="@drawable/ic_summary_upload_file" />
 
-                    <TextView
-                        android:id="@+id/summaryFm_tvTimesSummary1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_regular"
-                        android:textColor="@color/color_white"
-                        android:textSize="@dimen/_12sdp"
-                        tools:text="Left: 5" />
 
                 </LinearLayout>
 
@@ -108,14 +100,6 @@
                         android:textSize="@dimen/_16sdp"
                         app:drawableStartCompat="@drawable/ic_summary_gallery" />
 
-                    <TextView
-                        android:id="@+id/summaryFm_tvTimesSummary2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_regular"
-                        android:textColor="@color/color_white"
-                        android:textSize="@dimen/_12sdp"
-                        tools:text="Left: 5" />
                 </LinearLayout>
 
                 <LinearLayout

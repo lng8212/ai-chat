@@ -37,6 +37,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView
+import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.bubble.*
@@ -50,22 +51,6 @@ import com.longkd.chatgpt_openai.open.client.TimeStampService
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
-import com.longkd.chatgpt_openai.R
-import com.longkd.chatgpt_openai.base.bubble.BubbleBehavior
-import com.longkd.chatgpt_openai.base.bubble.ExpandableView
-import com.longkd.chatgpt_openai.base.bubble.FloatingBubble
-import com.longkd.chatgpt_openai.base.bubble.FloatingBubbleService
-import com.longkd.chatgpt_openai.base.model.ChatDetailDto
-import com.longkd.chatgpt_openai.base.model.ChatType
-import com.longkd.chatgpt_openai.base.model.ErrorType
-import com.longkd.chatgpt_openai.base.model.ModelData
-import com.longkd.chatgpt_openai.base.model.ResultDataDto
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.Strings
-import com.longkd.chatgpt_openai.base.util.gone
-import com.longkd.chatgpt_openai.base.util.setOnSingleClick
-import com.longkd.chatgpt_openai.base.util.visible
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import java.text.SimpleDateFormat
@@ -123,9 +108,6 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                 override fun onDestroy() {}
                 override fun onClick() {
                     action.navigateToExpandableView() // must override `setupExpandableView`, otherwise throw an exception
-                    kotlin.runCatching {
-                        getMessNumber()
-                    }
                 }
 
                 override fun onMove(
@@ -140,7 +122,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
             .opacity(1f)
     }
 
-    override fun setupExpandableView(action: ExpandableView.Action): ExpandableView.Builder? {
+    override fun setupExpandableView(action: ExpandableView.Action): ExpandableView.Builder {
         val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
         actionPopToBubble = {
             action.popToBubble()
@@ -262,7 +244,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         Handler(Looper.getMainLooper())
     }
     private var currentMessage = 3
-    private var mRunner = kotlinx.coroutines.Runnable {
+    private var mRunner = Runnable {
         kotlin.runCatching {
             layout.findViewById<RecyclerView>(R.id.viewBubbleChat_rcv).scrollBy(0, 100)
         }
@@ -380,7 +362,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
             getStringRes(R.string.something_error),
             isNewChat,
             topicType = -1
-        )?.observe(this) { dto ->
+        ).observe(this) { dto ->
             isNewChat = false
             handleResultDtoChat(dto)
         }
@@ -388,7 +370,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
 
     fun hideKeyboard(context: Context) {
         val imm: InputMethodManager? =
-            context?.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as? InputMethodManager
+            context.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as? InputMethodManager
         var view: View? = null
         if (view == null) {
             view = View(context)
@@ -438,10 +420,10 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         showLoading()
         isActionSend = true
         mIsStartMore = false
-       completeChatWithTopic(
+        completeChatWithTopic(
             context = this,
             getStringRes(R.string.something_error)
-        )?.observe(this) { dto ->
+        ).observe(this) { dto ->
             isNewChat = false
             handleResultDtoChat(dto)
         }
@@ -539,7 +521,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                 }
             }
             mCurrentChatBaseDto.value?.let {
-                dataRepository?.insertChat(it)
+                dataRepository.insertChat(it)
             }
             if (isCallChatSuccess == true && mArrListPromt.size > 1) {
                 mArrListPromt.removeLastOrNull()
@@ -604,7 +586,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                 }
             }
             mCurrentChatBaseDto.value?.let {
-                dataRepository?.updateChatDto(it)
+                dataRepository.updateChatDto(it)
                 val currentBaseDto = reFormatDate(it).apply { it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore = mIsCallMore}
                 mCurrentChatBaseDto.value = currentBaseDto
             }
@@ -620,7 +602,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                 delay(500)
             }
             hideLoading()
-            getCurrentDto()?.observe(this@BubbleService) {
+            getCurrentDto().observe(this@BubbleService) {
                 currentDto = it
                 if (isNewChat || isActionSend || !autoSpeak) {
                     mAdapter?.updateData(it.chatDetail)
@@ -648,7 +630,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                 }
             }
         }
-        mMessageMore?.observe(this@BubbleService) { message ->
+        mMessageMore.observe(this@BubbleService) { message ->
             val timer = object : CountDownTimer(80000, 100) {
                 override fun onTick(millisUntilFinished: Long) {
                     if (autoSpeak) {
@@ -680,6 +662,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                         }
                     }
                 }
+
                 override fun onFinish() {
                 }
             }
@@ -787,26 +770,10 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
     private var mChatNumber: MutableLiveData<Int> = MutableLiveData()
     private var uiScope = CoroutineScope(Dispatchers.Main)
     var mMessageMore: MutableLiveData<String> = MutableLiveData()
-    fun getCurrentDto(): LiveData<ChatBaseDto> = mCurrentChatBaseDto
-    fun getMessNumber(isFromLocal: Boolean = false): LiveData<Int> {
-        uiScope.launch(Dispatchers.Main) {
-            val value = withContext(Dispatchers.Default) {
-                CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                    try {
-                        OpenAIHolder.getChatFreeMessage(1, it)
-                    } catch (e: Throwable) {
-                        0
-                    }
-                } ?: 0
-            }
-            mChatNumber.value = value
-        }
-
-        return mChatNumber
-    }
+    private fun getCurrentDto(): LiveData<ChatBaseDto> = mCurrentChatBaseDto
 
 
-    fun parseTime(textAtTime: String): String {
+    private fun parseTime(textAtTime: String): String {
         return try {
             val formatter = SimpleDateFormat("d MMM, yyyy ; HH:mm", Locale.US)
             val now = Date()
@@ -816,7 +783,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         }
     }
 
-    fun getFormattedDate(j: Long): String {
+    private fun getFormattedDate(j: Long): String {
         val instance = Calendar.getInstance()
         instance.timeInMillis = j
         return if (DateUtils.isToday(j)) {
@@ -843,13 +810,13 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         array.forEach { dto ->
             newList.add(
                 ChatDetailDto(
-                    dto.message ?: "",
-                    dto.timeChat ?: 0,
-                    dto.timeChatString ?: "",
-                    dto.isTyping ?: false,
-                    dto.chatType ?: -1,
-                    dto.chatUserNane ?: "",
-                    dto.parentId ?: 0
+                    dto.message,
+                    dto.timeChat,
+                    dto.timeChatString,
+                    dto.isTyping,
+                    dto.chatType,
+                    dto.chatUserNane,
+                    dto.parentId
                 ).apply {
 
                 })
@@ -933,10 +900,10 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
             }
             mCurrentChatBaseDto.value?.let {
                 if (isNewChat) {
-                    dataRepository?.insertChat(it)
+                    dataRepository.insertChat(it)
 
                 } else {
-                    dataRepository?.updateChatDto(it)
+                    dataRepository.updateChatDto(it)
                 }
                 mCurrentChatBaseDto.value = reFormatDate(it)
             }
@@ -1010,7 +977,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                 }
             }
             mCurrentChatBaseDto.value?.let {
-                dataRepository?.updateChatDto(it)
+                dataRepository.updateChatDto(it)
                 val currentBaseDto = reFormatDate(it).apply { it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore = mIsCallMore}
                 mCurrentChatBaseDto.value = currentBaseDto
             }

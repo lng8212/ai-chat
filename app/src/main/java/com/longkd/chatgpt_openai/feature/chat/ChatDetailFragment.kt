@@ -27,7 +27,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
-import com.longkd.chatgpt_openai.BR
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
@@ -46,17 +45,6 @@ import com.longkd.chatgpt_openai.feature.history.FragmentHistory
 import com.longkd.chatgpt_openai.feature.home.HomeViewModel
 import com.longkd.chatgpt_openai.feature.summary.DetailFileSummaryFragment
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileFragment
-import com.longkd.chatgpt_openai.base.model.ChatDetailDto
-import com.longkd.chatgpt_openai.base.model.ErrorType
-import com.longkd.chatgpt_openai.base.model.ResultDataDto
-import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
-import com.longkd.chatgpt_openai.base.util.CommonAction
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.NetworkUtil
-import com.longkd.chatgpt_openai.base.util.Strings
-import com.longkd.chatgpt_openai.base.util.UtilsApp
-import com.longkd.chatgpt_openai.base.util.orZero
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -215,7 +203,6 @@ class ChatDetailFragment :
                 }
             })
         mAdapter?.mOnAnimateFinished = {
-            mViewModel?.updateChatNumber()
             mAdapter?.mEnableAnimateText = true
             mBinding?.chatFmTvStopAnimateText?.gone()
             mHeaderView?.setCustomBtn(R.drawable.ic_history_chat, true)
@@ -323,7 +310,7 @@ class ChatDetailFragment :
     }
 
     private fun handleDisplaySelectModelChat() {
-        var modelChat = mViewModel?.getModelChat()
+        var modelChat = mViewModel.getModelChat()
         mBinding?.fmChatLlnSelectModel?.titleGpt4?.setCompoundDrawablesRelativeWithIntrinsicBounds(
             0,
             0,
@@ -354,7 +341,7 @@ class ChatDetailFragment :
         mBinding?.fmChatLlnSelectModel?.btnContinue?.setOnSingleClick {
             mBinding?.fmChatLlnSelectModel?.root?.gone()
             mHeaderView?.setTitle(if (modelChat == Constants.MODEL_CHAT.GPT_3_5) "Chat GPT 3.5" else "Chat GPT 4")
-            mViewModel?.setModelChat(modelChat ?: Constants.MODEL_CHAT.GPT_3_5)
+            mViewModel.setModelChat(modelChat ?: Constants.MODEL_CHAT.GPT_3_5)
         }
     }
 
@@ -362,7 +349,7 @@ class ChatDetailFragment :
         if (isFromHistory != true) {
             val historyFragmen = FragmentHistory.newInstance().apply {
                 onBackPress = {
-                    mViewModel?.getMessNumber()
+
                 }
             }
 
@@ -379,8 +366,8 @@ class ChatDetailFragment :
     }
 
     private fun updateChatHis() {
-        mViewModel?.getChatDto(chatId)?.observe(this) {
-            mViewModel?.initViewChatHis(it)
+        mViewModel.getChatDto(chatId)?.observe(this) {
+            mViewModel.initViewChatHis(it)
         }
     }
 
@@ -404,7 +391,7 @@ class ChatDetailFragment :
         isActionSend = true
         mIsStartMore = false
         mHeaderView?.setCustomBtn(R.drawable.ic_history_chat, false)
-        mViewModel?.completeQRetrofitHandler(
+        mViewModel.completeQRetrofitHandler(
             context,
             if (isSummaryChat) inputSummaryText else inputText.trim(),
             getStringRes(R.string.something_error),
@@ -426,7 +413,7 @@ class ChatDetailFragment :
     }
 
     private fun handleCallChatGPTWithTopic(isRegenerate: Boolean = false) {
-        mViewModel?.callGetTimeStamp()
+        mViewModel.callGetTimeStamp()
         if (!NetworkUtil.isInternetAvailable(requireContext())) {
             pushScreen(FragmentLostInternet.newInstance(), FragmentLostInternet::class.java.name)
             return
@@ -435,7 +422,7 @@ class ChatDetailFragment :
         isActionSend = true
         mIsStartMore = false
         mHeaderView?.setCustomBtn(R.drawable.ic_history_chat, false)
-        mViewModel?.completeChatWithTopic(
+        mViewModel.completeChatWithTopic(
             context,
             getStringRes(R.string.something_error),
             isRegenerate
@@ -514,7 +501,6 @@ class ChatDetailFragment :
         }
 
         mBinding?.chatFmTvStopAnimateText?.setOnSingleClick {
-            mViewModel?.updateChatNumber()
             mBinding?.chatFmTvStopAnimateText?.gone()
             mHeaderView?.setCustomBtn(R.drawable.ic_history_chat, true)
             isClickSuggestQuestion = true
@@ -579,17 +565,16 @@ class ChatDetailFragment :
 
     @SuppressLint("SetTextI18n", "StringFormatMatches", "SuspiciousIndentation")
     override fun initData() {
-        mBinding?.setVariable(BR.mViewModel, mViewModel)
         handleDisplaySelectModelChat()
         updateChatHis()
-        mViewModel?.initChatSummary(summaryData)
+        mViewModel.initChatSummary(summaryData)
         lifecycleScope.launch(Dispatchers.Main) {
             showLoading()
             withContext(Dispatchers.Default) {
                 delay(500)
             }
             hideLoading()
-            mViewModel?.getCurrentDto()?.observe(this@ChatDetailFragment) {
+            mViewModel.getCurrentDto().observe(this@ChatDetailFragment) {
                 currentDto = it
                 if (isNewChat || isActionSend || !autoSpeak) {
                     mAdapter?.updateData(it.chatDetail)
@@ -611,15 +596,15 @@ class ChatDetailFragment :
                 }
             }
             arguments?.getString(KEY_TEXT_COPY)?.let {
-                mViewModel?.setTextInputCopy(true)
-                mViewModel?.initChat(
+                mViewModel.setTextInputCopy(true)
+                mViewModel.initChat(
                     arguments?.getInt(TOPIC, -1) ?: -1,
                     it,
                     "at"
                 )
             } ?: run {
                 if (chatId == -1L) {
-                    mViewModel?.initChat(
+                    mViewModel.initChat(
                         arguments?.getInt(TOPIC, -1) ?: -1,
                         getStringRes(R.string.str_title_start_chat), "at"
                     )
@@ -631,7 +616,7 @@ class ChatDetailFragment :
                 mBinding?.chatFmEdt?.isEnabled = true
             }
 
-            mViewModel?.mMessageMore?.observe(this@ChatDetailFragment) { message ->
+            mViewModel.mMessageMore?.observe(this@ChatDetailFragment) { message ->
                 val timer = object : CountDownTimer(80000, 100) {
                     override fun onTick(millisUntilFinished: Long) {
                         if (autoSpeak) {
@@ -718,10 +703,10 @@ class ChatDetailFragment :
             mSpeech?.language = Locale.getDefault()
         }
 
-        mViewModel?.callChatWithTopic?.observe(this) {
+        mViewModel.callChatWithTopic?.observe(this) {
             handleCallChatGPTWithTopic()
         }
-        mViewModel?.inputEdtChat?.observe(this) {
+        mViewModel.inputEdtChat?.observe(this) {
             mBinding?.chatFmBtnSend?.isEnabled = !it.isNullOrBlank()
             mBinding?.chatFmLimitText?.text =
                 getString(R.string.str_limit_text_chat, it.length, limitChar.toString())

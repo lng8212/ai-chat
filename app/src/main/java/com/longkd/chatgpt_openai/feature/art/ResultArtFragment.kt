@@ -1,13 +1,14 @@
+/*
+ * Created by longkd on 10/15/23, 11:33 PM
+ * Copyright (c) by Begamob.com 2023 . All rights reserved.
+ * Last modified 10/15/23, 9:08 PM
+ */
+
 package com.longkd.chatgpt_openai.feature.art
 
 import android.Manifest
 import android.animation.Animator
-import android.annotation.SuppressLint
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.Canvas
-import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -15,22 +16,16 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
-import com.longkd.chatgpt_openai.base.model.ErrorType
-import com.longkd.chatgpt_openai.base.model.GenerateArtByVyroRequest
-import com.longkd.chatgpt_openai.base.model.ResultDataDto
-import com.longkd.chatgpt_openai.base.util.*
-import com.longkd.chatgpt_openai.databinding.FragmentResultArtBinding
-import com.longkd.chatgpt_openai.dialog.DialogFailArt
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.target.CustomTarget
-import com.bumptech.glide.request.transition.Transition
 import com.longkd.chatgpt_openai.base.util.CommonAction
 import com.longkd.chatgpt_openai.base.util.Strings
 import com.longkd.chatgpt_openai.base.util.WatermarkImageDownloader
+import com.longkd.chatgpt_openai.base.util.gone
+import com.longkd.chatgpt_openai.base.util.setOnSingleClick
+import com.longkd.chatgpt_openai.base.util.visible
+import com.longkd.chatgpt_openai.databinding.FragmentResultArtBinding
+import com.longkd.chatgpt_openai.dialog.DialogFailArt
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -87,191 +82,13 @@ class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragme
         modelId = arguments?.getString(KEY_MODEL_ID, "") ?: Strings.EMPTY
         width = arguments?.getInt(KEY_WIDTH)
         height = arguments?.getInt(KEY_HEIGHT)
-        generateImage(
-            prompt ?: "",
-            modelId ?: "",
-            width ?: DEFAULT_SIZE,
-            height ?: DEFAULT_SIZE
-        )
+
     }
 
-    @SuppressLint("CheckResult")
-    private fun generateImage(
-        prompt: String,
-        modelId: String,
-        width: Int,
-        height: Int,
-        isReGenerate: Boolean = false
-    ) {
-        mBinding?.fmResultArtTvRegenerate?.isEnabled = false
-//        mViewModel?.createAiArt(prompt.trim(), modelId, width, height)?.observe(this) { resultData ->
-//            when (resultData) {
-//                is ResultDataDto.Error -> {
-//                    FirebaseTracking.logArtAction(context, if (isReGenerate) "regenerate" else "generate", status = "fail", modelId = modelId)
-//                    if (resultData.errorType == ErrorType.END_VIP) {
-//                    } else {
-//                        mBinding?.fmResultArtLatLoading?.cancelAnimation()
-//                        countDownTimer?.cancel()
-//                        val dialog = DialogFailArt.newInstance()
-//                        dialog.onDialogDismissListener = {
-//                            popBackStack()
-//                        }
-//                        dialog.show(activity?.supportFragmentManager)
-//                    }
-//                }
-//                is ResultDataDto.SuccessImage -> {
-//                    FirebaseTracking.logArtAction(context, if (isReGenerate) "regenerate" else "generate", status = "success", modelId = modelId)
-//                    mBinding?.fmResultArtCtLoading?.gone()
-//                    mBinding?.fmResultArtLatLoading?.cancelAnimation()
-//                    countDownTimer?.cancel()
-//                    mBinding?.fmResultArtImv?.let {
-//                        Glide.with(this@ResultArtFragment)
-//                            .asBitmap()
-//                            .apply { RequestOptions().override(width, height) }
-//                            .load(resultData.url).placeholder(R.drawable.img_default_art)
-//                            .into(object : CustomTarget<Bitmap>() {
-//                                @Synchronized
-//                                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-//                                    var outputBitmap: Bitmap? = null
-//                                        val watermarkBitmap =
-//                                            BitmapFactory.decodeResource(context?.resources, R.drawable.water_mark)
-//                                        val watermarkWidth = resource.width / 4
-//                                        val watermarkHeight =
-//                                            watermarkWidth * watermarkBitmap.height / watermarkBitmap.width
-//                                        val watermarkResized = Bitmap.createScaledBitmap(
-//                                            watermarkBitmap,
-//                                            watermarkWidth,
-//                                            watermarkHeight,
-//                                            false
-//                                        )
-//                                        outputBitmap =
-//                                            Bitmap.createBitmap(
-//                                                resource.width,
-//                                                resource.height,
-//                                                Bitmap.Config.ARGB_8888
-//                                            )
-//                                        val canvas = Canvas(outputBitmap)
-//                                        canvas.drawBitmap(resource, 0f, 0f, null)
-//                                        canvas.drawBitmap(
-//                                            watermarkResized,
-//                                            10f,
-//                                            resource.height.toFloat() - watermarkHeight,
-//                                            null
-//                                        )
-//                                    it.setImageBitmap(outputBitmap)
-//                                    mBinding?.fmResultArtTvRegenerate?.isEnabled = true
-//                                }
-//
-//                                override fun onLoadCleared(placeholder: Drawable?) {
-//                                    // Do nothing
-//                                }
-//                            })
-//                    }
-//                    currentUrlImage = resultData.url
-//                    mBinding?.fmResultArtTvPrompt?.text =
-//                        arguments?.getString(KEY_PROMPT, "") ?: Strings.EMPTY
-//                    mBinding?.fmResultArtTvStyle?.text = arguments?.getString(KEY_STYLE, "")
-//                }
-//                else -> {}
-//            }
-//        }
-
-        mViewModel?.generateArtByVyro(
-            GenerateArtByVyroRequest(
-                prompt = " A surreal landscape with floating islands",
-                styleId = 27,
-                aspectRatio = "1:1"
-            )
-        )?.observe(this) { result ->
-            when (result) {
-                is ResultDataDto.Error -> {
-                    if (result.errorType != ErrorType.END_VIP) {
-                        mBinding?.fmResultArtLatLoading?.cancelAnimation()
-                        countDownTimer?.cancel()
-                        val dialog = DialogFailArt.newInstance()
-                        dialog.onDialogDismissListener = {
-                            popBackStack()
-                        }
-                        dialog.show(activity?.supportFragmentManager)
-                    }
-                }
-
-                is ResultDataDto.SuccessImageVyro -> {
-                    mBinding?.fmResultArtCtLoading?.gone()
-                    mBinding?.fmResultArtLatLoading?.cancelAnimation()
-                    countDownTimer?.cancel()
-                    mBinding?.fmResultArtImv?.let {
-                        Glide.with(this@ResultArtFragment)
-                            .asBitmap()
-                            .apply { RequestOptions().override(width, height) }
-                            .load(result.data).placeholder(R.drawable.img_default_art)
-                            .into(object : CustomTarget<Bitmap>() {
-                                @Synchronized
-                                override fun onResourceReady(
-                                    resource: Bitmap,
-                                    transition: Transition<in Bitmap>?
-                                ) {
-                                    val watermarkBitmap =
-                                        BitmapFactory.decodeResource(
-                                            context?.resources,
-                                            R.drawable.water_mark
-                                        )
-                                    val watermarkWidth = resource.width / 4
-                                    val watermarkHeight =
-                                        watermarkWidth * watermarkBitmap.height / watermarkBitmap.width
-                                    val watermarkResized = Bitmap.createScaledBitmap(
-                                        watermarkBitmap,
-                                        watermarkWidth,
-                                        watermarkHeight,
-                                        false
-                                    )
-                                    var outputBitmap: Bitmap = Bitmap.createBitmap(
-                                            resource.width,
-                                            resource.height,
-                                            Bitmap.Config.ARGB_8888
-                                        )
-                                    val canvas = Canvas(outputBitmap)
-                                    canvas.drawBitmap(resource, 0f, 0f, null)
-                                    canvas.drawBitmap(
-                                        watermarkResized,
-                                        10f,
-                                        resource.height.toFloat() - watermarkHeight,
-                                        null
-                                    )
-                                    it.setImageBitmap(outputBitmap)
-                                    mBinding?.fmResultArtTvRegenerate?.isEnabled = true
-                                }
-
-                                override fun onLoadCleared(placeholder: Drawable?) {
-                                    // Do nothing
-                                }
-                            })
-                    }
-                    mBinding?.fmResultArtTvPrompt?.text =
-                        arguments?.getString(KEY_PROMPT, "") ?: Strings.EMPTY
-                    mBinding?.fmResultArtTvStyle?.text = arguments?.getString(KEY_STYLE, "")
-                }
-
-                else -> {}
-            }
-        }
-    }
 
     override fun initActions() {
         mBinding?.fmResultArtImvBack?.setOnSingleClick {
             popBackStack()
-        }
-
-        mBinding?.fmResultArtTvRegenerate?.setOnSingleClick {
-            mBinding?.fmResultArtCtLoading?.visible()
-            mBinding?.fmResultArtLatLoading?.playAnimation()
-            countDownTimer?.start()
-            generateImage(
-                prompt ?: "",
-                modelId ?: "",
-                width ?: DEFAULT_SIZE,
-                height ?: DEFAULT_SIZE
-            )
         }
 
         mBinding?.fmResultArtImvDownload?.setOnSingleClick {

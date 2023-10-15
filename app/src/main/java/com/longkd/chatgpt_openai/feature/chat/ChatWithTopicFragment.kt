@@ -25,7 +25,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
-import com.longkd.chatgpt_openai.BR
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
@@ -39,25 +38,12 @@ import com.longkd.chatgpt_openai.feature.ShareDataViewModel
 import com.longkd.chatgpt_openai.feature.chat.viewholder.ChatDetailAdapter
 import com.longkd.chatgpt_openai.feature.connect.FragmentLostInternet
 import com.longkd.chatgpt_openai.feature.home.HomeViewModel
-import com.longkd.chatgpt_openai.base.model.ChatDetailDto
-import com.longkd.chatgpt_openai.base.model.ChatType
-import com.longkd.chatgpt_openai.base.model.ErrorType
-import com.longkd.chatgpt_openai.base.model.ResultDataDto
-import com.longkd.chatgpt_openai.base.util.CommonAction
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.NetworkUtil
-import com.longkd.chatgpt_openai.base.util.Strings
-import com.longkd.chatgpt_openai.base.util.UtilsApp
-import com.longkd.chatgpt_openai.base.util.orZero
-import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.*
-import kotlin.collections.ArrayList
 
 @AndroidEntryPoint
 class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout.fragment_chat_with_topic) {
@@ -70,17 +56,14 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
     private var isNewChat = true
     private val mShareDataViewModel: ShareDataViewModel by activityViewModels()
     private var onNetworkConnectivityCallback: ConnectivityManager.NetworkCallback? = null
-    private var mWillShowSale = false
     private var autoSpeak = false
     private var mIsStartMore = false
     private var textMessaeMore = ""
     private var limitChar: Int ? = null
     private var isCheckDuplicateRegenerate: Boolean = false
     private var isClickSuggestQuestion: Boolean = true
-    private var currentMessage = 5
     private var heightToolbar: Int ? = null
     private var mListSuggest: ArrayList<String> = arrayListOf()
-    private var isAdsRewarded: Boolean = false
     private val mHandler: Handler? by lazy {
         Handler(Looper.getMainLooper())
     }
@@ -92,13 +75,14 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
         }
     }
 
-    var mUserMode: String = ""
-    var mSpeech: TextToSpeech? = null
+    private var mUserMode: String = ""
+    private var mSpeech: TextToSpeech? = null
     private var currentDto: ChatBaseDto? = null
 
     override fun initHeaderView(): BaseHeaderView? {
         return mBinding?.chatFmHeaderView
     }
+
     override fun initViews() {
         mUserMode = CommonSharedPreferences.getInstance().userRate
         autoSpeak =
@@ -164,7 +148,6 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
                 }
             })
         mAdapter?.mOnAnimateFinished = {
-            mViewModel?.updateChatNumber()
             mAdapter?.mEnableAnimateText = true
             mBinding?.chatFmTvStopAnimateText?.gone()
             mBinding?.chatFmEdt?.isEnabled = true
@@ -261,7 +244,6 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
 
     private var isActionSend = false
     private fun actionSend() {
-        mViewModel?.callGetTimeStamp()
         val inputText = mBinding?.chatFmEdt?.text?.toString() ?: Strings.EMPTY
         UtilsApp.hideKeyboard(activity)
         if (!NetworkUtil.isInternetAvailable(requireContext())) {
@@ -311,7 +293,6 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
         }
 
         mBinding?.chatFmTvStopAnimateText?.setOnSingleClick {
-            mViewModel?.updateChatNumber()
             mBinding?.chatFmTvStopAnimateText?.gone()
             isClickSuggestQuestion = true
             mSpeech?.stop()
@@ -354,14 +335,13 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
 
     @SuppressLint("SetTextI18n", "StringFormatMatches", "SuspiciousIndentation")
     override fun initData() {
-        mBinding?.setVariable(BR.mViewModel, mViewModel)
         lifecycleScope.launch(Dispatchers.Main) {
             showLoading()
             withContext(Dispatchers.Default) {
                 delay(500)
             }
             hideLoading()
-            mViewModel?.getCurrentDto()?.observe(this@ChatWithTopicFragment) {
+            mViewModel.getCurrentDto().observe(this@ChatWithTopicFragment) {
                 currentDto = it
                 if (isNewChat || isActionSend || !autoSpeak) {
                     mAdapter?.updateData(it.chatDetail)
@@ -406,6 +386,7 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
 
                     override fun onDone(utteranceId: String) {}
 
+                    @Deprecated("Deprecated in Java")
                     override fun onError(utteranceId: String) {}
 
                     override fun onRangeStart(
@@ -428,19 +409,19 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
             mSpeech?.language = Locale.getDefault()
         }
 
-        mViewModel?.inputEdtChat?.observe(this) {
+        mViewModel.inputEdtChat.observe(this) {
             mBinding?.chatFmBtnSend?.isEnabled = !it.isNullOrBlank()
-            mBinding?.chatFmLimitText?.text = getString(R.string.str_limit_text_chat, it.length, limitChar.toString())
+            mBinding?.chatFmLimitText?.text =
+                getString(R.string.str_limit_text_chat, it.length, limitChar.toString())
         }
 
-        mViewModel?.callChatWithTopic?.observe(this) {
+        mViewModel.callChatWithTopic.observe(this) {
             handleCallChatGPTWithTopic(false)
         }
     }
 
     private fun handleCallChatGPTWithTopic(isRegenerate: Boolean) {
         var lastAssistantChat = ""
-        mViewModel?.callGetTimeStamp()
         mBinding?.fmChatSuggestQuestion?.gone()
         if (!NetworkUtil.isInternetAvailable(requireContext())) {
             pushScreen(FragmentLostInternet.newInstance(), FragmentLostInternet::class.java.name)
@@ -450,18 +431,19 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
         isActionSend = true
         mIsStartMore = false
         currentDto?.chatDetail?.lastOrNull { it.chatType == ChatType.SEND.value || it.message == mQuestionTopic }?.let {
-            currentDto?.chatDetail?.lastIndexOf(it)?.let {
-                lastAssistantChat = currentDto?.chatDetail?.get(it)?.message ?: ""
+            currentDto?.chatDetail?.lastIndexOf(it)?.let { it1 ->
+                lastAssistantChat = currentDto?.chatDetail?.get(it1)?.message ?: ""
             }
         }
-        mViewModel?.completeTopicChat(
+        mViewModel.completeTopicChat(
             context,
             mQuestionTopic,
             getStringRes(R.string.something_error),
             isNewChat,
-            topicType = (arguments?.getParcelable(ChatDetailFragment.TOPIC) as? TopicDto)?.topicType ?: -1,
+            topicType = (arguments?.getParcelable(ChatDetailFragment.TOPIC) as? TopicDto)?.topicType
+                ?: -1,
             if (isRegenerate && lastAssistantChat.isNotBlank()) lastAssistantChat else null
-        )?.observe(this) { dto ->
+        ).observe(this) { dto ->
             isNewChat = false
             handleResultDtoChat(dto)
         }
@@ -498,10 +480,10 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
         }
     }
 
-    var mQuestionTopic = ""
+    private var mQuestionTopic = ""
     private fun initChatTopic() {
         mQuestionTopic = arguments?.getString(KEY_QUESTION_WITH_TOPIC) ?: ""
-        mViewModel?.initChat(
+        mViewModel.initChat(
             0,
             getStringRes(R.string.hi_there),
             "at",

@@ -22,11 +22,6 @@ import com.longkd.chatgpt_openai.open.dto.image_art.ImageArtRequest
 import com.longkd.chatgpt_openai.open.dto.image_art.ImageArtResult
 import com.longkd.chatgpt_openai.open.dto.model.Model
 import com.longkd.chatgpt_openai.open.dto.moderation.*
-import com.longkd.chatgpt_openai.base.model.GenerateArtByVyroRequest
-import com.longkd.chatgpt_openai.base.model.GenerateArtResponse
-import com.longkd.chatgpt_openai.base.model.ImageStyleResponse
-import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
-import com.longkd.chatgpt_openai.base.model.TopicResponse
 import io.reactivex.Single
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -93,10 +88,6 @@ interface OpenAiApi {
     @POST("/v1/files")
     fun uploadFile(@Part("purpose") purpose: RequestBody?, @Part file: MultipartBody.Part?): Single<File>
 
-    @Multipart
-    @POST("/api/v1/summarize_file")
-    fun uploadSummaryFile(@Part file: MultipartBody.Part?): Single<SummaryFileResponse>
-
     @DELETE("/v1/files/{file_id}")
     fun deleteFile(@Path("file_id") fileId: String?): Single<DeleteResult>
 
@@ -154,9 +145,6 @@ interface OpenAiApi {
 
     @POST("/api/v1/summarize_chat")
     fun completeSummaryChat(@Body request: Completion35Request?): Single<Completion35Result>
-
-    @POST("api/v1/topic_chat")
-    fun completeTopicChat(@Body request: Completion35Request?): Single<TopicResponse>
 
     @GET("list")
     fun getImageStyle(@Query("folder") folder: String): Single<ImageStyleResponse>

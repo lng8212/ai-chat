@@ -6,12 +6,16 @@
 
 package com.longkd.chatgpt_openai.open
 
+import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
+import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
-import io.reactivex.Single
+import okhttp3.MultipartBody
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.Part
 
 /**
  * @Author: longkd
@@ -23,4 +27,11 @@ interface ChatService {
 
     @POST("/api/v1/chat_v4")
     suspend fun createCompletionV1ChatGPT4(@Body request: Completion35Request?): Response<Completion35Result>
+
+    @POST("api/v1/topic_chat")
+    suspend fun completeTopicChat(@Body request: Completion35Request?): Response<TopicResponse>
+
+    @Multipart
+    @POST("/api/v1/summarize_file")
+    suspend fun uploadSummaryFile(@Part file: MultipartBody.Part?): Response<SummaryFileResponse>
 }

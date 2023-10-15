@@ -41,8 +41,6 @@ class WidgetTopic : AppWidgetProvider() {
 
     override fun onReceive(context: Context, intent: Intent?) {
         super.onReceive(context, intent)
-        if (context == null)
-            return
         if (ACTION_UPDATE == intent?.action) {
             try {
                 val intent = Intent(context, WidgetTopic::class.java)
@@ -52,7 +50,7 @@ class WidgetTopic : AppWidgetProvider() {
                 )
                 intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, ids)
                 onUpdate(context, AppWidgetManager.getInstance(context), ids)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
 
             }
         }
@@ -71,7 +69,7 @@ class WidgetTopic : AppWidgetProvider() {
                     RemoteViews(context.packageName, R.layout.layout_widget_topic).apply {
                         MainScope().launch(Dispatchers.Default) {
                             withContext(Dispatchers.Default) {
-                                val dto = dataRepository?.getChatDto()
+                                val dto = dataRepository.getChatDto()
                                 dto?.chatDetail?.lastOrNull()?.let {
                                     setTextViewText(R.id.layoutWidgetTvLastChat, it.message)
                                 }
@@ -81,7 +79,7 @@ class WidgetTopic : AppWidgetProvider() {
                                     intent.action = Constants.KEY_WIDGET_CLICK
                                     intent.putExtra(Constants.KEY_WIDGET_CLICK, dto.chatId)
                                     intent.putExtra(TYPE_HISTORY, true)
-                                    intent.putExtra("widget", WidgetTopic.ACTION)
+                                    intent.putExtra("widget", ACTION)
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                                     val pending =
                                         UtilsApp.getActivityIntent(context, 969696, intent)
@@ -125,7 +123,7 @@ class WidgetTopic : AppWidgetProvider() {
     private fun createPendingIntent(context: Context?, topicType: Int? = -1): PendingIntent {
         val intent = Intent(context, SplashActivity::class.java)
         intent.action = Constants.KEY_WIDGET_CLICK
-        intent.putExtra("widget", WidgetTopic.ACTION)
+        intent.putExtra("widget", ACTION)
         intent.putExtra(Constants.KEY_WIDGET_CLICK, topicType)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
         return UtilsApp.getActivityIntent(context, topicType ?: 66666, intent)

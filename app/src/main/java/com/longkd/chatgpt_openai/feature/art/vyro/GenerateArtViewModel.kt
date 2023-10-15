@@ -1,21 +1,19 @@
+/*
+ * Created by longkd on 10/15/23, 11:33 PM
+ * Copyright (c) by Begamob.com 2023 . All rights reserved.
+ * Last modified 10/15/23, 9:08 PM
+ */
+
 package com.longkd.chatgpt_openai.feature.art.vyro
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.longkd.chatgpt_openai.R
-import com.longkd.chatgpt_openai.base.OpenAIHolder
-import com.longkd.chatgpt_openai.base.model.ImageStyleResponse
 import com.longkd.chatgpt_openai.base.model.ModelGenerateArt
 import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
 import com.longkd.chatgpt_openai.base.mvvm.DataRepository
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.feature.art.vyro.adapter.AspectRatioData
-import com.longkd.chatgpt_openai.open.client.OpenAiService
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -57,24 +55,4 @@ class GenerateArtViewModel @Inject constructor(val dataRepository: DataRepositor
         }
     }
 
-    fun getListStyleImage(): LiveData<ImageStyleResponse> {
-        val listStyle = MutableLiveData<ImageStyleResponse>()
-        uiScope.launch(Dispatchers.Main) {
-            val result =  withContext(Dispatchers.Default) {
-                try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.getImageStyle(
-                            OpenAiService(timeout = Constants.TIME_OUT),
-                            "StyleAIArt"
-                        )
-                    }
-                } catch (e: Throwable) {
-                    e.printStackTrace()
-                    null
-                }
-            }
-            listStyle.postValue(result!!)
-        }
-        return listStyle
-    }
 }

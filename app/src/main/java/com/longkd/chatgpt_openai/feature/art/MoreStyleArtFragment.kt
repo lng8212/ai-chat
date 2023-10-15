@@ -1,3 +1,9 @@
+/*
+ * Created by longkd on 10/15/23, 11:33 PM
+ * Copyright (c) by Begamob.com 2023 . All rights reserved.
+ * Last modified 10/15/23, 9:08 PM
+ */
+
 package com.longkd.chatgpt_openai.feature.art
 
 import android.os.Bundle
@@ -7,7 +13,6 @@ import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.util.CommonAction
-import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
 import com.longkd.chatgpt_openai.databinding.FragmentMoreStyleArtBinding
 import com.longkd.chatgpt_openai.feature.home.HomeViewModel
@@ -55,12 +60,8 @@ class MoreStyleArtFragment :
             popBackStack()
         })
 
-        mViewModel?.currentStyleArt?.observe(this){ list ->
+        mViewModel.currentStyleArt?.observe(this){ list ->
             println()
-        }
-        mBinding?.fmMoreStyleArtTvDone?.setOnSingleClick {
-            currentStyleArt?.let { it1 -> mViewModel?.updateListStyleArt(context, it1) }
-            popBackStack()
         }
     }
 

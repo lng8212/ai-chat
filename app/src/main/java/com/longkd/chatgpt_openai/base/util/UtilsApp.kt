@@ -2,7 +2,11 @@ package com.longkd.chatgpt_openai.base.util
 
 import android.app.Activity
 import android.app.PendingIntent
-import android.content.*
+import android.content.ActivityNotFoundException
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -25,7 +29,8 @@ import java.net.InetAddress
 import java.net.UnknownHostException
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 
 object UtilsApp {
@@ -67,12 +72,12 @@ object UtilsApp {
     }
 
 
-    fun createEmailIntent(context: Context, appName: String): Intent {
+    private fun createEmailIntent(context: Context, appName: String): Intent {
         val toEmail = context.getString(R.string.email_feedback)
         val release = Build.VERSION.RELEASE
         val SDK = Build.VERSION.SDK_INT
         val yourName = "customer"
-        val phoneName = android.os.Build.MODEL
+        val phoneName = Build.MODEL
         val manager = context.packageManager
         var info: PackageInfo? = null
         try {
@@ -127,7 +132,7 @@ object UtilsApp {
         val release = Build.VERSION.RELEASE
         val SDK = Build.VERSION.SDK_INT
         val yourName = "customer"
-        val phoneName = android.os.Build.MODEL
+        val phoneName = Build.MODEL
         val manager = context.packageManager
         var info: PackageInfo? = null
         try {
@@ -201,7 +206,7 @@ object UtilsApp {
     }
 
     private fun applyLocaleChangeLegacy(resources: Resources, configuration: Configuration) {
-        val displayMetrics = resources.getDisplayMetrics()
+        val displayMetrics = resources.displayMetrics
         resources.updateConfiguration(configuration, displayMetrics)
     }
 

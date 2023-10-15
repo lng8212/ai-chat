@@ -6,8 +6,14 @@
 
 package com.longkd.chatgpt_openai.open
 
+import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
+import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.asRequestBody
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -24,5 +30,17 @@ class ChatRepositoryImpl @Inject constructor(private val service: ChatService) :
 
     override suspend fun createCompletionV1ChatGPT4(request: Completion35Request): State<Completion35Result> {
         return handleResponse(service.createCompletionV1ChatGPT4(request))
+    }
+
+    override suspend fun completeTopicChat(request: Completion35Request): State<TopicResponse> {
+        return handleResponse(service.completeTopicChat(request))
+    }
+
+    override suspend fun uploadSummaryFile(path: String): State<SummaryFileResponse> {
+        val mFile = java.io.File(path)
+        val fileBody = mFile.asRequestBody("application/pdf".toMediaTypeOrNull())
+        val body: MultipartBody.Part =
+            MultipartBody.Part.createFormData("file", mFile.name, fileBody)
+        return handleResponse(service.uploadSummaryFile(body))
     }
 }

@@ -6,11 +6,10 @@
 
 package com.longkd.chatgpt_openai.open
 
+import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
+import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
-import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.POST
 
 /**
  * @Author: longkd
@@ -19,4 +18,8 @@ import retrofit2.http.POST
 interface ChatRepository {
     suspend fun createCompletionV1Chat(request: Completion35Request): State<Completion35Result>
     suspend fun createCompletionV1ChatGPT4(request: Completion35Request): State<Completion35Result>
+
+    suspend fun completeTopicChat(request: Completion35Request): State<TopicResponse>
+
+    suspend fun uploadSummaryFile(path: String): State<SummaryFileResponse>
 }

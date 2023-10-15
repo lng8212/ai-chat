@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
+import com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
@@ -28,32 +29,23 @@ import com.longkd.chatgpt_openai.feature.chat.viewholder.AllTopicAdapter
 import com.longkd.chatgpt_openai.feature.chat.viewholder.DetailTopicAdapter
 import com.longkd.chatgpt_openai.feature.home.HomeViewModel
 import com.longkd.chatgpt_openai.feature.home_new.topic.DetailTopicFragment
+import com.longkd.chatgpt_openai.feature.home_new.topic.TopicProvider
 import com.longkd.chatgpt_openai.feature.home_new.topic.TopicsAdapter
 import com.longkd.chatgpt_openai.feature.intro.IntroFirstFragment
 import com.longkd.chatgpt_openai.feature.intro.IntroFragment
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic
-import com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
-import com.longkd.chatgpt_openai.base.model.DetailTopicData
-import com.longkd.chatgpt_openai.base.model.TopicData
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.TopicsUtils
-import com.longkd.chatgpt_openai.base.util.orZero
-import com.longkd.chatgpt_openai.feature.home_new.topic.TopicProvider
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.util.*
 
 @AndroidEntryPoint
 class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_new_home) {
     private val mViewModel: HomeViewModel by viewModels()
     private val mShareDataViewModel: ShareDataViewModel by activityViewModels()
-    private var mIsDeviceSupported = true
     private lateinit var topicAdapter: TopicsAdapter
     private lateinit var detailTopicAdapter: DetailTopicAdapter
     private lateinit var allTopicAdapter: AllTopicAdapter
@@ -67,22 +59,6 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
         CommonSharedPreferences.getInstance().titleAppChat.let {
             if (!it.isNullOrBlank()) {
                 mBinding?.homeFmSelectTitle?.text = it
-            }
-        }
-        mShareDataViewModel.setTimeStartApp {}
-        mShareDataViewModel.setNumberStartApp()
-        kotlin.runCatching {
-            if (mShareDataViewModel.isResetLimitUse()) {
-                CommonSharedPreferences.getInstance().numberLimitedUse = 3
-                lifecycleScope.launch(Dispatchers.Main) {
-                    withContext(Dispatchers.Default) {
-                        CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                            kotlin.runCatching {
-                                OpenAIHolder.resetFreeChat(it)
-                            }
-                        }
-                    }
-                }
             }
         }
 
@@ -216,7 +192,8 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
                 mBinding?.rclDetailAllTopic?.gone()
                 mBinding?.rclDetailTopic?.visible()
                 val arrTopicDetail =
-                    DetailTopicData.values().toMutableList().filter { it.topicId == item.topicId }
+                    DetailTopicData.values().toMutableList()
+                        .filter { it1 -> it1.topicId == item.topicId }
                 detailTopicAdapter.setDatas(arrTopicDetail.toMutableList())
             }
         }
@@ -234,8 +211,7 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
         }
 
         mBinding?.homeFmSummaryFile?.setOnSingleClick {
-
-                        showSummaryFileFragment()
+            showSummaryFileFragment()
 
         }
 
@@ -310,7 +286,6 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
 
     @SuppressLint("SetTextI18n")
     override fun initData() {
-        mViewModel.callGetTimeStamp()
         val isShowIntro = CommonSharedPreferences.getInstance(context)
             .getBoolean(Constants.FIRST_SHOW_INTRO, true)
         if (isShowIntro) {
@@ -321,67 +296,63 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
             }, IntroFirstFragment::class.java.name)
         } else {
             lifecycleScope.launch(Dispatchers.Main) {
-                if (mIsDeviceSupported) {
-                    when (activity?.intent?.action) {
-                        Intent.ACTION_PROCESS_TEXT -> {
-                            activity?.intent?.getStringExtra(Intent.EXTRA_PROCESS_TEXT)?.let {
-                                mainFragment?.pushScreenWithAnimate(
-                                    ChatDetailFragment.newInstance(
-                                        textCopy = "It appears that you have copied:\n$it\n\nWhat would you like me to do with it"
-                                    ),
-                                    ChatDetailFragment::class.java.name
-                                )
-                            }
+
+                when (activity?.intent?.action) {
+                    Intent.ACTION_PROCESS_TEXT -> {
+                        activity?.intent?.getStringExtra(Intent.EXTRA_PROCESS_TEXT)?.let {
+                            mainFragment?.pushScreenWithAnimate(
+                                ChatDetailFragment.newInstance(
+                                    textCopy = "It appears that you have copied:\n$it\n\nWhat would you like me to do with it"
+                                ),
+                                ChatDetailFragment::class.java.name
+                            )
                         }
-
-                        Constants.KEY_WIDGET_CLICK -> {
-                            if (activity?.intent?.getBooleanExtra(
-                                    WidgetTopic.TYPE_HISTORY,
-                                    false
-                                ) == true
-                            ) {
-                                val topicType = activity?.intent?.getLongExtra(
-                                    Constants.KEY_WIDGET_CLICK,
-                                    -1
-                                )
-                                mainFragment?.pushScreenWithAnimate(
-                                    ChatDetailFragment.newInstance(
-                                        chatId = topicType ?: 0
-                                    ), ChatDetailFragment::class.java.name
-                                )
-
-                            } else {
-                                val topicType = activity?.intent?.getIntExtra(
-                                    Constants.KEY_WIDGET_CLICK,
-                                    -1
-                                )
-                                val topics = TopicsUtils.listTopic(activity)
-                                val topic = topics.find {
-                                    it.topicType == topicType
-                                }
-                                mainFragment?.pushScreenWithAnimate(
-                                    ChatDetailFragment.newInstance(
-                                        topicType = topic
-                                    ),
-                                    ChatDetailFragment::javaClass.name
-                                )
-                            }
-                        }
-
-                        else -> {}
                     }
 
-                } else {
-                    withContext(Dispatchers.Default) {
-                        delay(200)
+                    Constants.KEY_WIDGET_CLICK -> {
+                        if (activity?.intent?.getBooleanExtra(
+                                WidgetTopic.TYPE_HISTORY,
+                                false
+                            ) == true
+                        ) {
+                            val topicType = activity?.intent?.getLongExtra(
+                                Constants.KEY_WIDGET_CLICK,
+                                -1
+                            )
+                            mainFragment?.pushScreenWithAnimate(
+                                ChatDetailFragment.newInstance(
+                                    chatId = topicType ?: 0
+                                ), ChatDetailFragment::class.java.name
+                            )
+
+                        } else {
+                            val topicType = activity?.intent?.getIntExtra(
+                                Constants.KEY_WIDGET_CLICK,
+                                -1
+                            )
+                            val topics = TopicsUtils.listTopic(activity)
+                            val topic = topics.find {
+                                it.topicType == topicType
+                            }
+                            mainFragment?.pushScreenWithAnimate(
+                                ChatDetailFragment.newInstance(
+                                    topicType = topic
+                                ),
+                                ChatDetailFragment::javaClass.name
+                            )
+                        }
                     }
+
+                    else -> {}
                 }
+
             }
+
         }
 
         mShareDataViewModel.mNotifyUpdateChatHistory.observe(this) {
             if (context != null)
-                mViewModel?.getAllChatHistory()
+                mViewModel.getAllChatHistory()
         }
 
         if (isShowIntro) {
@@ -391,15 +362,9 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
     }
 
     fun updateDataChat() {
-        mViewModel?.getAllChatHistory()
+        mViewModel.getAllChatHistory()
     }
 
-    @SuppressLint("SetTextI18n")
-    fun getChatNumber() {
-        mViewModel?.getMessNumberNormal()?.observe(this@HomeNewFragment) {
-            mShareDataViewModel.updateChatNumber(it)
-        }
-    }
 
     override var initBackAction: Boolean = false
 

@@ -5,21 +5,21 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.OpenAIHolder
-import com.longkd.chatgpt_openai.base.model.*
-import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
-import com.longkd.chatgpt_openai.base.mvvm.DataRepository
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.DateUtils
-import com.longkd.chatgpt_openai.open.client.OpenAiService
-import com.longkd.chatgpt_openai.open.client.TimeStampService
-import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
-import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.model.ChatType
 import com.longkd.chatgpt_openai.base.model.ModelData
 import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
+import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
+import com.longkd.chatgpt_openai.base.mvvm.DataRepository
+import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
+import com.longkd.chatgpt_openai.base.util.Constants
+import com.longkd.chatgpt_openai.base.util.DateUtils
+import com.longkd.chatgpt_openai.open.ChatRepository
+import com.longkd.chatgpt_openai.open.client.OpenAiService
+import com.longkd.chatgpt_openai.open.client.TimeStampService
+import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
+import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,7 +28,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SummaryFileViewModel @Inject constructor(
-    private val dataRepository: DataRepository
+    private val dataRepository: DataRepository,
+    private val chatRepository: ChatRepository
 ) : BaseViewModel(dataRepository) {
 
     private val _listSummaryHistory = MutableLiveData<ArrayList<SummaryHistoryDto>>()
@@ -41,7 +42,7 @@ class SummaryFileViewModel @Inject constructor(
     private val _showLoading = MutableLiveData<Boolean>()
     val showLoading: LiveData<Boolean> = _showLoading
 
-    private var typeSummary: String ? = Constants.TYPE_SUMMARY.SUMMARY_FILE
+    private var typeSummary: String? = Constants.TYPE_SUMMARY.SUMMARY_FILE
     fun getListSummaryHistory(): LiveData<ArrayList<SummaryHistoryDto>> = _listSummaryHistory
     val arrRemoveSummary = MutableLiveData<ArrayList<SummaryHistoryDto>>(arrayListOf())
     val isRemoveSuccess = MutableLiveData<Boolean>()
@@ -81,19 +82,8 @@ class SummaryFileViewModel @Inject constructor(
         uiScope.launch(Dispatchers.Main) {
             _showLoading.postValue(true)
             typeSummary = Constants.TYPE_SUMMARY.SUMMARY_FILE
-           val result =  withContext(Dispatchers.Default) {
-                try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.uploadSummaryFile(
-                            OpenAiService(TOKEN_PAKE, timeout = Constants.TIME_OUT, type = 1),
-                            data.filePaths.first(),
-                            it
-                        )
-                    }
-                } catch (e: Throwable) {
-                    e.printStackTrace()
-                    null
-                }
+            val result = withContext(Dispatchers.Default) {
+                chatRepository.uploadSummaryFile(data.filePaths.first()).data
             }
             errorCode.value = result?.code
             handleSaveSummaryResponse(data, null, result, context)
@@ -105,11 +95,12 @@ class SummaryFileViewModel @Inject constructor(
         uiScope.launch(Dispatchers.Main) {
             typeSummary = Constants.TYPE_SUMMARY.SUMMARY_TEXT
             _showLoading.postValue(true)
-            val result =  withContext(Dispatchers.Default) {
+            val result = withContext(Dispatchers.Default) {
                 try {
                     val completionRequest = Completion35Request()
                     completionRequest.model = ModelData.GPT_35.value
-                    completionRequest.messages = arrayListOf(Message35Request("system", summaryContent))
+                    completionRequest.messages =
+                        arrayListOf(Message35Request("system", summaryContent))
                     completionRequest.maxTokens = 3000
                     CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
                         OpenAIHolder.uploadSummaryText(
@@ -129,18 +120,26 @@ class SummaryFileViewModel @Inject constructor(
         }
     }
 
-    private fun handleSaveSummaryResponse(data: SummaryHistoryDto? = null, summaryContent: String ? = null, result: SummaryFileResponse?, context: Context?) {
+    private fun handleSaveSummaryResponse(
+        data: SummaryHistoryDto? = null,
+        summaryContent: String? = null,
+        result: SummaryFileResponse?,
+        context: Context?
+    ) {
         result?.let {
             if (it.code != 200) {
                 _showLoading.postValue(false)
                 _summaryFileDto.postValue(null)
             } else {
                 CommonSharedPreferences.getInstance().apply {
-                        setNumberSummaryFile(getNumberSummaryFile(summaryConfigData).minus(1))
+                    setNumberSummaryFile(getNumberSummaryFile(summaryConfigData).minus(1))
                     resetNumberSummaryFile()
                 }
                 val chatBaseDto = ChatDetailDto(
-                    context?.getString(R.string.str_file_summary) + " " + result.summaryText?.replace("TLDR:", ""),
+                    context?.getString(R.string.str_file_summary) + " " + result.summaryText?.replace(
+                        "TLDR:",
+                        ""
+                    ),
                     System.currentTimeMillis(),
                     DateUtils.parseTime("at"),
                     false,
@@ -196,17 +195,17 @@ class SummaryFileViewModel @Inject constructor(
                 data?.token?.let {
                     CommonSharedPreferences.getInstance().timeStamp = it
 
-                        var timeInMills = CommonSharedPreferences.getInstance().timeSaveSummaryFile
-                        if (timeInMills == -1L || timeInMills == null) {
-                            CommonSharedPreferences.getInstance().timeSaveSummaryFile = it.toLong()
-                            timeInMills = it.toLong()
+                    var timeInMills = CommonSharedPreferences.getInstance().timeSaveSummaryFile
+                    if (timeInMills == -1L || timeInMills == null) {
+                        CommonSharedPreferences.getInstance().timeSaveSummaryFile = it.toLong()
+                        timeInMills = it.toLong()
+                    }
+                    if (!android.text.format.DateUtils.isToday(timeInMills)) {
+                        CommonSharedPreferences.getInstance().timeSaveSummaryFile = it.toLong()
+                        CommonSharedPreferences.getInstance().apply {
+                            setNumberSummaryFile(summaryConfigData)
                         }
-                        if (!android.text.format.DateUtils.isToday(timeInMills)) {
-                            CommonSharedPreferences.getInstance().timeSaveSummaryFile = it.toLong()
-                            CommonSharedPreferences.getInstance().apply {
-                                setNumberSummaryFile(summaryConfigData)
-                            }
-                        }
+                    }
                 }
             }
         }
@@ -221,7 +220,7 @@ class SummaryFileViewModel @Inject constructor(
 
     fun resetNumberSummaryFile() {
         CommonSharedPreferences.getInstance().apply {
-                timesSummary.value =  getNumberSummaryFile(summaryConfigData)
+            timesSummary.value = getNumberSummaryFile(summaryConfigData)
         }
     }
 

@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import com.longkd.chatgpt_openai.feature.home_new.topic.DataFieldTopic
-import com.longkd.chatgpt_openai.feature.home_new.topic.DataTypeTopic
 import com.google.android.flexbox.FlexboxLayout
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.util.gone
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.base.util.visible
 import com.longkd.chatgpt_openai.databinding.LayoutCustomTopicBinding
+import com.longkd.chatgpt_openai.feature.home_new.topic.DataFieldTopic
+import com.longkd.chatgpt_openai.feature.home_new.topic.DataTypeTopic
 
 class CustomTopicView : ConstraintLayout {
     private var mBinding: LayoutCustomTopicBinding? = null
@@ -99,16 +99,17 @@ class CustomTopicView : ConstraintLayout {
     }
 
     fun getDataField(): String {
-        var result = ""
-        when(mDataType) {
+        val result: String = when (mDataType) {
             DataTypeTopic.MULTI_SELECT.name -> {
-                result = selectedItems.toString()
+                selectedItems.toString()
             }
+
             DataTypeTopic.SELECT.name -> {
-                result = mBinding?.inputSelect?.text?.trim().toString()
+                mBinding?.inputSelect?.text?.trim().toString()
             }
+
             else -> {
-                result = mBinding?.inputText?.text?.trim().toString()
+                mBinding?.inputText?.text?.trim().toString()
             }
         }
         return result
