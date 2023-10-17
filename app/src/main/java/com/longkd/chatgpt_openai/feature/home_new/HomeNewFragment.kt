@@ -18,7 +18,6 @@ import com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
-import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.model.*
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.FragmentNewHomeBinding
@@ -53,9 +52,6 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
 
     override fun initViews() {
         initShortCut()
-        kotlin.runCatching {
-            OpenAIHolder.initLib()
-        }
         CommonSharedPreferences.getInstance().titleAppChat.let {
             if (!it.isNullOrBlank()) {
                 mBinding?.homeFmSelectTitle?.text = it

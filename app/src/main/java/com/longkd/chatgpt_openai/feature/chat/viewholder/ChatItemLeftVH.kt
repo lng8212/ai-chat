@@ -14,18 +14,17 @@ import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.base.widget.BaseViewHolder
 import com.longkd.chatgpt_openai.databinding.ChatItemListLeftBinding
-import com.longkd.chatgpt_openai.base.util.LoggerUtil
 
 
 class ChatItemLeftVH(
     mBinding: ChatItemListLeftBinding,
     var enableAnimateText: Boolean,
-    var mOnAnimateFinished: (() -> Unit)? = null,
-    var itemClickListener: ItemClickListener<ChatDetailDto>,
-    var onClickRegenerate : ((chatDto: ChatDetailDto) -> Unit)? = null,
-    var onClickViewMore: (() -> Unit) ? = null
+    private var mOnAnimateFinished: (() -> Unit)? = null,
+    private var itemClickListener: ItemClickListener<ChatDetailDto>,
+    private var onClickRegenerate: ((chatDto: ChatDetailDto) -> Unit)? = null,
+    private var onClickViewMore: (() -> Unit)? = null
 ) : BaseViewHolder<ChatItemListLeftBinding>(mBinding) {
-    var isTypingRunning = false
+    private var isTypingRunning = false
     private var mData: ChatDetailDto? = null
     @SuppressLint("SetTextI18n")
     fun bindData(data: ChatDetailDto) {
@@ -126,7 +125,7 @@ class ChatItemLeftVH(
         binding.chatItemListLeftText.setCharacterDelay(millis)
     }
 
-    fun updateTypingAnimation(isRun: Boolean) {
+    private fun updateTypingAnimation(isRun: Boolean) {
         isTypingRunning = isRun
         if (isRun) {
             binding.chatItemListLeftAnimTypePing.visible()

@@ -10,9 +10,13 @@ import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionResult
+import com.longkd.chatgpt_openai.open.dto.completion.TokenDto
 import okhttp3.MultipartBody
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.Multipart
 import retrofit2.http.POST
 import retrofit2.http.Part
@@ -34,4 +38,16 @@ interface ChatService {
     @Multipart
     @POST("/api/v1/summarize_file")
     suspend fun uploadSummaryFile(@Part file: MultipartBody.Part?): Response<SummaryFileResponse>
+
+    @POST("/api/v1/summarize_chat")
+    suspend fun completeSummaryChat(@Body request: Completion35Request?): Response<Completion35Result>
+
+    @POST("/api/v1/summarize_text")
+    suspend fun uploadSummaryText(@Body request: Completion35Request?): Response<SummaryFileResponse>
+
+    @POST("/api/v1/completion")
+    suspend fun createCompletionNew(@Body request: CompletionRequest?): Response<CompletionResult>
+
+    @GET("/api/getTime")
+    suspend fun getTime(): Response<TokenDto>
 }

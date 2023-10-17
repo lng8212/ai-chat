@@ -10,9 +10,11 @@ import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionResult
+import com.longkd.chatgpt_openai.open.dto.completion.TokenDto
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -42,5 +44,21 @@ class ChatRepositoryImpl @Inject constructor(private val service: ChatService) :
         val body: MultipartBody.Part =
             MultipartBody.Part.createFormData("file", mFile.name, fileBody)
         return handleResponse(service.uploadSummaryFile(body))
+    }
+
+    override suspend fun completeSummaryChat(request: Completion35Request?): State<Completion35Result> {
+        return handleResponse(service.completeSummaryChat(request))
+    }
+
+    override suspend fun createCompletionNew(request: CompletionRequest?): State<CompletionResult> {
+        return handleResponse(service.createCompletionNew(request))
+    }
+
+    override suspend fun uploadSummaryText(request: Completion35Request?): State<SummaryFileResponse> {
+        return handleResponse(service.uploadSummaryText(request))
+    }
+
+    override suspend fun getTime(): State<TokenDto> {
+        return handleResponse(service.getTime())
     }
 }

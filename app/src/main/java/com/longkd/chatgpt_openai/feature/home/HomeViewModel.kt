@@ -1,10 +1,10 @@
 package com.longkd.chatgpt_openai.feature.home
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.longkd.chatgpt_openai.R
-import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.model.ChatBaseDto
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.model.ChatRole
@@ -22,10 +22,7 @@ import com.longkd.chatgpt_openai.base.util.LoggerUtil
 import com.longkd.chatgpt_openai.base.util.convertToChatBaseDto
 import com.longkd.chatgpt_openai.feature.art.StyleArtDto
 import com.longkd.chatgpt_openai.open.ChatRepository
-import com.longkd.chatgpt_openai.open.client.OpenAiService
-import com.longkd.chatgpt_openai.open.client.TimeStampService
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -40,8 +37,6 @@ class HomeViewModel @Inject constructor(
     private val dataRepository: DataRepository,
     private val chatRepository: ChatRepository
 ) : BaseViewModel(dataRepository) {
-    private var mTimeStampService =
-        TimeStampService(TOKEN, timeout = 60, type = 0)
     private var mCurrentChatBaseDto: MutableLiveData<ChatBaseDto> = MutableLiveData()
     var mMessageMore: MutableLiveData<String> = MutableLiveData()
     private var mTextAtTime: String = ""
@@ -49,21 +44,33 @@ class HomeViewModel @Inject constructor(
     var currentStyleArt: MutableLiveData<ArrayList<StyleArtDto>> = MutableLiveData()
     private val mArrListPromt: ArrayList<Message35Request> = arrayListOf()
     val callChatWithTopic = MutableLiveData<Unit>()
-    private val limitSavePrevConversation = CommonSharedPreferences.getInstance().limitSavePrevConversation.times(2).plus(1)
-    private var isTextInputCopy: Boolean ? = null
+    private val limitSavePrevConversation =
+        CommonSharedPreferences.getInstance().limitSavePrevConversation.times(2).plus(1)
+    private var isTextInputCopy: Boolean? = null
 
     fun getCurrentDto(): LiveData<ChatBaseDto> = mCurrentChatBaseDto
 
     val inputEdtChat = MutableLiveData<String>()
 
-    private var isCallChatSuccess: Boolean ? = null
+    private var isCallChatSuccess: Boolean? = null
 
     fun setTextInputCopy(value: Boolean) {
         this.isTextInputCopy = value
     }
 
-    fun initChat(topicType: Int, firstMessage: String, textAtTime: String, question: String ? = null, topic: String ? = null) {
-        if (!topic.isNullOrEmpty()) mArrListPromt.add(Message35Request(ChatRole.SYSTEM.value, "topic: $topic"))
+    fun initChat(
+        topicType: Int,
+        firstMessage: String,
+        textAtTime: String,
+        question: String? = null,
+        topic: String? = null
+    ) {
+        if (!topic.isNullOrEmpty()) mArrListPromt.add(
+            Message35Request(
+                ChatRole.SYSTEM.value,
+                "topic: $topic"
+            )
+        )
         mTextAtTime = textAtTime
         question?.let {
             uiScope.launch(Dispatchers.Main) {
@@ -85,7 +92,12 @@ class HomeViewModel @Inject constructor(
                 callChatWithTopic.postValue(Unit)
             }
         } ?: run {
-            if (this.isTextInputCopy == true) mArrListPromt.add(Message35Request(ChatRole.ASSISTANT.value, "$firstMessage"))
+            if (this.isTextInputCopy == true) mArrListPromt.add(
+                Message35Request(
+                    ChatRole.ASSISTANT.value,
+                    "$firstMessage"
+                )
+            )
             uiScope.launch(Dispatchers.Main) {
                 val newDto = withContext(Dispatchers.Default) {
                     ChatBaseDto(
@@ -123,7 +135,6 @@ class HomeViewModel @Inject constructor(
     }
 
 
-
     private suspend fun reFormatDate(dto: ChatBaseDto): ChatBaseDto {
         return withContext(Dispatchers.Default) {
             dto.chatDetail.forEach {
@@ -153,6 +164,7 @@ class HomeViewModel @Inject constructor(
         }
         return newList
     }
+
     fun getAllChatHistory(): LiveData<ArrayList<ChatDetailDto>> {
         uiScope.launch(Dispatchers.Main) {
             val listChatHistory = arrayListOf<ChatDetailDto>()
@@ -205,7 +217,7 @@ class HomeViewModel @Inject constructor(
         valueError: String,
         isNewChat: Boolean,
         topicType: Int,
-        lastAssistantChat: String ? = null
+        lastAssistantChat: String? = null
     ): LiveData<ResultDataDto> {
         val result: MutableLiveData<ResultDataDto> = MutableLiveData()
         val resultDataDto = ChatDetailDto(
@@ -275,7 +287,8 @@ class HomeViewModel @Inject constructor(
                             "There is an error, please check if automatic date and time are enabled on your phone."
                         }
                     } else if (e.message?.contains(Constants.MESSAGE_TIME_OUT) == true) {
-                        resultText = context?.getString(R.string.str_message_time_out_connecting) ?: "Time out! Please make sure your internet connection is stable."
+                        resultText = context?.getString(R.string.str_message_time_out_connecting)
+                            ?: "Time out! Please make sure your internet connection is stable."
                     }
                     e.printStackTrace()
                     null
@@ -290,9 +303,15 @@ class HomeViewModel @Inject constructor(
                 mArrListPromt.firstOrNull { it.role == ChatRole.ASSISTANT.value }?.let {
                     it.content = completionResult.topicText
                 } ?: run {
-                    mArrListPromt.add(Message35Request(ChatRole.ASSISTANT.value, completionResult.topicText))
+                    mArrListPromt.add(
+                        Message35Request(
+                            ChatRole.ASSISTANT.value,
+                            completionResult.topicText
+                        )
+                    )
                 }
-                CommonSharedPreferences.getInstance().numberFreeChat1 = CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
+                CommonSharedPreferences.getInstance().numberFreeChat1 =
+                    CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
                 isCallChatSuccess = true
                 result.value = ResultDataDto.SuccessTopic(completionResult)
                 resultText = completionResult.topicText ?: ""
@@ -310,7 +329,10 @@ class HomeViewModel @Inject constructor(
             }
             mCurrentChatBaseDto.value?.let {
                 dataRepository.updateChatDto(it)
-                val currentBaseDto = reFormatDate(it).apply { it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore = false}
+                val currentBaseDto = reFormatDate(it).apply {
+                    it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore =
+                        false
+                }
                 mCurrentChatBaseDto.value = currentBaseDto
             }
         }
@@ -353,11 +375,9 @@ class HomeViewModel @Inject constructor(
                 completionRequest.maxTokens = 1500
 
                 try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.callCompletion35(
-                            1, "", OpenAiService(TOKEN, timeout = Constants.TIME_OUT, type = 0), completionRequest, it
-                        )
-                    }
+
+                    chatRepository.createCompletionV1Chat(completionRequest).data
+
                 } catch (e: Throwable) {
                     if (e.cause is SSLHandshakeException) {
                         resultText = try {
@@ -366,8 +386,9 @@ class HomeViewModel @Inject constructor(
                         } catch (e: Exception) {
                             "There is an error, please check if automatic date and time are enabled on your phone."
                         }
-                    }  else if (e.message?.contains(Constants.MESSAGE_TIME_OUT) == true) {
-                        resultText = context?.getString(R.string.str_message_time_out_connecting) ?: "Time out! Please make sure your internet connection is stable."
+                    } else if (e.message?.contains(Constants.MESSAGE_TIME_OUT) == true) {
+                        resultText = context?.getString(R.string.str_message_time_out_connecting)
+                            ?: "Time out! Please make sure your internet connection is stable."
                     }
                     e.printStackTrace()
                     null
@@ -388,7 +409,8 @@ class HomeViewModel @Inject constructor(
                         completionResult?.choices?.getOrNull(0)?.message?.content
                     )
                 )
-                CommonSharedPreferences.getInstance().numberFreeChat1 = CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
+                CommonSharedPreferences.getInstance().numberFreeChat1 =
+                    CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
                 resultText = data
                 result.value = ResultDataDto.Success(data, mIsCallMore)
                 isCallChatSuccess = true
@@ -406,12 +428,16 @@ class HomeViewModel @Inject constructor(
             }
             mCurrentChatBaseDto.value?.let {
                 dataRepository.updateChatDto(it)
-                val currentBaseDto = reFormatDate(it).apply { it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore = mIsCallMore}
+                val currentBaseDto = reFormatDate(it).apply {
+                    it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore =
+                        mIsCallMore
+                }
                 mCurrentChatBaseDto.value = currentBaseDto
             }
         }
         return result
     }
+
     fun completeQRetrofitHandler(
         context: Context?,
         input: String,
@@ -441,7 +467,7 @@ class HomeViewModel @Inject constructor(
             input,
             isSeeMore = false,
 
-        )
+            )
         uiScope.launch(Dispatchers.Main) {
             if (isNewChat && isTextInputCopy != true) {
                 mCurrentChatBaseDto.value = ChatBaseDto(
@@ -493,23 +519,15 @@ class HomeViewModel @Inject constructor(
                     1500
 
                 try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let { sharef ->
-                        fromSummary?.let {
-                            OpenAIHolder.completeSummaryChat(
-                                1, input, OpenAiService(TOKEN, timeout = Constants.TIME_OUT, type = 0), completionRequest, sharef
-                            )
-                        } ?: run {
-                            if (CommonSharedPreferences.getInstance().modelChatGpt == Constants.MODEL_CHAT.GPT_3_5){
-                                chatRepository.createCompletionV1Chat(completionRequest).data
-                            }
-                            else chatRepository.createCompletionV1ChatGPT4(completionRequest).data
-
-//                            OpenAIHolder.callCompletion35(
-//                                1, input, OpenAiService(TOKEN, timeout = Constants.TIME_OUT, type = 0), completionRequest, sharef
-//                            )
-                        }
+                    fromSummary?.let {
+                        chatRepository.completeSummaryChat(completionRequest).data
+                    } ?: run {
+                        if (CommonSharedPreferences.getInstance().modelChatGpt == Constants.MODEL_CHAT.GPT_3_5) {
+                            chatRepository.createCompletionV1Chat(completionRequest).data
+                        } else chatRepository.createCompletionV1ChatGPT4(completionRequest).data
                     }
                 } catch (e: Throwable) {
+                    Log.e("aaaaa", "completeQRetrofit35: ${e.message}")
                     if (e.cause is SSLHandshakeException) {
                         resultText = try {
                             context?.getString(R.string.txt_exception_date)
@@ -518,7 +536,8 @@ class HomeViewModel @Inject constructor(
                             "There is an error, please check if automatic date and time are enabled on your phone."
                         }
                     } else if (e.message?.contains(Constants.MESSAGE_TIME_OUT) == true) {
-                        resultText = context?.getString(R.string.str_message_time_out_connecting) ?: "Time out! Please make sure your internet connection is stable."
+                        resultText = context?.getString(R.string.str_message_time_out_connecting)
+                            ?: "Time out! Please make sure your internet connection is stable."
                     }
                     e.printStackTrace()
                     null
@@ -526,7 +545,7 @@ class HomeViewModel @Inject constructor(
             }
             var data = completionResult?.choices?.first()?.message?.content
             var mIsCallMore = false
-           // if (IapUtils.isVipChat()) data = data?.substring(0, data.lastIndexOf(".").plus(1))
+            // if (IapUtils.isVipChat()) data = data?.substring(0, data.lastIndexOf(".").plus(1))
             if (data.isNullOrBlank()) {
                 isCallChatSuccess = false
                 result.value = ResultDataDto.Error(ErrorType.UNKNOWN)
@@ -537,7 +556,8 @@ class HomeViewModel @Inject constructor(
                         completionResult?.choices?.getOrNull(0)?.message?.content
                     )
                 )
-                CommonSharedPreferences.getInstance().numberFreeChat1 = CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
+                CommonSharedPreferences.getInstance().numberFreeChat1 =
+                    CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
                 isCallChatSuccess = true
                 result.value = ResultDataDto.Success(data, mIsCallMore)
                 resultText = data
@@ -560,65 +580,19 @@ class HomeViewModel @Inject constructor(
                 } ?: run {
                     dataRepository.updateChatDto(it)
                 }
-                val currentBaseDto = reFormatDate(it).apply { it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore = mIsCallMore}
+                val currentBaseDto = reFormatDate(it).apply {
+                    it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore =
+                        mIsCallMore
+                }
                 mCurrentChatBaseDto.value = currentBaseDto
             }
         }
         return result
     }
-    // call chat second
-    private fun completeQRetrofitMore(
-        context: Context?,
-        input: String,
-    ) {
-        uiScope.launch(Dispatchers.Main) {
-            val completionResult = withContext(Dispatchers.Default) {
-                val completionRequest = CompletionRequest()
-                completionRequest.model = ModelData.GPT_D.value
-                completionRequest.prompt = input
-                completionRequest.echo = false
-                completionRequest.temperature = 0.9
-                completionRequest.topP = 1.0
-                completionRequest.bestOf = 1
-                completionRequest.stop = listOf("User:", "Assistant:")
-                completionRequest.presencePenalty = 0.6
-                completionRequest.maxTokens =  950
-                try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.callCompletionMore(1, input, OpenAiService(TOKEN, timeout = 60, type = 0), completionRequest
-                        )
-                    }
-                } catch (e: Throwable) {
-                    e.printStackTrace()
-                    null
-                }
-            }
 
-            val data = completionResult?.choices?.first()?.text
-            if (data.isNullOrBlank()) {
-                return@launch
-            }
-            mMessageMore.value = data.toString()
-        }
-    }
     //get token time
     fun callGetTimeStamp() {
-        val time = CommonSharedPreferences.getInstance().timeStartGetTime
-        if (System.currentTimeMillis() - time > Constants.TIME_8_MINUS) {
-            CommonSharedPreferences.getInstance().timeStartGetTime = System.currentTimeMillis()
-            uiScope.launch(Dispatchers.Main) {
-                val data = withContext(Dispatchers.Default) {
-                    try {
-                        OpenAIHolder.callGetTime(mTimeStampService)
-                    } catch (e: Throwable) {
-                        null
-                    }
-                }
-                data?.token?.let {
-                    CommonSharedPreferences.getInstance().timeStamp = it
-                }
-            }
-        }
+        CommonSharedPreferences.getInstance().timeStamp = System.currentTimeMillis().toString()
     }
 
     fun initChatSummary(data: SummaryHistoryDto?) {
@@ -644,9 +618,18 @@ class HomeViewModel @Inject constructor(
         CommonSharedPreferences.getInstance().modelChatGpt = value
     }
 
-    private fun initChatDetailDto(mes: String, chatType: Int, userName: String = ""): ChatDetailDto {
-        return  ChatDetailDto(
-            mes, System.currentTimeMillis(), DateUtils.parseTime(mTextAtTime), false, chatType, userName
+    private fun initChatDetailDto(
+        mes: String,
+        chatType: Int,
+        userName: String = ""
+    ): ChatDetailDto {
+        return ChatDetailDto(
+            mes,
+            System.currentTimeMillis(),
+            DateUtils.parseTime(mTextAtTime),
+            false,
+            chatType,
+            userName
         )
     }
 

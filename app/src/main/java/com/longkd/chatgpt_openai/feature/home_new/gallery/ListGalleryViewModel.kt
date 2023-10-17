@@ -7,22 +7,18 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.longkd.chatgpt_openai.R
-import com.longkd.chatgpt_openai.base.OpenAIHolder
-import com.longkd.chatgpt_openai.base.model.*
-import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
-import com.longkd.chatgpt_openai.base.mvvm.DataRepository
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.DateUtils
-import com.longkd.chatgpt_openai.feature.summary.SummaryFileViewModel
-import com.longkd.chatgpt_openai.open.client.OpenAiService
-import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
-import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.model.ChatType
 import com.longkd.chatgpt_openai.base.model.ModelData
 import com.longkd.chatgpt_openai.base.model.SummaryData
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
+import com.longkd.chatgpt_openai.base.mvvm.BaseViewModel
+import com.longkd.chatgpt_openai.base.mvvm.DataRepository
+import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
+import com.longkd.chatgpt_openai.base.util.DateUtils
+import com.longkd.chatgpt_openai.open.ChatRepository
+import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
+import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -33,8 +29,9 @@ import javax.inject.Inject
 @HiltViewModel
 class ListGalleryViewModel
     @Inject constructor(
-    private val dataRepository: DataRepository
-) : BaseViewModel(dataRepository) {
+        private val dataRepository: DataRepository,
+        private val chatRepository: ChatRepository
+    ) : BaseViewModel(dataRepository) {
 
     private var imagesLiveData: MutableLiveData<List<SummaryData>?> = MutableLiveData()
     fun getImageList(): MutableLiveData<List<SummaryData>?> = imagesLiveData
@@ -102,14 +99,7 @@ class ListGalleryViewModel
                     completionRequest.model = ModelData.GPT_35.value
                     completionRequest.messages = arrayListOf(Message35Request("system", summaryContent))
                     completionRequest.maxTokens = 2000
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.uploadSummaryText(
-                            1,
-                            OpenAiService(SummaryFileViewModel.TOKEN_PAKE, timeout = Constants.TIME_OUT, type = 0),
-                            completionRequest,
-                            it
-                        )
-                    }
+                    chatRepository.uploadSummaryText(completionRequest).data
                 } catch (e: Throwable) {
                     e.printStackTrace()
                     null

@@ -13,7 +13,9 @@ import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
+import android.text.Editable
 import android.text.InputFilter
+import android.text.TextWatcher
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.view.inputmethod.EditorInfo
@@ -409,11 +411,24 @@ class ChatWithTopicFragment: BaseFragment<FragmentChatWithTopicBinding>(R.layout
             mSpeech?.language = Locale.getDefault()
         }
 
-        mViewModel.inputEdtChat.observe(this) {
-            mBinding?.chatFmBtnSend?.isEnabled = !it.isNullOrBlank()
-            mBinding?.chatFmLimitText?.text =
-                getString(R.string.str_limit_text_chat, it.length, limitChar.toString())
-        }
+        mBinding?.chatFmEdt?.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                mBinding?.chatFmBtnSend?.isEnabled = p0.toString().isNotBlank()
+                mBinding?.chatFmLimitText?.text =
+                    getString(
+                        R.string.str_limit_text_chat,
+                        p0.toString().length,
+                        limitChar.toString()
+                    )
+            }
+        })
 
         mViewModel.callChatWithTopic.observe(this) {
             handleCallChatGPTWithTopic(false)

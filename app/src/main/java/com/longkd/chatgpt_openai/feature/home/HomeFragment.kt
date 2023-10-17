@@ -8,7 +8,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
-import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.databinding.HomeFragmentBinding
@@ -21,10 +20,6 @@ import com.longkd.chatgpt_openai.feature.widget.WidgetFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic.Companion.ACTION_UPDATE
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic.Companion.TYPE_HISTORY
-import com.longkd.chatgpt_openai.base.util.CommonAction
-import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.TopicsUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -43,9 +38,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
     }
 
     override fun initViews() {
-        kotlin.runCatching {
-            OpenAIHolder.initLib()
-        }
+
         mBinding?.fmHomeCtViewGroup?.layoutTransition?.setAnimateParentHierarchy(false)
         mHeaderView?.apply {
             setVisibleLeft(false)
@@ -120,7 +113,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
 
     @SuppressLint("SetTextI18n")
     override fun initData() {
-        mViewModel?.callGetTimeStamp()
+        mViewModel.callGetTimeStamp()
         val isShowIntro = CommonSharedPreferences.getInstance(context)
             .getBoolean(Constants.FIRST_SHOW_INTRO, true)
         if (isShowIntro) {
@@ -174,7 +167,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
         }
 
         mBinding?.homeFmStartTvChatNumber?.gone()
-        mViewModel?.getAllChatHistory()?.observe(this) {
+        mViewModel.getAllChatHistory()?.observe(this) {
             if (it.isEmpty()) {
                 mBinding?.homeFmLayoutEmpty?.visible()
                 mBinding?.homeFmLayout?.gone()
@@ -195,7 +188,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
         }
         mShareDataViewModel.mNotifyUpdateChatHistory.observe(this) {
             if (context != null)
-                mViewModel?.getAllChatHistory()
+                mViewModel.getAllChatHistory()
         }
     }
 
@@ -204,6 +197,6 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
 
 
     fun updateDataChat() {
-        mViewModel?.getAllChatHistory()
+        mViewModel.getAllChatHistory()
     }
 }

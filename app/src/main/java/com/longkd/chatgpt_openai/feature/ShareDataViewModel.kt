@@ -1,15 +1,13 @@
 package com.longkd.chatgpt_openai.feature
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.longkd.chatgpt_openai.base.OpenAIHolder
-import com.longkd.chatgpt_openai.base.model.ChatMode
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
-import com.longkd.chatgpt_openai.base.util.Constants
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
 
 class ShareDataViewModel : ViewModel() {
     private val viewModelJob = SupervisorJob()

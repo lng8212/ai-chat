@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.longkd.chatgpt_openai.R
-import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.model.ChatType
 import com.longkd.chatgpt_openai.base.model.ModelData
@@ -16,8 +15,6 @@ import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.DateUtils
 import com.longkd.chatgpt_openai.open.ChatRepository
-import com.longkd.chatgpt_openai.open.client.OpenAiService
-import com.longkd.chatgpt_openai.open.client.TimeStampService
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -33,8 +30,6 @@ class SummaryFileViewModel @Inject constructor(
 ) : BaseViewModel(dataRepository) {
 
     private val _listSummaryHistory = MutableLiveData<ArrayList<SummaryHistoryDto>>()
-    private var mTimeStampService =
-        TimeStampService("wIX1xqLnKnprsmNMw/bMiA==", timeout = 60, type = 0)
 
     private val _summaryFileDto = MutableLiveData<SummaryHistoryDto?>()
     val summaryFileDto: LiveData<SummaryHistoryDto?> = _summaryFileDto
@@ -102,14 +97,7 @@ class SummaryFileViewModel @Inject constructor(
                     completionRequest.messages =
                         arrayListOf(Message35Request("system", summaryContent))
                     completionRequest.maxTokens = 3000
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.uploadSummaryText(
-                            1,
-                            OpenAiService(TOKEN_PAKE, timeout = Constants.TIME_OUT, type = 0),
-                            completionRequest,
-                            it
-                        )
-                    }
+                    chatRepository.uploadSummaryText(completionRequest).data
                 } catch (e: Throwable) {
                     e.printStackTrace()
                     null
@@ -181,35 +169,18 @@ class SummaryFileViewModel @Inject constructor(
     }
 
     fun callGetTimeStamp() {
-        val time = CommonSharedPreferences.getInstance().timeStartGetTime
-        if (System.currentTimeMillis() - time > Constants.TIME_8_MINUS) {
-            CommonSharedPreferences.getInstance().timeStartGetTime = System.currentTimeMillis()
-            uiScope.launch(Dispatchers.Main) {
-                val data = withContext(Dispatchers.Default) {
-                    try {
-                        OpenAIHolder.callGetTime(mTimeStampService)
-                    } catch (e: Throwable) {
-                        null
-                    }
-                }
-                data?.token?.let {
-                    CommonSharedPreferences.getInstance().timeStamp = it
-
-                    var timeInMills = CommonSharedPreferences.getInstance().timeSaveSummaryFile
-                    if (timeInMills == -1L || timeInMills == null) {
-                        CommonSharedPreferences.getInstance().timeSaveSummaryFile = it.toLong()
-                        timeInMills = it.toLong()
-                    }
-                    if (!android.text.format.DateUtils.isToday(timeInMills)) {
-                        CommonSharedPreferences.getInstance().timeSaveSummaryFile = it.toLong()
-                        CommonSharedPreferences.getInstance().apply {
-                            setNumberSummaryFile(summaryConfigData)
-                        }
-                    }
-                }
-            }
+        CommonSharedPreferences.getInstance().timeStamp = System.currentTimeMillis().toString()
+        var timeInMills = CommonSharedPreferences.getInstance().timeSaveSummaryFile
+        if (timeInMills == -1L || timeInMills == null) {
+            CommonSharedPreferences.getInstance().timeSaveSummaryFile = System.currentTimeMillis()
+            timeInMills = System.currentTimeMillis()
+        }
+        CommonSharedPreferences.getInstance().timeSaveSummaryFile = System.currentTimeMillis()
+        CommonSharedPreferences.getInstance().apply {
+            setNumberSummaryFile(summaryConfigData)
         }
     }
+
 
     fun checkTimesSummaryFile(): Boolean {
         CommonSharedPreferences.getInstance().apply {

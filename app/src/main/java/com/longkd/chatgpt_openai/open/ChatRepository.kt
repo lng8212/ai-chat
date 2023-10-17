@@ -10,6 +10,10 @@ import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
+import com.longkd.chatgpt_openai.open.dto.completion.CompletionResult
+import com.longkd.chatgpt_openai.open.dto.completion.TokenDto
+import retrofit2.http.Body
 
 /**
  * @Author: longkd
@@ -22,4 +26,11 @@ interface ChatRepository {
     suspend fun completeTopicChat(request: Completion35Request): State<TopicResponse>
 
     suspend fun uploadSummaryFile(path: String): State<SummaryFileResponse>
+
+    suspend fun completeSummaryChat(@Body request: Completion35Request?): State<Completion35Result>
+
+    suspend fun createCompletionNew(@Body request: CompletionRequest?): State<CompletionResult>
+    suspend fun uploadSummaryText(@Body request: Completion35Request?): State<SummaryFileResponse>
+
+    suspend fun getTime(): State<TokenDto>
 }

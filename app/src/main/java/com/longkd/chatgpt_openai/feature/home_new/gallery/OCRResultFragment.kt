@@ -3,6 +3,11 @@ package com.longkd.chatgpt_openai.feature.home_new.gallery
 import android.net.Uri
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.text.TextRecognition
+import com.google.mlkit.vision.text.TextRecognizer
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.customview.CropImageView
@@ -13,10 +18,6 @@ import com.longkd.chatgpt_openai.databinding.FragmentOcrResultBinding
 import com.longkd.chatgpt_openai.feature.MainActivity
 import com.longkd.chatgpt_openai.feature.chat.ChatDetailFragment
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileFragment
-import com.bumptech.glide.Glide
-import com.google.mlkit.vision.common.InputImage
-import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.TextRecognizer
 
 class OCRResultFragment: BaseFragment<FragmentOcrResultBinding>(R.layout.fragment_ocr_result),
     CropImageView.OnCropImageCompleteListener {
@@ -90,6 +91,9 @@ class OCRResultFragment: BaseFragment<FragmentOcrResultBinding>(R.layout.fragmen
                 mBinding?.fmOcrResultText?.text = it.text
                 mBinding?.fmOcrResultText?.movementMethod = ScrollingMovementMethod()
                 mBinding?.fmOcrLoading?.gone()
+            }
+            addOnFailureListener {
+                Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
             }
         }
 

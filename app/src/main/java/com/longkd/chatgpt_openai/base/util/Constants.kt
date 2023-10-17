@@ -2,6 +2,10 @@ package com.longkd.chatgpt_openai.base.util
 
 class Constants {
     companion object {
+
+        const val BASE_URL = "http://10.0.2.2:8088"
+        const val BASE_URL_ART = "https://aiapi-art.longkd.com"
+
         const val TAG = "xx"
         const val CHAT_MODE = "CHAT_MODE"
         const val THEME_MODE = "THEME_MODE"
@@ -15,7 +19,7 @@ class Constants {
         const val USER_RATE_HIGHER = "user_rate_higher"
         const val KEY_WIDGET_CLICK = "key_widget_click"
         const val NUMBER_CHAT_RESET = "number_chat_reset"
-        const val LIMIT_SAVE_PREV_CONVERSATION= "limit_save_prev_conversation"
+        const val LIMIT_SAVE_PREV_CONVERSATION = "limit_save_prev_conversation"
         const val NUMBER_FREE_CHAT = "number_free_chat"
         const val NUMBER_FREE_GENERATE_ART = "number_free_generate_art"
         const val NUMBER_REWARD_CHAT = "number_reward_chat"
@@ -79,7 +83,5 @@ class Constants {
         }
     }
 
-    object Copy {
-
-    }
+    object Copy
 }

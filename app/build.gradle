@@ -18,19 +18,6 @@ android {
         buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:8088\"")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", "Chatgpt-openai-$versionName")
-        externalNativeBuild {// For ndk-build, instead use the ndkBuild block.
-            cmake {
-                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-                // Passes optional arguments to CMake.
-                arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
-
-                // Sets a flag to enable format macro constants for the C compiler.
-                cppFlags "-std=c++17 -frtti"
-
-                // Sets optional flags for the C++ compiler.
-                cppFlags "-fexceptions", "-frtti"
-            }
-        }
     }
 
     buildTypes {
@@ -49,17 +36,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.18.1"
-        }
-    }
 
-    sourceSets.main {
-        jni.srcDirs = []
-        jniLibs.srcDirs = ['libs']
-    }
     kotlinOptions {
         jvmTarget = '11'
         freeCompilerArgs = ['-Xjvm-default=compatibility']

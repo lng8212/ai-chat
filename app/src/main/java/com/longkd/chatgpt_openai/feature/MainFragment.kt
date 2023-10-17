@@ -63,6 +63,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
             )
         }
         mBinding?.mainFragmentViewPager?.adapter = mAdapter
+        mBinding?.mainFragmentViewPager?.isUserInputEnabled = false
 //        mBinding?.mainFragmentViewPager?.offscreenPageLimit = 3
         mBinding?.mainFragmentBottomBar?.onItemSelected = { it ->
             when (it) {

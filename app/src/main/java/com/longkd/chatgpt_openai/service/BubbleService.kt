@@ -39,17 +39,14 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.RecyclerView
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.ItemClickListener
-import com.longkd.chatgpt_openai.base.OpenAIHolder
 import com.longkd.chatgpt_openai.base.bubble.*
 import com.longkd.chatgpt_openai.base.model.*
 import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.feature.chat.viewholder.ChatDetailAdapter
 import com.longkd.chatgpt_openai.feature.splash.SplashActivity
-import com.longkd.chatgpt_openai.open.client.OpenAiService
-import com.longkd.chatgpt_openai.open.client.TimeStampService
+import com.longkd.chatgpt_openai.open.ChatRepository
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
@@ -64,11 +61,14 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
 
     private lateinit var lifecycleRegistry: LifecycleRegistry
     private lateinit var layout: View
-    private var actionPopToBubble : (() -> Unit)? = null
+    private var actionPopToBubble: (() -> Unit)? = null
     private val mArrListPromt: ArrayList<Message35Request> = arrayListOf()
 
     @Inject
     lateinit var dataRepository: DataRepository
+
+    @Inject
+    lateinit var chatRepository: ChatRepository
     override fun onCreate() {
         super.onCreate()
         lifecycleRegistry = LifecycleRegistry(this)
@@ -535,11 +535,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
                     1000
 
                 try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.callCompletion35(
-                            1, "", OpenAiService("wIX1xqLnKnprsmNMw/bMiA==", timeout = Constants.TIME_OUT, type = 0), completionRequest, it
-                        )
-                    }
+                    chatRepository.createCompletionV1Chat(completionRequest).data
                 } catch (e: Throwable) {
                     if (e.cause is SSLHandshakeException) {
                         resultText = try {
@@ -761,10 +757,6 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
         } catch (e: Exception) {
         }
     }
-
-
-    private var mService = OpenAiService("wIX1xqLnKnprsmNMw/bMiA==", timeout = 60, type = 0)
-    private var mTimeStampService = TimeStampService("wIX1xqLnKnprsmNMw/bMiA==", timeout = 60, type = 0)
     var mCurrentChatBaseDto: MutableLiveData<ChatBaseDto> = MutableLiveData()
     private var mTextAtTime: String = ""
     private var mChatNumber: MutableLiveData<Int> = MutableLiveData()
@@ -922,15 +914,7 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
 
                 completionRequest.stop  = listOf("/n")
                 try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.callCompletion35(
-                            1,
-                            input,
-                            OpenAiService("wIX1xqLnKnprsmNMw/bMiA==", timeout = Constants.TIME_OUT, type = 0),
-                            completionRequest,
-                            it
-                        )
-                    }
+                    chatRepository.createCompletionV1Chat(completionRequest).data
                 } catch (e: Throwable) {
                     if (e.cause is SSLHandshakeException) {
                         resultText = try {
@@ -978,82 +962,28 @@ class BubbleService : FloatingBubbleService(), LifecycleOwner {
             }
             mCurrentChatBaseDto.value?.let {
                 dataRepository.updateChatDto(it)
-                val currentBaseDto = reFormatDate(it).apply { it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore = mIsCallMore}
+                val currentBaseDto = reFormatDate(it).apply {
+                    it.chatDetail.findLast { it.chatType == ChatType.RECEIVE.value }?.isSeeMore =
+                        mIsCallMore
+                }
                 mCurrentChatBaseDto.value = currentBaseDto
             }
         }
         return result
     }
 
-    fun callGetTimeStamp() {
-        val time = CommonSharedPreferences.getInstance().timeStartGetTime
-        if (System.currentTimeMillis()- time   > Constants.TIME_8_MINUS) {
-            CommonSharedPreferences.getInstance().timeStartGetTime = System.currentTimeMillis()
-            uiScope.launch(Dispatchers.Main) {
-                val data = withContext(Dispatchers.Default) {
-                    try {
-                        OpenAIHolder.callGetTime(mTimeStampService)
-                    } catch (e: Throwable) {
-                        null
-                    }
-                }
-                data?.token?.let {
-                    CommonSharedPreferences.getInstance().timeStamp = it
-                }
-            }
-        }
-    }
-    fun completeQRetrofitMore(
-        input: String,
-        result: String
-    ) {
-        uiScope.launch(Dispatchers.Main) {
-            val completionResult = withContext(Dispatchers.Default) {
-                val completionRequest= CompletionRequest()
-                completionRequest.model = "text-davinci-003"
-                completionRequest.prompt = input
-                completionRequest.echo = false
-                completionRequest.temperature = 0.9
-                completionRequest.topP = 1.0
-                completionRequest.bestOf = 1
-                completionRequest.stop = listOf("User:", "Assistant:")
-                completionRequest.presencePenalty = 0.6
-                completionRequest.maxTokens =  950
-                try {
-                    CommonSharedPreferences.getInstance().getSharedPreferences()?.let {
-                        OpenAIHolder.callCompletionMore(
-                            1,
-                            input,
-                            OpenAiService("wIX1xqLnKnprsmNMw/bMiA==", timeout = 60, type = 0),
-                            completionRequest
-                        )
-                    }
-                } catch (e: Throwable) {
-                    e.printStackTrace()
-                    null
-                }
-            }
+    private fun callGetTimeStamp() {
+        CommonSharedPreferences.getInstance().timeStamp = System.currentTimeMillis().toString()
 
-            val data = completionResult?.choices?.first()?.text?.trim()
-            if (data.isNullOrBlank()) {
-                return@launch
-            }
-            mMessageMore.value = " "+data.toString()
-        }
     }
-    var chatNumber: MutableLiveData<Int> = MutableLiveData()
-        private set
-    var mNotifyUpdateChatHistory: MutableLiveData<Int> = MutableLiveData()
+
+    private var mNotifyUpdateChatHistory: MutableLiveData<Int> = MutableLiveData()
 
     /**
      * Cancel all coroutines when the ViewModel is cleared
      */
 
-    fun updateChatNumber(chatNumber: Int) {
-        this.chatNumber.value = chatNumber
-    }
-
-    fun notifyUpdateChatHistory() {
+    private fun notifyUpdateChatHistory() {
         val new = (mNotifyUpdateChatHistory.value ?: 0) + arrayOf(1, -1, 2).random()
         mNotifyUpdateChatHistory.value = new
     }

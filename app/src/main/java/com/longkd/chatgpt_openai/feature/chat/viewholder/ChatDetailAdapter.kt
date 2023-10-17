@@ -18,10 +18,10 @@ import com.longkd.chatgpt_openai.databinding.ChatItemListRightBinding
 class ChatDetailAdapter(
     var listData: ArrayList<ChatDetailDto>, var mEnableAnimateText: Boolean,
     private val themeColorMode: Int,
-    var itemClickListener: ItemClickListener<ChatDetailDto>
+    private var itemClickListener: ItemClickListener<ChatDetailDto>
 ) : BaseListAdapter<ChatDetailDto>(listData) {
     var mRecyclerView: RecyclerView? = null
-    var mLastChatItemLeftVH: ChatItemLeftVH? = null
+    private var mLastChatItemLeftVH: ChatItemLeftVH? = null
     var mOnAnimateFinished: (() -> Unit)? = null
     var onClickRegenerate: ((chatDto: ChatDetailDto) -> Unit) ? = null
     var onClickSeeMore: (() -> Unit) ? = null
@@ -113,18 +113,18 @@ class ChatDetailAdapter(
         }
     }
 
-    fun disconnectDataLinked(array: List<ChatDetailDto>): List<ChatDetailDto> {
+    private fun disconnectDataLinked(array: List<ChatDetailDto>): List<ChatDetailDto> {
         val newList: java.util.ArrayList<ChatDetailDto> = arrayListOf()
         array.forEach { dto ->
             newList.add(
                 ChatDetailDto(
-                    dto.message ?: "",
-                    dto.timeChat ?: 0,
-                    dto.timeChatString ?: "",
-                    dto.isTyping ?: false,
-                    dto.chatType ?: -1,
-                    dto.chatUserNane ?: "",
-                    dto.parentId?:0,
+                    dto.message,
+                    dto.timeChat,
+                    dto.timeChatString,
+                    dto.isTyping,
+                    dto.chatType,
+                    dto.chatUserNane,
+                    dto.parentId,
                     dto.isSeeMore,
                     dto.isLastItem
                 ).apply {

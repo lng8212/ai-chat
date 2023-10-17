@@ -13,8 +13,10 @@ import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
+import android.text.Editable
 import android.text.InputFilter
 import android.text.InputFilter.LengthFilter
+import android.text.TextWatcher
 import android.view.View
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.view.animation.AnimationUtils
@@ -86,14 +88,14 @@ class ChatDetailFragment :
             if (isScrollRcl) mBinding?.chatFmRcv?.scrollBy(0, 100)
         }
     }
-    var mUserMode: String = ""
+    private var mUserMode: String = ""
     var mSpeech: TextToSpeech? = null
     private var currentDto: ChatBaseDto? = null
     var onCallBackWhenPurchase: (() -> Unit)? = null
 
     companion object {
-        const val FROM_CHAT_STYLE = "FROM_CHAT_STYLE"
-        const val CHAT_MODE = "CHAT_MODE"
+        private const val FROM_CHAT_STYLE = "FROM_CHAT_STYLE"
+        private const val CHAT_MODE = "CHAT_MODE"
         const val TOPIC = "TOPIC"
         const val CHAT_ID = "CHAT_ID"
         private const val KEY_QUESTION_TOPIC = "key_question_topic"
@@ -237,7 +239,7 @@ class ChatDetailFragment :
                 result?.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
                     ?.let {
                         mBinding?.chatFmEdt?.setText(it)
-                        if (!it.isEmpty()) mBinding?.chatFmBtnSend?.isEnabled = true
+                        if (it.isNotEmpty()) mBinding?.chatFmBtnSend?.isEnabled = true
                     }
             }
         }
@@ -341,7 +343,7 @@ class ChatDetailFragment :
         mBinding?.fmChatLlnSelectModel?.btnContinue?.setOnSingleClick {
             mBinding?.fmChatLlnSelectModel?.root?.gone()
             mHeaderView?.setTitle(if (modelChat == Constants.MODEL_CHAT.GPT_3_5) "Chat GPT 3.5" else "Chat GPT 4")
-            mViewModel.setModelChat(modelChat ?: Constants.MODEL_CHAT.GPT_3_5)
+            mViewModel.setModelChat(modelChat)
         }
     }
 
@@ -366,14 +368,14 @@ class ChatDetailFragment :
     }
 
     private fun updateChatHis() {
-        mViewModel.getChatDto(chatId)?.observe(this) {
+        mViewModel.getChatDto(chatId).observe(this) {
             mViewModel.initViewChatHis(it)
         }
     }
 
     private var isActionSend = false
     private fun actionSend(isSummaryChat: Boolean = false, inputSummaryText: String = "") {
-//        mViewModel?.callGetTimeStamp()
+        mViewModel.callGetTimeStamp()
         val inputText = mBinding?.chatFmEdt?.text?.toString() ?: Strings.EMPTY
         UtilsApp.hideKeyboard(activity)
         if (!NetworkUtil.isInternetAvailable(requireContext())) {
@@ -398,7 +400,7 @@ class ChatDetailFragment :
             isNewChat && chatId == -1L,
             topicType = (arguments?.getParcelable(TOPIC) as? TopicDto)?.topicType ?: -1,
             fromSummary = summaryData
-        )?.observe(this) { dto ->
+        ).observe(this) { dto ->
             isNewChat = false
             handleResultDtoChat(dto)
         }
@@ -426,7 +428,7 @@ class ChatDetailFragment :
             context,
             getStringRes(R.string.something_error),
             isRegenerate
-        )?.observe(this) { dto ->
+        ).observe(this) { dto ->
             isNewChat = false
             handleResultDtoChat(dto)
         }
@@ -568,7 +570,7 @@ class ChatDetailFragment :
         handleDisplaySelectModelChat()
         updateChatHis()
         mViewModel.initChatSummary(summaryData)
-        lifecycleScope.launch(Dispatchers.Main) {
+        lifecycleScope.launch {
             showLoading()
             withContext(Dispatchers.Default) {
                 delay(500)
@@ -616,7 +618,7 @@ class ChatDetailFragment :
                 mBinding?.chatFmEdt?.isEnabled = true
             }
 
-            mViewModel.mMessageMore?.observe(this@ChatDetailFragment) { message ->
+            mViewModel.mMessageMore.observe(this@ChatDetailFragment) { message ->
                 val timer = object : CountDownTimer(80000, 100) {
                     override fun onTick(millisUntilFinished: Long) {
                         if (autoSpeak) {
@@ -703,14 +705,28 @@ class ChatDetailFragment :
             mSpeech?.language = Locale.getDefault()
         }
 
-        mViewModel.callChatWithTopic?.observe(this) {
+        mViewModel.callChatWithTopic.observe(this) {
             handleCallChatGPTWithTopic()
         }
-        mViewModel.inputEdtChat?.observe(this) {
-            mBinding?.chatFmBtnSend?.isEnabled = !it.isNullOrBlank()
-            mBinding?.chatFmLimitText?.text =
-                getString(R.string.str_limit_text_chat, it.length, limitChar.toString())
-        }
+
+        mBinding?.chatFmEdt?.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                mBinding?.chatFmBtnSend?.isEnabled = p0.toString().isNotBlank()
+                mBinding?.chatFmLimitText?.text =
+                    getString(
+                        R.string.str_limit_text_chat,
+                        p0.toString().length,
+                        limitChar.toString()
+                    )
+            }
+        })
     }
 
     override fun handleOnBackPress(): Boolean {
