@@ -9,11 +9,11 @@ package com.longkd.chatgpt_openai.hilt
 import android.content.Context
 import androidx.room.Room
 import com.longkd.chatgpt_openai.BuildConfig
-import com.longkd.chatgpt_openai.MyApp
 import com.longkd.chatgpt_openai.base.data.ChatDatabase
 import com.longkd.chatgpt_openai.base.data.CoreDao
 import com.longkd.chatgpt_openai.base.mvvm.DataRepository
-import com.longkd.chatgpt_openai.open.ChatService
+import com.longkd.chatgpt_openai.open.chat.ChatService
+import com.longkd.chatgpt_openai.open.image.ImageService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,6 +23,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 /**
@@ -60,6 +61,8 @@ object AppModule {
         OkHttpClient
             .Builder()
             .addInterceptor(httpLoggingInterceptor)
+            .connectTimeout(60, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS)
             .build()
 
     @Singleton
@@ -72,7 +75,13 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit): ChatService = retrofit.create(ChatService::class.java)
+    fun provideApiService(retrofit: Retrofit): ChatService =
+        retrofit.create(ChatService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideImageService(retrofit: Retrofit): ImageService =
+        retrofit.create(ImageService::class.java)
 
     @Singleton
     @Provides

@@ -24,11 +24,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
-import com.longkd.chatgpt_openai.dialog.DialogChooseActionOcr
-import com.longkd.chatgpt_openai.feature.MainFragment
-import com.longkd.chatgpt_openai.feature.home_new.gallery.ListGalleryFragment
-import com.longkd.chatgpt_openai.feature.home_new.gallery.OCRResultFragment
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.LoggerUtil
@@ -39,7 +34,12 @@ import com.longkd.chatgpt_openai.base.util.addFragmentWithAnimation
 import com.longkd.chatgpt_openai.base.util.addFragmentWithAnimationZoom
 import com.longkd.chatgpt_openai.base.util.addFragmentWithNoAnimation
 import com.longkd.chatgpt_openai.base.util.replaceFragment
+import com.longkd.chatgpt_openai.base.widget.header.BaseHeaderView
 import com.longkd.chatgpt_openai.databinding.BaseFragmentBinding
+import com.longkd.chatgpt_openai.dialog.DialogChooseActionOcr
+import com.longkd.chatgpt_openai.feature.MainFragment
+import com.longkd.chatgpt_openai.feature.home_new.gallery.ListGalleryFragment
+import com.longkd.chatgpt_openai.feature.home_new.gallery.OCRResultFragment
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -151,7 +151,12 @@ abstract class BaseFragment<VDB : ViewDataBinding>(@LayoutRes val contentViewRes
         fragment: Fragment,
         tag: String, @IdRes frameId: Int = R.id.mainFrameLayoutContainer
     ) {
-        (activity as? AppCompatActivity)?.addFragmentWithAnimation(this, fragment, tag, frameId)
+        (activity as? AppCompatActivity)?.addFragmentWithAnimation(
+            this,
+            fragment,
+            tag,
+            frameId
+        )
     }
 
     fun pushScreenWithAnimateZoom(

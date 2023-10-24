@@ -305,7 +305,7 @@
     <string name="i_got_it">I GOT IT</string>
     <string name="content_doesn_t_contain">Content doesn’t contain sensitive words.</string>
     <string name="more">More</string>
-    <string name="midj_art">Midj Art</string>
+    <string name="midj_art">Ai Art</string>
     <string name="done">Done</string>
     <string name="choose_style_art">Choose Style Art</string>
     <string name="applying_style">Applying style...</string>
@@ -957,4 +957,7 @@
     <string name="str_msg_free_generate_art">to earn %d free generate art</string>
     <string name="txt_yearly">Yearly</string>
     <string name="txt_start_yeal_auto">Auto - renewing subscription charged yearly</string>
+    <string name="text_width">Width</string>
+    <string name="text_height">Height</string>
+    <string name="text_result_art">Result Art</string>
 </resources>

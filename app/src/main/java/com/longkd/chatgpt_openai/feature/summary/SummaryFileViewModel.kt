@@ -14,7 +14,7 @@ import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.DateUtils
-import com.longkd.chatgpt_openai.open.ChatRepository
+import com.longkd.chatgpt_openai.open.chat.ChatRepository
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -27,7 +27,7 @@ import javax.inject.Inject
 class SummaryFileViewModel @Inject constructor(
     private val dataRepository: DataRepository,
     private val chatRepository: ChatRepository
-) : BaseViewModel(dataRepository) {
+) : BaseViewModel() {
 
     private val _listSummaryHistory = MutableLiveData<ArrayList<SummaryHistoryDto>>()
 

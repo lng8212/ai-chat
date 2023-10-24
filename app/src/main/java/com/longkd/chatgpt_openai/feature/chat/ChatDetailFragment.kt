@@ -17,6 +17,7 @@ import android.text.Editable
 import android.text.InputFilter
 import android.text.InputFilter.LengthFilter
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.view.animation.AnimationUtils
@@ -287,10 +288,12 @@ class ChatDetailFragment :
                 suggestAdapter =
                     SuggestListAdapter(mutableListOf(), object : ItemClickListener<String> {
                         override fun onClick(item: String?, position: Int) {
-                            item?.let {
+                            item?.let { it1 ->
                                 if (isClickSuggestQuestion) {
-                                    actionSend(true, it)
-                                    suggestAdapter.updateView(it)
+                                    Log.e("xxxxx", "onClick: send0")
+                                    actionSend(true, it1)
+                                    Log.e("xxxxx", "onClick: send")
+                                    suggestAdapter.updateView(it1)
                                     isClickSuggestQuestion = false
                                 }
                             }
@@ -570,7 +573,7 @@ class ChatDetailFragment :
         handleDisplaySelectModelChat()
         updateChatHis()
         mViewModel.initChatSummary(summaryData)
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.Main) {
             showLoading()
             withContext(Dispatchers.Default) {
                 delay(500)

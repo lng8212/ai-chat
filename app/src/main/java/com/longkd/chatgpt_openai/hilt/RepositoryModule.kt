@@ -6,8 +6,10 @@
 
 package com.longkd.chatgpt_openai.hilt
 
-import com.longkd.chatgpt_openai.open.ChatRepository
-import com.longkd.chatgpt_openai.open.ChatRepositoryImpl
+import com.longkd.chatgpt_openai.open.chat.ChatRepository
+import com.longkd.chatgpt_openai.open.chat.ChatRepositoryImpl
+import com.longkd.chatgpt_openai.open.image.ImageRepository
+import com.longkd.chatgpt_openai.open.image.ImageRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -22,4 +24,7 @@ import dagger.hilt.components.SingletonComponent
 abstract class RepositoryModule {
     @Binds
     abstract fun bindChatRepository(chatRepositoryImpl: ChatRepositoryImpl): ChatRepository
+
+    @Binds
+    abstract fun bindImageRepository(imageRepositoryImpl: ImageRepositoryImpl): ImageRepository
 }

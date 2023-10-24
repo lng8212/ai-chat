@@ -5,6 +5,4 @@ import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 
 class HomeNewViewModel(
     private val dataRepository: DataRepository
-) : BaseViewModel(dataRepository) {
-
-}
+) : BaseViewModel()

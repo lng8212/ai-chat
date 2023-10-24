@@ -9,6 +9,7 @@ import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.databinding.FragmentMainBinding
 import com.longkd.chatgpt_openai.dialog.DialogBottomExitApp
+import com.longkd.chatgpt_openai.feature.art.GenerateArtFragment
 import com.longkd.chatgpt_openai.feature.home_new.HomeNewFragment
 import com.longkd.chatgpt_openai.feature.setting.FragmentSetting
 
@@ -32,12 +33,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
             when (position) {
                 0 -> {
                     mBinding?.mainFragmentBottomBar?.setCurrentTab(BottomFloatingType.TYPE_HOME)
-                    val homeFragment = listFm.getOrNull(position) as? HomeNewFragment
                 }
 
-//                1 -> {
-//                    mBinding?.mainFragmentBottomBar?.setCurrentTab(BottomFloatingType.TYPE_ART)
-//                }
+                1 -> {
+                    mBinding?.mainFragmentBottomBar?.setCurrentTab(BottomFloatingType.TYPE_ART)
+                }
 
                 else -> {
                     mBinding?.mainFragmentBottomBar?.setCurrentTab(BottomFloatingType.TYPE_SETTING)
@@ -49,11 +49,11 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
     override fun initViews() {
         val homeFragment = HomeNewFragment.newInstance()
         val fragmentSetting = FragmentSetting.newInstance()
-//        val homeArtFragment = HomeArtPageFragment.newInstance()
+        val homeArtFragment = GenerateArtFragment.newInstance()
 
         listFm = arrayListOf(
             homeFragment,
-//            homeArtFragment,
+            homeArtFragment,
             fragmentSetting,
         )
         mAdapter = activity?.let {
@@ -64,7 +64,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         }
         mBinding?.mainFragmentViewPager?.adapter = mAdapter
         mBinding?.mainFragmentViewPager?.isUserInputEnabled = false
-//        mBinding?.mainFragmentViewPager?.offscreenPageLimit = 3
+        mBinding?.mainFragmentViewPager?.offscreenPageLimit = 3
         mBinding?.mainFragmentBottomBar?.onItemSelected = { it ->
             when (it) {
                 BottomFloatingType.TYPE_HOME -> mBinding?.mainFragmentViewPager?.setCurrentItem(
@@ -72,10 +72,10 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
                     false
                 )
 
-//                BottomFloatingType.TYPE_ART -> mBinding?.mainFragmentViewPager?.setCurrentItem(
-//                    1,
-//                    false
-//                )
+                BottomFloatingType.TYPE_ART -> mBinding?.mainFragmentViewPager?.setCurrentItem(
+                    1,
+                    false
+                )
 
                 BottomFloatingType.TYPE_SETTING -> mBinding?.mainFragmentViewPager?.setCurrentItem(
                     2,

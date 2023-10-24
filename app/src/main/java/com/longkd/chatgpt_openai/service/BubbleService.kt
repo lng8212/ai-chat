@@ -45,7 +45,7 @@ import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.base.util.*
 import com.longkd.chatgpt_openai.feature.chat.viewholder.ChatDetailAdapter
 import com.longkd.chatgpt_openai.feature.splash.SplashActivity
-import com.longkd.chatgpt_openai.open.ChatRepository
+import com.longkd.chatgpt_openai.open.chat.ChatRepository
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.AndroidEntryPoint

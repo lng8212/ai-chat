@@ -11,8 +11,11 @@ import com.longkd.chatgpt_openai.R
 
 
 fun AppCompatActivity.replaceFragment(
-     fragment: Fragment,
-    tag: String,@IdRes frameId: Int, addToBackStack: Boolean = true, enableAnimation: Boolean = true
+    fragment: Fragment,
+    tag: String,
+    @IdRes frameId: Int,
+    addToBackStack: Boolean = true,
+    enableAnimation: Boolean = true
 ) {
     if (addToBackStack) {
         if (enableAnimation) {
@@ -68,12 +71,14 @@ fun AppCompatActivity.addFragmentWithAnimation(
     fragment: Fragment,
     tag: String, @IdRes frameId: Int,
     addToBackStack: Boolean = true
+
 ) {
     supportFragmentManager.transactWithAnimation({
         add(frameId, fragment, tag)
         fromFragment?.let { hide(it) }
-    }, tag,addToBackStack)
+    }, tag, addToBackStack)
 }
+
 fun AppCompatActivity.addFragmentWithAnimationZoom(
     fromFragment: Fragment? = null,
     fragment: Fragment,
@@ -83,7 +88,7 @@ fun AppCompatActivity.addFragmentWithAnimationZoom(
     supportFragmentManager.transactWithAnimationZoom({
         add(frameId, fragment, tag)
         fromFragment?.let { hide(it) }
-    }, tag,addToBackStack)
+    }, tag, addToBackStack)
 }
 
 fun AppCompatActivity.replaceFragmentWithAnimation(

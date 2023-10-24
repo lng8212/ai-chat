@@ -11,11 +11,6 @@ class Image {
     /**
      * The URL where the image can be accessed.
      */
+    @SerializedName("url")
     var url: String? = null
-
-    /**
-     * Base64 encoded image string.
-     */
-    @SerializedName("b64_json")
-    var b64Json: String? = null
 }

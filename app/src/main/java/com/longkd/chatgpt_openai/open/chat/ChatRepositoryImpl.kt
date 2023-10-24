@@ -1,18 +1,19 @@
 /*
- * Created by longkd on 10/3/23, 10:21 PM
+ * Created by longkd on 10/23/23, 9:37 PM
  * Copyright (c) by Begamob.com 2023 . All rights reserved.
- * Last modified 10/3/23, 10:21 PM
+ * Last modified 10/17/23, 10:02 PM
  */
 
-package com.longkd.chatgpt_openai.open
+package com.longkd.chatgpt_openai.open.chat
 
 import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.TopicResponse
+import com.longkd.chatgpt_openai.open.State
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
 import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
 import com.longkd.chatgpt_openai.open.dto.completion.CompletionResult
-import com.longkd.chatgpt_openai.open.dto.completion.TokenDto
+import com.longkd.chatgpt_openai.open.handleResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
@@ -56,9 +57,5 @@ class ChatRepositoryImpl @Inject constructor(private val service: ChatService) :
 
     override suspend fun uploadSummaryText(request: Completion35Request?): State<SummaryFileResponse> {
         return handleResponse(service.uploadSummaryText(request))
-    }
-
-    override suspend fun getTime(): State<TokenDto> {
-        return handleResponse(service.getTime())
     }
 }

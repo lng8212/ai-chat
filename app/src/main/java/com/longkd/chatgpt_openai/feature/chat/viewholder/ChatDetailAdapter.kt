@@ -8,6 +8,7 @@ import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
 import com.longkd.chatgpt_openai.base.model.ChatType
+import com.longkd.chatgpt_openai.base.util.DateUtils
 import com.longkd.chatgpt_openai.base.util.bindingInflate
 import com.longkd.chatgpt_openai.base.widget.BaseListAdapter
 import com.longkd.chatgpt_openai.base.widget.BaseViewHolder

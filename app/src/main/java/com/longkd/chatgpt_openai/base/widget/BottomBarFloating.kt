@@ -69,7 +69,7 @@ class BottomBarFloating : ConstraintLayout {
                 disableState(mCurrentType)
                 mCurrentType = BottomFloatingType.TYPE_ART
                 enableState(BottomFloatingType.TYPE_ART)
-//                onItemSelected?.invoke(BottomFloatingType.TYPE_ART)
+                onItemSelected?.invoke(BottomFloatingType.TYPE_ART)
             }
 
         })

@@ -4,7 +4,7 @@
  * Last modified 10/3/23, 10:17 PM
  */
 
-package com.longkd.chatgpt_openai.open
+package com.longkd.chatgpt_openai.open.chat
 
 import com.longkd.chatgpt_openai.base.model.SummaryFileResponse
 import com.longkd.chatgpt_openai.base.model.TopicResponse

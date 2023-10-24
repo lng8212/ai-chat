@@ -1,4 +1,4 @@
-package com.longkd.chatgpt_openai.feature.art.vyro.adapter
+package com.longkd.chatgpt_openai.feature.art
 
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
@@ -6,27 +6,24 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.ItemClickListener
-import com.longkd.chatgpt_openai.base.model.ImageStyleData
+import com.longkd.chatgpt_openai.base.util.Size
 import com.longkd.chatgpt_openai.base.util.bindingInflate
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.base.widget.BaseListAdapter
 import com.longkd.chatgpt_openai.base.widget.BaseViewHolder
-import com.longkd.chatgpt_openai.databinding.ItemStyleImageArtBinding
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
+import com.longkd.chatgpt_openai.databinding.ItemAspectRatioBinding
 
-class StyleGenerateAdapter(
-    var listData: MutableList<ImageStyleData>,
-    var clickListener: ItemClickListener<ImageStyleData>,
-) : BaseListAdapter<ImageStyleData>(listData) {
+class AspectRatioAdapter(
+    var listData: MutableList<Size>,
+    private var clickListener: ItemClickListener<Size>,
+) : BaseListAdapter<Size>(listData) {
     companion object {
         const val PAYLOAD_UPDATE = "PAYLOAD_UPDATE"
     }
 
     override fun bind(
         holder: BaseViewHolder<ViewDataBinding>,
-        item: ImageStyleData,
+        item: Size,
         position: Int
     ) {
         when (holder) {
@@ -37,28 +34,15 @@ class StyleGenerateAdapter(
         }
     }
 
-    fun updateData(list: ArrayList<ImageStyleData>) {
+    fun updateData(list: List<Size>) {
         listData.clear()
         listData.addAll(list)
         notifyDataSetChanged()
     }
 
-    fun updateDataDiff(list: ArrayList<ImageStyleData>) {
-        val newRecipeList: MutableList<ImageStyleData> = ArrayList()
-        list.forEach {
-            newRecipeList.add(it)
-        }
-        val diffUtil = DiffUtil.calculateDiff(DiffCallback(listData, list))
-        diffUtil.dispatchUpdatesTo(this)
-        listData.clear()
-        newRecipeList.forEach {
-            listData.add(it)
-        }
-    }
-
     class DiffCallback(
-        private val oldDataFileCloudDtoList: MutableList<ImageStyleData>,
-        private val newDataFileCloudDtoList: MutableList<ImageStyleData>
+        private val oldDataFileCloudDtoList: MutableList<Size>,
+        private val newDataFileCloudDtoList: MutableList<Size>
     ) :
         DiffUtil.Callback() {
         override fun getOldListSize(): Int = oldDataFileCloudDtoList.size
@@ -68,19 +52,19 @@ class StyleGenerateAdapter(
         override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
             val oldItem = oldDataFileCloudDtoList[oldItemPosition]
             val newItem = newDataFileCloudDtoList[newItemPosition]
-            return oldItem.name == newItem.name
+            return oldItem.size == newItem.size
         }
 
         override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
             val oldItem = oldDataFileCloudDtoList[oldItemPosition]
             val newItem = newDataFileCloudDtoList[newItemPosition]
-            return oldItem.url == newItem.url && oldItem.name == newItem.name
+            return oldItem.size == newItem.size && oldItem.isSelected == newItem.isSelected
         }
 
         override fun getChangePayload(oldItemPosition: Int, newItemPosition: Int): Any? {
             val oldItem = oldDataFileCloudDtoList[oldItemPosition]
             val newItem = newDataFileCloudDtoList[newItemPosition]
-            return if (oldItem.isSelect != newItem.isSelect)
+            return if (oldItem.isSelected != newItem.isSelected)
                 PAYLOAD_UPDATE else
                 null
         }
@@ -96,13 +80,13 @@ class StyleGenerateAdapter(
 
 
     override fun createBinding(parent: ViewGroup, viewType: Int): ViewDataBinding {
-        return parent.bindingInflate(R.layout.item_style_image_art)
+        return parent.bindingInflate(R.layout.item_aspect_ratio)
 
     }
 
     override fun getViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<ViewDataBinding> {
         return AspectRatioViewholder(
-            createBinding(parent, viewType) as ItemStyleImageArtBinding,
+            createBinding(parent, viewType) as ItemAspectRatioBinding,
             clickListener,
         )
     }
@@ -110,7 +94,7 @@ class StyleGenerateAdapter(
     override fun bindPayload(
 
         holder: BaseViewHolder<ViewDataBinding>,
-        item: ImageStyleData,
+        item: Size,
         position: Int,
         payload: Any
     ) {
@@ -126,31 +110,28 @@ class StyleGenerateAdapter(
     }
 
     class AspectRatioViewholder(
-        mBinding: ItemStyleImageArtBinding,
-        val callback: ItemClickListener<ImageStyleData>
-    ) : BaseViewHolder<ItemStyleImageArtBinding>(mBinding) {
-        fun bindData(data: ImageStyleData) {
+        mBinding: ItemAspectRatioBinding,
+        val callback: ItemClickListener<Size>
+    ) : BaseViewHolder<ItemAspectRatioBinding>(mBinding) {
+        fun bindData(data: Size) {
+            binding.tvAspectRadio.text = data.size
             binding.root.setOnSingleClick {
                 callback.onClick(data, adapterPosition)
-            }
-            binding.tvStyleArt.text = data.convertNameStyle()
-            data.url?.let {
-                val requestOptions = RequestOptions().diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-                Glide.with(itemView.rootView)
-                    .load(it)
-                    .apply(requestOptions)
-                    .placeholder(R.drawable.img_default_art)
-                    .into(binding.image)
             }
             updateSelected(data)
         }
 
-        fun updateSelected(data: ImageStyleData) {
-            if (data.isSelect == true) {
-                binding.root.setBackgroundResource(R.drawable.bg_border_choose_version_art)
+        fun updateSelected(data: Size) {
+            if (data.isSelected) {
+                binding.llnAspectRadio.setBackgroundResource(R.drawable.bg_border_choose_version_art)
             } else {
-                binding.root.setBackgroundResource(R.drawable.bg_border_background_tab_layout)
+                binding.llnAspectRadio.setBackgroundResource(R.drawable.bg_border_background_tab_layout)
             }
         }
     }
 }
+
+data class AspectRatioData(
+    val ratio: String? = "1:1",
+    var isSelect: Boolean? = false
+)

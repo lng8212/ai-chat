@@ -21,7 +21,7 @@ import com.longkd.chatgpt_openai.base.util.DateUtils
 import com.longkd.chatgpt_openai.base.util.LoggerUtil
 import com.longkd.chatgpt_openai.base.util.convertToChatBaseDto
 import com.longkd.chatgpt_openai.feature.art.StyleArtDto
-import com.longkd.chatgpt_openai.open.ChatRepository
+import com.longkd.chatgpt_openai.open.chat.ChatRepository
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -36,7 +36,7 @@ import javax.net.ssl.SSLHandshakeException
 class HomeViewModel @Inject constructor(
     private val dataRepository: DataRepository,
     private val chatRepository: ChatRepository
-) : BaseViewModel(dataRepository) {
+) : BaseViewModel() {
     private var mCurrentChatBaseDto: MutableLiveData<ChatBaseDto> = MutableLiveData()
     var mMessageMore: MutableLiveData<String> = MutableLiveData()
     private var mTextAtTime: String = ""

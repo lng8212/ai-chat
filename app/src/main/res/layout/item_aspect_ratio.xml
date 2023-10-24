@@ -11,21 +11,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_marginVertical="@dimen/_8sdp"
         android:paddingTop="@dimen/_6sdp"
         android:paddingBottom="@dimen/_6sdp"
         android:paddingStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_6sdp"
         android:paddingEnd="@dimen/_12sdp">
 
-        <FrameLayout
-            android:id="@+id/icAspectRadio"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_16sdp"
-            android:background="@drawable/bg_border_white_4dp"
-            app:layout_constraintDimensionRatio="H,3:4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
             android:id="@+id/tvAspectRadio"
@@ -36,7 +28,7 @@
             android:fontFamily="@font/font_medium"
             android:text="1:1"
             android:layout_marginStart="@dimen/_8sdp"
-            app:layout_constraintStart_toEndOf="@id/icAspectRadio"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

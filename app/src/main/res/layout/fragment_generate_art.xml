@@ -5,10 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="mViewModel"
-            type="com.longkd.chatgpt_openai.feature.art.vyro.GenerateArtViewModel" />
-        <import type="com.longkd.chatgpt_openai.base.util.Constants"/>
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,8 +29,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_height="@dimen/_54sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -41,19 +38,11 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+
                         android:fontFamily="@font/font_bold"
                         android:text="@string/enter_your_prompt"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/_16sdp" />
-
-                    <TextView
-                        android:id="@+id/fmHomeArtTvInspired"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_medium"
-                        android:text="@string/get_inspired"
-                        android:textColor="@color/color_green_base"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textSize="@dimen/_18sdp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -64,230 +53,63 @@
                     <EditText
                         android:id="@+id/fmHomeArtEdtPrompt"
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="300dp"
                         android:background="@drawable/bg_boder14_white50"
                         android:fontFamily="@font/font_regular"
                         android:gravity="top"
                         android:hint="@string/image_type_object_any_details_ne_g_a_beautiful_magical_kingdom"
-                        android:padding="@dimen/_12sdp"
                         android:overScrollMode="always"
+                        android:padding="@dimen/_12sdp"
                         android:scrollbarStyle="insideInset"
                         android:scrollbars="vertical"
                         android:textColor="@color/color_white"
                         android:textColorHint="@color/color_white_50"
                         android:textSize="@dimen/_14sdp" />
                 </RelativeLayout>
+
                 <LinearLayout
                     android:id="@+id/fmHomeArtLLPolicy"
                     android:layout_width="wrap_content"
-                    android:gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="@dimen/_12sdp"
                         android:layout_height="@dimen/_12sdp"
-                        android:src="@drawable/ic_warning"/>
+                        android:src="@drawable/ic_warning" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_regular"
                         android:layout_marginStart="@dimen/_2sdp"
-                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/font_regular"
+                        android:text="@string/content_doesn_t_contain"
                         android:textColor="@color/color_white_70"
-                        android:text="@string/content_doesn_t_contain"/>
+                        android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Choose version"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/_16sdp"
                     android:layout_marginTop="@dimen/_16sdp"
-                    android:fontFamily="@font/font_medium"/>
+                    android:fontFamily="@font/font_medium"
+                    android:text="Aspect Ratio"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/_16sdp" />
 
-                <LinearLayout
+                <com.longkd.chatgpt_openai.base.customview.NestedScrollableHost
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="@dimen/_8sdp">
-
-                    <LinearLayout
-                        android:id="@+id/generateFm_llnAdvanceView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingStart="@dimen/_20sdp"
-                        android:paddingEnd="@dimen/_20sdp"
-                        android:paddingTop="@dimen/_10sdp"
-                        android:paddingBottom="@dimen/_10sdp"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Advanced"
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:textColor="@color/color_white"
-                            android:textSize="@dimen/_14sdp"
-                       />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Free Tries Left: 2"
-                            android:layout_gravity="center"
-                            android:textColor="@color/color_white_50"
-                            android:textSize="@dimen/_10sdp"
-                            android:fontFamily="@font/font_regular"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/generateFm_llnPrimaryView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:paddingStart="@dimen/_20sdp"
-                        android:paddingEnd="@dimen/_20sdp"
-                        android:paddingTop="@dimen/_10sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:paddingBottom="@dimen/_10sdp"
-                        android:gravity="center"
-                       >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Primary"
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:textColor="@color/color_white"
-                            android:textSize="@dimen/_14sdp"
-                            tools:ignore="SpUsage" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Free Tries Left: 5"
-                            android:layout_gravity="center"
-                            android:textColor="@color/color_white_50"
-                            android:textSize="@dimen/_10sdp"
-                            android:textStyle="normal"
-                            android:fontFamily="@font/font_regular"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <com.google.android.flexbox.FlexboxLayout
-                        android:id="@+id/flexboxLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:alignContent="stretch"
-                        android:layout_marginTop="@dimen/_12sdp"
-                        app:alignItems="stretch"
-                        android:layout_gravity="center"
-                        app:flexWrap="wrap" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_12sdp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/font_bold"
-                            android:text="@string/choose_an_art_style"
-                            android:textColor="@color/color_white"
-                            android:textSize="@dimen/_16sdp" />
-                    </LinearLayout>
+                    android:layout_height="wrap_content">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rcv"
+                        android:id="@+id/generateFm_rclRatio"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_12sdp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Choose Model"
-                        android:textColor="@color/color_white"
-                        android:textSize="@dimen/_16sdp"
-                        android:layout_marginTop="@dimen/_16sdp"
-                        android:fontFamily="@font/font_medium"/>
-
-                    <TextView
-                        android:id="@+id/generateFm_chooseModel"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/color_white"
-                        android:textSize="@dimen/_16sdp"
-                        android:maxLines="1"
-                        android:ellipsize="end"
                         android:layout_marginTop="@dimen/_12sdp"
-                        android:padding="@dimen/_14sdp"
-                        android:background="@drawable/bg_border_choose_version_art"
-                        android:text="Imagine V4.1"
-                        android:fontFamily="@font/font_medium"
-                        app:drawableEndCompat="@drawable/ic_arrow_down" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Aspect Ratio"
-                        android:textColor="@color/color_white"
-                        android:textSize="@dimen/_16sdp"
-                        android:layout_marginTop="@dimen/_16sdp"
-                        android:fontFamily="@font/font_medium"/>
-
-                    <com.longkd.chatgpt_openai.base.customview.NestedScrollableHost
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/generateFm_rclRatio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            tools:itemCount="1"
-                            android:layout_marginTop="@dimen/_12sdp"/>
-                    </com.longkd.chatgpt_openai.base.customview.NestedScrollableHost>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Choose an art style"
-                        android:textColor="@color/color_white"
-                        android:textSize="@dimen/_16sdp"
-                        android:layout_marginTop="@dimen/_16sdp"
-                        android:fontFamily="@font/font_medium"/>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/generateFm_rclStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:itemCount="1"
-                        android:layout_marginTop="@dimen/_12sdp"/>
-
-                </LinearLayout>
-
+                        tools:itemCount="1" />
+                </com.longkd.chatgpt_openai.base.customview.NestedScrollableHost>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
@@ -298,12 +120,12 @@
             android:layout_marginHorizontal="@dimen/_16sdp"
             android:layout_marginBottom="@dimen/_18sdp"
             android:background="@drawable/ripper_btn_full_green_round"
+            android:fontFamily="@font/font_bold"
             android:gravity="center"
             android:orientation="vertical"
-            android:fontFamily="@font/font_bold"
             android:text="@string/generate"
             android:textColor="@color/color_white"
             android:textSize="@dimen/_16sdp"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
