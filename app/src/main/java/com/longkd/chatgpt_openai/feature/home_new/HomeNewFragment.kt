@@ -20,6 +20,7 @@ import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
 import com.longkd.chatgpt_openai.base.model.*
 import com.longkd.chatgpt_openai.base.util.*
+import com.longkd.chatgpt_openai.base.util.UtilsApp.toCelsius
 import com.longkd.chatgpt_openai.databinding.FragmentNewHomeBinding
 import com.longkd.chatgpt_openai.dialog.*
 import com.longkd.chatgpt_openai.feature.ShareDataViewModel
@@ -52,6 +53,7 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
 
     override fun initViews() {
         initShortCut()
+        mViewModel.getCurrentWeather()
         CommonSharedPreferences.getInstance().titleAppChat.let {
             if (!it.isNullOrBlank()) {
                 mBinding?.homeFmSelectTitle?.text = it
@@ -342,6 +344,22 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
                     else -> {}
                 }
 
+            }
+            viewLifecycleOwner.lifecycleScope.launch {
+                mViewModel.dataWeather.collect { state ->
+                    if (state is com.longkd.chatgpt_openai.open.State.Success) {
+                        mBinding?.txtCurrentWeather?.visible()
+                        val maxTemp =
+                            state.data?.dailyForecasts?.get(0)?.temperature?.maximum?.value?.toInt()
+                        val minTemp =
+                            state.data?.dailyForecasts?.get(0)?.temperature?.minimum?.value?.toInt()
+                        mBinding?.txtCurrentWeather?.text = getString(R.string.text_today) +
+                                " ${minTemp?.toCelsius()} - ${maxTemp?.toCelsius()}°C"
+                    } else {
+                        mBinding?.txtCurrentWeather?.invisible()
+                    }
+
+                }
             }
 
         }

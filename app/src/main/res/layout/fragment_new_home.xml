@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
         android:id="@+id/homeFm_scrollerLayout"
@@ -47,6 +46,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/homeFmSelectTitle" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_current_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/font_bold"
+                android:text="@string/text_today"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeFmSelectTitle" />
 
             <com.longkd.chatgpt_openai.base.widget.CommonTextViewWriting
                 android:id="@+id/homeFm_titleChatAI"
@@ -62,7 +75,8 @@
                 android:textSize="@dimen/_18sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/homeFmSelectTitle" />
+                app:layout_constraintTop_toBottomOf="@id/txt_current_weather" />
+
 
             <TextView
                 android:id="@+id/homeFm_startChat"
@@ -273,8 +287,8 @@
                 android:text="@string/txt_topic"
                 android:textColor="@color/color_white_50"
                 android:textSize="@dimen/_16sdp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rclTitleTopic"
@@ -285,7 +299,7 @@
                 android:layout_marginEnd="@dimen/_18sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTopic"/>
+                app:layout_constraintTop_toBottomOf="@id/tvTopic" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rclDetailAllTopic"

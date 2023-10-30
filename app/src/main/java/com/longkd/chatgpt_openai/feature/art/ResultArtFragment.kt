@@ -76,6 +76,13 @@ class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragme
             popBackStack()
         }
 
+        mBinding?.fmResultArtTvRegenerate?.setOnSingleClick {
+            mBinding?.fmResultArtCtLoading?.visible()
+            mBinding?.fmResultArtLatLoading?.playAnimation()
+            countDownTimer?.start()
+            mViewModel.getImage(prompt ?: "", size ?: "0")
+        }
+
         mBinding?.fmResultArtImvDownload?.setOnSingleClick {
             showPermission {
                 lifecycleScope.launch(Dispatchers.Default) {
@@ -160,6 +167,8 @@ class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragme
                         }
                         dialog.show(activity?.supportFragmentManager)
                     }
+
+                    else -> {}
                 }
             }
         }

@@ -10,6 +10,8 @@ import com.longkd.chatgpt_openai.open.chat.ChatRepository
 import com.longkd.chatgpt_openai.open.chat.ChatRepositoryImpl
 import com.longkd.chatgpt_openai.open.image.ImageRepository
 import com.longkd.chatgpt_openai.open.image.ImageRepositoryImpl
+import com.longkd.chatgpt_openai.open.weather.WeatherRepository
+import com.longkd.chatgpt_openai.open.weather.WeatherRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -27,4 +29,7 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindImageRepository(imageRepositoryImpl: ImageRepositoryImpl): ImageRepository
+
+    @Binds
+    abstract fun bindWeatherRepository(weatherRepositoryImpl: WeatherRepositoryImpl): WeatherRepository
 }

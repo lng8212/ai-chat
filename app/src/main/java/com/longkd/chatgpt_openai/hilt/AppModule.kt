@@ -14,6 +14,7 @@ import com.longkd.chatgpt_openai.base.data.CoreDao
 import com.longkd.chatgpt_openai.base.mvvm.DataRepository
 import com.longkd.chatgpt_openai.open.chat.ChatService
 import com.longkd.chatgpt_openai.open.image.ImageService
+import com.longkd.chatgpt_openai.open.weather.WeatherService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -82,6 +83,11 @@ object AppModule {
     @Provides
     fun provideImageService(retrofit: Retrofit): ImageService =
         retrofit.create(ImageService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideWeatherService(retrofit: Retrofit): WeatherService =
+        retrofit.create(WeatherService::class.java)
 
     @Singleton
     @Provides

@@ -46,6 +46,10 @@ object UtilsApp {
         return false
     }
 
+    fun Int.toCelsius(): Int {
+        return ((((this - 32) * 5) / 9f).toInt())
+    }
+
 
     fun hideKeyboard(activity: Activity?) {
         val imm: InputMethodManager? =

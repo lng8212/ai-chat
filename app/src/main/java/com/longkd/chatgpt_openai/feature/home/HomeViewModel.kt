@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.model.ChatBaseDto
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
@@ -21,11 +22,17 @@ import com.longkd.chatgpt_openai.base.util.DateUtils
 import com.longkd.chatgpt_openai.base.util.LoggerUtil
 import com.longkd.chatgpt_openai.base.util.convertToChatBaseDto
 import com.longkd.chatgpt_openai.feature.art.StyleArtDto
+import com.longkd.chatgpt_openai.open.State
 import com.longkd.chatgpt_openai.open.chat.ChatRepository
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Message35Request
+import com.longkd.chatgpt_openai.open.weather.WeatherRepository
+import com.longkd.chatgpt_openai.open.weather.model.WeatherResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
@@ -35,7 +42,8 @@ import javax.net.ssl.SSLHandshakeException
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val dataRepository: DataRepository,
-    private val chatRepository: ChatRepository
+    private val chatRepository: ChatRepository,
+    private val weatherRepository: WeatherRepository
 ) : BaseViewModel() {
     private var mCurrentChatBaseDto: MutableLiveData<ChatBaseDto> = MutableLiveData()
     var mMessageMore: MutableLiveData<String> = MutableLiveData()
@@ -48,6 +56,9 @@ class HomeViewModel @Inject constructor(
         CommonSharedPreferences.getInstance().limitSavePrevConversation.times(2).plus(1)
     private var isTextInputCopy: Boolean? = null
 
+    private val _dataWeather: MutableStateFlow<State<WeatherResponse>> =
+        MutableStateFlow(State.Loading())
+    val dataWeather = _dataWeather.asStateFlow()
     fun getCurrentDto(): LiveData<ChatBaseDto> = mCurrentChatBaseDto
 
     val inputEdtChat = MutableLiveData<String>()
@@ -57,6 +68,27 @@ class HomeViewModel @Inject constructor(
     fun setTextInputCopy(value: Boolean) {
         this.isTextInputCopy = value
     }
+
+    fun getCurrentWeather() {
+        viewModelScope.launch {
+            when (val response = weatherRepository.getWeatherCurrent()) {
+                is State.Success -> {
+                    _dataWeather.update {
+                        State.Success(response.data)
+                    }
+                }
+
+                is State.Error -> {
+                    _dataWeather.update {
+                        State.Error(response.message)
+                    }
+                }
+
+                else -> {}
+            }
+        }
+    }
+
 
     fun initChat(
         topicType: Int,
