@@ -1,6 +1,8 @@
 package com.longkd.chatgpt_openai.feature.chat
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -95,6 +97,7 @@ class ChatDetailFragment :
     var onCallBackWhenPurchase: (() -> Unit)? = null
 
     companion object {
+        private const val REQUEST_CODE_STT = 1
         private const val FROM_CHAT_STYLE = "FROM_CHAT_STYLE"
         private const val CHAT_MODE = "CHAT_MODE"
         const val TOPIC = "TOPIC"
@@ -114,7 +117,7 @@ class ChatDetailFragment :
             fromHistory: Boolean? = false,
             resultOcr: String? = null,
             summaryData: SummaryHistoryDto? = null,
-            textCopy: String? = null
+            textCopy: String? = null,
         ): ChatDetailFragment {
             val args = Bundle()
             val fragment = ChatDetailFragment()
@@ -242,6 +245,36 @@ class ChatDetailFragment :
                         mBinding?.chatFmEdt?.setText(it)
                         if (it.isNotEmpty()) mBinding?.chatFmBtnSend?.isEnabled = true
                     }
+            }
+        }
+
+        val resultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == Activity.RESULT_OK) {
+                    val data =
+                        it.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.get(0)
+                            .toString()
+                    mBinding?.chatFmEdt?.setText(data)
+                }
+            }
+        mBinding?.btnVoice?.setOnSingleClick {
+            val sttIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            // Language model defines the purpose, there are special models for other use cases, like search.
+            sttIntent.putExtra(
+                RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+            )
+            // Adding an extra language, you can use any language from the Locale class.
+            sttIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
+            // Text that shows up on the Speech input prompt.
+            sttIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak now!")
+            try {
+                // Start the intent for a result, and pass in our request code
+                resultLauncher.launch(sttIntent)
+            } catch (e: ActivityNotFoundException) {
+                e.printStackTrace()
+                Toast.makeText(requireContext(), getString(R.string.error), Toast.LENGTH_LONG)
+                    .show()
             }
         }
         mSpeechRecognizerIntent.putExtra(
@@ -692,7 +725,7 @@ class ChatDetailFragment :
                         utteranceId: String,
                         start: Int,
                         end: Int,
-                        frame: Int
+                        frame: Int,
                     ) {
                         mAdapter?.updateText(utteranceId.substring(0, end), end)
                     }

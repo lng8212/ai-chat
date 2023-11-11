@@ -10,7 +10,7 @@ data class ChatDetailDto(
     var message: String = "",
     @Expose
     val timeChat: Long = 0,
-    var timeChatString: String = "",
+    var timeChatString: String? = "",
     var isTyping: Boolean = false,
     @Expose
     val chatType: Int,
@@ -18,5 +18,5 @@ data class ChatDetailDto(
     var chatUserNane: String = "",
     var parentId: Long = 0,
     var isSeeMore: Boolean = false,
-    var isLastItem: Boolean = false
+    var isLastItem: Boolean = false,
 ) : Parcelable

@@ -82,7 +82,7 @@
                     android:minHeight="@dimen/_52sdp"
                     android:paddingTop="@dimen/_4sdp"
                     android:paddingStart="@dimen/_16sdp"
-                    android:paddingEnd="@dimen/_50sdp"
+                    android:paddingEnd="@dimen/_100sdp"
                     android:textColor="@color/color_white"
                     android:textColorHint="@color/color_white_50"
                     android:textSize="@dimen/_14sdp"
@@ -106,6 +106,16 @@
                     app:layout_constraintBottom_toBottomOf="@+id/chatFm_edt"
                     app:layout_constraintEnd_toStartOf="@+id/chatFm_btnSend"
                     app:layout_constraintTop_toTopOf="@+id/chatFm_edt" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btn_voice"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:src="@drawable/ic_voice"
+                    app:layout_constraintBottom_toBottomOf="@id/chatFm_btnOcr"
+                    app:layout_constraintEnd_toStartOf="@id/chatFm_btnOcr"
+                    app:layout_constraintTop_toTopOf="@id/chatFm_btnOcr" />
 
                 <ImageView
                     android:id="@+id/chatFm_btnSend"
