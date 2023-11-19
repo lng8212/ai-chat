@@ -10,7 +10,6 @@ import android.os.SystemClock
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ProcessLifecycleOwner
-import androidx.lifecycle.lifecycleScope
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseActivity
 import com.longkd.chatgpt_openai.base.BaseFragment
@@ -19,10 +18,6 @@ import com.longkd.chatgpt_openai.databinding.ActivityMainBinding
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileFragment
 import com.longkd.chatgpt_openai.service.RemindAlarmReceiver
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 @Suppress("SameParameterValue")
@@ -55,11 +50,6 @@ class MainActivity : BaseActivity() {
             supportFragmentManager.addOnBackStackChangedListener(it)
         }
         ProcessLifecycleOwner.get().lifecycle.addObserver(myActivityObserver)
-        lifecycleScope.launch(Dispatchers.Main) {
-            withContext(Dispatchers.Default) {
-                delay(1500)
-            }
-        }
     }
 
 

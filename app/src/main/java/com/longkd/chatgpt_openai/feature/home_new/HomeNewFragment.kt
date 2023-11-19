@@ -6,15 +6,11 @@ import android.content.Intent
 import android.content.pm.ShortcutManager
 import android.os.Build
 import android.os.Bundle
-import android.view.MotionEvent
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
-import com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.ItemClickListener
@@ -63,14 +59,6 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
         mBinding?.homeFmTitleChatAI?.setCharacterDelay(150)
         mBinding?.homeFmTitleChatAI?.animateText(getString(R.string.str_title_start_chat))
         initViewTopic()
-        mBinding?.homeFmScrollerLayout?.onVerticalScrollChangeListener =
-            ConsecutiveScrollerLayout.OnScrollChangeListener { _, scrollY, _, _ ->
-                if (scrollY > mBinding?.homeFmTopView?.height.orZero() || scrollY < 0) {
-                    mBinding?.homeFmScrollerLayout?.stickyOffset = 0
-                } else {
-                    mBinding?.homeFmScrollerLayout?.stickyOffset = -scrollY / 2
-                }
-            }
     }
 
     private fun initShortCut() {
@@ -101,35 +89,6 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
             this?.adapter = topicAdapter
             this?.layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            this?.addOnItemTouchListener(object : OnItemTouchListener {
-                var lastX = 0
-                override fun onInterceptTouchEvent(rv: RecyclerView, e: MotionEvent): Boolean {
-                    when (e.action) {
-                        MotionEvent.ACTION_DOWN -> lastX = e.x.toInt()
-                        MotionEvent.ACTION_MOVE -> {
-                            val isScrollingRight = e.x < lastX
-                            if (isScrollingRight && (mBinding?.rclTitleTopic?.layoutManager as LinearLayoutManager).findLastCompletelyVisibleItemPosition() == mBinding?.rclTitleTopic?.adapter?.itemCount?.minus(
-                                    1
-                                )
-                                || !isScrollingRight && (mBinding?.rclTitleTopic?.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition() == 0
-                            ) {
-                                mainFragment?.enableScrollPaper(true)
-                            } else {
-                                mainFragment?.enableScrollPaper(false)
-                            }
-                        }
-
-                        MotionEvent.ACTION_UP -> {
-                            lastX = 0
-                            mainFragment?.enableScrollPaper(true)
-                        }
-                    }
-                    return false
-                }
-
-                override fun onTouchEvent(rv: RecyclerView, e: MotionEvent) {}
-                override fun onRequestDisallowInterceptTouchEvent(disallowIntercept: Boolean) {}
-            })
         }
 
         TopicProvider.listSubHaveOption(DetailTopicData.values(), requireContext())
@@ -145,7 +104,6 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
 
         allTopicAdapter = AllTopicAdapter(arrayListOf())
         mBinding?.rclDetailAllTopic?.adapter = allTopicAdapter
-        mBinding?.rclDetailAllTopic?.layoutManager = LinearLayoutManager(context)
         allTopicAdapter.updateData(listTopic)
         allTopicAdapter.clickItemTopic = {
             handleTopic(it)

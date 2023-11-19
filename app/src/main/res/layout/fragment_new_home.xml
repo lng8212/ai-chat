@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
         android:id="@+id/homeFm_scrollerLayout"
@@ -15,7 +15,6 @@
             android:id="@+id/homeFm_topView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_isSink="true"
             app:layout_isSticky="true"
             app:layout_isTriggerScroll="true">
@@ -216,7 +215,6 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="@+id/homeFmImvDirector"
-                app:layout_constraintStart_toStartOf="@+id/homeFmImvDirector"
                 app:layout_constraintTop_toBottomOf="@+id/homeFmImvDirector">
 
                 <ImageView
@@ -309,6 +307,8 @@
                 android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_16sdp"
                 android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_detail_sub_topic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

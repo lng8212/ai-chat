@@ -4,6 +4,7 @@ import android.Manifest
 import android.animation.Animator
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -13,6 +14,10 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.util.Strings
@@ -85,10 +90,12 @@ class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragme
 
         mBinding?.fmResultArtImvDownload?.setOnSingleClick {
             showPermission {
+                mBinding?.llLoading?.visible()
                 lifecycleScope.launch(Dispatchers.Default) {
                     val data = WatermarkImageDownloader().load(requireContext(), url ?: "")
                     if (data != null) {
                         withContext(Dispatchers.Main) {
+                            mBinding?.llLoading?.gone()
                             mBinding?.fmResultArtLLDownloaded?.visible()
                             mBinding?.fmResultArtLatDownloaded?.playAnimation()
                         }
@@ -145,15 +152,37 @@ class ResultArtFragment : BaseFragment<FragmentResultArtBinding>(R.layout.fragme
 
                     is State.Success -> {
                         url = state.data?.data?.get(0)?.url ?: ""
-                        mBinding?.fmResultArtCtLoading?.gone()
-                        mBinding?.fmResultArtLatLoading?.cancelAnimation()
-                        countDownTimer?.cancel()
+
                         mBinding?.fmResultArtTvPrompt?.text = prompt
                         mBinding?.fmResultArtImv?.let {
 
                             Glide.with(this@ResultArtFragment)
                                 .load(url)
                                 .placeholder(R.drawable.img_default_art)
+                                .addListener(object : RequestListener<Drawable> {
+                                    override fun onLoadFailed(
+                                        e: GlideException?,
+                                        model: Any?,
+                                        target: Target<Drawable>?,
+                                        isFirstResource: Boolean,
+                                    ): Boolean {
+                                        return false
+                                    }
+
+                                    override fun onResourceReady(
+                                        resource: Drawable?,
+                                        model: Any?,
+                                        target: Target<Drawable>?,
+                                        dataSource: DataSource?,
+                                        isFirstResource: Boolean,
+                                    ): Boolean {
+                                        mBinding?.fmResultArtCtLoading?.gone()
+                                        mBinding?.fmResultArtLatLoading?.cancelAnimation()
+                                        countDownTimer?.cancel()
+                                        return false
+                                    }
+
+                                })
                                 .into(it)
                         }
                     }

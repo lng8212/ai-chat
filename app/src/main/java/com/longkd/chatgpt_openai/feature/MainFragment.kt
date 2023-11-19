@@ -96,9 +96,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>(R.layout.fragment_main) {
         mBinding?.mainFragmentViewPager?.registerOnPageChangeCallback(mOnPageChangeCallback)
     }
 
-    fun enableScrollPaper(isEnable: Boolean = true) {
-        mBinding?.mainFragmentViewPager?.isUserInputEnabled = isEnable
-    }
 
     override var initBackAction: Boolean = true
     override fun onDestroyView() {
