@@ -112,7 +112,7 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
         allTopicAdapter.clickArrowRight = { title ->
             updateViewClickTopic(listTopic.firstOrNull { it.title == title })
             mBinding?.homeFmScrollerLayout?.scrollToChildWithOffset(
-                mBinding?.homeFmLlnBottomView, 0
+                mBinding?.flBottom, 0
             )
             mBinding?.rclTitleTopic?.layoutManager?.scrollToPosition(listTopic.indexOf(listTopic.firstOrNull { it.title == title }))
         }

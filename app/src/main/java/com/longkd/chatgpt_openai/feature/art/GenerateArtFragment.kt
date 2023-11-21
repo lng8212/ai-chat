@@ -32,7 +32,7 @@ class GenerateArtFragment :
         })
         mBinding?.generateFmRclRatio?.adapter = aspectRatioAdapter
         mBinding?.generateFmRclRatio?.layoutManager =
-            StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
     }
 
     override fun initActions() {

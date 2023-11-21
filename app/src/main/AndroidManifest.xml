@@ -68,7 +68,6 @@
             android:exported="true"
             android:label="Chat AI"
             android:screenOrientation="portrait"
-            android:hardwareAccelerated="false"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />

@@ -7,17 +7,14 @@
         android:id="@+id/homeFm_scrollerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
         android:background="@drawable/home_bg_gradient"
+        android:animateLayoutChanges="true"
         app:autoAdjustHeightAtBottomView="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/homeFm_topView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_isSink="true"
-            app:layout_isSticky="true"
-            app:layout_isTriggerScroll="true">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/homeFmSelectTitle"
@@ -266,13 +263,12 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/homeFm_llnBottomView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <FrameLayout
+            android:id="@+id/fl_bottom"
             android:background="@drawable/home_bg_gradient"
-            android:orientation="vertical"
-            app:layout_scrollChild="@+id/rclDetailAllTopic">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_isSticky="true">
 
             <TextView
                 android:id="@+id/tvTopic"
@@ -293,51 +289,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_40sdp"
                 android:layout_marginEnd="@dimen/_18sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvTopic" />
+        </FrameLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rclDetailAllTopic"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginBottom="@dimen/_16sdp"
-                android:visibility="visible"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_detail_sub_topic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rclTitleTopic" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclDetailAllTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_detail_sub_topic" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rclDetailTopic"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/_18sdp"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginBottom="@dimen/_16sdp"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rclTitleTopic" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclDetailTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:visibility="gone" />
 
-            <View
-                android:id="@+id/homeFm_viewDirector1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="@color/color_black_40"
-                android:clickable="true"
-                android:focusable="true"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/homeFm_viewDirector1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout>
 </layout>
