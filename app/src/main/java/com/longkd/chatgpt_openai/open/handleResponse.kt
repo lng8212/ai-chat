@@ -15,14 +15,18 @@ import retrofit2.Response
 inline fun <reified T : Any> handleResponse(
     response: Response<T>,
 ): State<T> {
-    return if (response.isSuccessful) {
-        val body = response.body()
-        if (body != null) {
-            State.Success(body)
+    return try {
+        if (response.isSuccessful) {
+            val body = response.body()
+            if (body != null) {
+                State.Success(body)
+            } else {
+                State.Error("Empty body")
+            }
         } else {
-            State.Error("Empty body")
+            State.Error(response.errorBody()?.string() ?: "Error")
         }
-    } else {
-        State.Error(response.errorBody()?.string() ?: "Error")
+    } catch (e: Exception) {
+        State.Error(e.toString())
     }
 }

@@ -72,6 +72,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
 
+
                     <View
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_1sdp"
@@ -83,70 +84,13 @@
                         app:layout_constraintWidth_percent="0.9" />
 
                     <com.longkd.chatgpt_openai.base.widget.ItemSetting
-                        android:id="@+id/fmSettingUpdateItemAbout"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
-                        android:layout_marginTop="@dimen/_1sdp"
-                        app:Its_icon="@drawable/ic_about_us"
-                        app:Its_title="@string/text_about_us"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingBubble" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/color_line_setting"
-                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemAbout"
-                        app:layout_constraintHorizontal_bias="1"
-                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemAbout"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemAbout"
-                        app:layout_constraintWidth_percent="0.9" />
-
-                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
-                        android:id="@+id/fmSettingUpdateItemPrivacy"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
-                        android:layout_marginTop="@dimen/_1sdp"
-                        app:Its_icon="@drawable/ic_privacy_policy"
-                        app:Its_title="@string/text_privacy_policy"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemAbout" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/color_line_setting"
-                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemPrivacy"
-                        app:layout_constraintHorizontal_bias="1"
-                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemPrivacy"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemPrivacy"
-                        app:layout_constraintWidth_percent="0.9" />
-
-                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
-                        android:id="@+id/fmSettingUpdateItemTemp"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
-                        android:layout_marginTop="@dimen/_1sdp"
-                        app:Its_icon="@drawable/ic_term_of_use"
-                        app:Its_title="@string/text_term_of_use"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemPrivacy" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/color_line_setting"
-                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemTemp"
-                        app:layout_constraintHorizontal_bias="1"
-                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemTemp"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemTemp"
-                        app:layout_constraintWidth_percent="0.9" />
-
-                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
                         android:id="@+id/fmSettingUpdateItemLanguage"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_56sdp"
                         android:layout_marginTop="@dimen/_1sdp"
                         app:Its_icon="@drawable/ic_language"
                         app:Its_title="@string/txt_language"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemTemp" />
+                        app:layout_constraintTop_toBottomOf="@+id/fmSettingBubble" />
 
                     <View
                         android:layout_width="0dp"
@@ -171,56 +115,6 @@
                         app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemLanguage" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/fmSettingUpdateTvStay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16sdp"
-                    android:fontFamily="@font/font_regular"
-                    android:text="@string/text_stay_in_touch"
-                    android:textColor="@color/color_white_50"
-                    android:textSize="@dimen/_13sdp"
-                    app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateTvSupport"
-                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateSupportContainer" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/fmSettingUpdateStayContainer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:background="@drawable/bg_item_settinground"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateTvStay"
-                    app:layout_constraintWidth_percent="0.872">
-
-                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
-                        android:id="@+id/fmSettingUpdateItemRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
-                        app:Its_icon="@drawable/ic_rate_app"
-                        app:Its_title="@string/text_rate_app"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_1sdp"
-                        android:background="@color/color_line_setting"
-                        app:layout_constraintEnd_toEndOf="@+id/fmSettingUpdateItemRate"
-                        app:layout_constraintHorizontal_bias="1"
-                        app:layout_constraintStart_toStartOf="@+id/fmSettingUpdateItemRate"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemRate"
-                        app:layout_constraintWidth_percent="0.9" />
-
-                    <com.longkd.chatgpt_openai.base.widget.ItemSetting
-                        android:id="@+id/fmSettingUpdateItemFeedBack"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_56sdp"
-                        android:layout_marginTop="@dimen/_1sdp"
-                        app:Its_icon="@drawable/ic_feedback"
-                        app:Its_title="@string/text_send_feedback"
-                        app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateItemRate" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/fmSettingUpdateTvVersion"
@@ -234,7 +128,7 @@
                     android:textSize="@dimen/_14sdp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateStayContainer" />
+                    app:layout_constraintTop_toBottomOf="@+id/fmSettingUpdateSupportContainer" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>

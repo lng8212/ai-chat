@@ -11,8 +11,6 @@ import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.State
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionResult
 import retrofit2.http.Body
 
 /**
@@ -29,7 +27,6 @@ interface ChatRepository {
 
     suspend fun completeSummaryChat(@Body request: Completion35Request?): State<Completion35Result>
 
-    suspend fun createCompletionNew(@Body request: CompletionRequest?): State<CompletionResult>
     suspend fun uploadSummaryText(@Body request: Completion35Request?): State<SummaryFileResponse>
 
 }

@@ -11,8 +11,6 @@ import com.longkd.chatgpt_openai.base.model.TopicResponse
 import com.longkd.chatgpt_openai.open.State
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Request
 import com.longkd.chatgpt_openai.open.dto.completion.Completion35Result
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionRequest
-import com.longkd.chatgpt_openai.open.dto.completion.CompletionResult
 import com.longkd.chatgpt_openai.open.handleResponse
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -49,10 +47,6 @@ class ChatRepositoryImpl @Inject constructor(private val service: ChatService) :
 
     override suspend fun completeSummaryChat(request: Completion35Request?): State<Completion35Result> {
         return handleResponse(service.completeSummaryChat(request))
-    }
-
-    override suspend fun createCompletionNew(request: CompletionRequest?): State<CompletionResult> {
-        return handleResponse(service.createCompletionNew(request))
     }
 
     override suspend fun uploadSummaryText(request: Completion35Request?): State<SummaryFileResponse> {

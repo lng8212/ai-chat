@@ -71,21 +71,29 @@ class HomeViewModel @Inject constructor(
 
     fun getCurrentWeather() {
         viewModelScope.launch {
-            when (val response = weatherRepository.getWeatherCurrent()) {
-                is State.Success -> {
-                    _dataWeather.update {
-                        State.Success(response.data)
-                    }
-                }
+            try {
 
-                is State.Error -> {
-                    _dataWeather.update {
-                        State.Error(response.message)
+                when (val response = weatherRepository.getWeatherCurrent()) {
+                    is State.Success -> {
+                        _dataWeather.update {
+                            State.Success(response.data)
+                        }
                     }
-                }
 
-                else -> {}
+                    is State.Error -> {
+                        _dataWeather.update {
+                            State.Error(response.message)
+                        }
+                    }
+
+                    else -> {}
+                }
+            } catch (e: Exception) {
+                _dataWeather.update {
+                    State.Error(e.toString())
+                }
             }
+
         }
     }
 

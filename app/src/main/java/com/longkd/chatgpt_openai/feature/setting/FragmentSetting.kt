@@ -23,7 +23,6 @@ import com.longkd.chatgpt_openai.base.bubble.FloatingBubbleService
 import com.longkd.chatgpt_openai.base.bubble.isDrawOverlaysPermissionGranted
 import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
-import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.databinding.SettingFragmentBinding
 import com.longkd.chatgpt_openai.feature.language.LanguageActivity
@@ -63,23 +62,6 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
 
     override fun initActions() {
         mBinding?.apply {
-            fmSettingUpdateItemPrivacy.setOnSingleClick {
-                UtilsApp.openBrowser(context, Constants.URL_POLICY)
-            }
-            fmSettingUpdateItemTemp.setOnSingleClick {
-                UtilsApp.openBrowser(context, Constants.URL_TERM_OF_SERVICE)
-            }
-            fmSettingUpdateItemRate.setOnSingleClick {
-                activity?.supportFragmentManager?.let { it1 ->
-                }
-            }
-            fmSettingUpdateItemFeedBack.setOnSingleClick {
-                activity?.let { it1 ->
-                    UtilsApp.sendFeedBack(
-                        it1, getStringRes(R.string.app_name)
-                    )
-                }
-            }
             fmSettingUpdateItemLanguage.setOnSingleClick {
                 val mIntent = Intent(context, LanguageActivity::class.java)
                 mIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
