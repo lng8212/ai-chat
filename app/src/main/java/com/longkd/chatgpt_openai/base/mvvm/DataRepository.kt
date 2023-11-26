@@ -1,7 +1,5 @@
 package com.longkd.chatgpt_openai.base.mvvm
 
-import android.content.Context
-import com.longkd.chatgpt_openai.base.data.ChatDatabase
 import com.longkd.chatgpt_openai.base.data.CoreDao
 import com.longkd.chatgpt_openai.base.model.ChatBaseDto
 import com.longkd.chatgpt_openai.base.model.SummaryHistoryDto
@@ -28,12 +26,6 @@ open class DataRepository(private val coreDao: CoreDao) {
     suspend fun getChatDto(): ChatBaseDto? {
         return withContext(Dispatchers.IO) {
             coreDao.getAllChat().firstOrNull()
-        }
-    }
-
-    suspend fun getLastChatDto(): ChatBaseDto? {
-        return withContext(Dispatchers.IO) {
-            coreDao.getAllChat().lastOrNull()
         }
     }
 
