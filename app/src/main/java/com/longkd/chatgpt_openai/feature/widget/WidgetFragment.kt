@@ -1,13 +1,8 @@
-
 package com.longkd.chatgpt_openai.feature.widget
 
-import android.app.PendingIntent
-import android.appwidget.AppWidgetManager
-import android.content.ComponentName
-import android.content.Intent
-import android.os.Build
+
 import android.os.Bundle
-import android.widget.Toast
+import androidx.fragment.app.viewModels
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.util.CommonAction
@@ -17,9 +12,10 @@ import com.longkd.chatgpt_openai.databinding.FragmentWidgetBinding
 
 class WidgetFragment : BaseFragment<FragmentWidgetBinding>(R.layout.fragment_widget) {
 
+    private val viewModel: WidgetViewModel by viewModels()
 
     companion object {
-        fun newInstance(): WidgetFragment{
+        fun newInstance(): WidgetFragment {
             val args = Bundle()
 
             val fragment = WidgetFragment()
@@ -34,79 +30,13 @@ class WidgetFragment : BaseFragment<FragmentWidgetBinding>(R.layout.fragment_wid
 
     override fun initActions() {
         mBinding?.fmWidgetTvAddTopic?.setOnSingleClick {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val  appWidgetManager = AppWidgetManager.getInstance(activity)
-                val myProvider =
-                    activity?.let { it1 ->
-                        ComponentName(
-                            it1,
-                            WidgetTopic::class.java
-                        )
-                    }
-                if (appWidgetManager.isRequestPinAppWidgetSupported) {
-                    val successCallback = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                        PendingIntent.getBroadcast(
-                            activity,
-                            6666,
-                            Intent(),
-                            PendingIntent.FLAG_IMMUTABLE
-                        )
-                    } else {
-                        PendingIntent.getBroadcast(
-                            activity,
-                            6666,
-                            Intent(),
-                            PendingIntent.FLAG_UPDATE_CURRENT
-                        )
-                    }
-                    if (myProvider != null) {
-                        appWidgetManager.requestPinAppWidget(myProvider, null, successCallback)
-                    }
-                } else {
-                    Toast.makeText(activity, getStringRes(R.string.device_not_support), Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                Toast.makeText(activity, getStringRes(R.string.text_des_guide_widget), Toast.LENGTH_SHORT).show()
-            }
+            activity?.let { it1 -> viewModel.clickWidget4x1(it1) }
         }
         mBinding?.fmWidgetTvAddNoTopic?.setOnSingleClick {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val  appWidgetManager = AppWidgetManager.getInstance(activity)
-                val myProvider =
-                    activity?.let { it1 ->
-                        ComponentName(
-                            it1,
-                            WidgetNoTopic::class.java
-                        )
-                    }
-                if (appWidgetManager.isRequestPinAppWidgetSupported) {
-                    val successCallback = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                        PendingIntent.getBroadcast(
-                            activity,
-                            6666,
-                            Intent(),
-                            PendingIntent.FLAG_IMMUTABLE
-                        )
-                    } else {
-                        PendingIntent.getBroadcast(
-                            activity,
-                            6666,
-                            Intent(),
-                            PendingIntent.FLAG_UPDATE_CURRENT
-                        )
-                    }
-                    if (myProvider != null) {
-                        appWidgetManager.requestPinAppWidget(myProvider, null, successCallback)
-                    }
-                } else {
-                    Toast.makeText(activity, getStringRes(R.string.device_not_support), Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                Toast.makeText(activity, getStringRes(R.string.text_des_guide_widget), Toast.LENGTH_SHORT).show()
-            }
+            activity?.let { it1 -> viewModel.clickWidget4x2(it1) }
         }
         mBinding?.fmWidgetHeader?.setTitle(getStringRes(R.string.widget))
-        mBinding?.fmWidgetHeader?.setLeftAction(leftAction = CommonAction{
+        mBinding?.fmWidgetHeader?.setLeftAction(leftAction = CommonAction {
             popBackStack()
         })
     }

@@ -11,12 +11,10 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import androidx.activity.result.contract.ActivityResultContracts
-import com.longkd.chatgpt_openai.BuildConfig
+import androidx.fragment.app.viewModels
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.bubble.FloatingBubbleService
@@ -25,10 +23,13 @@ import com.longkd.chatgpt_openai.base.util.CommonSharedPreferences
 import com.longkd.chatgpt_openai.base.util.Constants
 import com.longkd.chatgpt_openai.base.util.setOnSingleClick
 import com.longkd.chatgpt_openai.databinding.SettingFragmentBinding
-import com.longkd.chatgpt_openai.feature.language.LanguageActivity
 import com.longkd.chatgpt_openai.service.BubbleService
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fragment) {
+
+    private val viewModel: SettingViewModel by viewModels()
     override var initBackAction: Boolean = false
 
     private val receiver = object : BroadcastReceiver() {
@@ -38,6 +39,7 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
             }
         }
     }
+
     companion object {
         fun newInstance(): FragmentSetting {
             val args = Bundle()
@@ -51,7 +53,7 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
     @SuppressLint("SetTextI18n", "UnspecifiedRegisterReceiverFlag")
     override fun initViews() {
         mBinding?.fmSettingUpdateTvVersion?.text =
-            getStringRes(R.string.text_version) + " ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
+            context?.let { viewModel.getVersion(it) }
         val enableAnimateText =
             CommonSharedPreferences.getInstance().getBoolean(Constants.ENABLE_ANIMATE_TEXT, false)
         mBinding?.fmSettingUpdateItemGenerating?.setSwitchEnable(enableAnimateText)
@@ -63,39 +65,11 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
     override fun initActions() {
         mBinding?.apply {
             fmSettingUpdateItemLanguage.setOnSingleClick {
-                val mIntent = Intent(context, LanguageActivity::class.java)
-                mIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-                mIntent.data = activity?.intent?.data
-                mIntent.action = activity?.intent?.action
-                activity?.intent?.extras?.let { mIntent.putExtras(it) }
-                startActivity(mIntent)
+                activity?.let { it1 -> viewModel.openLanguage(it1) }
             }
             fmSettingBubble.setSwitchEnable(FloatingBubbleService.isRunning())
             fmSettingBubble.onSwitchChange {
-                if (it) {
-                    if (context?.isDrawOverlaysPermissionGranted() == true) {
-                        val intent = Intent(activity, BubbleService::class.java)
-                        if (!FloatingBubbleService.isRunning()) {
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                                activity?.startForegroundService(intent)
-                            } else {
-                                activity?.startService(intent)
-                            }
-                        }
-                    } else {
-                        val intent = Intent(
-                            Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                            Uri.parse("package:" + activity?.packageName)
-                        )
-                        resultLauncherOverlay.launch(intent)
-                    }
-
-                } else {
-                    if (FloatingBubbleService.isRunning()){
-                        val intent = Intent(activity, BubbleService::class.java)
-                        activity?.stopService(intent)
-                    }
-                }
+                activity?.let { it1 -> viewModel.openBubble(it1, it, resultLauncherOverlay) }
             }
         }
     }
@@ -112,9 +86,9 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
                     }
                 }
             } else {
-            mBinding?.fmSettingBubble?.setSwitchEnable(false)
+                mBinding?.fmSettingBubble?.setSwitchEnable(false)
+            }
         }
-    }
 
     override fun onDestroy() {
         super.onDestroy()
@@ -122,6 +96,7 @@ class FragmentSetting : BaseFragment<SettingFragmentBinding>(R.layout.setting_fr
             activity?.unregisterReceiver(receiver)
         }
     }
+
     override fun initData() {
     }
 

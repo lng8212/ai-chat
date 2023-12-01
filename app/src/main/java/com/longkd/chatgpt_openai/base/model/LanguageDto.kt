@@ -3,7 +3,7 @@ package com.longkd.chatgpt_openai.base.model
 import android.os.Parcel
 import android.os.Parcelable
 
-class LanguageDto(val data: LanguageItem, var isSelected: Boolean) : Parcelable {
+data class LanguageDto(val data: LanguageItem, var isSelected: Boolean) : Parcelable {
     constructor(parcel: Parcel) : this(
         LanguageItem.ENGLISH,
         parcel.readByte() != 0.toByte()
