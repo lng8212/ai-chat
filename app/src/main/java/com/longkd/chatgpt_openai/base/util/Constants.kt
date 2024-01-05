@@ -2,10 +2,6 @@ package com.longkd.chatgpt_openai.base.util
 
 class Constants {
     companion object {
-
-        const val BASE_URL = "http://10.0.2.2:8088"
-        const val BASE_URL_ART = "https://aiapi-art.longkd.com"
-
         const val TAG = "xx"
         const val CHAT_MODE = "CHAT_MODE"
         const val THEME_MODE = "THEME_MODE"

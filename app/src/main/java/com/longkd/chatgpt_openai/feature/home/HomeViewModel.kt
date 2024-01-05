@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
 import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.model.ChatBaseDto
 import com.longkd.chatgpt_openai.base.model.ChatDetailDto
@@ -30,6 +29,7 @@ import com.longkd.chatgpt_openai.open.weather.WeatherRepository
 import com.longkd.chatgpt_openai.open.weather.model.WeatherResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -70,7 +70,7 @@ class HomeViewModel @Inject constructor(
     }
 
     fun getCurrentWeather() {
-        viewModelScope.launch {
+        GlobalScope.launch {
             try {
 
                 when (val response = weatherRepository.getWeatherCurrent()) {
@@ -596,8 +596,6 @@ class HomeViewModel @Inject constructor(
                         completionResult?.choices?.getOrNull(0)?.message?.content
                     )
                 )
-                CommonSharedPreferences.getInstance().numberFreeChat1 =
-                    CommonSharedPreferences.getInstance().numberFreeChat1?.minus(1)
                 isCallChatSuccess = true
                 result.value = ResultDataDto.Success(data, mIsCallMore)
                 resultText = data

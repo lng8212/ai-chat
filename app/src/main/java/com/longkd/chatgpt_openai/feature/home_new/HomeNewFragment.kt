@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.ShortcutManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -27,8 +28,6 @@ import com.longkd.chatgpt_openai.feature.home.HomeViewModel
 import com.longkd.chatgpt_openai.feature.home_new.topic.DetailTopicFragment
 import com.longkd.chatgpt_openai.feature.home_new.topic.TopicProvider
 import com.longkd.chatgpt_openai.feature.home_new.topic.TopicsAdapter
-import com.longkd.chatgpt_openai.feature.intro.IntroFirstFragment
-import com.longkd.chatgpt_openai.feature.intro.IntroFragment
 import com.longkd.chatgpt_openai.feature.summary.SummaryFileFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic
@@ -46,6 +45,7 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
     private lateinit var detailTopicAdapter: DetailTopicAdapter
     private lateinit var allTopicAdapter: AllTopicAdapter
     private var isCheckDuplicate: Boolean = false
+
 
     override fun initViews() {
         initShortCut()
@@ -242,17 +242,8 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
 
     @SuppressLint("SetTextI18n")
     override fun initData() {
-        val isShowIntro = CommonSharedPreferences.getInstance(context)
-            .getBoolean(Constants.FIRST_SHOW_INTRO, true)
-        if (isShowIntro) {
-            pushScreen(IntroFragment.newInstance().apply {
-                mOnViewDestroyedListener = {
 
-                }
-            }, IntroFirstFragment::class.java.name)
-        } else {
             lifecycleScope.launch(Dispatchers.Main) {
-
                 when (activity?.intent?.action) {
                     Intent.ACTION_PROCESS_TEXT -> {
                         activity?.intent?.getStringExtra(Intent.EXTRA_PROCESS_TEXT)?.let {
@@ -303,33 +294,41 @@ class HomeNewFragment : BaseFragment<FragmentNewHomeBinding>(R.layout.fragment_n
                 }
 
             }
-            viewLifecycleOwner.lifecycleScope.launch {
-                mViewModel.dataWeather.collect { state ->
-                    if (state is com.longkd.chatgpt_openai.open.State.Success) {
-                        mBinding?.txtCurrentWeather?.visible()
-                        val maxTemp =
-                            state.data?.dailyForecasts?.get(0)?.temperature?.maximum?.value?.toInt()
-                        val minTemp =
-                            state.data?.dailyForecasts?.get(0)?.temperature?.minimum?.value?.toInt()
-                        mBinding?.txtCurrentWeather?.text = getString(R.string.text_today) +
-                                " ${minTemp?.toCelsius()} - ${maxTemp?.toCelsius()}°C"
-                    } else {
-                        mBinding?.txtCurrentWeather?.invisible()
-                    }
-
+        lifecycleScope.launch {
+            mViewModel.dataWeather.collect { state ->
+                Log.e("xxxxx", "initData: ${state.message}")
+                if (state is com.longkd.chatgpt_openai.open.State.Success) {
+                    mBinding?.txtCurrentWeather?.visible()
+                    val maxTemp =
+                        state.data?.dailyForecasts?.get(0)?.temperature?.maximum?.value?.toInt()
+                    val minTemp =
+                        state.data?.dailyForecasts?.get(0)?.temperature?.minimum?.value?.toInt()
+                    mBinding?.txtCurrentWeather?.text = getString(R.string.text_today) +
+                            " ${minTemp?.toCelsius()} - ${maxTemp?.toCelsius()}°C"
+                } else {
+                    mBinding?.txtCurrentWeather?.invisible()
                 }
             }
-
         }
+
+
 
         mShareDataViewModel.mNotifyUpdateChatHistory.observe(this) {
             if (context != null)
                 mViewModel.getAllChatHistory()
         }
 
-        if (isShowIntro) {
-            showDirector(isShowIntro)
+        if (CommonSharedPreferences.getInstance(context)
+                .getBoolean(Constants.FIRST_SHOW_INTRO, false)
+        ) {
+            showDirector(true)
+            CommonSharedPreferences.getInstance(context)
+                .putBoolean(Constants.FIRST_SHOW_INTRO, false)
+
         }
+        CommonSharedPreferences.getInstance(context)
+            .putBoolean(Constants.FIRST_SHOW_INTRO, false)
+
 
     }
 

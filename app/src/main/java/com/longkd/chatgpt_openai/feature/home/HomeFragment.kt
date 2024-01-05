@@ -14,8 +14,6 @@ import com.longkd.chatgpt_openai.databinding.HomeFragmentBinding
 import com.longkd.chatgpt_openai.feature.ShareDataViewModel
 import com.longkd.chatgpt_openai.feature.chat.ChatDetailFragment
 import com.longkd.chatgpt_openai.feature.history.FragmentHistory
-import com.longkd.chatgpt_openai.feature.intro.IntroFirstFragment
-import com.longkd.chatgpt_openai.feature.intro.IntroFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetFragment
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic
 import com.longkd.chatgpt_openai.feature.widget.WidgetTopic.Companion.ACTION_UPDATE
@@ -38,7 +36,6 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
     }
 
     override fun initViews() {
-
         mBinding?.fmHomeCtViewGroup?.layoutTransition?.setAnimateParentHierarchy(false)
         mHeaderView?.apply {
             setVisibleLeft(false)
@@ -114,60 +111,48 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
     @SuppressLint("SetTextI18n")
     override fun initData() {
         mViewModel.callGetTimeStamp()
-        val isShowIntro = CommonSharedPreferences.getInstance(context)
-            .getBoolean(Constants.FIRST_SHOW_INTRO, true)
-        if (isShowIntro) {
-            pushScreen(IntroFragment.newInstance().apply {
-                mOnViewDestroyedListener = {
-                }
-            }, IntroFirstFragment::class.java.name)
-        } else {
-            lifecycleScope.launch(Dispatchers.Main) {
-                    when (activity?.intent?.action) {
+        lifecycleScope.launch(Dispatchers.Main) {
+            when (activity?.intent?.action) {
+                Constants.KEY_WIDGET_CLICK -> {
+                    if (activity?.intent?.getBooleanExtra(
+                            TYPE_HISTORY,
+                            false
+                        ) == true
+                    ) {
+                        val topicType = activity?.intent?.getLongExtra(
+                            Constants.KEY_WIDGET_CLICK,
+                            -1
+                        )
+                        mainFragment?.pushScreenWithAnimate(
+                            ChatDetailFragment.newInstance(
+                                chatId = topicType ?: 0
+                            ), ChatDetailFragment::class.java.name
+                        )
 
-                        Constants.KEY_WIDGET_CLICK -> {
-                            if (activity?.intent?.getBooleanExtra(
-                                    TYPE_HISTORY,
-                                    false
-                                ) == true
-                            ) {
-                                val topicType = activity?.intent?.getLongExtra(
-                                    Constants.KEY_WIDGET_CLICK,
-                                    -1
-                                )
-                                mainFragment?.pushScreenWithAnimate(
-                                    ChatDetailFragment.newInstance(
-                                        chatId = topicType ?: 0
-                                    ), ChatDetailFragment::class.java.name
-                                )
-
-                            } else {
-                                val topicType = activity?.intent?.getIntExtra(
-                                    Constants.KEY_WIDGET_CLICK,
-                                    -1
-                                )
-                                val topics = TopicsUtils.listTopic(activity)
-                                val topic = topics.find {
-                                    it.topicType == topicType
-                                }
-                                mainFragment?.pushScreenWithAnimate(
-                                    ChatDetailFragment.newInstance(
-                                        topicType = topic
-                                    ),
-                                    ChatDetailFragment::javaClass.name
-                                )
-                            }
+                    } else {
+                        val topicType = activity?.intent?.getIntExtra(
+                            Constants.KEY_WIDGET_CLICK,
+                            -1
+                        )
+                        val topics = TopicsUtils.listTopic(activity)
+                        val topic = topics.find {
+                            it.topicType == topicType
                         }
-
-                        else -> {}
+                        mainFragment?.pushScreenWithAnimate(
+                            ChatDetailFragment.newInstance(
+                                topicType = topic
+                            ),
+                            ChatDetailFragment::javaClass.name
+                        )
                     }
+                }
 
-
+                else -> {}
             }
         }
 
         mBinding?.homeFmStartTvChatNumber?.gone()
-        mViewModel.getAllChatHistory()?.observe(this) {
+        mViewModel.getAllChatHistory().observe(this) {
             if (it.isEmpty()) {
                 mBinding?.homeFmLayoutEmpty?.visible()
                 mBinding?.homeFmLayout?.gone()
@@ -193,7 +178,6 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
     }
 
     override var initBackAction: Boolean = false
-
 
 
     fun updateDataChat() {

@@ -15,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField("String", "BASE_URL", "\"http://18.142.240.210:8088\"")
+        buildConfigField("String", "BASE_URL", "\"http://52.221.202.69:8088\"")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", "Chatgpt-openai-$versionName")
     }

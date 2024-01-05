@@ -5,10 +5,11 @@ import com.longkd.chatgpt_openai.R
 import com.longkd.chatgpt_openai.base.BaseFragment
 import com.longkd.chatgpt_openai.base.util.UtilsApp
 import com.longkd.chatgpt_openai.databinding.FragmentIntroFirstBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class IntroFirstFragment :
     BaseFragment<FragmentIntroFirstBinding>(R.layout.fragment_intro_first) {
-
     companion object {
         fun newInstance(): IntroFirstFragment {
             val args = Bundle()
@@ -28,9 +29,11 @@ class IntroFirstFragment :
     override fun initData() {
 
     }
+
     fun playAnimation(){
         mBinding?.fmIntroFirstLat?.playAnimation()
     }
+
     fun stopAnimation(){
         mBinding?.fmIntroFirstLat?.cancelAnimation()
     }

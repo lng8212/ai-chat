@@ -6,7 +6,6 @@
 
 package com.longkd.chatgpt_openai.feature.language
 
-import android.content.Intent
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.longkd.chatgpt_openai.base.model.LanguageDto
@@ -34,7 +33,7 @@ class LanguageViewModel @Inject constructor() : ViewModel() {
         listLanguage.value = data ?: emptyList()
     }
 
-    fun saveLanguage(code: String, activity: LanguageActivity, intent: Intent) {
-        languageRepository.saveLanguage(code, activity, intent)
+    fun saveLanguage(code: String) {
+        languageRepository.saveLanguage(code)
     }
 }
